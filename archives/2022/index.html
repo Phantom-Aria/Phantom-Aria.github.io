@@ -21,7 +21,7 @@
   <meta content="谢文龙的个人博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649228352668" as="style">
+  <link rel="preload" href="/css/style.css?time=1649228630595" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1656,8 +1656,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649228352668" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649228352668"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649228630595" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649228630595"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1728,9 +1728,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649228352668","sites":"/js/plugins/sites.js?time=1649228352668","friends":"/js/plugins/friends.js?time=1649228352668","parallax":"/js/plugins/parallax.js?time=1649228352668","rightMenu":"/js/plugins/rightMenu.js?time=1649228352668","contributors":"/js/plugins/contributors.js?time=1649228352668","message":"/js/thirdparty/message.js?time=1649228352668","search":"/js/search/hexo.js?time=1649228352668"},"css":{"style":"/css/style.css?time=1649228352668","message":"/css/message.css?time=1649228352668"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649228630595","sites":"/js/plugins/sites.js?time=1649228630595","friends":"/js/plugins/friends.js?time=1649228630595","parallax":"/js/plugins/parallax.js?time=1649228630595","rightMenu":"/js/plugins/rightMenu.js?time=1649228630595","contributors":"/js/plugins/contributors.js?time=1649228630595","message":"/js/thirdparty/message.js?time=1649228630595","search":"/js/search/hexo.js?time=1649228630595"},"css":{"style":"/css/style.css?time=1649228630595","message":"/css/message.css?time=1649228630595"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649228352668),
+    lastupdate: new Date(1649228630595),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2835,7 +2835,7 @@ Qu...
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649228352668.js"></script>
+<script src="/js/app.js?time=1649228630595.js"></script>
 
 
 
@@ -3027,7 +3027,7 @@ Qu...
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649228352668')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649228630595')</script>
 
 
 
@@ -3040,19 +3040,19 @@ Qu...
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649228352668")
+        volantis.js("/js/plugins/sites.js?time=1649228630595")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649228352668")
+        volantis.js("/js/plugins/friends.js?time=1649228630595")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649228352668")
+        volantis.js("/js/plugins/contributors.js?time=1649228630595")
       }
     
   };
@@ -3177,7 +3177,7 @@ Qu...
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649228352668");
+    return volantis.js("/js/search/hexo.js?time=1649228630595");
   }
 
   function loadSearchService() {
@@ -3553,25 +3553,6 @@ Qu...
     </div>
   <!-- Custom Files bodyEnd begin-->
   <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
-  <script> 
-    var OriginTitle = document.title;
-    var titleTime;
-    document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-            $('[rel="icon"]').attr('href', "https://raw.githubusercontent.com/Phantom-Aria/image/main/bitbug_favicon1.ico");
-            document.title = '╭(°A°`)╮等你回来唷~';
-            clearTimeout(titleTime);
-        }
-        else {
-            $('[rel="icon"]').attr('href', "https://raw.githubusercontent.com/Phantom-Aria/image/main/bitbug_favicon.ico");
-            document.title = '(ฅ>ω<*ฅ)你回来啦~';
-            titleTime = setTimeout(function () {
-                document.title = OriginTitle;
-                $('[rel="icon"]').attr('href', "https://raw.githubusercontent.com/Phantom-Aria/image/main/bitbug_favicon.ico");
-            }, 2000);
-        }
-    });
-  </script>
   
   <!-- Custom Files bodyEnd end-->
   </body>
