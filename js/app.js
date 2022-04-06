@@ -5,18 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     VolantisFancyBox.init();
     highlightKeyWords.startFromURL();
     locationHash();
-const changeTitle = () => {
-  sessionStorage.setItem("domTitle", document.title);
-  document.addEventListener('visibilitychange', function () {
-    const title = sessionStorage.getItem("domTitle") || document.title;
-    const titleArr = title.split(' - ') || [];
-    if (document.visibilityState == 'hidden') {
-      document.title = titleArr.length === 2 ? titleArr[1] : titleArr[0];
-    } else {
-      document.title = title;
-    }
-  });
-}
 
     volantis.pjax.push(() => {
       VolantisApp.pjaxReload();
