@@ -7512,3 +7512,15 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -o-transform: scale(1);
   -ms-transform: scale(1);
 }
+#l_header {
+  background-color: rgba(255,255,255,0.9);
+}
+#l_main .post,
+#l_side .widget {
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 4px 10px -4px #ebedf0;
+  -webkit-box-shadow: 0 4px 10px -4px #ebedf0;
+}
+#post.post {
+  background-color: var(--color-card);
+}
