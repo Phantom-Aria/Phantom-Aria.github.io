@@ -888,14 +888,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("/Phantom-Aria/Phantom-Aria.github.io/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("/Phantom-Aria/Phantom-Aria.github.io/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
