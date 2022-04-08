@@ -6857,19 +6857,19 @@ textarea {
 }
 .fancybox-container .fancybox-stage,
 .fancybox__carousel .is-draggable {
-  cursor: url("/media/cursor/zoom-out.png"), zoom-out;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/zoom-out.png"), zoom-out;
 }
 .fancybox a,
 .fancybox-can-zoomIn .fancybox-content,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content {
-  cursor: url("/media/cursor/zoom-in.png"), zoom-in;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/zoom-in.png"), zoom-in;
 }
 span.btn>a:not([href]):hover,
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover,
 .gt-container .gt-btn.is--disable,
 span.not-select {
-  cursor: url("/media/cursor/circle.png"), not-allowed;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/circle.png"), not-allowed;
 }
 html,
 a:not([href]),
@@ -6894,7 +6894,7 @@ kbd,
 p > img,
 p > svg,
 .fix-cursor-default {
-  cursor: url("/media/cursor/left_ptr.png"), default;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/left_ptr.png"), default;
 }
 a,
 psw,
@@ -6955,28 +6955,28 @@ a.result.search-result-fix,
 .tk-action-icon,
 .fancybox,
 .fix-cursor-pointer {
-  cursor: url("/media/cursor/pointer.png"), pointer;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/pointer.png"), pointer;
 }
 .cur-default {
-  cursor: url("/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/left_ptr.png"), default !important;
 }
 .cur-pointer,
 .carousel__button,
 .fancybox__slide {
-  cursor: url("/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/pointer.png"), pointer !important;
 }
 .cur-not-allowed {
-  cursor: url("/media/cursor/circle.png"), not-allowed !important;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/circle.png"), not-allowed !important;
 }
 .cur-zoom-in,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content,
 .has-image[data-image-fit=contain].can-zoom_in .fancybox__image {
-  cursor: url("/media/cursor/zoom-in.png"), zoom-in !important;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/zoom-in.png"), zoom-in !important;
 }
 .cur-zoom-out,
 .fancybox__carousel .is-draggable,
 .has-image[data-image-fit=contain].is-draggable .fancybox__image {
-  cursor: url("/media/cursor/zoom-out.png"), zoom-out !important;
+  cursor: url("/Phantom-Aria/Phantom-Aria.github.io/media/cursor/zoom-out.png"), zoom-out !important;
 }
 .cur-text {
   cursor: url("https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/text.png"), text !important;
