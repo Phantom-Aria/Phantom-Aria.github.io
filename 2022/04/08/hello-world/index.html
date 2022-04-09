@@ -21,7 +21,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649522193089" as="style">
+  <link rel="preload" href="/css/style.css?time=1649524815774" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1778,8 +1778,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649522193089" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649522193089"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649524815774" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649524815774"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1856,9 +1856,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649522193089","sites":"/js/plugins/sites.js?time=1649522193089","friends":"/js/plugins/friends.js?time=1649522193089","parallax":"/js/plugins/parallax.js?time=1649522193089","rightMenu":"/js/plugins/rightMenu.js?time=1649522193089","contributors":"/js/plugins/contributors.js?time=1649522193089","message":"/js/thirdparty/message.js?time=1649522193089","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649522193089"},"css":{"style":"/css/style.css?time=1649522193089","message":"/css/message.css?time=1649522193089"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649524815774","sites":"/js/plugins/sites.js?time=1649524815774","friends":"/js/plugins/friends.js?time=1649524815774","parallax":"/js/plugins/parallax.js?time=1649524815774","rightMenu":"/js/plugins/rightMenu.js?time=1649524815774","contributors":"/js/plugins/contributors.js?time=1649524815774","message":"/js/thirdparty/message.js?time=1649524815774","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649524815774"},"css":{"style":"/css/style.css?time=1649524815774","message":"/css/message.css?time=1649524815774"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649522193089),
+    lastupdate: new Date(1649524815774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2294,19 +2294,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <i class='fa-solid fa-house fa-fw'></i>主页
                 </a>
                 
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-book-blank fa-fw'></i>博客
+                </a>
+                
                   <ul class="list-v">
                     
                       
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" title="主题源码"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantis"
+                    active-action="action-categories"
                   >
-                  主题源码
+                  分类
                 </a>
                 
               </li>
@@ -2317,13 +2334,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/releases/" title="更新日志"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases"
+                    active-action="action-tags"
                   >
-                  更新日志
+                  标签
                 </a>
                 
               </li>
@@ -2340,67 +2357,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                 href="/" onclick="return false;" title="有疑问？"
+                href="/archives/" title="归档"
                   
                   
+                  
+                    active-action="action-archives"
                   >
-                  有疑问？
+                  归档
                 </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/faqs/" title="看 FAQ"
-                  
-                  
-                  
-                    active-action="action-faqs"
-                  >
-                  看 FAQ
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="看 本站源码"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xvolantis-docs"
-                  >
-                  看 本站源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues/" title="提 Issue"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisissues"
-                  >
-                  提 Issue
-                </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2453,54 +2417,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/categories/" title="分类"
+                 href="/" onclick="return false;" title="鸣谢"
                   
                   
-                  
-                    active-action="action-categories"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                  <i class='fa-solid fa-handshake-simple fa-fw'></i>鸣谢
                 </a>
                 
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
+                  <ul class="list-v">
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
@@ -2512,6 +2438,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   >
                   <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" title="主题源码"
+                  
+                  
+                  
+                    active-action="action-https:githubcomvolantis-xhexo-theme-volantis"
+                  >
+                  主题源码
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="本站源码"
+                  
+                  
+                  
+                    active-action="action-https:githubcomvolantis-xvolantis-docs"
+                  >
+                  本站源码
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
                 
               </li>
             
@@ -2528,6 +2500,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/more/" title="更多"
+                  
+                  
+                  
+                    active-action="action-more"
+                  >
+                  <i class='fa-solid fa-caret-down fa-fw'></i>更多
                 </a>
                 
               </li>
@@ -2566,7 +2555,129 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <i class='fa-solid fa-house fa-fw'></i>主页
                 </a>
                 
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-book-blank fa-fw'></i>博客
+                </a>
+                
                   <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                 href="/" onclick="return false;" title="鸣谢"
+                  
+                  
+                  >
+                  <i class='fa-solid fa-handshake-simple fa-fw'></i>鸣谢
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
                     
                       
             
@@ -2589,83 +2700,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/releases/" title="更新日志"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases"
-                  >
-                  更新日志
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <hr>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                 href="/" onclick="return false;" title="有疑问？"
-                  
-                  
-                  >
-                  有疑问？
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/faqs/" title="看 FAQ"
-                  
-                  
-                  
-                    active-action="action-faqs"
-                  >
-                  看 FAQ
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="看 本站源码"
+                target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" title="本站源码"
                   
                   
                   
                     active-action="action-https:githubcomvolantis-xvolantis-docs"
                   >
-                  看 本站源码
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues/" title="提 Issue"
-                  
-                  
-                  
-                    active-action="action-https:githubcomvolantis-xhexo-theme-volantisissues"
-                  >
-                  提 Issue
+                  本站源码
                 </a>
                 
               </li>
@@ -2673,86 +2714,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
                     
                   </ul>
-                
-              </li>
-            
-          
-                    
-                  </ul>
-                
-              </li>
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
                 
               </li>
             
@@ -2769,6 +2730,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>留言
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                href="/more/" title="更多"
+                  
+                  
+                  
+                    active-action="action-more"
+                  >
+                  <i class='fa-solid fa-caret-down fa-fw'></i>更多
                 </a>
                 
               </li>
@@ -3322,7 +3300,7 @@ This Markdown cheat sheet provides a ...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649522193089.js"></script>
+<script src="/js/app.js?time=1649524815774.js"></script>
 
 
 
@@ -3523,7 +3501,7 @@ This Markdown cheat sheet provides a ...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649522193089')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649524815774')</script>
 
 
 
@@ -3653,19 +3631,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649522193089")
+        volantis.js("/js/plugins/sites.js?time=1649524815774")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649522193089")
+        volantis.js("/js/plugins/friends.js?time=1649524815774")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649522193089")
+        volantis.js("/js/plugins/contributors.js?time=1649524815774")
       }
     
   };
@@ -3734,7 +3712,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1649522193089')
+    await volantis.js('/js/plugins/aplayer.js?time=1649524815774')
   
   })();
 
@@ -3859,7 +3837,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649522193089");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649524815774");
   }
 
   function loadSearchService() {
@@ -4175,7 +4153,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1649522193089').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1649524815774').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
