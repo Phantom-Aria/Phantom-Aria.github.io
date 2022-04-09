@@ -21,7 +21,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649438353371" as="style">
+  <link rel="preload" href="/css/style.css?time=1649509435168" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1779,8 +1779,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649438353371" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649438353371"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649509435168" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649509435168"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1857,9 +1857,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649438353371","sites":"/js/plugins/sites.js?time=1649438353371","friends":"/js/plugins/friends.js?time=1649438353371","parallax":"/js/plugins/parallax.js?time=1649438353371","rightMenu":"/js/plugins/rightMenu.js?time=1649438353371","contributors":"/js/plugins/contributors.js?time=1649438353371","message":"/js/thirdparty/message.js?time=1649438353371","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649438353371"},"css":{"style":"/css/style.css?time=1649438353371","message":"/css/message.css?time=1649438353371"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649509435168","sites":"/js/plugins/sites.js?time=1649509435168","friends":"/js/plugins/friends.js?time=1649509435168","parallax":"/js/plugins/parallax.js?time=1649509435168","rightMenu":"/js/plugins/rightMenu.js?time=1649509435168","contributors":"/js/plugins/contributors.js?time=1649509435168","message":"/js/thirdparty/message.js?time=1649509435168","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649509435168"},"css":{"style":"/css/style.css?time=1649509435168","message":"/css/message.css?time=1649509435168"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649438353371),
+    lastupdate: new Date(1649509435168),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -3322,7 +3322,7 @@ This Markdown cheat sheet provides a ...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649438353371.js"></script>
+<script src="/js/app.js?time=1649509435168.js"></script>
 
 
 
@@ -3523,7 +3523,7 @@ This Markdown cheat sheet provides a ...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649438353371')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649509435168')</script>
 
 
 
@@ -3653,19 +3653,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649438353371")
+        volantis.js("/js/plugins/sites.js?time=1649509435168")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649438353371")
+        volantis.js("/js/plugins/friends.js?time=1649509435168")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649438353371")
+        volantis.js("/js/plugins/contributors.js?time=1649509435168")
       }
     
   };
@@ -3734,7 +3734,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1649438353371')
+    await volantis.js('/js/plugins/aplayer.js?time=1649509435168')
   
   })();
 
@@ -3805,51 +3805,44 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://npm.elemecdn.com/twikoo@latest", pjax_twikoo)
+  }
+  function pjax_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    let path = pdata.commentPath;
+    let placeholder = pdata.commentPlaceholder || "" || "";
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || "decodeURI(window.location.pathname)"; //神奇的pathname 没错,twikoo这里就是字符串,不要乱动了
     }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function pjax_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
+    twikoo.init(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/twikoo@latest","path":null,"envId":"twikoo-5gkd7f3taf6c883d","placeholder":null}, {
+      el: '#twikoo_container',
+      path: path,
+      placeholder: placeholder,
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
       }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
+    }),pdata.commentConfig))
   }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  pjax_giscus();
-  volantis.pjax.push(pjax_giscus);
-  volantis.dark.push(dark_giscus);
+  load_twikoo();
+  volantis.pjax.push(()=>{
+    if (typeof twikoo == "undefined") {
+      load_twikoo();
+    } else {
+      pjax_twikoo();
+    }
+  },'twikoo');
 </script>
 
 
@@ -3866,7 +3859,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649438353371");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649509435168");
   }
 
   function loadSearchService() {
@@ -4182,7 +4175,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1649438353371').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1649509435168').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4503,5 +4496,5 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
   
   <!-- Custom Files bodyEnd end-->
-  </body>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
