@@ -1387,22 +1387,12 @@ svg.loading {
 }
 #l_main {
   width: calc(100% - 1 * 240px);
-  padding-left: 16px;
+  padding-right: 16px;
   float: left;
-  -webkit-box-ordinal-group: 2;
-  -moz-box-ordinal-group: 2;
-  -ms-flex-order: 2;
-  -webkit-order: 2;
-  order: 2;
 }
 @media screen and (max-width: 768px) {
   #l_main {
     width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  #l_main {
-    padding-left: 0;
   }
 }
 #l_main.no_sidebar {
@@ -2573,11 +2563,6 @@ img.lazyload:not(.placeholder).loaded {
 #l_side {
   width: 240px;
   float: right;
-  -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
-  -ms-flex-order: 1;
-  -webkit-order: 1;
-  order: 1;
   position: relative;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
