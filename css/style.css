@@ -7384,6 +7384,29 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) .aplayer.aplayer-withlist .aplayer-info {
     border-bottom: 1px solid var(--color-block);
   }
+  :root:not([color-scheme]) .OwO .OwO-body {
+    color: #c0c0c0 !important;
+    background-color: #252627 !important;
+    border-color: #4a4b50 !important;
+  }
+  :root:not([color-scheme]) .OwO .OwO-body .OwO-bar {
+    border-top: 1px solid #4a4b50 !important;
+    background: #4a4b50 !important;
+    color: #ccc !important;
+  }
+  :root:not([color-scheme]) .OwO .OwO-body .OwO-bar .OwO-packages li:hover {
+    background-color: #252627 !important;
+  }
+  :root:not([color-scheme]) .OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active {
+    background-color: #252627 !important;
+  }
+  :root:not([color-scheme]) .OwO .OwO-body .OwO-items .OwO-item {
+    background: #4a4b50 !important;
+    color: #ccc !important;
+  }
+  :root:not([color-scheme]) .OwO .OwO-body .OwO-items-image .OwO-item:hover {
+    background-color: #252627 !important;
+  }
 }
 [color-scheme='dark'] {
   --block-hover: #1c1c1c;
@@ -7485,6 +7508,29 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] .aplayer.aplayer-withlist .aplayer-info {
   border-bottom: 1px solid var(--color-block);
+}
+[color-scheme='dark'] .OwO .OwO-body {
+  color: #c0c0c0 !important;
+  background-color: #252627 !important;
+  border-color: #4a4b50 !important;
+}
+[color-scheme='dark'] .OwO .OwO-body .OwO-bar {
+  border-top: 1px solid #4a4b50 !important;
+  background: #4a4b50 !important;
+  color: #ccc !important;
+}
+[color-scheme='dark'] .OwO .OwO-body .OwO-bar .OwO-packages li:hover {
+  background-color: #252627 !important;
+}
+[color-scheme='dark'] .OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active {
+  background-color: #252627 !important;
+}
+[color-scheme='dark'] .OwO .OwO-body .OwO-items .OwO-item {
+  background: #4a4b50 !important;
+  color: #ccc !important;
+}
+[color-scheme='dark'] .OwO .OwO-body .OwO-items-image .OwO-item:hover {
+  background-color: #252627 !important;
 }
 #safearea {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
