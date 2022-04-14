@@ -21,23 +21,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649961960062" as="style">
+  <link rel="preload" href="/css/style.css?time=1649963329266" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>结绳 - 我的小破站</title>
   <meta name="keywords" content="null">
-  <meta name="description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式               2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速">
+  <meta name="description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式                        修复部分页面强制重新加载bug，修改了部分pjax代码                        修复aplayer播放器切换页面后中断播放bug，同上                        发表日志：转录组数据分析笔记（">
 <meta property="og:type" content="website">
 <meta property="og:title" content="我的小破站">
 <meta property="og:url" content="http://www.shelven.com/history/index.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式               2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速">
+<meta property="og:description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式                        修复部分页面强制重新加载bug，修改了部分pjax代码                        修复aplayer播放器切换页面后中断播放bug，同上                        发表日志：转录组数据分析笔记（">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-14T06:58:57.323Z">
-<meta property="article:modified_time" content="2022-04-14T06:58:57.315Z">
+<meta property="article:published_time" content="2022-04-14T19:08:43.765Z">
+<meta property="article:modified_time" content="2022-04-14T19:08:43.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1779,8 +1779,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649961960062" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649961960062"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649963329266" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649963329266"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1857,9 +1857,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649961960062","sites":"/js/plugins/sites.js?time=1649961960062","friends":"/js/plugins/friends.js?time=1649961960062","parallax":"/js/plugins/parallax.js?time=1649961960062","rightMenu":"/js/plugins/rightMenu.js?time=1649961960062","contributors":"/js/plugins/contributors.js?time=1649961960062","message":"/js/thirdparty/message.js?time=1649961960062","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649961960062"},"css":{"style":"/css/style.css?time=1649961960062","message":"/css/message.css?time=1649961960062"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649963329266","sites":"/js/plugins/sites.js?time=1649963329266","friends":"/js/plugins/friends.js?time=1649963329266","parallax":"/js/plugins/parallax.js?time=1649963329266","rightMenu":"/js/plugins/rightMenu.js?time=1649963329266","contributors":"/js/plugins/contributors.js?time=1649963329266","message":"/js/thirdparty/message.js?time=1649963329266","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649963329266"},"css":{"style":"/css/style.css?time=1649963329266","message":"/css/message.css?time=1649963329266"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649961960062),
+    lastupdate: new Date(1649963329266),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3063,44 +3063,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <div class="timeline">
 <div class="timenode"><div class="meta"><p><p>2022-04-14</p>
-</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复文章永久链接中文乱码bug，已更改永久链接格式</p>            </div></div></div></div>
-
+</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复文章永久链接中文乱码bug，已更改永久链接格式</p>            </div><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复部分页面强制重新加载bug，修改了部分pjax代码</p>            </div><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复aplayer播放器切换页面后中断播放bug，同上</p>            </div><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>发表日志：转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控</p>            </div></div></div></div>
 
 <div class="timenode"><div class="meta"><p><p>2022-04-13</p>
-</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复和CDN加速</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>本站已加入又拍云联盟，站点已进行CDN加速</p>            </div><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>发表日志：小破站正式对外开放啦！</p>            </div></div></div></div>
-
+</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复和CDN加速</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复主页轮播图片空白bug，修改了部分parallax代码，已优化图片加载方式</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>本站已加入又拍云联盟，站点已进行CDN加速</p>            </div><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>发表日志：小破站正式对外开放啦！</p>            </div></div></div></div>
 
 <div class="timenode"><div class="meta"><p><p>2022-04-12</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：服务器迁移</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>服务器迁移至本地</p>            </div><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>本站已绑定<a href="https://www.shelven.com/">www.shelven.com</a>域名</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>本站已安装SSL安全证书</p>            </div></div></div></div>
 
-
 <div class="timenode"><div class="meta"><p><p>2022-04-11</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：界面优化</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>添加pjax插件，优化部分页面加载速度</p>            </div><div class='checkbox minus yellow checked'><input type="checkbox" checked="checked"/>            <p>百度统计维护，5月31日恢复接入</p>            </div><div class='checkbox times red checked'><input type="checkbox" checked="checked"/>            <p>bug:暂时无法全站无刷新加载</p>            </div></div></div></div>
-
 
 <div class="timenode"><div class="meta"><p><p>2022-04-10</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：功能添加</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>添加rss订阅功能</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>新增结绳栏目</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>新增站内搜索功能</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>接入百度统计</p>            </div></div></div></div>
 
-
 <div class="timenode"><div class="meta"><p><p>2022-04-09</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：功能添加</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>新增live2D看板娘模块</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>接入腾讯云开发和twikoo评论系统</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>启用MFA，新增留言提醒和QQ邮箱头像抓取功能</p>            </div></div></div></div>
-
 
 <div class="timenode"><div class="meta"><p><p>2022-04-08</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：页面美化</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>更改鼠标样式</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>更改侧边栏配置</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>新增网页加载条</p>            </div></div></div></div>
 
-
 <div class="timenode"><div class="meta"><p><p>2022-04-07</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：页面美化和功能更新</strong></p><div class='checkbox'><input type="checkbox" />            <p>重设导航栏</p>            </div><div class='checkbox'><input type="checkbox" />            <p>重设封面</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>更改右键菜单功能</p>            </div></div></div></div>
-
 
 <div class="timenode"><div class="meta"><p><p>2022-04-06</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：功能添加</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>添加背景音乐功能，接入aplayer播放器</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>添加网站统计访客数功能，接入LeanCloud</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>添加文章字数统计功能</p>            </div></div></div></div>
 
-
 <div class="timenode"><div class="meta"><p><p>2022-04-05</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：页面美化</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>导航栏设计和美化</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>卡片添加透明度</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>优化主题背景图片</p>            </div></div></div></div>
-
 
 <div class="timenode"><div class="meta"><p><p>2022-04-04</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：小破站成立啦！</strong></p><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>使用Hexo框架，volantis主题搭建网站</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>github建库，代码托管</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>建立图床，使用jsDelivr进行CDN加速</p>            </div></div></div></div>
@@ -3126,10 +3116,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-14T14:58:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-15T03:08:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月14日</p>
+    <p>更新于：2022年4月15日</p>
   </a>
 </div>
 
@@ -3584,7 +3574,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649961960062.js"></script>
+<script src="/js/app.js?time=1649963329266.js"></script>
 
 
 
@@ -3768,7 +3758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649961960062')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649963329266')</script>
 
 
 
@@ -3898,19 +3888,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649961960062")
+        volantis.js("/js/plugins/sites.js?time=1649963329266")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649961960062")
+        volantis.js("/js/plugins/friends.js?time=1649963329266")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649961960062")
+        volantis.js("/js/plugins/contributors.js?time=1649963329266")
       }
     
   };
@@ -3979,7 +3969,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1649961960062')
+    await volantis.js('/js/plugins/aplayer.js?time=1649963329266')
   
   })();
 
@@ -4104,7 +4094,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649961960062");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649963329266");
   }
 
   function loadSearchService() {
@@ -4444,7 +4434,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1649961960062').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1649963329266').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
