@@ -21,23 +21,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649909219616" as="style">
+  <link rel="preload" href="/css/style.css?time=1649919541825" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>结绳 - 我的小破站</title>
   <meta name="keywords" content="null">
-  <meta name="description" content="2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速               2022-04-12 更新日志：服务器迁移            服务器迁移至本地                        本站已绑定">
+  <meta name="description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式               2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速">
 <meta property="og:type" content="website">
 <meta property="og:title" content="我的小破站">
 <meta property="og:url" content="http://www.shelven.com/history/index.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速               2022-04-12 更新日志：服务器迁移            服务器迁移至本地                        本站已绑定">
+<meta property="og:description" content="2022-04-14 更新日志：bug修复            修复文章永久链接中文乱码bug，已更改永久链接格式               2022-04-13 更新日志：bug修复和CDN加速            修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式                        本站已加入又拍云联盟，站点已进行CDN加速">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-13T14:25:46.791Z">
-<meta property="article:modified_time" content="2022-04-13T14:25:46.787Z">
+<meta property="article:published_time" content="2022-04-14T06:58:57.323Z">
+<meta property="article:modified_time" content="2022-04-14T06:58:57.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1779,8 +1779,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649909219616" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649909219616"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649919541825" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649919541825"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1857,9 +1857,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649909219616","sites":"/js/plugins/sites.js?time=1649909219616","friends":"/js/plugins/friends.js?time=1649909219616","parallax":"/js/plugins/parallax.js?time=1649909219616","rightMenu":"/js/plugins/rightMenu.js?time=1649909219616","contributors":"/js/plugins/contributors.js?time=1649909219616","message":"/js/thirdparty/message.js?time=1649909219616","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649909219616"},"css":{"style":"/css/style.css?time=1649909219616","message":"/css/message.css?time=1649909219616"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649919541825","sites":"/js/plugins/sites.js?time=1649919541825","friends":"/js/plugins/friends.js?time=1649919541825","parallax":"/js/plugins/parallax.js?time=1649919541825","rightMenu":"/js/plugins/rightMenu.js?time=1649919541825","contributors":"/js/plugins/contributors.js?time=1649919541825","message":"/js/thirdparty/message.js?time=1649919541825","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649919541825"},"css":{"style":"/css/style.css?time=1649919541825","message":"/css/message.css?time=1649919541825"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1649909219616),
+    lastupdate: new Date(1649919541825),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3062,8 +3062,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <div class="timeline">
+<div class="timenode"><div class="meta"><p><p>2022-04-14</p>
+</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复文章永久链接中文乱码bug，已更改永久链接格式</p>            </div></div></div></div>
+
+
 <div class="timenode"><div class="meta"><p><p>2022-04-13</p>
-</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复和CDN加速</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>本站已加入又拍云联盟，站点已进行CDN加速</p>            </div></div></div></div>
+</p></div><div class="body"><div class="note "><p><strong>更新日志：bug修复和CDN加速</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>修复主页轮播图片加载超出阈值导致的空白bug，已优化加载方式</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>本站已加入又拍云联盟，站点已进行CDN加速</p>            </div><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>发表日志：小破站正式对外开放啦！</p>            </div></div></div></div>
 
 
 <div class="timenode"><div class="meta"><p><p>2022-04-12</p>
@@ -3122,10 +3126,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-13T22:25:46+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-14T14:58:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月13日</p>
+    <p>更新于：2022年4月14日</p>
   </a>
 </div>
 
@@ -3570,7 +3574,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649909219616.js"></script>
+<script src="/js/app.js?time=1649919541825.js"></script>
 
 
 
@@ -3754,7 +3758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649909219616')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649919541825')</script>
 
 
 
@@ -3884,19 +3888,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649909219616")
+        volantis.js("/js/plugins/sites.js?time=1649919541825")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649909219616")
+        volantis.js("/js/plugins/friends.js?time=1649919541825")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649909219616")
+        volantis.js("/js/plugins/contributors.js?time=1649919541825")
       }
     
   };
@@ -3965,7 +3969,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1649909219616')
+    await volantis.js('/js/plugins/aplayer.js?time=1649919541825')
   
   })();
 
@@ -4090,7 +4094,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649909219616");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1649919541825");
   }
 
   function loadSearchService() {
@@ -4430,7 +4434,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1649909219616').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1649919541825').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
