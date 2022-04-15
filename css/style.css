@@ -982,6 +982,13 @@ footer.footer a.social:hover {
   color: #ff5722;
   background: rgba(255,87,34,0.1);
 }
+@media screen and (max-width: 560px) {
+  footer.footer .footerMax560 {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
 footer.footer .copyright {
   margin-top: 16px;
 }
@@ -7575,6 +7582,41 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 .post.post-v3.white-box a {
   font-weight: 600 !important;
+}
+@media screen and (max-width: 500px) {
+  #safearea {
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  #safearea .body-wrapper {
+    padding: 0;
+  }
+  #safearea #l_main article#comments,
+  #safearea #l_main article#friends,
+  #safearea #l_main article#post,
+  #safearea #l_main article#page,
+  #safearea #l_main article#arc {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  #safearea #l_main article#cat,
+  #safearea #l_main article#tag {
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  #safearea #l_main .post-wrapper {
+    margin: 0 0 16px;
+  }
+  #safearea #l_main .post-wrapper .post {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  #safearea #l_side .widget.mobile {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
 }
 .l_header {
   position: fixed;
