@@ -4,8 +4,8 @@
   <meta name="generator" content="Hexo 6.1.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/categories/个人主页/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/04/15/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -26,14 +26,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>分类：个人主页 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.html">
+  <title>转录组数据分析笔记（2）——使用Hisat2比对参考基因组 - 我的小破站</title>
+  <meta name="keywords" content="hisat2,null">
+  <meta name="description" content="1 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令： $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome -p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关genome # 命名的索引文件名，可以改成自己能找到的  就可以在当前目录建立">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转录组数据分析笔记（2）——使用Hisat2比对参考基因组">
+<meta property="og:url" content="http://www.shelven.com/2022/04/15/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="1 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令： $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome -p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关genome # 命名的索引文件名，可以改成自己能找到的  就可以在当前目录建立">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-04-15T08:53:41.000Z">
+<meta property="article:modified_time" content="2022-04-15T10:23:15.779Z">
+<meta property="article:tag" content="hisat2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2964,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3026,25 +3031,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/13/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/15/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3053,68 +3042,342 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/13/a.html"  itemprop="url">
-        小破站正式对外开放啦！
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言咳咳，经过10天左右紧张地准备，小站今天正式对外开放啦！作为第一次运行个人网站的小白，看着网站从零开始在自己手上慢慢展现一个个页面，实现一个个功能，这种成就感和激动感，让我感觉这几天的熬夜狂肝还是值得的呜呜呜我的头发。
+    
+      <h1 class="title" itemprop="name headline">
+        转录组数据分析笔记（2）——使用Hisat2比对参考基因组
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
 
-建站过程为什么建站说是从零开始，其实也是站在前人搭建好的框架上才能顺利进行的。我很早之前就萌发了搭建个人网站的想法，自从这个学期开始学习生物信息学，我也慢慢对linux...
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-13T22:29:14+08:00">2022-04-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">个人主页</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" itemprop="url"><span itemprop="name">个人主页</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-15T16:53:41+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年4月15日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.6k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：5 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/13/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="转录组数据分析笔记（2）——使用Hisat2比对参考基因组" data-path="/2022/04/15/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="1-建立参考基因组索引"><a href="#1-建立参考基因组索引" class="headerlink" title="1 建立参考基因组索引"></a>1 建立参考基因组索引</h2><div class="story post-story"><p>在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：</p>
+<p><code>$ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome</code></p>
+<div class="note info"><p>-p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关<br >genome # 命名的索引文件名，可以改成自己能找到的</p></div>
+
+<p>就可以在当前目录建立参考基因组索引文件，hisat2固定会生成8个以.ht2做后缀名的索引文件，如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE2022dhkdk041tweaaeheqhh.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE2022dhkdk041tweaaeheqhh.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>需要注意的一点，比对软件除了hiasat2以外，还有subjunk、bwa、bowtie2等等，<strong>各个比对软件生成的索引文件是不同的</strong>，不能相互混用，命名的时候注意区分各种比对工具。</p>
+</div><h2 id="2-clean-data与参考基因组比对"><a href="#2-clean-data与参考基因组比对" class="headerlink" title="2 clean data与参考基因组比对"></a>2 clean data与参考基因组比对</h2><div class="story post-story"><p>比对的意思是将每一个read与参考基因组序列进行对比，目的是得到每一个read在参考基因组上的位置信息，有了这个基础的位置信息才可以进行后续基因或者转录本的定量，最终由定量结果做差异表达矩阵，分析上调或者下调的基因数量。</p>
+<p>新建一个shell脚本输入下面的代码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">！ bin/bash</span></span><br><span class="line">for i in `seq 194 209`</span><br><span class="line">do</span><br><span class="line">    hisat2 -p 4 -x /media/sf_example/data/ref/genome \  #索引文件绝对路径</span><br><span class="line">    -1 /media/sf_example/data/clean_data/ERR1698&quot;$i&quot;_1.fq.gz \</span><br><span class="line">    -2 /media/sf_example/data/clean_data/ERR1698&quot;$i&quot;_2.fq.gz \</span><br><span class="line">    -S /media/sf_example/data/hisat2_sam/ERR1698&quot;$i&quot;.sam    #注意大写的S</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<div class="note info"><p>-p # 同样是配置线程数<br >-x # 指定索引文件，需要定义索引文件名称，不能加后缀，不能只定义到索引文件所在目录<br >-1 # 第一端测序数据文件<br >-2 # 第二端测序数据文件<br >-S # 指定输出目录和文件，不指定会刷屏，<strong>注意是大写的S</strong></p></div>
+
+<p>输出到屏幕的结果如下，我们选取其中一个进行解读：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415150423.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415150423.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>共有6166091对测序数据，都是双侧测序数据，其中：</p>
+<div class='checkbox'><input type="checkbox" />
+            <p>65259 (1.06 %) aligned concordantly 0 times： read1 和 read2 没有合理比对上参考基因组序列的有65259对，占1.06%</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>5698903 (92.42 %) aligned concordantly exactly 1 time： read1 和 read2 只有一条比对上参考基因组序列的有5698903对，占92.42%，<strong>这部分reads数需要占测序reads的绝大多数才正常</strong></p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>401929 (6.52 %) aligned concordantly &gt;1 times： read1 和 read2 可以同时比对到多个地方的有401929对，占6.52%</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>65259对没有合理比对上的序列中，55871对可以不合理地比对上一次</p>
+            </div>
+<p>最后一块是对两条链拆开比对的结果，这个一般用不到，本来测序的两条reads就应该比对到同一个染色体同一个基因附近，拆开比对到不同染色体没有意义。我们要看的是最后一句话，总比对率为99.97%，通常比对率大于**90%**说明比对情况较好，与参考基因组基本吻合。</p>
+</div><h2 id="3-sam文件解读"><a href="#3-sam文件解读" class="headerlink" title="3. sam文件解读"></a>3. sam文件解读</h2><div class="story post-story"><p>比对结果除了有屏幕上输出的总体报告外，还有记录详细比对结果的sam文件。双端测序的比对会将两个测序文件进行整合和比较，最后只生成一个sam文件，因此这个sam文件非常大，hisat2比对生成的sam文件可以直接打开。我们可以选取一部分进行解读。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415153505.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415153505.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><strong>@HD VN:1.0 SO:unsorted （排序类型）</strong></p>
+<p>VN是格式版本；SO表示比对排序的类型，有unknown，unsorted，queryname和coordinate几种。samtools软件在进行行排序后不能自动更新sam文件的SO值。</p>
+<p><strong>@SQ SN:1 LN:30427671 （序列ID及长度）</strong></p>
+<p>参考序列名，这些参考序列决定了比对结果sort的顺序，SN是参考序列名；LN是参考序列长度；每个参考序列为一行。这里表示拟南芥有5条染色体，对应长度都在后面，Mt是线粒体基因，Pt是叶绿体基因。</p>
+<p><strong>@PG ID:hisat2  PN:hisat2  VN:2.2.1 （比对所使用的软件及版本</strong>）</p>
+<p>这里包括了路径，方法，以及我质控后的序列长度（50-100）等详细信息。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415154521.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220415154521.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>接下来每行都是一长串，显示的是比对结果部分，每一行表示一个片段的比对信息，11个字段（列）包括：</p>
+<div class='checkbox'><input type="checkbox" />
+            <p>第一列：QNAME：测序出来的reads序列数据名，ERR1698194.2</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第二列：FLAG：表明比对类型：paring，strand，mate strand等</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第三列：RNAME：参考基因组的染色体名，我这里是第1条染色体</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第四列：POS：比对到这个染色的具体位置，4969</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第五列：MAPQ：比对质量，是一个衡量比对好坏的打分结果，60最好</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第六列：CIGAR：简要比对信息表达式，1S100M是第1个碱基切除，100个匹配</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第七列：RNEXT：另一个序列比对上的参考序列编号，没有另外的片段是*，同一个片段&#x3D;</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第八列：MPOS：另一个序列匹配的染色体具体位置，这里一样也是4969</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第九列：TLEN：配对片段长度，最左边的为正，最右边的为负</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第十列：SEQ：和参考序列在同一个链上比对的序列</p>
+            </div>
+<div class='checkbox'><input type="checkbox" />
+            <p>第十一列：QUAL：比对序列的质量和reads碱基质量值</p>
+            </div>
+
+<p>后面提供额外的信息，一般不重要，了解一下就行。因为sam文件太大（往往有10G以上），也不适合电脑进行后续处理，所以我们会用到samtools，将sam文件转化为更适合电脑处理的二进制bam文件。这个后面会讲。</p>
+</div><h2 id="4-其他比对软件"><a href="#4-其他比对软件" class="headerlink" title="4. 其他比对软件"></a>4. 其他比对软件</h2><div class="story post-story"><p>以下4种软件均用于序列比对，用法稍有不同，做个记录</p>
+<p>hisat2 -p 4 -x 索引目录 -1 单端测序数据文件 -2 另一端测序数据文件 -S 输出文件</p>
+<p>subjunk -T 4 -i 索引目录 -r 单端测序数据文件 -R 另一端测序数据文件 -o 输出文件</p>
+<p>bowtie2 -p 4 -x 索引目录 -1 单端测序数据文件 -2 另一端测序数据文件 -S 输出文件</p>
+<p>bwa mem -t 4 -M 索引目录 单端测序数据文件 另一端测序数据文件 &gt; 输出文件</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/15/a.html>http://www.shelven.com/2022/04/15/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-15T18:23:15+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年4月15日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hisat2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>hisat2</p></a></div>
+  <span hidden itemprop="keywords">hisat2</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/15/a.html&title=转录组数据分析笔记（2）——使用Hisat2比对参考基因组 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/15/a.html&title=转录组数据分析笔记（2）——使用Hisat2比对参考基因组 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/15/a.html&title=转录组数据分析笔记（2）——使用Hisat2比对参考基因组 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/04/14/a.html'>
+          <p class='title'>转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meri...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/04/15/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3122,203 +3385,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BB%BA%E7%AB%8B%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%B4%A2%E5%BC%95"><span class="toc-text">1 建立参考基因组索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-clean-data%E4%B8%8E%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%AF%94%E5%AF%B9"><span class="toc-text">2 clean data与参考基因组比对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-sam%E6%96%87%E4%BB%B6%E8%A7%A3%E8%AF%BB"><span class="toc-text">3. sam文件解读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E6%AF%94%E5%AF%B9%E8%BD%AF%E4%BB%B6"><span class="toc-text">4. 其他比对软件</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>3 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>5.5k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-04-15 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3343,14 +3441,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="转录组数据分析笔记（2）——使用Hisat2比对参考基因组";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4581,7 +4680,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/个人主页/","name":"个人主页"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/15/a.html","name":"转录组数据分析笔记（2）——使用Hisat2比对参考基因组"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（2）——使用Hisat2比对参考基因组","description":"","datePublished":"2022-04-15T08:53:41.000Z","dateModified":"2022-04-15T10:23:15.779Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/15/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/15/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"hisat2","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
