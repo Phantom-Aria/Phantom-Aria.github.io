@@ -4,8 +4,8 @@
   <meta name="generator" content="Hexo 6.1.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/categories/转录组数据分析/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/04/16/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -26,14 +26,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>分类：转录组数据分析 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
+  <title>转录组数据分析笔记（3）——samtools用法小结 - 我的小破站</title>
+  <meta name="keywords" content="samtools,null">
+  <meta name="description" content="1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件： 12345#! bin&#x2F;bashls *.sam | while read iddo    samtools sort -0 -@ 5 -o $(bas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转录组数据分析笔记（3）——samtools用法小结">
+<meta property="og:url" content="http://www.shelven.com/2022/04/16/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件： 12345#! bin&#x2F;bashls *.sam | while read iddo    samtools sort -0 -@ 5 -o $(bas">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-04-16T10:41:24.000Z">
+<meta property="article:modified_time" content="2022-04-16T10:49:01.465Z">
+<meta property="article:tag" content="samtools">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2964,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3026,28 +3031,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
@@ -3057,209 +3042,297 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/16/a.html"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         转录组数据分析笔记（3）——samtools用法小结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
     
-      
-        1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件：
-12345#! bin/bashls *.sam | while read iddo    samtools sort -0 -@ 5 -o $(...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-16T18:41:24+08:00">2022-04-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-16T18:41:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年4月16日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.1k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/16/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="转录组数据分析笔记（3）——samtools用法小结" data-path="/2022/04/16/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="1-sam文件转化bam"><a href="#1-sam文件转化bam" class="headerlink" title="1. sam文件转化bam"></a>1. sam文件转化bam</h2><div class="story post-story"><p>bam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">! bin/bash</span></span><br><span class="line">ls *.sam | while read id</span><br><span class="line">do</span><br><span class="line">    samtools sort -0 -@ 5 -o $(basename $id &quot;.sam&quot;).bam $id     # 指定输出文件，改后缀.bam</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>运行脚本，将当前目录的sam文件全转换成bam文件并排序（<strong>这里的排序不是按名称，用HTseq还要再按照read名称排序，使用参数-n）</strong>。</p>
+<div class="note info"><p>samtools sort # 对bam文件进行排序（sam文件排序不会变）<br > -0 # 设置输出文件压缩等级，0-9，0是不压缩,9是最高等级压缩<br > -@ # 设置线程数<br > -o # 设置排序后输出的文件名<br > 最后接输入的bam或者sam格式文件</p></div>
+
+</div><h2 id="2-构建索引文件"><a href="#2-构建索引文件" class="headerlink" title="2. 构建索引文件"></a>2. 构建索引文件</h2><div class="story post-story"><h3 id="2-1-构建bam文件索引"><a href="#2-1-构建bam文件索引" class="headerlink" title="2.1 构建bam文件索引"></a>2.1 构建bam文件索引</h3><p>在bam文件目录下，<strong>排序后</strong>的bam文件可以建立索引：</p>
+<p><code>$ ls *.bam | xargs -i samtools index &#123;&#125;</code></p>
+<p>注意下xargs -i的用法，和管道不一样，是传递参数给后一个命令的花括号中，后一个命令中不存在歧义的时候可省略参数-i和花括号。</p>
+<p>如图生成的bai文件就是索引文件。其实到了这一步，前面的sam文件就可以删除（节省电脑空间），只留下bam文件就行，bam文件无法直接查看，可以通过samtools view命令查看bam文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416174957.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416174957.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="2-2-构建参考基因组fa文件索引"><a href="#2-2-构建参考基因组fa文件索引" class="headerlink" title="2.2 构建参考基因组fa文件索引"></a>2.2 构建参考基因组fa文件索引</h3><p>在参考基因组文件目录下，对参考基因组的fa文件建立索引：</p>
+<p><code>$ samtools faidx Arabidopsis_thaliana.dna.genome.fa</code></p>
+<p>参考基因组文件名注意改成自己的，生成的索引文件是.fai结尾的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416180041.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416180041.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</div><h2 id="3-bam文件qc质控"><a href="#3-bam文件qc质控" class="headerlink" title="3. bam文件qc质控"></a>3. bam文件qc质控</h2><div class="story post-story"><p>samtools转化生成的bam文件需要进行质控，看看比对情况如何。在bam文件目录下，我们创建一个samtools自带qc质控指令samtools flagstat运行脚本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">! bin/bash</span></span><br><span class="line">ls *.bam | while read id</span><br><span class="line">do</span><br><span class="line">    samtools flastat -@ 4 $id &gt; $(basename $id &quot;.bam&quot;).flagstat     # 自定义输出文件</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p><code>$ samtools flagstat bam文件 &gt; 输出文件     # 这种格式，其他参数都一样</code> </p>
+<p>运行脚本文件可以获得16个.flagstat质控文件，和fastqc一样，我们还可以做完后用multiqc命令集合成一个html格式的总的qc报告网页。和fastqc不同之处是，fastqc是做下机数据质控，samtools是做比对参考基因组的质控。如下图所示，可以比较直观地看出大部分reads都是map上的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E5%B7%A5%E5%95%86%E9%87%91%E8%9E%8D%E7%95%8C.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E5%B7%A5%E5%95%86%E9%87%91%E8%9E%8D%E7%95%8C.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>生成的每一个flagstat文件我们也可以直接点开。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416181848.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416181848.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>每一行统计数据都是以通过QC的reads数量和未通过QC的reads数量组成，以我点开的这个文件为例，主要信息有以下几个：</p>
+<div class="note info"><p>13992629个reads都是合格的<br > 12328290个reads只比对到参考基因组一个位置上<br > 13988737个reads比对到参考基因组（99.97%）<br > 12332182个reads是成对的<br > 12201338个reads可以正确配对（98.94%）<br > 2846条reads成对但只有一条能比对上参考基因组<br > 12398个配对的reads可以比对到别的染色体上</p></div>
+
+<p>可以自己将所有的flagstat运行结束后的文件放在一个目录下，运用paste命令全部按列粘贴在一起，用cut或者awk提取所需的列数据自己做比对情况表格，这里不再赘述。</p>
+</div><h2 id="4-samtools其他指令"><a href="#4-samtools其他指令" class="headerlink" title="4. samtools其他指令"></a>4. samtools其他指令</h2><div class="story post-story"><p>简单介绍一下：</p>
+<p><code>$ samtools view ERR1698194.bam     #查看bam文件（不能直接cat查看二进制文件）</code></p>
+<p><code>$ samtools tview ERR1698194.bam    #类似于IGV这种基因组浏览器，但是非交互式界面（下图）不直观，我们一般都是用IGV查看基因组</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416182944.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220416182944.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>其他还有samtools merge（合并所有bam文件到一个文件），samtools depth（得到每个碱基位点或者区域的测序深度,并输出到标准输出）等等，不是特别常用，这里就不介绍了。</p>
+<p>在步骤2中构建的索引文件可以导入IGV中，对转录组每个read mapping情况进行可视化浏览，下个笔记将介绍IGV的用法。</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/16/a.html>http://www.shelven.com/2022/04/16/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-16T18:49:01+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年4月16日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/15/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/samtools/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>samtools</p></a></div>
+  <span hidden itemprop="keywords">samtools</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/16/a.html&title=转录组数据分析笔记（3）——samtools用法小结 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/16/a.html&title=转录组数据分析笔记（3）——samtools用法小结 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/16/a.html&title=转录组数据分析笔记（3）——samtools用法小结 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/04/15/a.html'>
+          <p class='title'>转录组数据分析笔记（2）——使用Hisat2比对参考基因组<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：
+$ hisat2-build Arabidop...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/04/16/a.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/15/a.html"  itemprop="url">
-        转录组数据分析笔记（2）——使用Hisat2比对参考基因组
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：
-$ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
--p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关genome # 命名的索引文件名，可以改成自己能找到的
+    <div id="layoutHelper-comments"></div>
 
-就可以在当前...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-15T16:53:41+08:00">2022-04-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/15/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/14/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/14/a.html"  itemprop="url">
-        转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-14T21:13:35+08:00">2022-04-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/14/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3267,203 +3340,38 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-sam%E6%96%87%E4%BB%B6%E8%BD%AC%E5%8C%96bam"><span class="toc-text">1. sam文件转化bam</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9E%84%E5%BB%BA%E7%B4%A2%E5%BC%95%E6%96%87%E4%BB%B6"><span class="toc-text">2. 构建索引文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%9E%84%E5%BB%BAbam%E6%96%87%E4%BB%B6%E7%B4%A2%E5%BC%95"><span class="toc-text">2.1 构建bam文件索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%84%E5%BB%BA%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84fa%E6%96%87%E4%BB%B6%E7%B4%A2%E5%BC%95"><span class="toc-text">2.2 构建参考基因组fa文件索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-bam%E6%96%87%E4%BB%B6qc%E8%B4%A8%E6%8E%A7"><span class="toc-text">3. bam文件qc质控</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-samtools%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4"><span class="toc-text">4. samtools其他指令</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>4 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>6.5k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-04-16 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3488,14 +3396,15 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="转录组数据分析笔记（3）——samtools用法小结";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4726,7 +4635,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/16/a.html","name":"转录组数据分析笔记（3）——samtools用法小结"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（3）——samtools用法小结","description":"","datePublished":"2022-04-16T10:41:24.000Z","dateModified":"2022-04-16T10:49:01.465Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/16/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"samtools","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
