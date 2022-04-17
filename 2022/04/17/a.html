@@ -6,8 +6,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/tags/igv/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/04/17/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,14 +28,20 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：IGV - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/tags/IGV/index.html">
+  <title>转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站</title>
+  <meta name="keywords" content="stringtie,prepDE.py3,null">
+  <meta name="description" content="stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。 在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数-e，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转录组数据分析笔记（5）——stringtie转录本组装和定量">
+<meta property="og:url" content="http://www.shelven.com/2022/04/17/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。 在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数-e，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-04-17T15:14:21.000Z">
+<meta property="article:modified_time" content="2022-04-17T15:22:03.434Z">
+<meta property="article:tag" content="stringtie">
+<meta property="article:tag" content="prepDE.py3">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2966,7 +2972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3028,25 +3034,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/b.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/17/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3055,71 +3045,319 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/16/b.html"  itemprop="url">
-        转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。
-直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        转录组数据分析笔记（5）——stringtie转录本组装和定量
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-16T19:32:50+08:00">2022-04-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-17T23:14:21+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年4月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.9k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：7 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/16/b.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="转录组数据分析笔记（5）——stringtie转录本组装和定量" data-path="/2022/04/17/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="stringtie转录本组装和定量"><a href="#stringtie转录本组装和定量" class="headerlink" title="stringtie转录本组装和定量"></a>stringtie转录本组装和定量</h2><div class="story post-story"><h3 id="1-转录本组装"><a href="#1-转录本组装" class="headerlink" title="1 转录本组装"></a>1 转录本组装</h3><p>Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过<strong>排序</strong>的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。</p>
+<p>在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 <strong>- e</strong>，我之前跑了一遍流程没有加参数-e，结果组装的结果非常差，还有大量的未注释的基因。我请教了度娘，网上的教程攻略也都是抄来抄去的没解决什么问题，官网只有这么一句解释：</p>
+<blockquote>
+<p>-e    this option directs StringTie to operate in expression estimation mode; this limits the processing of read alignments to estimating the coverage of the transcripts given with the <code>-G</code> option (hence this option requires <code>-G</code>).</p>
+</blockquote>
+<p>对于加了参数-e之后如何做的比对和组装处理还是不明了，不知道表达评估模式的原理是什么，只能自己做个大概的总结（不知正确与否）：</p>
+<div class="note "><p><strong></strong></p><ol><li>如果我们研究的样本没有很好的注释信息，研究的人少，现有的注释信息都不完善，那么我们就需要重建转录本进行注释，这个时候就不需要加参数-e。</li><li>如果样品的注释信息非常完整，比如拟南芥这种模式生物，我们不需要重建新的转录本进行注释，只对现有的参考基因组注释文件就足够了，那就要用-e参数，不需要预测新的转录本。</div></li>
+</ol>
+<p>-e参数还有个比较重要的地方，<strong>只有用了-e参数后，才可以运行prepDE.py3脚本得到read count矩阵</strong>（也就是进行定量），这个脚本后面会说。</p>
+<hr>
+<p>我们首先创建一个shell脚本进行转录本组装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">! bin/bash</span></span><br><span class="line">for i in `seq 194 209`</span><br><span class="line">do</span><br><span class="line">    stringtie -p 4 -e \</span><br><span class="line">    -G /media/sf_/data/ref/Arabidopis_thaliana.gtf \    # 参考基因组注释文件</span><br><span class="line">    -o /media/sf_/data/fastq/gtf/ERR1698&quot;$i&quot;.gtf \      # 自定义输出文件</span><br><span class="line">    /media/sf_/data/fastq/bam/ERR1698&quot;$i&quot;.bam   # 输入的bam文件</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>保存，运行，我们可以得到.gtf格式文件，less一下查看里面的内容：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220417215153.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/QQ%E6%88%AA%E5%9B%BE20220417215153.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我们这里因为加了参数-e，不会有新的基因和转录本，可以看到每个read比对上的基因的信息。（不加参数-e会组装<strong>新基因和转录本</strong>，默认采用STRG加数字编号进行区分）。每行数据会给出<strong>coverage</strong>，<strong>FPKM</strong>和<strong>TPM</strong>三个信息，后两者都可以用来定量。FPKM和TPM都是对read counts数目进行的标准化，如果是单端测序数据可以用RPKM进行标准化，不进行数据标准化的比较是没有意义的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/ethwtjyj.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/ethwtjyj.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E6%96%87gnwn%E5%8C%96%E4%B8%BA.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E6%96%87gnwn%E5%8C%96%E4%B8%BA.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E6%B8%B8%E5%AE%A2%E4%BD%93sfns%E9%AA%8C%E7%9C%8B%E5%9B%BE.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E6%B8%B8%E5%AE%A2%E4%BD%93sfns%E9%AA%8C%E7%9C%8B%E5%9B%BE.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<hr>
+<h3 id="2-合并转录本"><a href="#2-合并转录本" class="headerlink" title="2 合并转录本"></a>2 合并转录本</h3><p>将所有的转录本组装完毕后，我们需要<strong>合并</strong>所有的转录本的组装结果，得到一个非冗余的转录本合集，也就是获得跨多个RNA-seq样品的全局的转录本。这里需要分两步：</p>
+<p><code>$ ls *.gtf &gt; mergelist.txt     # 将所有组装的转录本文件名合并到一个文件</code></p>
+<p><code>$ stringtie --merge -p 4 -G /media/sf_/data/ref/Arabidopis_thaliana.gtf -o merge.gtf ./mergelist.txt   #这一步是用--merge指令将所有转录本合并输出到merge.gtf文件中</code></p>
+<p>我们最后得到的merge.gtf就是全局的转录本，从而进行raw count定量。</p>
+<hr>
+<h3 id="3-获得定量表达矩阵"><a href="#3-获得定量表达矩阵" class="headerlink" title="3 获得定量表达矩阵"></a>3 获得定量表达矩阵</h3><p>DESeq2要求输入的定量结果为raw count形式，raw count是根据mapping到基因或转录本的reads数计算得到，而stringtie只提供了转录本水平的表达量，定量方式包括TPM和FPKM值两种。为了进行raw count定量，stringtie官方提供了prepDE.py脚本（两个版本，我选择的python 3版本，在我base环境下不会冲突），可以计算出raw count的表达量。</p>
+<p>下载这个python脚本，如果你用的是windows浏览器，在官网找到脚本直接右键复制链接，用wget直接下到linux系统里，<strong>千万不要在windows上直接复制粘贴代码过去</strong>。因为windows的换行符和linux的不一样，两个系统间直接粘贴代码会出现错行和莫名其妙的缩进导致程序报错（可以用cat -A看两个系统换行符的区别，血的教训，排查了老半天才发现）推荐用prepDE.py3，不用再切python 2 的环境了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/stjssjrsjjjjs.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/stjssjrsjjjjs.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>官方给出的prepDE.py脚本有两种运行方式（如下图所示），一种是建立Ballgown能识别的目录结构，一种是建立sample_lst文件并指定所有样品数据的路径。两种方法都可行，Ballgown现在用的比较少，比较主流的还是Stringtie+DESeq2的分析方法。演示一下如何创建sample_lst和解释一下这个文件要求的格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/46uij.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/46uij.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h4 id="3-1-sample-lst文件准备"><a href="#3-1-sample-lst文件准备" class="headerlink" title="3.1 sample_lst文件准备"></a>3.1 sample_lst文件准备</h4><p>简单来说，sample_list要求第一列为样品编号，第二列为对应编号的样品gtf文件所在路径，中间用<strong>制表符tab</strong>隔开，如下图（命名不一定要完全一样，只要当前目录有这个txt文件就行）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417223633.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417223633.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>这个文件准备工作比较简单，不再赘述</p>
+<h4 id="3-2-运行prepDE-py3"><a href="#3-2-运行prepDE-py3" class="headerlink" title="3.2 运行prepDE.py3"></a>3.2 运行prepDE.py3</h4><p>将prepDE.py3脚本放在上面gtf文件的目录下，运行以下命令：</p>
+<p><code>$ python prepDE.py3 -i merge.gtf -g gene_count_matrix.csv -t transcript_count_matrix.csv</code></p>
+<p>解释一下：</p>
+<div class="note "><p><strong>参数含义</strong></p><p>-i  # 输入文件，就是前面合并的转录本<br>-g  # 自定义基因组表达矩阵名字，默认也是gene_count_matrix.csv<br>-t  # 自定义转录本表达矩阵名字，默认也是transcript_count_matrix.csv</p></div>
+<p>得到的这两个文件就是基因和转录水平的raw count表达量矩阵，我们都可以用于后面的DESeq2分析。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225037.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225037.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<hr>
+</div><h2 id="4-制作样本列表矩阵"><a href="#4-制作样本列表矩阵" class="headerlink" title="4. 制作样本列表矩阵"></a>4. 制作样本列表矩阵</h2><div class="story post-story"><p>这里需要和前面为了运行prepDE.py脚本而制作的sample_lst文件区分开，要做下一步DESeq2差异基因分析，我们需要自己手动创建一个DESeq2能识别的样本列表矩阵，包含两列信息：一列是样本名称，一列是样本分组。样本分组信息我们可以直接从下载样本数据的地方（EBI官网）得到，只需要自己改一下格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225800.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225800.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>下载之后发现第一行标题特别长，稍微处理下制表符替换成换行符，将第一行标题拆分成每个字段一行的格式，找一下不同天数处理的分组信息关键字“time”，发现我们要的分组信息在第36行（也就是原来文件的第36列）：</p>
+<p><code>$ head -n1 E-MTAB-5130.sdrf.txt | tr &#39;\t&#39; &#39;\n&#39; | nl | grep &quot;time&quot;</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225856.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225856.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>同样的方法找样本信息所在列是32列：</p>
+<p><code>$ head -n1 E-MTAB-5130.sdrf.txt | tr &#39;\t&#39; &#39;\n&#39; | nl | grep &quot;ENA&quot;</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225952.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417225952.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>所以我们需要提取第32列和第36列，用cut命令切割并重定向到新的文件sample_list:</p>
+<p><code>$ cut -f 32,36 E-MTAB-5130.sdrf.txt &gt; sample_list.csv</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417230231.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417230231.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>发现相邻数据有重复，uniq删除重复行，再用sed替换制表符为逗号（因为csv文件就是以逗号作为分隔符），将原来的sample_list.csv覆盖，vim手动修改一下第一行名字，完成后就可以用于DESeq2分析了！</p>
+<p><code>$ uniq sample_list.csv &gt; sample_list1.csv  # uniq删除重复行</code></p>
+<p><code>$ sed &#39;s/\t/,/g&#39; sample_list1.csv &gt; sample_list .csv   # 替换制表符为逗号</code></p>
+<p>手动修改sample_list .csv第一行内容，修改之后如下即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417231146.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417231146.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/17/a.html>http://www.shelven.com/2022/04/17/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-17T23:22:03+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年4月17日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/stringtie/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>stringtie</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/prepDE-py3/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>prepDE.py3</p></a></div>
+  <span hidden itemprop="keywords">stringtie prepDE.py3</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/04/16/b.html'>
+          <p class='title'>转录组数据分析笔记（4）——IGV基因组浏览器安装和解读<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/04/17/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3127,203 +3365,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(5)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#stringtie%E8%BD%AC%E5%BD%95%E6%9C%AC%E7%BB%84%E8%A3%85%E5%92%8C%E5%AE%9A%E9%87%8F"><span class="toc-text">stringtie转录本组装和定量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BD%AC%E5%BD%95%E6%9C%AC%E7%BB%84%E8%A3%85"><span class="toc-text">1 转录本组装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%88%E5%B9%B6%E8%BD%AC%E5%BD%95%E6%9C%AC"><span class="toc-text">2 合并转录本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%8E%B7%E5%BE%97%E5%AE%9A%E9%87%8F%E8%A1%A8%E8%BE%BE%E7%9F%A9%E9%98%B5"><span class="toc-text">3 获得定量表达矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-sample-lst%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="toc-text">3.1 sample_lst文件准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E8%BF%90%E8%A1%8CprepDE-py3"><span class="toc-text">3.2 运行prepDE.py3</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%B6%E4%BD%9C%E6%A0%B7%E6%9C%AC%E5%88%97%E8%A1%A8%E7%9F%A9%E9%98%B5"><span class="toc-text">4. 制作样本列表矩阵</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>6 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>9.4k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-04-17 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3348,14 +3421,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="转录组数据分析笔记（5）——stringtie转录本组装和定量";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4586,7 +4660,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/tags/IGV/","name":"IGV"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/17/a.html","name":"转录组数据分析笔记（5）——stringtie转录本组装和定量"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（5）——stringtie转录本组装和定量","description":"","datePublished":"2022-04-17T15:14:21.000Z","dateModified":"2022-04-17T15:22:03.434Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"stringtie,prepDE.py3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
