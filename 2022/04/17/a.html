@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1650478718329" as="style">
+  <link rel="preload" href="/css/style.css?time=1650642489864" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-17T15:14:21.000Z">
-<meta property="article:modified_time" content="2022-04-19T17:05:56.688Z">
+<meta property="article:modified_time" content="2022-04-22T14:51:33.305Z">
 <meta property="article:tag" content="stringtie">
 <meta property="article:tag" content="prepDE.py3">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1650478718329" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1650478718329"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1650642489864" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1650642489864"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1650478718329","sites":"/js/plugins/sites.js?time=1650478718329","friends":"/js/plugins/friends.js?time=1650478718329","parallax":"/js/plugins/parallax.js?time=1650478718329","rightMenu":"/js/plugins/rightMenu.js?time=1650478718329","contributors":"/js/plugins/contributors.js?time=1650478718329","message":"/js/thirdparty/message.js?time=1650478718329","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650478718329"},"css":{"style":"/css/style.css?time=1650478718329","message":"/css/message.css?time=1650478718329"}},
+    cdn: {"js":{"app":"/js/app.js?time=1650642489864","sites":"/js/plugins/sites.js?time=1650642489864","friends":"/js/plugins/friends.js?time=1650642489864","parallax":"/js/plugins/parallax.js?time=1650642489864","rightMenu":"/js/plugins/rightMenu.js?time=1650642489864","contributors":"/js/plugins/contributors.js?time=1650642489864","message":"/js/thirdparty/message.js?time=1650642489864","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650642489864"},"css":{"style":"/css/style.css?time=1650642489864","message":"/css/message.css?time=1650642489864"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650478718329),
+    lastupdate: new Date(1650642489864),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3102,7 +3102,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1.9k 字</p>
+      <p>字数：2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3197,6 +3197,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>$ sed &#39;s/\t/,/g&#39; sample_list1.csv &gt; sample_list .csv   # 替换制表符为逗号</code></p>
 <p>手动修改sample_list .csv第一行内容，修改之后如下即可</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417231146.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220417231146.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><strong>更新2022&#x2F;4&#x2F;22：这里的处理仅仅是做到符合DESeq2输入的格式，在进行两组样本基因表达差异分析的时候，还需要分别建立两两比对的样本列表矩阵和定量矩阵，不然差异分析没有意义，详见DESeq2笔记</strong></p>
 
 </div>
   </div>
@@ -3238,10 +3239,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-20T01:05:56+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-22T22:51:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月20日</p>
+    <p>更新于：2022年4月22日</p>
   </a>
 </div>
 
@@ -3567,7 +3568,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1650478718329.js"></script>
+<script src="/js/app.js?time=1650642489864.js"></script>
 
 
 
@@ -3751,7 +3752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1650478718329')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1650642489864')</script>
 
 
 
@@ -3881,19 +3882,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1650478718329")
+        volantis.js("/js/plugins/sites.js?time=1650642489864")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1650478718329")
+        volantis.js("/js/plugins/friends.js?time=1650642489864")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1650478718329")
+        volantis.js("/js/plugins/contributors.js?time=1650642489864")
       }
     
   };
@@ -3962,7 +3963,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1650478718329')
+    await volantis.js('/js/plugins/aplayer.js?time=1650642489864')
   
   })();
 
@@ -4087,7 +4088,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650478718329");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650642489864");
   }
 
   function loadSearchService() {
@@ -4427,7 +4428,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1650478718329').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1650642489864').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4661,7 +4662,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/17/a.html","name":"转录组数据分析笔记（5）——stringtie转录本组装和定量"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（5）——stringtie转录本组装和定量","description":"","datePublished":"2022-04-17T15:14:21.000Z","dateModified":"2022-04-19T17:05:56.688Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"stringtie,prepDE.py3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/17/a.html","name":"转录组数据分析笔记（5）——stringtie转录本组装和定量"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（5）——stringtie转录本组装和定量","description":"","datePublished":"2022-04-17T15:14:21.000Z","dateModified":"2022-04-22T14:51:33.305Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"stringtie,prepDE.py3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
