@@ -6,8 +6,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/archives/2022/04/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/04/25/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,14 +28,21 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>归档：2022/4 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/archives/2022/04/index.html">
+  <title>转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图 - 我的小破站</title>
+  <meta name="keywords" content="R语言,ggplot2,ggrepel,null">
+  <meta name="description" content="1. 前言前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：  A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即FDR值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图">
+<meta property="og:url" content="http://www.shelven.com/2022/04/25/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="1. 前言前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：  A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即FDR值">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-04-24T20:53:27.000Z">
+<meta property="article:modified_time" content="2022-04-24T20:58:08.201Z">
+<meta property="article:tag" content="R语言">
+<meta property="article:tag" content="ggplot2">
+<meta property="article:tag" content="ggrepel">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2266,7 +2273,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2962,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3025,39 +3032,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/25/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
@@ -3067,698 +3042,318 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/25/a.html"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 前言前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
 
-A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即F...
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-25T04:53:27+08:00">2022-04-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-25T04:53:27+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年4月25日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.8k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：10 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/25/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图" data-path="/2022/04/25/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><div class="story post-story"><p>前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425005510.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425005510.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即FDR值）小于0.05筛选除差异表达基因，最后加上group列方便查看。</p>
+<p>到这里已经可以通过排序找到我们感兴趣的基因了，但是这样的数据不够直观，我们还可以用最著名的绘图R包ggplot2做个火山图。这里需要准备的绘图R包是<strong>ggplot2</strong>，还有添加标签的R包<strong>ggrepel</strong>。</p>
+<h3 id="1-2-两个注意点"><a href="#1-2-两个注意点" class="headerlink" title="1.2 两个注意点"></a>1.2 两个注意点</h3><p>什么是火山图就不多bb了，重要的是知道我们可以从火山图获得两个信息：差异表达倍数（FoldChange值）和统计学显著性的标志p值。为了更方便比较和作图，我们一般用<strong>log2FC</strong>代替Fold Change值并作为X轴数据，表示两样品（组）间表达量的比值，对其取以2为底的对数即为log2FC，一般默认取log2FC绝对值大于1为差异基因的筛选标准；用<strong>FDR</strong>（也就是padj值）代替pvalue，并取-log10（FDR）值作为Y轴，FDR是错误发现率，是pvalue值进行校正得到的。</p>
+<p>log2FC有正有负很好理解，可能有同学发现，有的基因明明有pvalue值，但是校正之后的FDR值却是NA，如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425013137.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425013137.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>查阅了<a target="_blank" rel="noopener" href="http://www.360doc.com/content/18/1007/19/51784026_792756710.shtml">一些资料</a>，当基因的在所有样本中表达量为0，则两个值都为NA；当read count数较低时，DESeq2进行Independent Filtering过滤了一部分可能造成假阳性的结果，此时padj值为NA。因此，这部分数据在做火山图的时候因为没有对应的Y值也会被过滤掉。</p>
+</div><h2 id="2-流程代码"><a href="#2-流程代码" class="headerlink" title="2. 流程代码"></a>2. 流程代码</h2><div class="story post-story"><p>这部分需要一点R语言基础，需要知道怎么改自己的参数。假设前面没有用dplyr包做差异筛选（做了也不影响，只是多一列数据而已）只用DESeq2跑了个结果，我们同样可以用ggplot2包做筛选，用ggrepel包美化做标签。继续用前面DESeq2生成的csv文件，流程代码如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;ggplot2&quot;</span><span class="punctuation">)</span></span><br><span class="line">gene <span class="operator">&lt;-</span> read.csv<span class="punctuation">(</span><span class="string">&quot;gene_0_1.csv&quot;</span><span class="punctuation">,</span> stringsAsFactors <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&lt;=</span> <span class="operator">-</span><span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;DOWN&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&gt;=</span> <span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;UP&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span><span class="built_in">abs</span><span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange<span class="punctuation">)</span> <span class="operator">&lt;</span> <span class="number">1</span> <span class="operator">|</span> gene<span class="operator">$</span>padj <span class="operator">&gt;=</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;NOT CHANGE&quot;</span> <span class="comment"># |代表或，和linux里的管道是完全不一样的。以上三步新建了一列GROUP，筛选并赋予了三个值。</span></span><br><span class="line">res <span class="operator">&lt;-</span> ggplot<span class="punctuation">(</span>gene<span class="punctuation">,</span>     <span class="comment"># ggplot数据来源，这里省略了data = 和mapping = </span></span><br><span class="line">       aes<span class="punctuation">(</span>x <span class="operator">=</span> log2FoldChange<span class="punctuation">,</span>      <span class="comment"># 表示映射关系，就是定义xy</span></span><br><span class="line">           y <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">           col <span class="operator">=</span> GROUP<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span>      <span class="comment"># 注意这里定义颜色用col，以GROUP值区分</span></span><br><span class="line">         geom_point<span class="punctuation">(</span>alpha <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">,</span>    <span class="comment"># ggplot做散点图，设置点透明度和大小</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">1</span><span class="punctuation">)</span> <span class="operator">+</span> </span><br><span class="line">         scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span><span class="string">&quot;blue&quot;</span><span class="punctuation">,</span><span class="string">&quot;grey&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                            limits <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;UP&quot;</span><span class="punctuation">,</span><span class="string">&quot;DOWN&quot;</span><span class="punctuation">,</span><span class="string">&quot;NOT CHANGE&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span>     <span class="comment"># 自定义颜色 </span></span><br><span class="line">         theme<span class="punctuation">(</span>panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span>    <span class="comment"># 去网格线</span></span><br><span class="line">               panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">&quot;black&quot;</span><span class="punctuation">,</span></span><br><span class="line">                                               fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span>   <span class="comment"># 去背景色，透明</span></span><br><span class="line">               plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>hjust <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">,</span>      <span class="comment"># 调整图标标题位置为中间</span></span><br><span class="line">               legend.key <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">               legend.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">               legend.position <span class="operator">=</span> <span class="string">&quot;right&quot;</span><span class="punctuation">)</span> <span class="operator">+</span>     <span class="comment"># 设置legend图标</span></span><br><span class="line">         geom_vline<span class="punctuation">(</span>xintercept <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                    color <span class="operator">=</span> <span class="string">&quot;gray&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">0.3</span><span class="punctuation">)</span> <span class="operator">+</span>       <span class="comment"># 设置x轴辅助线</span></span><br><span class="line">         geom_hline<span class="punctuation">(</span>yintercept <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span><span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                    color <span class="operator">=</span> <span class="string">&quot;gray&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">0.3</span><span class="punctuation">)</span> <span class="operator">+</span>       <span class="comment"># 设置y轴辅助线</span></span><br><span class="line">         labs<span class="punctuation">(</span>x <span class="operator">=</span> <span class="string">&quot;log2 Fold Change&quot;</span><span class="punctuation">,</span></span><br><span class="line">              y <span class="operator">=</span> <span class="string">&quot;-log10(FDR) &quot;</span><span class="punctuation">,</span></span><br><span class="line">              title <span class="operator">=</span> <span class="string">&quot;LD 1 day vs LD 0 day&quot;</span><span class="punctuation">)</span>       <span class="comment"># 设置坐标轴标题和火山图标题</span></span><br><span class="line">res     <span class="comment"># 查看结果，plots中可以查看</span></span><br><span class="line"></span><br><span class="line">library<span class="punctuation">(</span><span class="string">&quot;ggrepel&quot;</span><span class="punctuation">)</span></span><br><span class="line">up <span class="operator">&lt;-</span> subset<span class="punctuation">(</span>gene<span class="punctuation">,</span> GROUP <span class="operator">==</span> <span class="string">&quot;UP&quot;</span><span class="punctuation">)</span>       <span class="comment"># subset从数据框中筛选符合条件的数据</span></span><br><span class="line">up <span class="operator">&lt;-</span> up<span class="punctuation">[</span>order<span class="punctuation">(</span>up<span class="operator">$</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">[</span><span class="number">1</span><span class="operator">:</span><span class="number">5</span><span class="punctuation">,</span> <span class="punctuation">]</span>       <span class="comment"># order升序排序，取前5个</span></span><br><span class="line">down <span class="operator">&lt;-</span> subset<span class="punctuation">(</span>gene<span class="punctuation">,</span> GROUP <span class="operator">==</span> <span class="string">&quot;DOWN&quot;</span><span class="punctuation">)</span></span><br><span class="line">down <span class="operator">&lt;-</span> down<span class="punctuation">[</span>order<span class="punctuation">(</span>down<span class="operator">$</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">[</span><span class="number">1</span><span class="operator">:</span><span class="number">5</span><span class="punctuation">,</span> <span class="punctuation">]</span></span><br><span class="line">resdata <span class="operator">&lt;-</span> res <span class="operator">+</span> </span><br><span class="line">  geom_text_repel<span class="punctuation">(</span>data <span class="operator">=</span> rbind<span class="punctuation">(</span>up<span class="punctuation">,</span> down<span class="punctuation">)</span><span class="punctuation">,</span>       <span class="comment"># ggrepel特有的函数</span></span><br><span class="line">                  aes<span class="punctuation">(</span>x <span class="operator">=</span> log2FoldChange<span class="punctuation">,</span></span><br><span class="line">                      y <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span>padj<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                      label <span class="operator">=</span> X <span class="punctuation">)</span><span class="punctuation">,</span>      <span class="comment"># label值指定哪列做标签</span></span><br><span class="line">                  size <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">                  box.padding <span class="operator">=</span> unit<span class="punctuation">(</span><span class="number">0.5</span><span class="punctuation">,</span> <span class="string">&quot;lines&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                  segment.color <span class="operator">=</span> <span class="string">&quot;#cccccc&quot;</span><span class="punctuation">,</span></span><br><span class="line">                  show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span>      <span class="comment"># 以上都是特有参数</span></span><br><span class="line">resdata     <span class="comment"># 查看结果</span></span><br><span class="line">ggsave<span class="punctuation">(</span><span class="string">&quot;gene_0_1.png&quot;</span><span class="punctuation">,</span> resdata<span class="punctuation">,</span> width <span class="operator">=</span> <span class="number">10</span><span class="punctuation">,</span> height <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span>        <span class="comment"># 输出结果文件</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div><h2 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3. 代码详解"></a>3. 代码详解</h2><div class="story post-story"><h3 id="3-1-ggplot2"><a href="#3-1-ggplot2" class="headerlink" title="3.1 ggplot2"></a>3.1 ggplot2</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&lt;=</span> <span class="operator">-</span><span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;DOWN&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&gt;=</span> <span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;UP&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span><span class="built_in">abs</span><span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange<span class="punctuation">)</span> <span class="operator">&lt;</span> <span class="number">1</span> <span class="operator">|</span> gene<span class="operator">$</span>padj <span class="operator">&gt;=</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;NOT CHANGE&quot;</span>  </span><br></pre></td></tr></table></figure>
+
+<p>之前这里稍微解释一下，即使前面没有用dplyr包，用别的方法同样可以筛选差异基因并且新增一列分组数据，万变不离其宗，核心的判断方式是一样的。如果前面学了linux，注意最后 | 这个符号在R里表示<strong>或</strong>，不要和管道混淆。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ggplot<span class="punctuation">(</span>data <span class="operator">=</span> 输入的数据<span class="punctuation">,</span></span><br><span class="line">      mapping <span class="operator">=</span> aes<span class="punctuation">(</span>x <span class="operator">=</span> 定义值<span class="punctuation">,</span></span><br><span class="line">                   y <span class="operator">=</span> 定义值<span class="punctuation">,</span></span><br><span class="line">                   其他参数<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">      genom_point<span class="punctuation">(</span>参数<span class="punctuation">)</span> <span class="operator">+</span>       <span class="comment"># 选择作图方法和参数 </span></span><br><span class="line">    其他设置函数和参数              <span class="comment"># 可有可无，美观相关的东西</span></span><br></pre></td></tr></table></figure>
+
+<p>我总结了一下ggplot最基本的结构，data和mapping是<strong>缺省值</strong>，可以<strong>不写</strong>。</p>
+<p>输入的数据可以是表格，可以是数据框等等；aes自定义点的映射范围，大小，颜色等等；作图方法有很多，比如点状图是genom_point。自由度很高，能设置的东西也非常之多，只有两点需要注意，<strong>同一个函数不同参数用 , 隔开；不同函数用 + 隔开</strong>。</p>
+<hr>
+<p>中间的设置函数也稍微解释一下：</p>
+<p><code>scale_color_manual()</code>  该函数是R中的一种自定义配色方法，手动把颜色赋值给参数value。我这里将UP的点赋予了红色，DOWN的点赋予蓝色，其他点赋予灰色。</p>
+<p><code>theme()</code> 该函数与主题配置有关，参数非常多，可以选取需要的比如背景色、网格线等等进行设置。这里举个例子，legend是图标，在ggplot中legend有四部分： legend.tittle, legend.text, legend.key和legend.backgroud，而每一个部分都有四种函数可以嵌套（也是是对应4种处理方式）：<code>element_text()</code>绘制标题相关；<code>element_rect()</code>绘制背景相关；<code>element_blank()</code>空主题，对元素不分配绘图空间；<code>element_get()</code>得到当前主题的设置。每个函数还有相应的参数，说起来就没完没了了。。。常用的设置知道就行。</p>
+<p><code>geom_vline() 和 geom_hline()</code> 这两个函数分别设置x轴y轴辅助线，目的是使我的火山图更直观，从图上可以直接看到我的分类依据。</p>
+<p><code>labs()</code>  该函数自定义x轴y轴标签和图标标题。这里提一嘴，火山图标题也是一个注意点，一般是 <strong>处理组vs对照组</strong> ，因此前面也说到DESeq2处理数据要注意顺序问题，不然会得出完全相反的结论，在火山图上的表现为与实际火山图呈镜像对称，这也很好理解。</p>
+<p>这里看一下res结果，我们可以在plots中看到缩略的预览图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425030819.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425030819.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="3-3-ggrepel"><a href="#3-3-ggrepel" class="headerlink" title="3.3 ggrepel"></a>3.3 ggrepel</h3><p>在过滤掉4000多个FDR值为NA的点，我们获得了一个不怎么像火山的火山图 <del>（简直丑爆了）</del> ，但是数据还是挺美丽的，上调区域和下调区域都有前后对比差异非常大的基因：log2FC绝对值越大，差异越明显；-log10（FDR）值越大，可信度越高。</p>
+<p>但是这个图还有个缺点，我不知道这些代表性的差异点对应什么基因名，我还要回到excel里去筛选排序。因此，我推荐用ggrepel包对火山图进一步美化，加上基因标签，能一眼看到我感兴趣的基因。</p>
+<hr>
+<p>这个包的原理和发展咱就不说了，已经是半夜4点了。。。简单介绍下中间用到的函数的结构。</p>
+<p><code>subset()</code> 从数据框中筛选符合条件的数据，我将UP的点和DOWN的点都提取出来。</p>
+<p><code>order()</code> order是升序排序，因为上调和下调的基因都比较多，全部打上基因名标签是不现实也没有意义的。我按照padj列也就是FDR值进行升序排序，取前5个可信度最高的基因打上基因名标签。当基因较少的时候是可以全部打上标签的。</p>
+<p>在前面ggplot2作图的基础上，我们加上<code>geom_text_repel()</code>这个特殊的ggreple包函数，这个函数是基于函数<code>geom_label()</code>做的改良，它将标签置于一个方框中，并且每个标签有算法优化不会重叠。该函数的结构与前面的ggplot前半部分类似：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">geom_text_repel<span class="punctuation">(</span>data <span class="operator">=</span> 输入数据<span class="punctuation">,</span></span><br><span class="line">                aes<span class="punctuation">(</span>x <span class="operator">=</span> 定义值<span class="punctuation">,</span></span><br><span class="line">                   y <span class="operator">=</span> 定义值<span class="punctuation">,</span></span><br><span class="line">                   label <span class="operator">=</span> X <span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                其他参数</span><br></pre></td></tr></table></figure>
+
+<p>这里所有参数设置都是平行的，所以只需要 , 隔开。</p>
+<p>我之前说到提取了up和down的数据，这里我把它们rbind一下合在一起，就形成了新的数据框数据，也就是我只对前面排序筛选的上调下调各5个基因打标签。这里注意下<code>aes()</code>这里的 <strong>label</strong> 是指定标签的，也就是我们这里的基因名，应该用的行名才能和数据一一对应，这里我用X是偶然发现的一个很有趣的事：</p>
+<p>前面导入gene数据框的时候，自动把行名加到了第一列成了单独的一列，且<strong>该列列名系统定义为X</strong>，我们可以进入environment找到gene点开看看这个数据框结构，如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425035429.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425035429.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>因此这里直接用<code>label = X</code>就能完美解决问题。反而我回头用<code>row.names = 1</code>用第一列做行名修改了gene数据框的读取方式，再在这里用<code>label = rowname(gene)</code>会提示长度错误或者不匹配，个中原因我暂时还没想明白。</p>
+<hr>
+<p>其他特有参数就解释一下我用到的几个：</p>
+<p>size: 标签大小</p>
+<p>box.padding: 标签连接方式，我用了线</p>
+<p>segment.color: 线段颜色，可以用RGB颜色代码</p>
+<p>show.legend: 是否显示标签的标签   &#x3D;_&#x3D;好像有点绕，说白了就是要不要再图标上再打标签…</p>
+<hr>
+<p>同样放一张plots里的缩略图，是不是要直观一点了呢？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041357.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041357.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="3-4-结果输出"><a href="#3-4-结果输出" class="headerlink" title="3.4 结果输出"></a>3.4 结果输出</h3><p><code>ggsave()</code>是ggplot2包里的输出结果的函数，自定义输出的文件类型，比如pdf、png等等，还可以自定义输出图片大小，这里不赘述，主要放一个完成图看看和plots里的缩略图做个比较。完成图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041858.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041858.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可能还是有些不美观，但是这些数据很不错，极端点偏离X轴和Y轴较远，都是我们需要重点关注的基因。</p>
+<p>如果我们记下了这几个极端点，我们还可以通过在ggplot中限制X轴和Y轴范围比如<code>xlim(-10, 10) + ylim(0, 14)</code>，再次缩小范围，得到一个更像火山的火山图 <del>(没有意义，纯粹吃饱了撑的)</del> 如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425043615.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425043615.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/25/a.html>http://www.shelven.com/2022/04/25/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-25T04:58:08+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年4月25日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/20/b.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R%E8%AF%AD%E8%A8%80/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>R语言</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ggplot2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ggplot2</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ggrepel/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ggrepel</p></a></div>
+  <span hidden itemprop="keywords">R语言 ggplot2 ggrepel</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/25/a.html&title=转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/25/a.html&title=转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/25/a.html&title=转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/04/20/b.html'>
+          <p class='title'>linux操作指令总结整理<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>该篇内容非常之多，主要记录自己能用的上的linux操作指令和自己的一些理解，想要用的时候方便站内搜索直接查找
+1. linux常用命令cdcd：Change directory修改（进入）工作目...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/04/25/a.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/20/b.html"  itemprop="url">
-        linux操作指令总结整理
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        该篇内容非常之多，主要记录自己能用的上的linux操作指令和自己的一些理解，想要用的时候方便站内搜索直接查找
-1. linux常用命令cdcd：Change directory修改（进入）工作目录，只对目录文件有效
-12345cd /    进入根(root)目录cd -    返回上次的目录cd      返回家(home)目录cd ~    返回家目录cd ..   返回上一级目录
+    <div id="layoutHelper-comments"></div>
 
-
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-20T23:44:49+08:00">2022-04-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/20/b.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/20/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/20/a.html"  itemprop="url">
-        shell脚本基本语法总结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        简单记录下shell脚本语言的学习
-shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个可运行的文件，使用特定格式的指令让系统通过脚本解析器解析并执行你的指令。系统提供的shell命令解析器有sh、bash和ash。可以通过echo $SHELL查看自己linux系统的默认解析方式
-shell脚本文件的开头：#!/bin/bash
-#! 是特殊的用来声明脚本由什么shell解释，否则...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-20T03:55:58+08:00">2022-04-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/20/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/18/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/18/a.html"  itemprop="url">
-        转录组数据分析笔记（7）——DESeq2差异分析
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        前言前面说到DESeq2包需要准备两个输入文件，一个是样本列表矩阵，一个是row count定量表达矩阵，接下来我们要对样本进行两两比对，找到两组之间有多少个基因上调和下调，不进行两两比对直接把4组数据4个重复全部导进去得到的结果是没有意义的
-举个栗子，我先进行短日照的“0”组样本和经过“1”天长日照的1组样本之间进行差异基因分析，从前面整理的样本列表矩阵我们可以看到，0组样本四个重复分别是...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-18T15:49:20+08:00">2022-04-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/18/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/17/b.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/17/b.html"  itemprop="url">
-        转录组数据分析笔记（6）——HTseq计数定量
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        HTseq也是对有参考基因组转录数据进行表达量分析的，主要用于reads计数。这个软件功能就比较专一，不像stringtie还需要运行prepDE.py脚本进行数据转化，直接一步到位。那为什么我一开始不用HTseq呢？因为我遇到一个bug 主要还是运算速度的问题，我比较了两种定量方式，HTseq定量虽然只有一步，但是速度远不如stringtie，也可能是我的问题，下面会说到。
-1. HTse...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-17T23:49:37+08:00">2022-04-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/17/b.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/17/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/17/a.html"  itemprop="url">
-        转录组数据分析笔记（5）——stringtie转录本组装和定量
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。
-在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-17T23:14:21+08:00">2022-04-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/17/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/b.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/16/b.html"  itemprop="url">
-        转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。
-直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-16T19:32:50+08:00">2022-04-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/16/b.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/16/a.html"  itemprop="url">
-        转录组数据分析笔记（3）——samtools用法小结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件：
-12345#!/bin/bashls *.sam | while read iddo    samtools sort -l 0 -@ 5 -o ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-16T18:41:24+08:00">2022-04-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/16/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/15/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/15/a.html"  itemprop="url">
-        转录组数据分析笔记（2）——使用Hisat2比对参考基因组
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：
-$ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
--p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关genome # 命名的索引文件名，可以改成自己能找到的
-
-就可以在当前...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-15T16:53:41+08:00">2022-04-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/15/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/14/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/14/a.html"  itemprop="url">
-        转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-14T21:13:35+08:00">2022-04-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/04/14/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2022/04/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
+  </article>
   
 
 
-	
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3766,203 +3361,38 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(8)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%89%8D%E8%A8%80"><span class="toc-text">1. 前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%B8%A4%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">1.2 两个注意点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B5%81%E7%A8%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">2. 流程代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3"><span class="toc-text">3. 代码详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-ggplot2"><span class="toc-text">3.1 ggplot2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-ggrepel"><span class="toc-text">3.3 ggrepel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA"><span class="toc-text">3.4 结果输出</span></a></li></ol></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 24px; color: #555">R语言</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>11 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>23.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-04-25 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3987,14 +3417,15 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4003,14 +3434,14 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -5225,7 +4656,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://www.shelven.com/archives/2022/4/","name":"4月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/25/a.html","name":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图","description":"","datePublished":"2022-04-24T20:53:27.000Z","dateModified":"2022-04-24T20:58:08.201Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"R语言,ggplot2,ggrepel","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

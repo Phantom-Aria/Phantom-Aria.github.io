@@ -23,13 +23,13 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1650809202269" as="style">
+  <link rel="preload" href="/css/style.css?time=1650834032840" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>转录组数据分析笔记（7）——DESeq2差异分析 - 我的小破站</title>
-  <meta name="keywords" content="DESeq2,null">
+  <meta name="keywords" content="DESeq2,dplyr,R语言,null">
   <meta name="description" content="前言前面说到DESeq2包需要准备两个输入文件，一个是样本列表矩阵，一个是row count定量表达矩阵，接下来我们要对样本进行两两比对，找到两组之间有多少个基因上调和下调，不进行两两比对直接把4组数据4个重复全部导进去得到的结果是没有意义的 举个栗子，我先进行短日照的“0”组样本和经过“1”天长日照的1组样本之间进行差异基因分析，从前面整理的样本列表矩阵我们可以看到，0组样本四个重复分别是ERR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="转录组数据分析笔记（7）——DESeq2差异分析">
@@ -39,8 +39,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-18T07:49:20.000Z">
-<meta property="article:modified_time" content="2022-04-24T14:06:38.465Z">
+<meta property="article:modified_time" content="2022-04-24T20:58:31.692Z">
 <meta property="article:tag" content="DESeq2">
+<meta property="article:tag" content="dplyr">
+<meta property="article:tag" content="R语言">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1782,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1650809202269" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1650809202269"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1650834032840" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1650834032840"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1650809202269","sites":"/js/plugins/sites.js?time=1650809202269","friends":"/js/plugins/friends.js?time=1650809202269","parallax":"/js/plugins/parallax.js?time=1650809202269","rightMenu":"/js/plugins/rightMenu.js?time=1650809202269","contributors":"/js/plugins/contributors.js?time=1650809202269","message":"/js/thirdparty/message.js?time=1650809202269","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650809202269"},"css":{"style":"/css/style.css?time=1650809202269","message":"/css/message.css?time=1650809202269"}},
+    cdn: {"js":{"app":"/js/app.js?time=1650834032840","sites":"/js/plugins/sites.js?time=1650834032840","friends":"/js/plugins/friends.js?time=1650834032840","parallax":"/js/plugins/parallax.js?time=1650834032840","rightMenu":"/js/plugins/rightMenu.js?time=1650834032840","contributors":"/js/plugins/contributors.js?time=1650834032840","message":"/js/thirdparty/message.js?time=1650834032840","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650834032840"},"css":{"style":"/css/style.css?time=1650834032840","message":"/css/message.css?time=1650834032840"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650809202269),
+    lastupdate: new Date(1650834032840),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3224,10 +3226,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-24T22:06:38+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-25T04:58:31+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月24日</p>
+    <p>更新于：2022年4月25日</p>
   </a>
 </div>
 
@@ -3236,8 +3238,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/DESeq2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>DESeq2</p></a></div>
-  <span hidden itemprop="keywords">DESeq2</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/DESeq2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>DESeq2</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/dplyr/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>dplyr</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R%E8%AF%AD%E8%A8%80/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>R语言</p></a></div>
+  <span hidden itemprop="keywords">DESeq2 dplyr R语言</span>
 
 
         
@@ -3554,7 +3556,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1650809202269.js"></script>
+<script src="/js/app.js?time=1650834032840.js"></script>
 
 
 
@@ -3738,7 +3740,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1650809202269')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1650834032840')</script>
 
 
 
@@ -3868,19 +3870,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1650809202269")
+        volantis.js("/js/plugins/sites.js?time=1650834032840")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1650809202269")
+        volantis.js("/js/plugins/friends.js?time=1650834032840")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1650809202269")
+        volantis.js("/js/plugins/contributors.js?time=1650834032840")
       }
     
   };
@@ -3949,7 +3951,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1650809202269')
+    await volantis.js('/js/plugins/aplayer.js?time=1650834032840')
   
   })();
 
@@ -4074,7 +4076,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650809202269");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650834032840");
   }
 
   function loadSearchService() {
@@ -4414,7 +4416,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1650809202269').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1650834032840').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4648,7 +4650,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/18/a.html","name":"转录组数据分析笔记（7）——DESeq2差异分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（7）——DESeq2差异分析","description":"","datePublished":"2022-04-18T07:49:20.000Z","dateModified":"2022-04-24T14:06:38.465Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/18/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/18/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"DESeq2","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/18/a.html","name":"转录组数据分析笔记（7）——DESeq2差异分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（7）——DESeq2差异分析","description":"","datePublished":"2022-04-18T07:49:20.000Z","dateModified":"2022-04-24T20:58:31.692Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/18/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/18/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"DESeq2,dplyr,R语言","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
