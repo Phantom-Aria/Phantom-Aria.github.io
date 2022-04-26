@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1650951693515" as="style">
+  <link rel="preload" href="/css/style.css?time=1650951765787" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-20T15:44:49.000Z">
-<meta property="article:modified_time" content="2022-04-26T05:41:14.457Z">
+<meta property="article:modified_time" content="2022-04-26T05:42:35.768Z">
 <meta property="article:tag" content="linux指令">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1650951693515" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1650951693515"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1650951765787" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1650951765787"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1650951693515","sites":"/js/plugins/sites.js?time=1650951693515","friends":"/js/plugins/friends.js?time=1650951693515","parallax":"/js/plugins/parallax.js?time=1650951693515","rightMenu":"/js/plugins/rightMenu.js?time=1650951693515","contributors":"/js/plugins/contributors.js?time=1650951693515","message":"/js/thirdparty/message.js?time=1650951693515","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650951693515"},"css":{"style":"/css/style.css?time=1650951693515","message":"/css/message.css?time=1650951693515"}},
+    cdn: {"js":{"app":"/js/app.js?time=1650951765787","sites":"/js/plugins/sites.js?time=1650951765787","friends":"/js/plugins/friends.js?time=1650951765787","parallax":"/js/plugins/parallax.js?time=1650951765787","rightMenu":"/js/plugins/rightMenu.js?time=1650951765787","contributors":"/js/plugins/contributors.js?time=1650951765787","message":"/js/thirdparty/message.js?time=1650951765787","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650951765787"},"css":{"style":"/css/style.css?time=1650951765787","message":"/css/message.css?time=1650951765787"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650951693515),
+    lastupdate: new Date(1650951765787),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3271,7 +3271,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <hr>
 <p><strong>&amp;</strong><br>运行命令时，在命令末尾加上&amp;可让命令在后台执行</p>
 <p>顺便说一下 |  ; &amp;&amp; ||区别</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\&amp;&amp;     左边命令成功运行了，右边命令才会运行，就是逻辑与的功能</span><br><span class="line">\;      不管左边命令有没有成功运行，右边命令都会运行，两者之间独立</span><br><span class="line">\|      左边命令的结果作为右边命令的参数，注意与xargs区分</span><br><span class="line">\||     左边运行的命令失败，右边的命令才会运行，否则只显示左边命令运行结果</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp;     左边命令成功运行了，右边命令才会运行，就是逻辑与的功能</span><br><span class="line">;      不管左边命令有没有成功运行，右边命令都会运行，两者之间独立</span><br><span class="line">|      左边命令的结果作为右边命令的参数，注意与xargs区分</span><br><span class="line">||     左边运行的命令失败，右边的命令才会运行，否则只显示左边命令运行结果</span><br></pre></td></tr></table></figure>
 
 <hr>
 <p><strong>nohup</strong><br>命令可以使命令永久的执行下去，和终端没有关系，退出终端也不会影响程序的运行； &amp; 是后台运行的意思，但当用户退出的时候，命令自动也跟着退出。 那么，把两个结合起来nohup 命令 &amp;这样就能使命令永久的在后台执行</p>
@@ -3377,7 +3377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T13:41:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T13:42:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年4月26日</p>
@@ -3707,7 +3707,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1650951693515.js"></script>
+<script src="/js/app.js?time=1650951765787.js"></script>
 
 
 
@@ -3891,7 +3891,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1650951693515')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1650951765787')</script>
 
 
 
@@ -4021,19 +4021,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1650951693515")
+        volantis.js("/js/plugins/sites.js?time=1650951765787")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1650951693515")
+        volantis.js("/js/plugins/friends.js?time=1650951765787")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1650951693515")
+        volantis.js("/js/plugins/contributors.js?time=1650951765787")
       }
     
   };
@@ -4102,7 +4102,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1650951693515')
+    await volantis.js('/js/plugins/aplayer.js?time=1650951765787')
   
   })();
 
@@ -4227,7 +4227,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650951693515");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1650951765787");
   }
 
   function loadSearchService() {
@@ -4567,7 +4567,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1650951693515').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1650951765787').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4801,7 +4801,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/b.html","name":"linux操作指令总结整理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux操作指令总结整理","description":"","datePublished":"2022-04-20T15:44:49.000Z","dateModified":"2022-04-26T05:41:14.457Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"linux指令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/b.html","name":"linux操作指令总结整理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux操作指令总结整理","description":"","datePublished":"2022-04-20T15:44:49.000Z","dateModified":"2022-04-26T05:42:35.768Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"linux指令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
