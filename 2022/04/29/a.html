@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1651245939920" as="style">
+  <link rel="preload" href="/css/style.css?time=1651247071609" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>vscode快速搭建python环境 - 我的小破站</title>
+  <title>vscode远程连接和快速搭建python环境 - 我的小破站</title>
   <meta name="keywords" content="vscode,python,null">
   <meta name="description" content="最近在自学python，刚入门苦于不知道从何下手，也不知道用什么编辑器比较适合。在度娘上搜了十几款编辑器，最终决定用微软的vscode，这个编辑器可以配置Python、Java、C ++等编程环境，而且有非常强大的插件功能，界面看着也挺友好，写个日志记录下自己瞎捣鼓的配置。 本来是想在我的云服务器上装vscode，但是我的云服务器上没有可视化界面……于是在我的小破笔记本上安装了vscode，后来又">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vscode快速搭建python环境">
+<meta property="og:title" content="vscode远程连接和快速搭建python环境">
 <meta property="og:url" content="http://www.shelven.com/2022/04/29/a.html">
 <meta property="og:site_name" content="我的小破站">
 <meta property="og:description" content="最近在自学python，刚入门苦于不知道从何下手，也不知道用什么编辑器比较适合。在度娘上搜了十几款编辑器，最终决定用微软的vscode，这个编辑器可以配置Python、Java、C ++等编程环境，而且有非常强大的插件功能，界面看着也挺友好，写个日志记录下自己瞎捣鼓的配置。 本来是想在我的云服务器上装vscode，但是我的云服务器上没有可视化界面……于是在我的小破笔记本上安装了vscode，后来又">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-29T10:17:01.000Z">
-<meta property="article:modified_time" content="2022-04-29T15:25:23.321Z">
+<meta property="article:modified_time" content="2022-04-29T15:44:27.608Z">
 <meta property="article:tag" content="vscode">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1651245939920" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1651245939920"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1651247071609" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1651247071609"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1651245939920","sites":"/js/plugins/sites.js?time=1651245939920","friends":"/js/plugins/friends.js?time=1651245939920","parallax":"/js/plugins/parallax.js?time=1651245939920","rightMenu":"/js/plugins/rightMenu.js?time=1651245939920","contributors":"/js/plugins/contributors.js?time=1651245939920","message":"/js/thirdparty/message.js?time=1651245939920","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651245939920"},"css":{"style":"/css/style.css?time=1651245939920","message":"/css/message.css?time=1651245939920"}},
+    cdn: {"js":{"app":"/js/app.js?time=1651247071609","sites":"/js/plugins/sites.js?time=1651247071609","friends":"/js/plugins/friends.js?time=1651247071609","parallax":"/js/plugins/parallax.js?time=1651247071609","rightMenu":"/js/plugins/rightMenu.js?time=1651247071609","contributors":"/js/plugins/contributors.js?time=1651247071609","message":"/js/thirdparty/message.js?time=1651247071609","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651247071609"},"css":{"style":"/css/style.css?time=1651247071609","message":"/css/message.css?time=1651247071609"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651245939920),
+    lastupdate: new Date(1651247071609),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3053,7 +3053,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        vscode快速搭建python环境
+        vscode远程连接和快速搭建python环境
       </h1>
       <div class='new-meta-box'>
         
@@ -3116,7 +3116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="vscode快速搭建python环境" data-path="/2022/04/29/a.html">
+      <div id="lc-pv" data-title="vscode远程连接和快速搭建python环境" data-path="/2022/04/29/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3227,7 +3227,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-29T23:25:23+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-29T23:44:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年4月29日</p>
@@ -3253,7 +3253,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/29/a.html&title=vscode快速搭建python环境 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/29/a.html&title=vscode远程连接和快速搭建python环境 - 我的小破站&summary="
           
           >
           
@@ -3265,7 +3265,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/29/a.html&title=vscode快速搭建python环境 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/29/a.html&title=vscode远程连接和快速搭建python环境 - 我的小破站&summary="
           
           >
           
@@ -3277,7 +3277,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/29/a.html&title=vscode快速搭建python环境 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/29/a.html&title=vscode远程连接和快速搭建python环境 - 我的小破站&summary="
           
           >
           
@@ -3414,7 +3414,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="vscode快速搭建python环境";
+  pdata.postTitle="vscode远程连接和快速搭建python环境";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3551,7 +3551,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1651245939920.js"></script>
+<script src="/js/app.js?time=1651247071609.js"></script>
 
 
 
@@ -3735,7 +3735,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1651245939920')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1651247071609')</script>
 
 
 
@@ -3865,19 +3865,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1651245939920")
+        volantis.js("/js/plugins/sites.js?time=1651247071609")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1651245939920")
+        volantis.js("/js/plugins/friends.js?time=1651247071609")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1651245939920")
+        volantis.js("/js/plugins/contributors.js?time=1651247071609")
       }
     
   };
@@ -3946,7 +3946,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1651245939920')
+    await volantis.js('/js/plugins/aplayer.js?time=1651247071609')
   
   })();
 
@@ -4071,7 +4071,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651245939920");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651247071609");
   }
 
   function loadSearchService() {
@@ -4411,7 +4411,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1651245939920').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1651247071609').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4645,7 +4645,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/29/a.html","name":"vscode快速搭建python环境"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"vscode快速搭建python环境","description":"","datePublished":"2022-04-29T10:17:01.000Z","dateModified":"2022-04-29T15:25:23.321Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/29/a.html","wordCount":0,"articleSection":"编程自学","keywords":"vscode,python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/29/a.html","name":"vscode远程连接和快速搭建python环境"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"vscode远程连接和快速搭建python环境","description":"","datePublished":"2022-04-29T10:17:01.000Z","dateModified":"2022-04-29T15:44:27.608Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/29/a.html","wordCount":0,"articleSection":"编程自学","keywords":"vscode,python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
