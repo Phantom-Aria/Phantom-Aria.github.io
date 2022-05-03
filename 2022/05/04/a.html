@@ -6,8 +6,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,nofollow">
-  <link rel="canonical" href="http://www.shelven.com/404.html"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/05/04/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,18 +28,21 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>404 Not Found - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta name="description" content="404 访问的页面走丢了！(⊙_⊙) 可能是输入地址有误或该地址已被删除 如果确认地址无误，请踢我一脚马上来改 TAT">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/404.html">
+  <title>获得测序原始数据——初探GEO和SRA数据库 - 我的小破站</title>
+  <meta name="keywords" content="SRA,SRA Toolkit,GEO,null">
+  <meta name="description" content="初探GEO数据库和SRA数据库最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。 1. GEO数据库先上数据库链接，点击这里 GEO数据库全称Gene Expr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="获得测序原始数据——初探GEO和SRA数据库">
+<meta property="og:url" content="http://www.shelven.com/2022/05/04/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="404 访问的页面走丢了！(⊙_⊙) 可能是输入地址有误或该地址已被删除 如果确认地址无误，请踢我一脚马上来改 TAT">
+<meta property="og:description" content="初探GEO数据库和SRA数据库最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。 1. GEO数据库先上数据库链接，点击这里 GEO数据库全称Gene Expr">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-09T14:14:36.602Z">
-<meta property="article:modified_time" content="2022-04-09T14:14:36.598Z">
+<meta property="article:published_time" content="2022-05-03T20:02:37.000Z">
+<meta property="article:modified_time" content="2022-05-03T20:07:13.822Z">
+<meta property="article:tag" content="SRA">
+<meta property="article:tag" content="SRA Toolkit">
+<meta property="article:tag" content="GEO">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2270,13 +2273,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
@@ -2964,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper page dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3026,9 +3031,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=' no_sidebar'>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/404.html">
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/04/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3048,24 +3053,181 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        获得测序原始数据——初探GEO和SRA数据库
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
       </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-04T04:02:37+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年5月4日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.5k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：8 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="获得测序原始数据——初探GEO和SRA数据库" data-path="/2022/05/04/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p class='p logo center huge'>404</p>
-<p class='p center bold'>访问的页面走丢了！(⊙_⊙)</p>
-<p class='p center small'>可能是输入地址有误或该地址已被删除</p>
-<p class='p center small'>如果确认地址无误，请踢我一脚马上来改 TAT</p> 
+    <h2 id="初探GEO数据库和SRA数据库"><a href="#初探GEO数据库和SRA数据库" class="headerlink" title="初探GEO数据库和SRA数据库"></a>初探GEO数据库和SRA数据库</h2><div class="story post-story"><p>最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。</p>
+</div><h2 id="1-GEO数据库"><a href="#1-GEO数据库" class="headerlink" title="1. GEO数据库"></a>1. GEO数据库</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/geo/">先上数据库链接，点击这里</a></p>
+<p>GEO数据库全称Gene Expression Omnibus database，是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。它创建于2000年，收录了世界各国研究机构提交的大多数高通量基因表达数据，GEO除了二代测序数据，还包含<strong>芯片测序</strong>、<strong>单细胞测序数据</strong>。</p>
+<p>GEO数据库有四种数据存放类型**GSE数据编号(Series)、GPL数据编号(GEO platforms)、GSM数据编号(Samples)和GDS数据编号(Datasets)**。</p>
+<p>一篇文章可以有一个或者多个GSE(Series)数据集，一个GSE里面可以有一个或者多个GSM(Samples)样本，如果做的是基因芯片，那每个数据集也会有自己对应的芯片平台，就是GPL(GEO platforms)。GSE编号一般为作者提交时生成的原始数据编号，后续NCBI中的工作人员会根据研究目的、样品类型等信息归纳整合为一个GDS(Datasets)，整理后的数据还会有GEO profile数据，也就是基因在这次实验中的表达数据。我平常文献里看到最多的就是GSE编号，可以直接在GEO数据库的搜索框里输入查看。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我个人比较关注的是tools栏目里的<strong>FTP Site</strong>功能。ftp是文件传输协议，ftp访问的界面非常干净，如果我只需要下载GEO数据库里的文件，而不关注其他多余信息的话，可以通过这个界面非常快速地找到对应GSE编号下所有作者上传到GEO数据库的文件，目录结构层次一目了然。如下图所示<strong>，datasets对应GDS编号；platforms对应GPL编号；samples对应GSM编号；series对应GSE编号</strong>，网站还很贴心地给了README.txt里面写了帮助文档，包括怎么用ftp访问等等</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在Browse Content这个栏目里，我们也能看到这个数据库的一些概览，比如现在有多少数据集，多少个芯片平台，多少上传的样品等等信息。我翻看了一下两年前jimmy出的教程，那个时候的GEO数据库收录的信息只有现在的一半不到，两年时间这些数据呈井喷式的发展，大数据时代信息发展之快也确实让我挺震惊。</p>
+<p>尤其是点开基因芯片的平台，以上传的样品数量对这些芯片平台进行排序，发现两年前独占鳌头的Affymetrix公司的HG-U133（也是最古老的基因芯片）已经被illumina公司高通量测序芯片全面超越了接近两倍，这也意味着高通量测序在这两年发展已经不仅仅是快速发展了，简直是火箭式发展……这也是大势所趋。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>GEO数据库的搜索地址也很有规律性，比如只有最后的GSE编号不同，其他网址字段都是一模一样的，这也算是方便搜索的一个没什么用处的小技巧？……</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>看点有用的，我们根据文献得到的GSE编号进行搜索，可以看到如下页面，前半部分是作者的一些信息，我们可以获得测序物种、作者的联系方式、发表的文章PMID等等，而我们更需要获取的信息在后半部分：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>样本信息这里解释一下，有三种主要的数据类型：</p>
+<ul>
+<li><p>SOFT  平台信息芯片中探针与基因的对应关系注释文件，样品单独的表达量，所有信息文件</p>
+</li>
+<li><p>MINiML  XML格式的所有数据，同SOFT文件单格式不同，和HTML格式差不多</p>
+</li>
+<li><p>TXT  这是样品表达矩阵的数据文件，我的理解是总结类型文件，不如用底下的原始数据</p>
+</li>
+</ul>
+<p>原始数据信息也说一下，<strong>这里可能会给原始测序的raw data，也可能不给；有的时候会给raw count表达矩阵，也有的时候不给；样品表达矩阵也是有的时候给的raw count，有的时候给的FPKM</strong>（比如上面这种情况）。就…挺离谱的，没有标准，如果我们要跑Deseq2复现作者的结论，通过FPKM得到的表达矩阵还不能用。希望网站能制定点相关标准吧（题外话，不然对于我们这种小白，找不到数据直接痛苦面具）</p>
+<p>我个人觉得，这个数据库比较重要的是可以获得样品分组信息和SRA数据库的链接地址，方便我们下载测序原始数据（后面介绍怎么下载）。<strong>如果不想跑原始数据，也可以直接拿样品表达矩阵来跑转录组下游分析</strong>。直接用表达矩阵就是要当心作者拿漂亮数据坑你。</p>
+</div><h2 id="2-SRA数据库"><a href="#2-SRA数据库" class="headerlink" title="2. SRA数据库"></a>2. SRA数据库</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/sra">同样的先上数据库链接，点这里</a></p>
+<p>其实从网址上就可以看出端倪，这俩数据库都是NCBI旗下的俩兄弟，都是NCBI一个亲爹亲妈养的。我百度的时候也发现，很多人把这两个数据库混在一起，或者叫GEO&#x2F;SRA数据库，其实两者还是有区别的。</p>
+<p>SRA数据库是三大核酸数据库之一，我之前的笔记也有介绍过<a href="https://www.shelven.com/2022/04/14/a.html?keyword=%E8%81%94%E7%9B%9F">（点击这里查看）</a>。我个人的理解是，SRA数据库存放的是原始测序文件，而GEO数据库存放的大部分是经过作者处理以后的数据文件（有的也包括了原始测序文件），相对而言SRA数据库更大也更存粹，而NCBI官方也给了下载SRA数据的小工具——<strong>SRA Toolkit</strong>。</p>
+<p>SRA数据类型包含如下四种，看到前缀知道这是SRA数据库，了解一下就行：</p>
+<ul>
+<li><p>Studies  研究课题（前缀为ERP或SRP，包含多个Experiment)</p>
+</li>
+<li><p>Experiments  实验设计（前缀为SRS，包含Sample、DNA source、测序平台和测序数据等信息）</p>
+</li>
+<li><p>Samples  样品信息（前缀为SRX，包含一个或多个Runs)</p>
+</li>
+<li><p>Runs  测序结果集（SSR开头的记录，代表测序仪器所产生的reads）</p>
+</li>
+</ul>
+<h3 id="主要说说数据下载方式"><a href="#主要说说数据下载方式" class="headerlink" title="主要说说数据下载方式"></a><strong>主要说说数据下载方式</strong></h3><p>前几天也有同学问我sra数据库的原始测序数据怎么下载的，找不到下载方式，看的教程都是NCBI上直接下载的。emmmmmm我的第一反应是这不就是NCBI旗下的子数据库嘛……还能从哪儿下载…</p>
+<p>废话不多说，直接看官网给的下载工具——<a target="_blank" rel="noopener" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software">SRA Toolkit</a></p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/8.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>这是一个官方给的小工具合集，提供我们各种操作系统下的安装包，我把linux和windows安装包都下了。安装步骤都是一样的，解压，把bin文件夹路径加到系统环境变量，搞定。windows需要打开cmd命令行运行一次prefetch（下载命令），按照提示输入<code>vdb-config --interactive</code>起到类似激活的作用就行了。linux里甚至都不需要编译（也可以conda安装）。可能有的同学对自己的windows系统不熟悉，不知道怎么改自己的系统环境变量，其实这个比linux改环境变量更容易，百度一下吧&#x3D; &#x3D;</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/9.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><strong>我个人更推荐在windows系统安装SRA Toolkit</strong>，SRA数据库本身服务器在国外，国内访问下载速度慢到令人发指（个位数Kb&#x2F;s，甚至直接没有），而类似转录组这种数据，细菌可能还好点，动植物做个10X测序动不动就是几个G十几个G，加上分组和生物学重复动辄几十上百G，那点速度下到天荒地老也下不完。纯命令行的linux系统使用代理服务相对windows系统来说要麻烦一点，说白了，windows系统更容易科学上网，为了下载数据没有别的办法。</p>
+<p>我们用的就是SRA Toolkit工具包里的<strong>prefetch命令</strong>下载原始数据，prefetch有个最大的好处是只要知道SRA数据库的数据类型编号，就可以<strong>直接下载</strong>对应的原始数据。如果要批量下载，可以将数据编号写入txt文件中再运行prefetch命令，或者直接写个循环语句。所以这里的关键是怎么得到数据编号，比如SRR编号等等。</p>
+<p>前面GEO数据库提供了SRA数据库的链接，我们可以直接点开（或者点击原始数据底下的<strong>SRA Run Selector</strong>）：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/10.jpg.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/10.jpg.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>点击右上角的<strong>Send results to Run selector</strong>:</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我们可以看到，这个项目一共有16个基因组测序数据，难道要16个wget命令一个一个下载麽？不需要，如果要下载的基因组数据数量多肯定不行。我们可以从Accession list里获取不同前缀的各种run数据，后面用prefetch命令结合循环语句，直接一步下载。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>把Accession list的编号全部复制下来，以linux为例运行<code>cat &gt; id</code>，回车后粘贴编号，按ctrl+c退出，这样就生成了一个名为id的文件，里面内容是我们要下载的基因组测序数据编号。</p>
+<p>写一个循环语句<code>cat id | while read id ;do prefetch $id &amp;;done</code> ，就可以全部下载了，这里没有指定输出目录，最终所有原始测序数据会输出到<strong>根目录下。</strong></p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/13.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/13.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220504/14.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/14.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 
-
-
+</div>
   </div>
   
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/05/04/a.html>http://www.shelven.com/2022/05/04/a.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
   
   
     
@@ -3073,6 +3235,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-04T04:07:13+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年5月4日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SRA/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SRA</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SRA-Toolkit/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SRA Toolkit</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GEO/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>GEO</p></a></div>
+  <span hidden itemprop="keywords">SRA SRA Toolkit GEO</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
     <!-- Custom Files bottomMeta begin -->
@@ -3085,6 +3318,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/05/03/a.html'>
+          <p class='title'>简易爬虫程序编程记录——以微博热搜为例<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 关于爬虫百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中，经常被称为网页追逐者），是一种按照一定的规则，自动抓取互联网信息的程序或者脚本。另外一些不常...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -3096,7 +3339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/404.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/05/04/a.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
@@ -3113,12 +3356,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%8E%A2GEO%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8CSRA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">初探GEO数据库和SRA数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-GEO%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">1. GEO数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SRA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">2. SRA数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-text">主要说说数据下载方式</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3162,24 +3423,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
-  pdata.commentPath="/404.html";
-  pdata.commentPlaceholder="请留言告诉我您要访问哪个页面找不到了";
+  pdata.ispage=true;
+  pdata.postTitle="获得测序原始数据——初探GEO和SRA数据库";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
   pdata.commentConfig={};
   //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
   
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4394,7 +4655,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/04/a.html","name":"获得测序原始数据——初探GEO和SRA数据库"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"获得测序原始数据——初探GEO和SRA数据库","description":"","datePublished":"2022-05-03T20:02:37.000Z","dateModified":"2022-05-03T20:07:13.822Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/04/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/04/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"SRA,SRA Toolkit,GEO","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
