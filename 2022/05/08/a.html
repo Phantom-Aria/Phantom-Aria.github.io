@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1651946568424" as="style">
+  <link rel="preload" href="/css/style.css?time=1651948511675" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-07T17:43:17.000Z">
-<meta property="article:modified_time" content="2022-05-07T18:02:43.422Z">
+<meta property="article:modified_time" content="2022-05-07T18:35:00.862Z">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="ffmpeg">
 <meta property="article:tag" content="numpy">
@@ -1785,8 +1785,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1651946568424" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1651946568424"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1651948511675" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1651948511675"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1863,9 +1863,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1651946568424","sites":"/js/plugins/sites.js?time=1651946568424","friends":"/js/plugins/friends.js?time=1651946568424","parallax":"/js/plugins/parallax.js?time=1651946568424","rightMenu":"/js/plugins/rightMenu.js?time=1651946568424","contributors":"/js/plugins/contributors.js?time=1651946568424","message":"/js/thirdparty/message.js?time=1651946568424","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651946568424"},"css":{"style":"/css/style.css?time=1651946568424","message":"/css/message.css?time=1651946568424"}},
+    cdn: {"js":{"app":"/js/app.js?time=1651948511675","sites":"/js/plugins/sites.js?time=1651948511675","friends":"/js/plugins/friends.js?time=1651948511675","parallax":"/js/plugins/parallax.js?time=1651948511675","rightMenu":"/js/plugins/rightMenu.js?time=1651948511675","contributors":"/js/plugins/contributors.js?time=1651948511675","message":"/js/thirdparty/message.js?time=1651948511675","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651948511675"},"css":{"style":"/css/style.css?time=1651948511675","message":"/css/message.css?time=1651948511675"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651946568424),
+    lastupdate: new Date(1651948511675),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3100,7 +3100,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.4k 字</p>
+      <p>字数：2.5k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3161,7 +3161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>还有，在计算亮度和赋予索引值的时候，我们是按照相对亮度来计算的。因此，当图片所有像素点都是一种颜色的时候，im.max() 和 im.min()值是相等的，相对亮度会出现0&#x2F;0的值，导致报错。所以我加了以下判断条件：纯色黑色和其他颜色属于两种不同情况，黑色时numpy数组亮度是非数值NaN，需要将数组全部值进行替换为亮度最小的字符的值；因为是RGB取值，其他颜色值固定在0-255之间，颜色均一，相对亮度就没有意义了，因此全部调整为最亮字符的值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> im.<span class="built_in">max</span>() == im.<span class="built_in">min</span>():</span><br><span class="line">    <span class="keyword">if</span> im.<span class="built_in">max</span>() &gt; <span class="number">0</span>:</span><br><span class="line">        im = (im / im) * (symbols.size - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        im[np.isnan(im)] = <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span>: </span><br><span class="line">    im = (im - im.<span class="built_in">min</span>()) / (im.<span class="built_in">max</span>() - im.<span class="built_in">min</span>()) * (symbols.size - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
+<p>顺便再说一个很有意思的模块subprocess，subprocess.call()函数可以执行命令行的命令，并且这个命令是在子进程实行的，只有子程序结束才会继续执行其他命令，使用起来真的特别方便！比如有些程序我的python库里没有但是我的linux里有，在python脚本的某一步我需要用到linux里的软件去处理，这个时候就可以调用subprocess.call()函数去执行linux命令行的命令了。</p>
 <p><strong>还有一个函数虽然不显眼，但是起着至关重要的作用</strong> <code>gc.collect()</code></p>
 <p>没有这个函数部分运行内存不够的电脑会崩……我在这里踩了个大坑……</p>
 <p>在对程序进行简化以后，我以为优化地差不多了，然后发现有的时候程序会被莫名其妙killed……</p>
@@ -3215,7 +3215,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-08T02:02:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-08T02:35:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月8日</p>
@@ -3539,7 +3539,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1651946568424.js"></script>
+<script src="/js/app.js?time=1651948511675.js"></script>
 
 
 
@@ -3723,7 +3723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1651946568424')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1651948511675')</script>
 
 
 
@@ -3853,19 +3853,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1651946568424")
+        volantis.js("/js/plugins/sites.js?time=1651948511675")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1651946568424")
+        volantis.js("/js/plugins/friends.js?time=1651948511675")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1651946568424")
+        volantis.js("/js/plugins/contributors.js?time=1651948511675")
       }
     
   };
@@ -3934,7 +3934,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1651946568424')
+    await volantis.js('/js/plugins/aplayer.js?time=1651948511675')
   
   })();
 
@@ -4059,7 +4059,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651946568424");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651948511675");
   }
 
   function loadSearchService() {
@@ -4399,7 +4399,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1651946568424').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1651948511675').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4633,7 +4633,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/08/a.html","name":"视频一键转字符动画——python函数封装和调用练习"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频一键转字符动画——python函数封装和调用练习","description":"","datePublished":"2022-05-07T17:43:17.000Z","dateModified":"2022-05-07T18:02:43.422Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/08/a.html","wordCount":0,"articleSection":"编程自学","keywords":"python,ffmpeg,numpy,pillow","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/08/a.html","name":"视频一键转字符动画——python函数封装和调用练习"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频一键转字符动画——python函数封装和调用练习","description":"","datePublished":"2022-05-07T17:43:17.000Z","dateModified":"2022-05-07T18:35:00.862Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/08/a.html","wordCount":0,"articleSection":"编程自学","keywords":"python,ffmpeg,numpy,pillow","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
