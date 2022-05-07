@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1651945596579" as="style">
+  <link rel="preload" href="/css/style.css?time=1651946101280" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-07T17:43:17.000Z">
-<meta property="article:modified_time" content="2022-05-07T17:46:32.302Z">
+<meta property="article:modified_time" content="2022-05-07T17:54:54.621Z">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="ffmpeg">
 <meta property="article:tag" content="numpy">
@@ -1785,8 +1785,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1651945596579" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1651945596579"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1651946101280" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1651946101280"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1863,9 +1863,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1651945596579","sites":"/js/plugins/sites.js?time=1651945596579","friends":"/js/plugins/friends.js?time=1651945596579","parallax":"/js/plugins/parallax.js?time=1651945596579","rightMenu":"/js/plugins/rightMenu.js?time=1651945596579","contributors":"/js/plugins/contributors.js?time=1651945596579","message":"/js/thirdparty/message.js?time=1651945596579","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651945596579"},"css":{"style":"/css/style.css?time=1651945596579","message":"/css/message.css?time=1651945596579"}},
+    cdn: {"js":{"app":"/js/app.js?time=1651946101280","sites":"/js/plugins/sites.js?time=1651946101280","friends":"/js/plugins/friends.js?time=1651946101280","parallax":"/js/plugins/parallax.js?time=1651946101280","rightMenu":"/js/plugins/rightMenu.js?time=1651946101280","contributors":"/js/plugins/contributors.js?time=1651946101280","message":"/js/thirdparty/message.js?time=1651946101280","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651946101280"},"css":{"style":"/css/style.css?time=1651946101280","message":"/css/message.css?time=1651946101280"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651945596579),
+    lastupdate: new Date(1651946101280),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3142,8 +3142,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><div class="story post-story"><p>捣鼓了几天python代码，我现在也越来越发现python的魅力所在，它的强大之处在于有非常多的第三方库可以随意调用。我不需要知道这些第三方库各种函数的实现方式，只要知道这些函数有什么作用，能得到什么结果。只要构思好自己的想法，找到对应的库就可以一步步按照我的思路编写程序，实现我想要的结果，整个构思到实现的过程让我非常愉悦~</p>
 <p>写这篇博客纯粹是个人爱好，也是一个巧合~</p>
 <p>前几天刷b站看到有人做了个剪影的字符动画，我就很好奇python是否可以实现。参考了一下github上大佬们的图片转字符画的代码，对这些代码做了点深入研究，总算搞明白了其实现方式，并且自己动手修改代码，在原有基础上改了几个bug，新增几个模块的调用，最后一步封装写成了下面这个脚本。这个脚本的功能是<strong>只要输入视频文件和你想要的视频帧率，就可以自动将视频转化为字符动画</strong>。</p>
-<p>可以先看一下视频效果~</p>
-<div class="video"><video controls preload><source src='https://www.bilibili.com/video/BV14S4y187Az?spm_id_from=333.999.0.0' type='video/mp4'>Your browser does not support the video tag.</video></div>
+<p>可以先看一下视频效果~ <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14S4y187Az?spm_id_from=333.999.0.0">或者点击这里进入b站观看</a></p>
+<div class="video"><video controls preload><source src='https://www.shelven.com/tuchuang/20220508/590001100-1-112.flv' type='video/mp4'>Your browser does not support the video tag.</video></div>
 
 </div><h2 id="2-实现思路"><a href="#2-实现思路" class="headerlink" title="2. 实现思路"></a>2. 实现思路</h2><div class="story post-story"><ul>
 <li>调用ffmpeg根据帧率将视频切割成图片</li>
@@ -3215,7 +3215,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-08T01:46:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-08T01:54:54+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月8日</p>
@@ -3539,7 +3539,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1651945596579.js"></script>
+<script src="/js/app.js?time=1651946101280.js"></script>
 
 
 
@@ -3723,7 +3723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1651945596579')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1651946101280')</script>
 
 
 
@@ -3853,19 +3853,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1651945596579")
+        volantis.js("/js/plugins/sites.js?time=1651946101280")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1651945596579")
+        volantis.js("/js/plugins/friends.js?time=1651946101280")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1651945596579")
+        volantis.js("/js/plugins/contributors.js?time=1651946101280")
       }
     
   };
@@ -3934,7 +3934,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1651945596579')
+    await volantis.js('/js/plugins/aplayer.js?time=1651946101280')
   
   })();
 
@@ -4059,7 +4059,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651945596579");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1651946101280");
   }
 
   function loadSearchService() {
@@ -4399,7 +4399,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1651945596579').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1651946101280').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4633,7 +4633,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/08/a.html","name":"视频一键转字符动画——python函数封装和调用练习"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频一键转字符动画——python函数封装和调用练习","description":"","datePublished":"2022-05-07T17:43:17.000Z","dateModified":"2022-05-07T17:46:32.302Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/08/a.html","wordCount":0,"articleSection":"编程自学","keywords":"python,ffmpeg,numpy,pillow","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/08/a.html","name":"视频一键转字符动画——python函数封装和调用练习"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频一键转字符动画——python函数封装和调用练习","description":"","datePublished":"2022-05-07T17:43:17.000Z","dateModified":"2022-05-07T17:54:54.621Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/08/a.html","wordCount":0,"articleSection":"编程自学","keywords":"python,ffmpeg,numpy,pillow","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
