@@ -6,8 +6,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/tags/igv/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/05/16/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,14 +28,21 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：IGV - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/tags/IGV/index.html">
+  <title>转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站</title>
+  <meta name="keywords" content="AnnotationHub,GO/KEGG,org.At.tair.db,null">
+  <meta name="description" content="包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。 一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体的某个代谢途径上发挥什么功能等等。网上能找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转录组数据分析笔记（10）——初识GO&#x2F;KEGG富集分析">
+<meta property="og:url" content="http://www.shelven.com/2022/05/16/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。 一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体的某个代谢途径上发挥什么功能等等。网上能找">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-05-15T19:47:39.000Z">
+<meta property="article:modified_time" content="2022-05-15T19:50:48.402Z">
+<meta property="article:tag" content="AnnotationHub">
+<meta property="article:tag" content="GO&#x2F;KEGG">
+<meta property="article:tag" content="org.At.tair.db">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2962,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3024,25 +3031,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/b.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/16/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3051,71 +3042,321 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/16/b.html"  itemprop="url">
-        转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。
-直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        转录组数据分析笔记（10）——初识GO/KEGG富集分析
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-16T19:32:50+08:00">2022-04-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-16T03:47:39+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年5月16日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.2k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：8 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/16/b.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="转录组数据分析笔记（10）——初识GO/KEGG富集分析" data-path="/2022/05/16/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。</p>
+<p>一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体的某个代谢途径上发挥什么功能等等。网上能找到很多注释信息的数据库，比如模式生物拟南芥TAIR，人类基因组hg19等等，Bioconductor有一个专门用来搜集注释信息数据库的工具包——AnnotationHub。</p>
+<h2 id="1-AnnotationHub注释数据库搜索工具"><a href="#1-AnnotationHub注释数据库搜索工具" class="headerlink" title="1. AnnotationHub注释数据库搜索工具"></a>1. AnnotationHub注释数据库搜索工具</h2><div class="story post-story"><p>用bioconductor下载Annotationhub包，载入（<strong>注：为演示结果，以下命令均在Rstudio终端输入</strong>）</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span><span class="string">&quot;Annotationhub&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> hub <span class="operator">&lt;-</span> AnnotationHub<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">C<span class="operator">:</span><span class="punctuation">\</span>Users<span class="punctuation">\</span>HUAWEI<span class="punctuation">\</span>AppData<span class="punctuation">\</span>Local<span class="operator">/</span>R<span class="operator">/</span>cache<span class="operator">/</span>R<span class="operator">/</span>AnnotationHub</span><br><span class="line">  does not exist<span class="punctuation">,</span> create directory<span class="operator">?</span> <span class="punctuation">(</span>yes<span class="operator">/</span>no<span class="punctuation">)</span><span class="operator">:</span> yes</span><br><span class="line">  <span class="operator">|</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">=</span><span class="operator">|</span> <span class="number">100</span>%</span><br><span class="line"></span><br><span class="line">snapshotDate<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">:</span> <span class="number">2021</span><span class="operator">-</span><span class="number">10</span><span class="operator">-</span><span class="number">20</span></span><br><span class="line"><span class="operator">&gt;</span> hub</span><br><span class="line">AnnotationHub with <span class="number">62386</span> records</span><br><span class="line"><span class="comment"># snapshotDate(): 2021-10-20</span></span><br><span class="line"><span class="comment"># $dataprovider: Ensembl, BroadInstitute, UCSC, ftp://ftp...</span></span><br><span class="line"><span class="comment"># $species: Homo sapiens, Mus musculus, Drosophila melano...</span></span><br><span class="line"><span class="comment"># $rdataclass: GRanges, TwoBitFile, BigWigFile, EnsDb, Rl...</span></span><br><span class="line"><span class="comment"># additional mcols(): taxonomyid, genome,</span></span><br><span class="line"><span class="comment">#   description, coordinate_1_based, maintainer,</span></span><br><span class="line"><span class="comment">#   rdatadateadded, preparerclass, tags, rdatapath,</span></span><br><span class="line"><span class="comment">#   sourceurl, sourcetype </span></span><br><span class="line"><span class="comment"># retrieve records with, e.g., &#x27;object[[&quot;AH5012&quot;]]&#x27; </span></span><br></pre></td></tr></table></figure>
+
+<p>第一次使用AnnotationHub需要创建一个AnnotationHub对象。为了更直观地使用，我们将AnnotationHub对象赋值给hub变量。查看这个变量，我们可以得到如下的信息。</p>
+<ul>
+<li>数据库版本是2021-10-20，目前有62386条记录</li>
+<li>可以用$dataprovider 方式查看数据来源，比如数据来自于Ensembl，UCSC等等</li>
+<li>可以用$species 方式查看数据库有哪些物种，比如人类、小鼠等等</li>
+<li>可以用$rdataclass 方式查看数据类型</li>
+<li>可以通过函数<code>mcols()</code>查看更多信息</li>
+<li>获取数据的方式是<code>object[[&quot;AH5012&quot;]]</code> object指你命名的变量名</li>
+</ul>
+<p>以上就是AnnotationHub的标准用法，比如我想获得拟南芥的注释数据库，我就输入以下命令查找：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> query<span class="punctuation">(</span>hub<span class="punctuation">,</span> <span class="string">&quot;Arabidopsis thaliana&quot;</span><span class="punctuation">)</span></span><br><span class="line">AnnotationHub with <span class="number">13</span> records</span><br><span class="line"><span class="comment"># snapshotDate(): 2021-10-20</span></span><br><span class="line"><span class="comment"># $dataprovider: UCSC, PathBank, NCBI,DBCLS, FANTOM5,DLRP...</span></span><br><span class="line"><span class="comment"># $species: Arabidopsis thaliana</span></span><br><span class="line"><span class="comment"># $rdataclass: SQLiteFile, TxDb, Tibble, list, OrgDb, Inp...</span></span><br><span class="line"><span class="comment"># additional mcols(): taxonomyid, genome,</span></span><br><span class="line"><span class="comment">#   description, coordinate_1_based, maintainer,</span></span><br><span class="line"><span class="comment">#   rdatadateadded, preparerclass, tags, rdatapath,</span></span><br><span class="line"><span class="comment">#   sourceurl, sourcetype </span></span><br><span class="line"><span class="comment"># retrieve records with, e.g., &#x27;object[[&quot;AH10456&quot;]]&#x27; </span></span><br><span class="line"></span><br><span class="line">            title                                           </span><br><span class="line">  AH10456 <span class="operator">|</span> hom.Arabidopsis_thaliana.inp8.sqlite            </span><br><span class="line">  AH52245 <span class="operator">|</span> TxDb.Athaliana.BioMart.plantsmart22.sqlite      </span><br><span class="line">  AH52246 <span class="operator">|</span> TxDb.Athaliana.BioMart.plantsmart25.sqlite      </span><br><span class="line">  AH52247 <span class="operator">|</span> TxDb.Athaliana.BioMart.plantsmart28.sqlite      </span><br><span class="line">  AH87070 <span class="operator">|</span> pathbank_Arabidopsis_thaliana_metabolites.rda   </span><br><span class="line">  ...       ...                                             </span><br><span class="line">  AH91794 <span class="operator">|</span> wikipathways_Arabidopsis_thaliana_metabolites...</span><br><span class="line">  AH95585 <span class="operator">|</span> Alternative Splicing Annotation <span class="keyword">for</span> Arabidops...</span><br><span class="line">  AH95951 <span class="operator">|</span> org.At.tair.db.sqlite                           </span><br><span class="line">  AH97723 <span class="operator">|</span> LRBaseDb <span class="keyword">for</span> Arabidopsis thaliana <span class="punctuation">(</span>Thale cres...</span><br><span class="line">  AH97844 <span class="operator">|</span> MeSHDb <span class="keyword">for</span> Arabidopsis thaliana <span class="punctuation">(</span>Thale cress<span class="punctuation">,</span>...</span><br></pre></td></tr></table></figure>
+
+<p><code>query()</code>函数查找，输入拟南芥的学名Arabidopsis thaliana我们可以看到一共找出了13个数据库。可以看到AH95951这个编号的数据库来源就是最大的拟南芥数据库TAIR（OrgDb，<strong>存储不同数据库基因ID之间对应关系，以及基因与GO等注释的对应关系</strong>，说白了后面ID转换要用到），我们就用这个数据库的注释资源。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> hub<span class="punctuation">[[</span><span class="string">&quot;AH95951&quot;</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line">downloading <span class="number">1</span> resources</span><br><span class="line">retrieving <span class="number">1</span> resource</span><br><span class="line">  <span class="operator">|</span>                                                   <span class="operator">|</span>   <span class="number">0</span>%</span><br></pre></td></tr></table></figure>
+
+<p>前面说过<code>object[[&quot;AH5012&quot;]]</code>是获取数据的方式。以上，就可以挂后台自动下载了。我这里因为网速的原因不下了，从前面的基因名也能看出来，我筛选的差异基因都是AT开头的，而且之前的基因组注释文件也是TAIR下载的，我可以<strong>直接用bioconductor安装org.At.tair.db包</strong>，这里用AnnotationHub只是提供一个找注释数据库的思路。</p>
+</div><h2 id="2-GO-x2F-KEGG富集分析"><a href="#2-GO-x2F-KEGG富集分析" class="headerlink" title="2. GO&#x2F;KEGG富集分析"></a>2. GO&#x2F;KEGG富集分析</h2><div class="story post-story"><h3 id="2-1-基因ID转换"><a href="#2-1-基因ID转换" class="headerlink" title="2.1 基因ID转换"></a>2.1 基因ID转换</h3><p>找到和下载注释数据库只是第一步，接下来GO&#x2F;KEGG富集分析需要用到R包<strong>clusterProfiler和org.At.tair.db</strong></p>
+<p>先来看一下我们基因名是什么格式的：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220515/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220515/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>很明显，我们的基因ID是TAIR类型<del>（废话，我从TAIR下的）</del>，org.At.tair.db包可以转换基因ID类型</p>
+<p>可以用<code>keytypes(org.At.tair.db)</code>或者<code>columns(org.At.tair.db)</code>查看可以转换的基因ID类型</p>
+<p><img src="https://www.shelven.com/tuchuang/20220515/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220515/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>转换基因ID代码如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;org.At.tair.db&quot;</span><span class="punctuation">)</span></span><br><span class="line">columns<span class="punctuation">(</span>org.At.tair.db<span class="punctuation">)</span>     <span class="comment"># 查看能转换基因的ID类型</span></span><br><span class="line">diffgen <span class="operator">&lt;-</span> nDEGs<span class="punctuation">[</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">]</span>       <span class="comment"># 注意只需要基因名</span></span><br><span class="line">diff_gen <span class="operator">&lt;-</span> bitr<span class="punctuation">(</span>diffgen<span class="punctuation">,</span></span><br><span class="line">                 fromType <span class="operator">=</span> <span class="string">&quot;TAIR&quot;</span><span class="punctuation">,</span></span><br><span class="line">                 toType <span class="operator">=</span> <span class="string">&quot;ENTREZID&quot;</span><span class="punctuation">,</span>   <span class="comment"># 基因ID类型TAIR转换为ENTREZID</span></span><br><span class="line">                 OrgDb <span class="operator">=</span> <span class="string">&quot;org.At.tair.db&quot;</span><span class="punctuation">)</span>      <span class="comment"># 该函数是基于org.At.tair.db包的</span></span><br><span class="line">diff_gen</span><br></pre></td></tr></table></figure>
+
+<p>这一步我的基因ID转换率<strong>只有60%左右</strong>，有<strong>将近一半</strong>的TAIR基因ID不能成功转换成ENTREZID，可能是Gene ID的版本问题，同一个基因在不同版本genecode中结果不一样，下载的注释文件原始版本我这里找不到了…暂时无法解决这个问题。只能不转换基因ID先跑一遍GO&#x2F;KEGG富集分析。</p>
+<p>看了很多教程都说clusterProfiler需要的ID类型是ENTREZID，<strong>这里我持怀疑态度</strong>，不转换后续也能得到结果，我看了函数<code>enrichGO()</code>默认的基因ID是ENTREZID并不代表不能改变，有可能是误传。[查阅了一些资料](<a target="_blank" rel="noopener" href="http://www.360doc.com/content/17/0919/14/19913717_688385068.shtml">浅谈Entrez ID (360doc.com)</a>)，简单来说Entrez ID是来自于NCBI旗下Entrez gene数据库的编号系统，基因编号系统之间是可以相互转换的，这些ID可以在对应的数据库找到基因注释信息，就是说也可以在网页上手动注释。</p>
+<h3 id="2-2-GO-x2F-KEGG分析"><a href="#2-2-GO-x2F-KEGG分析" class="headerlink" title="2.2 GO&#x2F;KEGG分析"></a>2.2 GO&#x2F;KEGG分析</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;clusterProfiler&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># GO富集分析</span></span><br><span class="line">enrich_GO <span class="operator">&lt;-</span> enrichGO<span class="punctuation">(</span>gene <span class="operator">=</span> diffgen<span class="punctuation">,</span>   <span class="comment"># 基因名列表</span></span><br><span class="line">                      OrgDb <span class="operator">=</span> <span class="string">&#x27;org.At.tair.db&#x27;</span><span class="punctuation">,</span> <span class="comment"># 输入OrgDb数据库（注释对象信息）</span></span><br><span class="line">                      keyType <span class="operator">=</span> <span class="string">&#x27;TAIR&#x27;</span><span class="punctuation">,</span>     <span class="comment"># 输入的基因名ID类型</span></span><br><span class="line">                      ont <span class="operator">=</span> <span class="string">&#x27;ALL&#x27;</span><span class="punctuation">,</span>      <span class="comment"># 输出的GO分类</span></span><br><span class="line">                      pAdjustMethod <span class="operator">=</span> <span class="string">&#x27;fdr&#x27;</span><span class="punctuation">,</span></span><br><span class="line">                      pvalueCutoff <span class="operator">=</span> <span class="number">0.05</span><span class="punctuation">,</span></span><br><span class="line">                      qvalueCutoff <span class="operator">=</span> <span class="number">0.2</span><span class="punctuation">,</span></span><br><span class="line">                      readable <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">)</span></span><br><span class="line">GO_result <span class="operator">&lt;-</span> enrich_GO<span class="operator">@</span>result</span><br><span class="line">write.table<span class="punctuation">(</span>GO_result<span class="punctuation">,</span> <span class="string">&#x27;GO_result.csv&#x27;</span><span class="punctuation">,</span> sep <span class="operator">=</span> <span class="string">&#x27;,&#x27;</span><span class="punctuation">,</span> <span class="built_in">quote</span> <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span> row.names <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># KEGG富集分析</span></span><br><span class="line">enrich_KEGG <span class="operator">&lt;-</span> enrichKEGG<span class="punctuation">(</span>gene <span class="operator">=</span> diffgen<span class="punctuation">,</span></span><br><span class="line">                        keyType <span class="operator">=</span> <span class="string">&quot;kegg&quot;</span><span class="punctuation">,</span></span><br><span class="line">                        organism <span class="operator">=</span> <span class="string">&quot;ath&quot;</span><span class="punctuation">,</span>   <span class="comment"># 输入的物种名</span></span><br><span class="line">                        pvalueCutoff <span class="operator">=</span> <span class="number">0.05</span><span class="punctuation">,</span></span><br><span class="line">                        qvalueCutoff <span class="operator">=</span> <span class="number">0.2</span><span class="punctuation">)</span></span><br><span class="line">KEGG_result <span class="operator">&lt;-</span> enrich_KEGG<span class="operator">@</span>result</span><br><span class="line">write.table<span class="punctuation">(</span>KEGG_result<span class="punctuation">,</span> <span class="string">&#x27;KEGG_result.csv&#x27;</span><span class="punctuation">,</span> sep <span class="operator">=</span> <span class="string">&#x27;,&#x27;</span><span class="punctuation">,</span> <span class="built_in">quote</span> <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span> row.names <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>clusterProfiler这个包进行GO和KEGG富集分析就这两个函数</p>
+<p>这里我的GO只富集到两条细胞组分的内容：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220515/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220515/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>说一下各列代表的意思：</p>
+<ul>
+<li>ONTOLOGY GO分类BP（生物学过程）、CC（细胞组分）或MF（分子功能）</li>
+<li>ID 富集到的GO id号</li>
+<li>Description 富集到的GO描述</li>
+<li>GeneRatio和BgRatio 分别为富集到该GO条目中的基因数目&#x2F;给定基因的总数目，以及该条目中背景基因总数目&#x2F;该物种所有已知的GO功能基因数目</li>
+<li>pvalue、p.adjust和qvalue p值、校正后p值和q值信息</li>
+<li>geneID和Count，富集到该GO条目中的基因名称和数目</li>
+</ul>
+<p>KEGG富集分析结果表如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220515/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220515/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li>ID和Description 分别代表富集到KEGG的ID和描述，其他和GO富集都类似</li>
+</ul>
+<p>KEGG富集分析的时候有一点需要注意，输入的organism名称需要在<strong>官网的KEGG Organisms列表中能找到</strong>，否则是不能进行分析的！<a target="_blank" rel="noopener" href="https://www.genome.jp/kegg/catalog/org_list.html">点击这里进入KEGG Organisms: Complete Genomes</a></p>
+<p>还发现一个很奇怪的问题，我在官网的Organisms列表能找到拟南芥Arabidopsis thaliana，但是在上面的函数中对参数赋值<code>organism = &quot;Arabidopsis thaliana&quot;</code>会显示HTTP 400错误，也就是发出的url请求有问题，但是输入<code>organism = &quot;ath&quot;</code>程序可以正常运行，以后注意写缩写吧（<strong>应该是只有缩写才行</strong>，会通过联网自动获取该物种的pathway注释信息）。</p>
+</div><h2 id="3-可视化"><a href="#3-可视化" class="headerlink" title="3. 可视化"></a>3. 可视化</h2><div class="story post-story"><p>clusterProfiler包还提供了GO&#x2F;KEGG富集结果的可视化方案，此处代码参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50898257/article/details/120588222">CSDN，作者：Tian問</a></p>
+<p>这里因为我的GO结果不好，只简单跑一下流程和做几个KEGG富集分析图，详细作图函数参数使用方法和效果同样可以参考上面的链接~</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## GO富集分析可视化</span></span><br><span class="line"><span class="comment">#barplot</span></span><br><span class="line">barplot<span class="punctuation">(</span>enrich_GO<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#dotplot</span></span><br><span class="line">dotplot<span class="punctuation">(</span>enrich_GO<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#DAG有向无环图</span></span><br><span class="line">plotGOgraph<span class="punctuation">(</span>enrich_GO<span class="punctuation">)</span>  <span class="comment">#矩形代表富集到的top10个GO terms, 颜色从黄色过滤到红色，对应p值从大到小。</span></span><br><span class="line"><span class="comment">#igraph布局的DAG</span></span><br><span class="line">goplot<span class="punctuation">(</span>enrich_GO<span class="punctuation">)</span></span><br><span class="line"><span class="comment">#GO terms关系网络图（通过差异基因关联）</span></span><br><span class="line">emapplot<span class="punctuation">(</span>enrich_GO<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">30</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#GO term与差异基因关系网络图</span></span><br><span class="line">cnetplot<span class="punctuation">(</span>enrich_GO<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">5</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## KEGG富集分析可视化</span></span><br><span class="line"><span class="comment">#barplot</span></span><br><span class="line">barplot<span class="punctuation">(</span>enrich_KEGG<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#dotplot</span></span><br><span class="line">dotplot<span class="punctuation">(</span>enrich_KEGG<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#pathway关系网络图（通过差异基因关联）</span></span><br><span class="line">emapplot<span class="punctuation">(</span>enrich_KEGG<span class="punctuation">,</span>  showCategory <span class="operator">=</span> <span class="number">30</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#pathway与差异基因关系网络图</span></span><br><span class="line">cnetplot<span class="punctuation">(</span>enrich_KEGG<span class="punctuation">,</span> showCategory <span class="operator">=</span> <span class="number">5</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#pathway映射</span></span><br><span class="line">browseKEGG<span class="punctuation">(</span>enrich_KEGG<span class="punctuation">,</span> <span class="string">&quot;ath03060&quot;</span><span class="punctuation">)</span> <span class="comment">#在pathway通路图上标记富集到的基因，会弹出页面链接到KEGG官网</span></span><br></pre></td></tr></table></figure>
+
+<p>关于GO&#x2F;KEGG富集分析，还有非常多的操作和应用，我只是简单做个最基础的富集分析的学习，没有涉及到手动注释，构建orgdb等等更多操作。电脑快没电了，这篇笔记先暂时记这些，以后需要用到再补充~</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/05/16/a.html>http://www.shelven.com/2022/05/16/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T03:50:48+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年5月16日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AnnotationHub/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AnnotationHub</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GO-KEGG/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>GO/KEGG</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/org-At-tair-db/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>org.At.tair.db</p></a></div>
+  <span hidden itemprop="keywords">AnnotationHub GO/KEGG org.At.tair.db</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/05/08/a.html'>
+          <p class='title'>视频一键转字符动画——python函数封装和调用练习<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 前言捣鼓了几天python代码，我现在也越来越发现python的魅力所在，它的强大之处在于有非常多的第三方库可以随意调用。我不需要知道这些第三方库各种函数的实现方式，只要知道这些函数有什么...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/05/16/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3123,208 +3364,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Phantom-Aria/ImgHosting/Phantom-Aria_PIC/头像1.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(13)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AnnotationHub%E6%B3%A8%E9%87%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7"><span class="toc-text">1. AnnotationHub注释数据库搜索工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GO-x2F-KEGG%E5%AF%8C%E9%9B%86%E5%88%86%E6%9E%90"><span class="toc-text">2. GO&#x2F;KEGG富集分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2"><span class="toc-text">2.1 基因ID转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-GO-x2F-KEGG%E5%88%86%E6%9E%90"><span class="toc-text">2.2 GO&#x2F;KEGG分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">3. 可视化</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 24px; color: #555">R语言</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 14px; color: #999">爬虫</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>17 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>38.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-05-16 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3349,14 +3420,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="转录组数据分析笔记（10）——初识GO/KEGG富集分析";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4587,7 +4659,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/tags/IGV/","name":"IGV"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/16/a.html","name":"转录组数据分析笔记（10）——初识GO/KEGG富集分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（10）——初识GO/KEGG富集分析","description":"","datePublished":"2022-05-15T19:47:39.000Z","dateModified":"2022-05-15T19:50:48.402Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/16/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"AnnotationHub,GO/KEGG,org.At.tair.db","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
