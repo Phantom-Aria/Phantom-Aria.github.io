@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1653334317209" as="style">
+  <link rel="preload" href="/css/style.css?time=1653334950678" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-18T07:49:20.000Z">
-<meta property="article:modified_time" content="2022-05-08T07:34:47.402Z">
+<meta property="article:modified_time" content="2022-05-23T19:42:19.839Z">
 <meta property="article:tag" content="DESeq2">
 <meta property="article:tag" content="dplyr">
 <meta property="article:tag" content="R语言">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1653334317209" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1653334317209"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1653334950678" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1653334950678"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1653334317209","sites":"/js/plugins/sites.js?time=1653334317209","friends":"/js/plugins/friends.js?time=1653334317209","parallax":"/js/plugins/parallax.js?time=1653334317209","rightMenu":"/js/plugins/rightMenu.js?time=1653334317209","contributors":"/js/plugins/contributors.js?time=1653334317209","message":"/js/thirdparty/message.js?time=1653334317209","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334317209"},"css":{"style":"/css/style.css?time=1653334317209","message":"/css/message.css?time=1653334317209"}},
+    cdn: {"js":{"app":"/js/app.js?time=1653334950678","sites":"/js/plugins/sites.js?time=1653334950678","friends":"/js/plugins/friends.js?time=1653334950678","parallax":"/js/plugins/parallax.js?time=1653334950678","rightMenu":"/js/plugins/rightMenu.js?time=1653334950678","contributors":"/js/plugins/contributors.js?time=1653334950678","message":"/js/thirdparty/message.js?time=1653334950678","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334950678"},"css":{"style":"/css/style.css?time=1653334950678","message":"/css/message.css?time=1653334950678"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653334317209),
+    lastupdate: new Date(1653334950678),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3132,7 +3132,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>前面说到DESeq2包需要准备两个输入文件，一个是<strong>样本列表矩阵</strong>，一个<strong>是row count定量表达矩阵</strong>，接下来我们要对样本进行两两比对，找到两组之间有多少个基因上调和下调，不进行两两比对直接把4组数据4个重复全部导进去得到的结果是没有意义的</p>
 <p>举个栗子，我先进行短日照的“0”组样本和经过“1”天长日照的1组样本之间进行差异基因分析，从前面整理的样本列表矩阵我们可以看到，0组样本四个重复分别是ERR1698194、ERR1698202、ERR1698203和ERR1698204，同样1组数据4个重复分别为ERR1698205、ERR1698206、ERR1698207和ERR1698208，因此我们需要<strong>重新</strong>整理我们需要的数据做成csv格式，如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422230846.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422230846.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422230705.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422230705.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><strong>定量表达矩阵第一行需要和样本列表矩阵的第一列一一对应，顺序需要一模一样</strong><br>下面讲解如何使用DESeq2</p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="https://www.shelven.com/tuchuang/20220418/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><strong>定量表达矩阵第一行需要和样本列表矩阵的第一列一一对应，顺序需要一模一样</strong><br>下面讲解如何使用DESeq2</p>
 </div><h2 id="1-代码示范"><a href="#1-代码示范" class="headerlink" title="1. 代码示范"></a>1. 代码示范</h2><div class="story post-story"><p>前面处理好raw count定量表达矩阵，建立样本列表矩阵后，我们就可以在rstudio里运行DESeq2包进行差异基因筛选了。代码如下。</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;DESeq2&quot;</span><span class="punctuation">)</span></span><br><span class="line">mycounts <span class="operator">&lt;-</span> read.csv<span class="punctuation">(</span><span class="string">&quot;gene_count_matrix_0_1.csv&quot;</span><span class="punctuation">,</span>row.names <span class="operator">=</span> <span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">mycounts_1 <span class="operator">&lt;-</span> mycounts<span class="punctuation">[</span>rowSums<span class="punctuation">(</span>mycounts<span class="punctuation">)</span> <span class="operator">!=</span> <span class="number">0</span><span class="punctuation">,</span><span class="punctuation">]</span> <span class="comment"># 重新定义数据集，过滤mapping数为0的基因</span></span><br><span class="line">mymeta <span class="operator">&lt;-</span> read.csv<span class="punctuation">(</span><span class="string">&quot;sample_list_0_1.csv&quot;</span><span class="punctuation">,</span>stringsAsFactors <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span>  <span class="comment"># 载入样本分组文件，遇到字符串将其转化为因子</span></span><br><span class="line">colnames<span class="punctuation">(</span>mycounts_1<span class="punctuation">)</span> <span class="operator">==</span> mymeta<span class="operator">$</span>id   <span class="comment"># 检查导入的两个数据集是否匹配，返回值为F需要重新匹配</span></span><br><span class="line">mymeta<span class="operator">$</span>index <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>mymeta<span class="operator">$</span>index<span class="punctuation">,</span>levels <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;0&quot;</span><span class="punctuation">,</span><span class="string">&quot;1&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span>    <span class="comment"># 把样本分组文件的分组列转换到因子，两两比对把对照组放前面！</span></span><br><span class="line">dds <span class="operator">&lt;-</span> DESeqDataSetFromMatrix<span class="punctuation">(</span>countData <span class="operator">=</span> mycounts_1<span class="punctuation">,</span></span><br><span class="line">                              colData <span class="operator">=</span> mymeta<span class="punctuation">,</span></span><br><span class="line">                              design <span class="operator">=</span> <span class="operator">~</span>index<span class="punctuation">)</span>  <span class="comment">#构造用于差异表达分析的数据集</span></span><br><span class="line">dds <span class="operator">&lt;-</span> DESeq<span class="punctuation">(</span>dds<span class="punctuation">)</span></span><br><span class="line">res <span class="operator">&lt;-</span> results<span class="punctuation">(</span>dds<span class="punctuation">)</span></span><br><span class="line">res_1 <span class="operator">&lt;-</span> data.frame<span class="punctuation">(</span>res<span class="punctuation">)</span>    <span class="comment"># 结果res不是常规的数据，需要转化成数据框</span></span><br><span class="line">library<span class="punctuation">(</span><span class="string">&quot;dplyr&quot;</span><span class="punctuation">)</span></span><br><span class="line">res_1 <span class="operator">%&gt;%</span>   <span class="comment"># dplyr给数据集增加新列</span></span><br><span class="line">  mutate<span class="punctuation">(</span>group <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">    log2FoldChange <span class="operator">&gt;=</span><span class="number">1</span> <span class="operator">&amp;</span> padj <span class="operator">&lt;=</span><span class="number">0.05</span> <span class="operator">~</span> <span class="string">&quot;UP&quot;</span><span class="punctuation">,</span></span><br><span class="line">    log2FoldChange <span class="operator">&lt;=</span><span class="operator">-</span><span class="number">1</span> <span class="operator">&amp;</span> padj <span class="operator">&lt;=</span><span class="number">0.05</span> <span class="operator">~</span> <span class="string">&quot;DOWN&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="literal">TRUE</span> <span class="operator">~</span> <span class="string">&quot;NOT_CHANGE&quot;</span></span><br><span class="line">  <span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> res_2</span><br><span class="line">table<span class="punctuation">(</span>res_2<span class="operator">$</span>group<span class="punctuation">)</span></span><br><span class="line">write.csv<span class="punctuation">(</span>res_2<span class="punctuation">,</span>file <span class="operator">=</span> <span class="string">&quot;gene_0_1.csv&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="built_in">quote</span> <span class="operator">=</span> <span class="built_in">F</span><span class="punctuation">)</span>    <span class="comment"># 输出文件</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </div><h2 id="2-代码详解"><a href="#2-代码详解" class="headerlink" title="2. 代码详解"></a>2. 代码详解</h2><div class="story post-story"><p>详细解释一下过程：</p>
@@ -3142,7 +3142,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>mycounts_1 &lt;- mycounts[rowSums(mycounts) != 0,]</code> # 过滤每一行mapping总数为0的基因，将数据集整理命名为mycounts_1</p>
 <p><code>mymeta &lt;- read.csv(&quot;sample_list_0_1.csv&quot;,stringsAsFactors = T)</code> # 载入样品列表，遇到字符串将其转化为一个因子</p>
 <p><code>colnames(mycounts_1) == mymeta$id</code> # 检查raw count矩阵第一行是否与样品列表的id列是否一致（如下）。<strong>这个很重要，不一致跑DESeq2会报错</strong>。如果显示false就要调整</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220418154725.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220418154725.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p><code>mymeta$index &lt;- factor(mymeta$index,levels = c(&quot;0&quot;,&quot;1&quot;))</code> # 这一步同样重要，把样本分组文件的分组列转换到因子，不然会报错。我这里对照组是第0天，所以把“1”放在“0”之后，这里顺序需要特别说明！样本和定量矩阵的分组只要一一对应可以不排序，这里一定要<strong>分清楚哪个组和哪个组进行比较，否则会得出完全相反的结论！</strong></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dds <span class="operator">&lt;-</span> DESeqDataSetFromMatrix<span class="punctuation">(</span>countData <span class="operator">=</span> mycounts_1<span class="punctuation">,</span></span><br><span class="line">                              colData <span class="operator">=</span> mymeta<span class="punctuation">,</span></span><br><span class="line">                              design <span class="operator">=</span> <span class="operator">~</span>index<span class="punctuation">)</span> </span><br></pre></td></tr></table></figure>
 
@@ -3150,7 +3150,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>dds &lt;- DESeq(dds)</code>  # <strong>分析的核心DESeq程序</strong></p>
 <p><code>res &lt;- results(dds)</code> # 将结果输出至res数据集</p>
 <p><code>res_1 &lt;- data.frame(res)</code>  # res不是常规的数据，我们可以用head和class命令查看一下（如下图），需要转化成常规的数据框格式才可以对其进行加减列等操作，转换格式后的数据集名字为res_1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220418153006.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220418153006.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/4.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p><code>library(&quot;dplyr&quot;)</code>  # 加载这个包是为了对数据框进行操作，我是要增加新的一列统计差异表达情况</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res_1 <span class="operator">%&gt;%</span>   </span><br><span class="line">  mutate<span class="punctuation">(</span>group <span class="operator">=</span> case_when<span class="punctuation">(</span></span><br><span class="line">    log2FoldChange <span class="operator">&gt;=</span><span class="number">1</span> <span class="operator">&amp;</span> padj <span class="operator">&lt;=</span><span class="number">0.05</span> <span class="operator">~</span> <span class="string">&quot;UP&quot;</span><span class="punctuation">,</span></span><br><span class="line">    log2FoldChange <span class="operator">&lt;=</span><span class="operator">-</span><span class="number">1</span> <span class="operator">&amp;</span> padj <span class="operator">&lt;=</span><span class="number">0.05</span> <span class="operator">~</span> <span class="string">&quot;DOWN&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="literal">TRUE</span> <span class="operator">~</span> <span class="string">&quot;NOT_CHANGE&quot;</span></span><br><span class="line">  <span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> res_2</span><br></pre></td></tr></table></figure>
 
@@ -3159,17 +3159,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>table(res_2$group)</code> # 查看差异基因表达的结果，上调基因多少，下调基因有多少，不变的有多少</p>
 <p><code>write.csv(res_2,file = &quot;gene_0_1.csv&quot;, quote = F)</code> # 输出和生成gene_0_1.csv文件，即为结果文件</p>
 </div><h2 id="3-结果演示"><a href="#3-结果演示" class="headerlink" title="3. 结果演示"></a>3. 结果演示</h2><div class="story post-story"><p>我对“0”组样本（对照）和长日照1天，2天和3天这一共4组样本分别进行两两对比，做了基因表达差异分析（0_1表示0组和1组对比，1_2表示1组和2组对比，依次类推不再赘述），同时与原文献补充数据2中的差异分析结果做对比</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422235400.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422235400.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/5.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>0组与1组对比，187个基因上调，149个基因下调；原文57个基因上调，79个基因下调</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422235528.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422235528.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/6.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>0组与2组对比，51个基因上调，42个基因下调；原文21个基因上调，24个基因下调</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422232534.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422232534.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/7.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>0组与3组对比，142个基因上调，143个基因下调；原文107个基因上调，84个基因下调</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422232843.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422232843.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/8.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>1组和2组对比，26个基因上调，29个基因下调；原文3个基因上调，0个基因下调</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422233050.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422233050.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>1组和3组对比，46个基因上调，50个基因下调；原文8个基因上调，2个基因下调</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422233237.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220422233237.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220418/10.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220418/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>2组和3组对比，11个基因上调，13个基因下调；原文2个基因上调，1个基因下调</p>
 <p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5442315/#S1">点击这里</a>下载原文基因表达差异总表（补充数据2）</p>
 <h3 id="3-1-分析"><a href="#3-1-分析" class="headerlink" title="3.1 分析"></a>3.1 分析</h3><p>我做的差异分析总体趋势和文章类似，都是短日照组（SD组，也就是0组）与长日照1、2、3天组（LD组，分别对应123组）相比，有较多基因出现差异性表达；而长日照1、2、3天组之间相比差异表达基因较少，这样才合理，表明拟南芥茎尖分生组织在开花期长日照下，确实有不同的基因参与了光周期诱导的开花过程。如果要对这些差异表达的基因做更深入的分析（下游分析），我们就要比对GO库或者KEGG库进行代谢通路富集分析和注释。以后的笔记会说到。<br>至于为什么我得到的差异基因普遍比原文多，一个是差异分析之前用的分析软件不同，在过滤数据过程中我的条件比较松（只过滤了count数为0的基因），另外不同软件的组装、比对和计数的算法实现也不一样。另外，我们得到这个基因差异表达结果之后，还可以做个更直观的火山图看我们的差异基因分布是否合理，之后也会说。</p>
@@ -3214,10 +3214,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-08T15:34:47+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:42:19+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月8日</p>
+    <p>更新于：2022年5月24日</p>
   </a>
 </div>
 
@@ -3544,7 +3544,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1653334317209.js"></script>
+<script src="/js/app.js?time=1653334950678.js"></script>
 
 
 
@@ -3728,7 +3728,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1653334317209')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1653334950678')</script>
 
 
 
@@ -3858,19 +3858,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1653334317209")
+        volantis.js("/js/plugins/sites.js?time=1653334950678")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1653334317209")
+        volantis.js("/js/plugins/friends.js?time=1653334950678")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1653334317209")
+        volantis.js("/js/plugins/contributors.js?time=1653334950678")
       }
     
   };
@@ -3939,7 +3939,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1653334317209')
+    await volantis.js('/js/plugins/aplayer.js?time=1653334950678')
   
   })();
 
@@ -4064,7 +4064,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334317209");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334950678");
   }
 
   function loadSearchService() {
@@ -4404,7 +4404,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1653334317209').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1653334950678').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4638,7 +4638,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/18/a.html","name":"转录组数据分析笔记（7）——DESeq2差异分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（7）——DESeq2差异分析","description":"","datePublished":"2022-04-18T07:49:20.000Z","dateModified":"2022-05-08T07:34:47.402Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/18/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/18/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"DESeq2,dplyr,R语言","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/18/a.html","name":"转录组数据分析笔记（7）——DESeq2差异分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（7）——DESeq2差异分析","description":"","datePublished":"2022-04-18T07:49:20.000Z","dateModified":"2022-05-23T19:42:19.839Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/18/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/18/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"DESeq2,dplyr,R语言","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
