@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1653334950678" as="style">
+  <link rel="preload" href="/css/style.css?time=1653335501938" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-19T19:55:58.000Z">
-<meta property="article:modified_time" content="2022-04-20T05:03:08.389Z">
+<meta property="article:modified_time" content="2022-05-23T19:51:34.360Z">
 <meta property="article:tag" content="shell脚本">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1653334950678" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1653334950678"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1653335501938" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1653335501938"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1653334950678","sites":"/js/plugins/sites.js?time=1653334950678","friends":"/js/plugins/friends.js?time=1653334950678","parallax":"/js/plugins/parallax.js?time=1653334950678","rightMenu":"/js/plugins/rightMenu.js?time=1653334950678","contributors":"/js/plugins/contributors.js?time=1653334950678","message":"/js/thirdparty/message.js?time=1653334950678","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334950678"},"css":{"style":"/css/style.css?time=1653334950678","message":"/css/message.css?time=1653334950678"}},
+    cdn: {"js":{"app":"/js/app.js?time=1653335501938","sites":"/js/plugins/sites.js?time=1653335501938","friends":"/js/plugins/friends.js?time=1653335501938","parallax":"/js/plugins/parallax.js?time=1653335501938","rightMenu":"/js/plugins/rightMenu.js?time=1653335501938","contributors":"/js/plugins/contributors.js?time=1653335501938","message":"/js/thirdparty/message.js?time=1653335501938","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938"},"css":{"style":"/css/style.css?time=1653335501938","message":"/css/message.css?time=1653335501938"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653334950678),
+    lastupdate: new Date(1653335501938),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3135,7 +3135,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="各种引号的区别"><a href="#各种引号的区别" class="headerlink" title="各种引号的区别"></a>各种引号的区别</h2><div class="story post-story"><p>vim创建脚本文件1111.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">echo &quot;Phantom的SHELL练习&quot;</span><br><span class="line">num=123</span><br><span class="line">echo &quot;预设数字=$num&quot;</span><br><span class="line">read -p &quot;输入数字&quot; sum      # read可以识别标准输入（键盘输入），-p参数设置提示语</span><br><span class="line">echo &quot;输出结果=$sum+$num&quot;</span><br><span class="line">echo &quot;$sum&quot;     # &quot;&quot;解析变量值</span><br><span class="line">echo &#x27;$sum&#x27;     # &#x27;&#x27;不能解析变量值</span><br><span class="line">echo &quot;今天日期`date`&quot;       # ``识别为系统命令</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420011514.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420011514.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>变量名不能以数字开头</p>
 <p>在变量赋值的过程中，等号两边不能接空格，若要接空格，则整个字符串都要用引号括起来</p>
 <div class="note "><p><strong>各种引号区别</strong></p><p>双引号“”可以解析变量的值<br>单引号‘’不能解析变量的值，包含的变量会被当做字符串<br>反引号`` 反引号的内容作为系统命令并执行 如`date`</p></div>
@@ -3143,27 +3143,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="各种括号的区别"><a href="#各种括号的区别" class="headerlink" title="各种括号的区别"></a>各种括号的区别</h2><div class="story post-story"><p>vim创建脚本文件xxx.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">Num=1000</span><br><span class="line">&#123;                                       # 花括号表示在当前shell完成，会影响当前变量</span><br><span class="line">    Num=1234</span><br><span class="line">    echo &quot;()里面的数字是=$Num&quot;</span><br><span class="line">&#125;</span><br><span class="line">echo &quot;显示当前shell数字=$Num&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420012607.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420012607.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>vim创建脚本文件xxxx.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">Num=1000</span><br><span class="line">(                                       # 小括号表示在当前shell完成，不会影响当前变量</span><br><span class="line">    Num=1234</span><br><span class="line">    echo &quot;()里面的数字是=$Num&quot;</span><br><span class="line">)</span><br><span class="line">echo &quot;显示当前shell数字=$Num&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420013440.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420013440.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <div class="note "><p><strong></strong></p><p>{命令序列} 在当前shell中执行，直接影响当前变量<br>(命令序列) 由子shell完成，不影响当前shell的变量<br>[判断条件]中括号是判断条件，进行数值判断。下面会说明</p></div>
 
 </div><h2 id="数值判断"><a href="#数值判断" class="headerlink" title="数值判断"></a>数值判断</h2><div class="story post-story"><p>vim建立脚本文件xxxxx.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">read -p &quot;请输入第一个数字&quot; m</span><br><span class="line">read -p &quot;请输入第二个数字&quot; n</span><br><span class="line">if [ $m -eq $n ]; then          # -eq 判断两个参数是否相等</span><br><span class="line">    echo &quot;输入的两个数字相等&quot;</span><br><span class="line">elif [ $m -lt $n ]; then        # -lt 判断左边参数是否小于右边参数</span><br><span class="line">    echo &quot;第一个数字小于第二个数字&quot;</span><br><span class="line">elif [ $m -gt $n ]; then        # -gt 判断左边参数是否大于右边参数</span><br><span class="line">    echo &quot;第一个数字大于第二个数字&quot;</span><br><span class="line">fi      # if控制语句格式：if elif else fi </span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420015758.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420015758.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> </p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/4.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> </p>
 <div class="note "><p><strong>数值判断参数详解</strong></p><p>-eq  比较两个参数是否相等<br>-ne  比较两个参数是否不相等<br>-lt  左边参数是否小于右边参数<br>-le  左边参数是否小于等于右边参数<br>-gt  左边参数是否大于右边参数<br>-ge  左边参数是否大于等于右边参数</p></div>
 
 </div><h2 id="字符串提取和替换"><a href="#字符串提取和替换" class="headerlink" title="字符串提取和替换"></a>字符串提取和替换</h2><div class="story post-story"><p>vim新建脚本文件1234.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">ll=&quot;Phantom Aria f r u i t l e s s l o v e&quot;     # 定义字符串变量</span><br><span class="line">echo &quot;长度为:$&#123;#ll&#125;&quot;        # 字符串长度(包括空格)</span><br><span class="line">echo &quot;$&#123;ll:3&#125;&quot;          # 从第3个字符往后提取</span><br><span class="line">echo &quot;$&#123;ll:3:11&#125;&quot;       # 从第3个字符往后提取11个字符</span><br><span class="line">echo &quot;$&#123;ll/ /&#125;&quot;         # 字符串从左往右删除第一个空格（相当于替换的方式）</span><br><span class="line">echo &quot;$&#123;ll// /&#125;&quot;        # 删除字符串中所有空格（相当于全局替换的方式）</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420024742.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420024742.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/5.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 </div><h2 id="字符串匹配和删除"><a href="#字符串匹配和删除" class="headerlink" title="字符串匹配和删除"></a>字符串匹配和删除</h2><div class="story post-story"><p>vim新建脚本文件match.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">ll=&quot;Phantom Aria fruitless love&quot;</span><br><span class="line">echo $&#123;ll% *&#125;   # 从右往左匹配第一个空格，删除右边所有字符串</span><br><span class="line">echo $&#123;ll%% *&#125;  # 从右往左匹配所有空格，删除右边所有字符串</span><br><span class="line">echo $&#123;ll#* &#125;   # 从左往右匹配第一个空格，删除左边所有字符串</span><br><span class="line">echo $&#123;ll##* &#125;  # 从左往右匹配所有空格，删除左边所有字符串</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420031440.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420031440.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/6.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <div class="note "><p><strong></strong></p><p>*号是通配符，可以是匹配的任意长度任意字符串<br>%和%%匹配原则：都是从右到左匹配，删除右边，%%称为<strong>贪婪匹配</strong><br>#和##匹配原则：都是从左往右匹配，删除左边，##同样称为贪婪匹配，<strong>注意通配符位置</strong></p></div>
 
 </div><h2 id="for循环语句"><a href="#for循环语句" class="headerlink" title="for循环语句"></a>for循环语句</h2><div class="story post-story"><p>for循环语句两种写法如下：</p>
@@ -3172,16 +3172,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>vim建立脚本文件for_example.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">declare -i sum=0        # 强制定义sum为整数型变量（不定义会变成一串字符串）</span><br><span class="line">read -p &quot;请输入整数&quot; n      # 标准输入定义变量n</span><br><span class="line">for (( i=0; i&lt;=$n; i++ ))   # 等同于for i in `seq 0 $n`，不赘述</span><br><span class="line">do</span><br><span class="line">    sum=$sum+$i     # 计算0到n之和</span><br><span class="line">done</span><br><span class="line">echo &quot;0到这个数的整数之和=$sum&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420022902.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420022902.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/7.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 </div><h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><div class="story post-story"><p>vim建立脚本文件12345.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">function formax()</span><br><span class="line">&#123;</span><br><span class="line">    if [ $n -gt $m ]; then</span><br><span class="line">        return $n</span><br><span class="line">    else</span><br><span class="line">        return $m</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line">read -p &quot;输入数值1：&quot; n</span><br><span class="line">read -p &quot;输入数值2：&quot; m</span><br><span class="line">formax $n $m</span><br><span class="line">echo &quot;输入的最大值为$?&quot; # $?表示上个指令的返回值</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420034507.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420034507.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/8.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>自定义了一个formax函数判断输入的两个数值大小，可以看出shell脚本中是一行一行读取指令的。自定义函数可以被引用，保存上述{}内的指令至原文件名12345.sh，在下一个脚本文件中，将函数放在脚本开始处， shell解释器发现它才可以进行调用（如下所示）</p>
 <p>vim建立脚本文件test.sh：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">source 12345.sh</span><br><span class="line">read -p &quot;输入数值1：&quot; n</span><br><span class="line">read -p &quot;输入数值2：&quot; m</span><br><span class="line">formax $n $m</span><br><span class="line">echo &quot;输入的最大值为$?&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420035345.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220420035345.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>自定义函数被成功调用</p>
 
 </div>
@@ -3224,10 +3224,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-20T13:03:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:51:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月20日</p>
+    <p>更新于：2022年5月24日</p>
   </a>
 </div>
 
@@ -3554,7 +3554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1653334950678.js"></script>
+<script src="/js/app.js?time=1653335501938.js"></script>
 
 
 
@@ -3738,7 +3738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1653334950678')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1653335501938')</script>
 
 
 
@@ -3868,19 +3868,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1653334950678")
+        volantis.js("/js/plugins/sites.js?time=1653335501938")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1653334950678")
+        volantis.js("/js/plugins/friends.js?time=1653335501938")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1653334950678")
+        volantis.js("/js/plugins/contributors.js?time=1653335501938")
       }
     
   };
@@ -3949,7 +3949,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1653334950678')
+    await volantis.js('/js/plugins/aplayer.js?time=1653335501938')
   
   })();
 
@@ -4074,7 +4074,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653334950678");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938");
   }
 
   function loadSearchService() {
@@ -4414,7 +4414,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1653334950678').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1653335501938').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4648,7 +4648,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/a.html","name":"shell脚本基本语法总结"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"shell脚本基本语法总结","description":"","datePublished":"2022-04-19T19:55:58.000Z","dateModified":"2022-04-20T05:03:08.389Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"shell脚本","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/a.html","name":"shell脚本基本语法总结"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"shell脚本基本语法总结","description":"","datePublished":"2022-04-19T19:55:58.000Z","dateModified":"2022-05-23T19:51:34.360Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"shell脚本","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
