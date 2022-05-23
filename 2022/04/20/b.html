@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1653335501938" as="style">
+  <link rel="preload" href="/css/style.css?time=1653336180351" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-20T15:44:49.000Z">
-<meta property="article:modified_time" content="2022-04-26T05:42:35.768Z">
+<meta property="article:modified_time" content="2022-05-23T19:55:33.840Z">
 <meta property="article:tag" content="linux指令">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1653335501938" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1653335501938"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1653336180351" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1653336180351"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1653335501938","sites":"/js/plugins/sites.js?time=1653335501938","friends":"/js/plugins/friends.js?time=1653335501938","parallax":"/js/plugins/parallax.js?time=1653335501938","rightMenu":"/js/plugins/rightMenu.js?time=1653335501938","contributors":"/js/plugins/contributors.js?time=1653335501938","message":"/js/thirdparty/message.js?time=1653335501938","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938"},"css":{"style":"/css/style.css?time=1653335501938","message":"/css/message.css?time=1653335501938"}},
+    cdn: {"js":{"app":"/js/app.js?time=1653336180351","sites":"/js/plugins/sites.js?time=1653336180351","friends":"/js/plugins/friends.js?time=1653336180351","parallax":"/js/plugins/parallax.js?time=1653336180351","rightMenu":"/js/plugins/rightMenu.js?time=1653336180351","contributors":"/js/plugins/contributors.js?time=1653336180351","message":"/js/thirdparty/message.js?time=1653336180351","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653336180351"},"css":{"style":"/css/style.css?time=1653336180351","message":"/css/message.css?time=1653336180351"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653335501938),
+    lastupdate: new Date(1653336180351),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3299,7 +3299,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="3-2-底线命令模式"><a href="#3-2-底线命令模式" class="headerlink" title="3.2 底线命令模式"></a>3.2 底线命令模式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:/word          # 查找word字符串</span><br><span class="line">:%s/x/y/gc      # 所有x被y替换 g代表全局，c代表交互模式（每次替代会提示）</span><br><span class="line">:!命令             # 命令先执行，vim被挂起。执行后按enter回到vim</span><br><span class="line">:split          # 横屏分屏显示 ctrl+ww切换上下屏</span><br><span class="line">:vsplit         # 纵向分屏</span><br><span class="line">:only           # 取消分屏</span><br><span class="line">:n1,n2s/word1/word2/g   # 在第n1与n2行之间寻找word1这个字符串，并将该字符串取代为word2</span><br></pre></td></tr></table></figure>
 
 <p>vim还有专门的键盘图。。。放一个简略版的</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E5%9C%A3%E5%85%AC%E4%BC%9A%E5%A8%81%E5%A8%81.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/%E5%9C%A3%E5%85%AC%E4%BC%9A%E5%A8%81%E5%A8%81.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220420_1/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220420_1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 </div><h2 id="4-基础命令三剑客"><a href="#4-基础命令三剑客" class="headerlink" title="4. 基础命令三剑客"></a>4. 基础命令三剑客</h2><div class="story post-story"><p>三剑客的命令非常之多，完全可以出一本书，这里只放一些简单的和我能用得到的</p>
 <h3 id="4-1-三剑客之grep"><a href="#4-1-三剑客之grep" class="headerlink" title="4.1 三剑客之grep"></a>4.1 三剑客之grep</h3><p>grep（找基因信息比较方便）<br>Global Regular Expression Print，全局正则表达式版本<br>文本搜索工具，类似于正则表达式搜索，可以在一个大的文件中快速搜索到满足一定规则的内容。</p>
 <p><code>$ grep &quot;&gt;&quot;  gene.fna | wc -l   # 统计gene.fna文件中序列的条数</code><br><code>$ grep -A 2 &quot;3 gi 29732 34486&quot; lastz.axt  #将满足条件的行和下面两行显示出来</code></p>
@@ -3365,10 +3365,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T13:42:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:55:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月26日</p>
+    <p>更新于：2022年5月24日</p>
   </a>
 </div>
 
@@ -3695,7 +3695,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1653335501938.js"></script>
+<script src="/js/app.js?time=1653336180351.js"></script>
 
 
 
@@ -3879,7 +3879,7 @@ shell脚本运行方式首先要了解什么是脚本，脚本本质上是一个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1653335501938')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1653336180351')</script>
 
 
 
@@ -4009,19 +4009,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1653335501938")
+        volantis.js("/js/plugins/sites.js?time=1653336180351")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1653335501938")
+        volantis.js("/js/plugins/friends.js?time=1653336180351")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1653335501938")
+        volantis.js("/js/plugins/contributors.js?time=1653336180351")
       }
     
   };
@@ -4090,7 +4090,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1653335501938')
+    await volantis.js('/js/plugins/aplayer.js?time=1653336180351')
   
   })();
 
@@ -4215,7 +4215,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653336180351");
   }
 
   function loadSearchService() {
@@ -4555,7 +4555,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1653335501938').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1653336180351').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4789,7 +4789,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/b.html","name":"linux操作指令总结整理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux操作指令总结整理","description":"","datePublished":"2022-04-20T15:44:49.000Z","dateModified":"2022-04-26T05:42:35.768Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"linux指令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/20/b.html","name":"linux操作指令总结整理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux操作指令总结整理","description":"","datePublished":"2022-04-20T15:44:49.000Z","dateModified":"2022-05-23T19:55:33.840Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/20/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/20/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"linux指令","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

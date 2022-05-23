@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1653335501938" as="style">
+  <link rel="preload" href="/css/style.css?time=1653336180351" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-24T20:53:27.000Z">
-<meta property="article:modified_time" content="2022-04-24T20:58:08.201Z">
+<meta property="article:modified_time" content="2022-05-23T20:02:51.280Z">
 <meta property="article:tag" content="R语言">
 <meta property="article:tag" content="ggplot2">
 <meta property="article:tag" content="ggrepel">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1653335501938" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1653335501938"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1653336180351" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1653336180351"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1653335501938","sites":"/js/plugins/sites.js?time=1653335501938","friends":"/js/plugins/friends.js?time=1653335501938","parallax":"/js/plugins/parallax.js?time=1653335501938","rightMenu":"/js/plugins/rightMenu.js?time=1653335501938","contributors":"/js/plugins/contributors.js?time=1653335501938","message":"/js/thirdparty/message.js?time=1653335501938","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938"},"css":{"style":"/css/style.css?time=1653335501938","message":"/css/message.css?time=1653335501938"}},
+    cdn: {"js":{"app":"/js/app.js?time=1653336180351","sites":"/js/plugins/sites.js?time=1653336180351","friends":"/js/plugins/friends.js?time=1653336180351","parallax":"/js/plugins/parallax.js?time=1653336180351","rightMenu":"/js/plugins/rightMenu.js?time=1653336180351","contributors":"/js/plugins/contributors.js?time=1653336180351","message":"/js/thirdparty/message.js?time=1653336180351","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653336180351"},"css":{"style":"/css/style.css?time=1653336180351","message":"/css/message.css?time=1653336180351"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653335501938),
+    lastupdate: new Date(1653336180351),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3131,12 +3131,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><div class="story post-story"><p>前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425005510.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425005510.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即FDR值）小于0.05筛选除差异表达基因，最后加上group列方便查看。</p>
 <p>到这里已经可以通过排序找到我们感兴趣的基因了，但是这样的数据不够直观，我们还可以用最著名的绘图R包ggplot2做个火山图。这里需要准备的绘图R包是<strong>ggplot2</strong>，还有添加标签的R包<strong>ggrepel</strong>。</p>
 <h3 id="1-2-两个注意点"><a href="#1-2-两个注意点" class="headerlink" title="1.2 两个注意点"></a>1.2 两个注意点</h3><p>什么是火山图就不多bb了，重要的是知道我们可以从火山图获得两个信息：差异表达倍数（FoldChange值）和统计学显著性的标志p值。为了更方便比较和作图，我们一般用<strong>log2FC</strong>代替Fold Change值并作为X轴数据，表示两样品（组）间表达量的比值，对其取以2为底的对数即为log2FC，一般默认取log2FC绝对值大于1为差异基因的筛选标准；用<strong>FDR</strong>（也就是padj值）代替pvalue，并取-log10（FDR）值作为Y轴，FDR是错误发现率，是pvalue值进行校正得到的。</p>
 <p>log2FC有正有负很好理解，可能有同学发现，有的基因明明有pvalue值，但是校正之后的FDR值却是NA，如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425013137.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425013137.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>查阅了<a target="_blank" rel="noopener" href="http://www.360doc.com/content/18/1007/19/51784026_792756710.shtml">一些资料</a>，当基因的在所有样本中表达量为0，则两个值都为NA；当read count数较低时，DESeq2进行Independent Filtering过滤了一部分可能造成假阳性的结果，此时padj值为NA。因此，这部分数据在做火山图的时候因为没有对应的Y值也会被过滤掉。</p>
 </div><h2 id="2-流程代码"><a href="#2-流程代码" class="headerlink" title="2. 流程代码"></a>2. 流程代码</h2><div class="story post-story"><p>这部分需要一点R语言基础，需要知道怎么改自己的参数。假设前面没有用dplyr包做差异筛选（做了也不影响，只是多一列数据而已）只用DESeq2跑了个结果，我们同样可以用ggplot2包做筛选，用ggrepel包美化做标签。继续用前面DESeq2生成的csv文件，流程代码如下：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;ggplot2&quot;</span><span class="punctuation">)</span></span><br><span class="line">gene <span class="operator">&lt;-</span> read.csv<span class="punctuation">(</span><span class="string">&quot;gene_0_1.csv&quot;</span><span class="punctuation">,</span> stringsAsFactors <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&lt;=</span> <span class="operator">-</span><span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;DOWN&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange <span class="operator">&gt;=</span> <span class="number">1</span> <span class="operator">&amp;</span> gene<span class="operator">$</span>padj <span class="operator">&lt;</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;UP&quot;</span></span><br><span class="line">gene<span class="punctuation">[</span>which<span class="punctuation">(</span><span class="built_in">abs</span><span class="punctuation">(</span>gene<span class="operator">$</span>log2FoldChange<span class="punctuation">)</span> <span class="operator">&lt;</span> <span class="number">1</span> <span class="operator">|</span> gene<span class="operator">$</span>padj <span class="operator">&gt;=</span> <span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;GROUP&quot;</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;NOT CHANGE&quot;</span> <span class="comment"># |代表或，和linux里的管道是完全不一样的。以上三步新建了一列GROUP，筛选并赋予了三个值。</span></span><br><span class="line">res <span class="operator">&lt;-</span> ggplot<span class="punctuation">(</span>gene<span class="punctuation">,</span>     <span class="comment"># ggplot数据来源，这里省略了data = 和mapping = </span></span><br><span class="line">       aes<span class="punctuation">(</span>x <span class="operator">=</span> log2FoldChange<span class="punctuation">,</span>      <span class="comment"># 表示映射关系，就是定义xy</span></span><br><span class="line">           y <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">           col <span class="operator">=</span> GROUP<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span>      <span class="comment"># 注意这里定义颜色用col，以GROUP值区分</span></span><br><span class="line">         geom_point<span class="punctuation">(</span>alpha <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">,</span>    <span class="comment"># ggplot做散点图，设置点透明度和大小</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">1</span><span class="punctuation">)</span> <span class="operator">+</span> </span><br><span class="line">         scale_color_manual<span class="punctuation">(</span>values <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span><span class="string">&quot;blue&quot;</span><span class="punctuation">,</span><span class="string">&quot;grey&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                            limits <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;UP&quot;</span><span class="punctuation">,</span><span class="string">&quot;DOWN&quot;</span><span class="punctuation">,</span><span class="string">&quot;NOT CHANGE&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">+</span>     <span class="comment"># 自定义颜色 </span></span><br><span class="line">         theme<span class="punctuation">(</span>panel.grid <span class="operator">=</span> element_blank<span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">,</span>    <span class="comment"># 去网格线</span></span><br><span class="line">               panel.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>color <span class="operator">=</span> <span class="string">&quot;black&quot;</span><span class="punctuation">,</span></span><br><span class="line">                                               fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span>   <span class="comment"># 去背景色，透明</span></span><br><span class="line">               plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>hjust <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">,</span>      <span class="comment"># 调整图标标题位置为中间</span></span><br><span class="line">               legend.key <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">               legend.background <span class="operator">=</span> element_rect<span class="punctuation">(</span>fill <span class="operator">=</span> <span class="string">&quot;transparent&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">               legend.position <span class="operator">=</span> <span class="string">&quot;right&quot;</span><span class="punctuation">)</span> <span class="operator">+</span>     <span class="comment"># 设置legend图标</span></span><br><span class="line">         geom_vline<span class="punctuation">(</span>xintercept <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                    color <span class="operator">=</span> <span class="string">&quot;gray&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">0.3</span><span class="punctuation">)</span> <span class="operator">+</span>       <span class="comment"># 设置x轴辅助线</span></span><br><span class="line">         geom_hline<span class="punctuation">(</span>yintercept <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span><span class="number">0.05</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                    color <span class="operator">=</span> <span class="string">&quot;gray&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    size <span class="operator">=</span> <span class="number">0.3</span><span class="punctuation">)</span> <span class="operator">+</span>       <span class="comment"># 设置y轴辅助线</span></span><br><span class="line">         labs<span class="punctuation">(</span>x <span class="operator">=</span> <span class="string">&quot;log2 Fold Change&quot;</span><span class="punctuation">,</span></span><br><span class="line">              y <span class="operator">=</span> <span class="string">&quot;-log10(FDR) &quot;</span><span class="punctuation">,</span></span><br><span class="line">              title <span class="operator">=</span> <span class="string">&quot;LD 1 day vs LD 0 day&quot;</span><span class="punctuation">)</span>       <span class="comment"># 设置坐标轴标题和火山图标题</span></span><br><span class="line">res     <span class="comment"># 查看结果，plots中可以查看</span></span><br><span class="line"></span><br><span class="line">library<span class="punctuation">(</span><span class="string">&quot;ggrepel&quot;</span><span class="punctuation">)</span></span><br><span class="line">up <span class="operator">&lt;-</span> subset<span class="punctuation">(</span>gene<span class="punctuation">,</span> GROUP <span class="operator">==</span> <span class="string">&quot;UP&quot;</span><span class="punctuation">)</span>       <span class="comment"># subset从数据框中筛选符合条件的数据</span></span><br><span class="line">up <span class="operator">&lt;-</span> up<span class="punctuation">[</span>order<span class="punctuation">(</span>up<span class="operator">$</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">[</span><span class="number">1</span><span class="operator">:</span><span class="number">5</span><span class="punctuation">,</span> <span class="punctuation">]</span>       <span class="comment"># order升序排序，取前5个</span></span><br><span class="line">down <span class="operator">&lt;-</span> subset<span class="punctuation">(</span>gene<span class="punctuation">,</span> GROUP <span class="operator">==</span> <span class="string">&quot;DOWN&quot;</span><span class="punctuation">)</span></span><br><span class="line">down <span class="operator">&lt;-</span> down<span class="punctuation">[</span>order<span class="punctuation">(</span>down<span class="operator">$</span>padj<span class="punctuation">)</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">[</span><span class="number">1</span><span class="operator">:</span><span class="number">5</span><span class="punctuation">,</span> <span class="punctuation">]</span></span><br><span class="line">resdata <span class="operator">&lt;-</span> res <span class="operator">+</span> </span><br><span class="line">  geom_text_repel<span class="punctuation">(</span>data <span class="operator">=</span> rbind<span class="punctuation">(</span>up<span class="punctuation">,</span> down<span class="punctuation">)</span><span class="punctuation">,</span>       <span class="comment"># ggrepel特有的函数</span></span><br><span class="line">                  aes<span class="punctuation">(</span>x <span class="operator">=</span> log2FoldChange<span class="punctuation">,</span></span><br><span class="line">                      y <span class="operator">=</span> <span class="operator">-</span>log10<span class="punctuation">(</span>padj<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                      label <span class="operator">=</span> X <span class="punctuation">)</span><span class="punctuation">,</span>      <span class="comment"># label值指定哪列做标签</span></span><br><span class="line">                  size <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">                  box.padding <span class="operator">=</span> unit<span class="punctuation">(</span><span class="number">0.5</span><span class="punctuation">,</span> <span class="string">&quot;lines&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                  segment.color <span class="operator">=</span> <span class="string">&quot;#cccccc&quot;</span><span class="punctuation">,</span></span><br><span class="line">                  show.legend <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span>      <span class="comment"># 以上都是特有参数</span></span><br><span class="line">resdata     <span class="comment"># 查看结果</span></span><br><span class="line">ggsave<span class="punctuation">(</span><span class="string">&quot;gene_0_1.png&quot;</span><span class="punctuation">,</span> resdata<span class="punctuation">,</span> width <span class="operator">=</span> <span class="number">10</span><span class="punctuation">,</span> height <span class="operator">=</span> <span class="number">10</span><span class="punctuation">)</span>        <span class="comment"># 输出结果文件</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -3155,7 +3155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>geom_vline() 和 geom_hline()</code> 这两个函数分别设置x轴y轴辅助线，目的是使我的火山图更直观，从图上可以直接看到我的分类依据。</p>
 <p><code>labs()</code>  该函数自定义x轴y轴标签和图标标题。这里提一嘴，火山图标题也是一个注意点，一般是 <strong>处理组vs对照组</strong> ，因此前面也说到DESeq2处理数据要注意顺序问题，不然会得出完全相反的结论，在火山图上的表现为与实际火山图呈镜像对称，这也很好理解。</p>
 <p>这里看一下res结果，我们可以在plots中看到缩略的预览图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425030819.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425030819.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <h3 id="3-3-ggrepel"><a href="#3-3-ggrepel" class="headerlink" title="3.3 ggrepel"></a>3.3 ggrepel</h3><p>在过滤掉4000多个FDR值为NA的点，我们获得了一个不怎么像火山的火山图 <del>（简直丑爆了）</del> ，但是数据还是挺美丽的，上调区域和下调区域都有前后对比差异非常大的基因：log2FC绝对值越大，差异越明显；-log10（FDR）值越大，可信度越高。</p>
 <p>但是这个图还有个缺点，我不知道这些代表性的差异点对应什么基因名，我还要回到excel里去筛选排序。因此，我推荐用ggrepel包对火山图进一步美化，加上基因标签，能一眼看到我感兴趣的基因。</p>
 <hr>
@@ -3168,7 +3168,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这里所有参数设置都是平行的，所以只需要 , 隔开。</p>
 <p>我之前说到提取了up和down的数据，这里我把它们rbind一下合在一起，就形成了新的数据框数据，也就是我只对前面排序筛选的上调下调各5个基因打标签。这里注意下<code>aes()</code>这里的 <strong>label</strong> 是指定标签的，也就是我们这里的基因名，应该用的行名才能和数据一一对应，这里我用X是偶然发现的一个很有趣的事：</p>
 <p>前面导入gene数据框的时候，自动把行名加到了第一列成了单独的一列，且<strong>该列列名系统定义为X</strong>，我们可以进入environment找到gene点开看看这个数据框结构，如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425035429.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425035429.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/4.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>因此这里直接用<code>label = X</code>就能完美解决问题。反而我回头用<code>row.names = 1</code>用第一列做行名修改了gene数据框的读取方式，再在这里用<code>label = rowname(gene)</code>会提示长度错误或者不匹配，个中原因我暂时还没想明白。</p>
 <hr>
 <p>其他特有参数就解释一下我用到的几个：</p>
@@ -3178,12 +3178,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>show.legend: 是否显示标签的标签   &#x3D;_&#x3D;好像有点绕，说白了就是要不要再图标上再打标签…</p>
 <hr>
 <p>同样放一张plots里的缩略图，是不是要直观一点了呢？</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041357.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041357.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/5.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <h3 id="3-4-结果输出"><a href="#3-4-结果输出" class="headerlink" title="3.4 结果输出"></a>3.4 结果输出</h3><p><code>ggsave()</code>是ggplot2包里的输出结果的函数，自定义输出的文件类型，比如pdf、png等等，还可以自定义输出图片大小，这里不赘述，主要放一个完成图看看和plots里的缩略图做个比较。完成图如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041858.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425041858.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/6.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>可能还是有些不美观，但是这些数据很不错，极端点偏离X轴和Y轴较远，都是我们需要重点关注的基因。</p>
 <p>如果我们记下了这几个极端点，我们还可以通过在ggplot中限制X轴和Y轴范围比如<code>xlim(-10, 10) + ylim(0, 14)</code>，再次缩小范围，得到一个更像火山的火山图 <del>(没有意义，纯粹吃饱了撑的)</del> 如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425043615.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Phantom-Aria/image/20220425043615.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220425/7.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220425/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 
 </div>
   </div>
@@ -3225,10 +3225,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-25T04:58:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T04:02:51+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月25日</p>
+    <p>更新于：2022年5月24日</p>
   </a>
 </div>
 
@@ -3555,7 +3555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1653335501938.js"></script>
+<script src="/js/app.js?time=1653336180351.js"></script>
 
 
 
@@ -3739,7 +3739,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1653335501938')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1653336180351')</script>
 
 
 
@@ -3869,19 +3869,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1653335501938")
+        volantis.js("/js/plugins/sites.js?time=1653336180351")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1653335501938")
+        volantis.js("/js/plugins/friends.js?time=1653336180351")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1653335501938")
+        volantis.js("/js/plugins/contributors.js?time=1653336180351")
       }
     
   };
@@ -3950,7 +3950,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1653335501938')
+    await volantis.js('/js/plugins/aplayer.js?time=1653336180351')
   
   })();
 
@@ -4075,7 +4075,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653335501938");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653336180351");
   }
 
   function loadSearchService() {
@@ -4415,7 +4415,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1653335501938').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1653336180351').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4649,7 +4649,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/25/a.html","name":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图","description":"","datePublished":"2022-04-24T20:53:27.000Z","dateModified":"2022-04-24T20:58:08.201Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"R语言,ggplot2,ggrepel","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/25/a.html","name":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图","description":"","datePublished":"2022-04-24T20:53:27.000Z","dateModified":"2022-05-23T20:02:51.280Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"R语言,ggplot2,ggrepel","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
