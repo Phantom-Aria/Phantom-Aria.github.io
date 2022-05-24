@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1653416341384" as="style">
+  <link rel="preload" href="/css/style.css?time=1653417076328" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>结绳 - 我的小破站</title>
   <meta name="keywords" content="null">
-  <meta name="description" content="2022-05-24 更新日志：图床迁移            本站图床已全部迁移至本地服务器，出于稳定性考虑不再使用jsdelivr                        优化和新增网址导航栏内容              2022-05-18 更新日志：新增栏目            新增网址导航栏目，优化导航栏              2022-05-16 更新日志">
+  <meta name="description" content="2022-05-25 更新日志            集群和slurm调度系统使用心得              2022-05-24 更新日志：图床迁移            本站图床已全部迁移至本地服务器，出于稳定性考虑不再使用jsdelivr                        优化和新增网址导航栏内容              2022-05-18 更新日志：新增栏目">
 <meta property="og:type" content="website">
 <meta property="og:title" content="我的小破站">
 <meta property="og:url" content="http://www.shelven.com/history/index.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="2022-05-24 更新日志：图床迁移            本站图床已全部迁移至本地服务器，出于稳定性考虑不再使用jsdelivr                        优化和新增网址导航栏内容              2022-05-18 更新日志：新增栏目            新增网址导航栏目，优化导航栏              2022-05-16 更新日志">
+<meta property="og:description" content="2022-05-25 更新日志            集群和slurm调度系统使用心得              2022-05-24 更新日志：图床迁移            本站图床已全部迁移至本地服务器，出于稳定性考虑不再使用jsdelivr                        优化和新增网址导航栏内容              2022-05-18 更新日志：新增栏目">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-23T20:31:32.729Z">
-<meta property="article:modified_time" content="2022-05-23T20:31:32.726Z">
+<meta property="article:published_time" content="2022-05-24T18:31:08.493Z">
+<meta property="article:modified_time" content="2022-05-24T18:31:08.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1781,8 +1781,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1653416341384" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1653416341384"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1653417076328" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1653417076328"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1859,9 +1859,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1653416341384","sites":"/js/plugins/sites.js?time=1653416341384","friends":"/js/plugins/friends.js?time=1653416341384","parallax":"/js/plugins/parallax.js?time=1653416341384","rightMenu":"/js/plugins/rightMenu.js?time=1653416341384","contributors":"/js/plugins/contributors.js?time=1653416341384","message":"/js/thirdparty/message.js?time=1653416341384","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653416341384"},"css":{"style":"/css/style.css?time=1653416341384","message":"/css/message.css?time=1653416341384"}},
+    cdn: {"js":{"app":"/js/app.js?time=1653417076328","sites":"/js/plugins/sites.js?time=1653417076328","friends":"/js/plugins/friends.js?time=1653417076328","parallax":"/js/plugins/parallax.js?time=1653417076328","rightMenu":"/js/plugins/rightMenu.js?time=1653417076328","contributors":"/js/plugins/contributors.js?time=1653417076328","message":"/js/thirdparty/message.js?time=1653417076328","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653417076328"},"css":{"style":"/css/style.css?time=1653417076328","message":"/css/message.css?time=1653417076328"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653416341384),
+    lastupdate: new Date(1653417076328),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3048,6 +3048,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <div class="timeline">
+<div class="timenode"><div class="meta"><p><p>2022-05-25</p>
+</p></div><div class="body"><div class="note "><p><strong>更新日志</strong></p><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>集群和slurm调度系统使用心得</p>            </div></div></div></div>
+
 <div class="timenode"><div class="meta"><p><p>2022-05-24</p>
 </p></div><div class="body"><div class="note "><p><strong>更新日志：图床迁移</strong></p><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>本站图床已全部迁移至本地服务器，出于稳定性考虑不再使用jsdelivr</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>优化和新增网址导航栏内容</p>            </div></div></div></div>
 
@@ -3147,10 +3150,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T04:31:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-25T02:31:08+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月24日</p>
+    <p>更新于：2022年5月25日</p>
   </a>
 </div>
 
@@ -3610,7 +3613,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1653416341384.js"></script>
+<script src="/js/app.js?time=1653417076328.js"></script>
 
 
 
@@ -3794,7 +3797,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1653416341384')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1653417076328')</script>
 
 
 
@@ -3924,19 +3927,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1653416341384")
+        volantis.js("/js/plugins/sites.js?time=1653417076328")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1653416341384")
+        volantis.js("/js/plugins/friends.js?time=1653417076328")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1653416341384")
+        volantis.js("/js/plugins/contributors.js?time=1653417076328")
       }
     
   };
@@ -4005,7 +4008,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1653416341384')
+    await volantis.js('/js/plugins/aplayer.js?time=1653417076328')
   
   })();
 
@@ -4130,7 +4133,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653416341384");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1653417076328");
   }
 
   function loadSearchService() {
@@ -4470,7 +4473,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1653416341384').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1653417076328').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
