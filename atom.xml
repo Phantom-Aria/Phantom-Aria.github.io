@@ -6,10 +6,36 @@
   <link href="http://www.shelven.com/atom.xml" rel="self"/>
   
   <link href="http://www.shelven.com/"/>
-  <updated>2022-05-24T18:17:49.409Z</updated>
+  <updated>2022-06-13T17:24:07.097Z</updated>
   <id>http://www.shelven.com/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基因组注释文件gbff格式转换gff3格式</title>
+    <link href="http://www.shelven.com/2022/06/14/a.html"/>
+    <id>http://www.shelven.com/2022/06/14/a.html</id>
+    <published>2022-06-13T17:09:45.000Z</published>
+    <updated>2022-06-13T17:24:07.097Z</updated>
+    
+    <content type="html"><![CDATA[<p>前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是<strong>gbff</strong>格式的。提交之后被告知需要<strong>gff</strong>格式的，因为gbf格式中没有基因相关结构的位置信息。</p><p>emmmmm….其实不是很理解，因为gbff格式和gff格式是可以相互转换的，如果gbff注释文件中有信息缺失，那么gff格式也同样没有相关信息….不管怎么样先转换个格式交差，网上搜了下有前人写的<strong>perl脚本</strong>可以用，但是我以前没接触过perl语言，这里做个笔记写一下自己瞎捣鼓的过程。</p><h2 id="1-perl语言和CPAN模块库"><a href="#1-perl语言和CPAN模块库" class="headerlink" title="1. perl语言和CPAN模块库"></a>1. perl语言和CPAN模块库</h2><div class="story post-story"><p>从<a href="https://baike.baidu.com/item/perl/851577?fr=aladdin">百度百科</a>中引用对perl语言的一段描述：</p><blockquote><p>Perl是一种功能丰富的计算机程序语言，易于使用、高效、完整，而不是美观（小巧，优雅，简约）。同时支持过程和面向对象编程，对文本处理具有强大的内置支持，并且拥有第三方模块集合之一。 Perl借取了C、sed、awk、shell脚本语言以及很多其他程序语言的特性，其中最重要的特性是它内部集成了正则表达式的功能，以及巨大的第三方代码库CPAN。</p></blockquote><p>看到这个简介，个人的理解就是perl语言就像python一样，自己有丰富的第三方库可以调用。同样，我们不需要具体了解每个模块的实现方式和底层代码，只要知道会调用相关的模块实现自己的目标即可。</p><p>CPAN是perl的一个第三方源码模块库，里面有上百万的perl模块，用于支撑perl的各种功能。为了方便安装perl的各种模块，前人做了一个CPAN模块，用cpan命令来安装perl的各个模块。也可以通过cpan命令来安装bioperl模块，里面有非常多的有关生信分析的perl脚本。</p></div><h2 id="2-安装和配置bioperl"><a href="#2-安装和配置bioperl" class="headerlink" title="2. 安装和配置bioperl"></a>2. 安装和配置bioperl</h2><div class="story post-story"><p>运行gbff转换gff3的perl脚本需要调用bioperl的一些模块，因此第一步需要安装bioperl，以及配置相应的环境。</p><p>登录学校集群，发现系统自带安装了perl程序和CPAN模块，我们可以用CPAN来安装bioperl。</p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在命令行进入CPAN交互式界面</span></span><br><span class="line">perl -MCPAN -e shell</span><br></pre></td></tr></table></figure><p>进入CPAN交互式界面如下：</p><p><img src="https://www.shelven.com/tuchuang/20220613/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220613/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在线寻找bioperl安装包</span></span><br><span class="line">cpan&gt;d /bioperl/</span><br><span class="line"><span class="comment"># 安装对应版本的bioperl，注意目录和版本号根据搜出来的结果不同而不同</span></span><br><span class="line">cpan&gt;install S/SE/SENDU/bioperl-<span class="number">1.5</span>.<span class="number">2_100</span>.tar.gz </span><br></pre></td></tr></table></figure><p>之后就是漫长的安装过程了，所有依赖关系也会一并安装，安装的时间较长，大概需要半个小时。</p><p>安装完成之后是配置环境变量，不配置的话即使安装了bioperl，也会找不到对应的模块。我的bioperl安装路径是&#x2F;public&#x2F;home&#x2F;wlxie&#x2F;miniconda3&#x2F;envs&#x2F;biosoft&#x2F;lib&#x2F;perl5&#x2F;site_perl&#x2F;5.22.0&#x2F;Bio&#x2F;，可以通过<code>echo $PERL5LIB</code>来查看当前perl模块的调用路径，然后在家目录的.bashrc环境变量文件中将bioperl的模块路径加到perl模块调用的路径当中。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在。bashrc文件最后一行加入bioperl模块调用路径</span></span><br><span class="line">export PERL5LIB=&quot;/public/home/wlxie/miniconda3/envs/biosoft/lib/perl5/site_perl/5.22.0/:$PERL5LIB&quot;</span><br></pre></td></tr></table></figure><p>这样所有的配置就完成了。</p></div><h2 id="3-gbff格式转换gff3"><a href="#3-gbff格式转换gff3" class="headerlink" title="3. gbff格式转换gff3"></a>3. gbff格式转换gff3</h2><div class="story post-story"><p>github上有许多gbff格式转gff3格式的脚本代码，有用biopython做的，也有bioperl做的，可能是我配置的问题，试了几个脚本后只有一个可以顺利转换。本来想研究一下脚本的实现方式，可是源代码2000多行看的我实在不知从何下手，这里只记录一下使用方法和备份脚本文件。</p><p>源代码的出处已经找不到了…<a href="https://www.shelven.com/script_backup/bp_genbank2gff3.pl">点击这里查看源代码在本站的备份</a></p><p>使用方法：</p><p>将脚本文件bp_genbank2gff3.pl放在要转换格式的gbff文件<strong>同一个目录下</strong>，运行命令</p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># perl bp_genbank2gff3.pl gbff文件名</span></span><br><span class="line">perl bp_genbank2gff3.pl Asclepias_syriaca-GCA_002018285.<span class="number">1_</span>ASM201828v1_genomic.gbff</span><br></pre></td></tr></table></figure><p>脚本自动运行，结束后会在当前目录生成<strong>同名的gff3文件</strong></p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是&lt;strong&gt;gbff&lt;/strong&gt;格式的。提交之后被告知需要&lt;strong</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://www.shelven.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="bioperl" scheme="http://www.shelven.com/tags/bioperl/"/>
+    
+    <category term="perl" scheme="http://www.shelven.com/tags/perl/"/>
+    
+  </entry>
   
   <entry>
     <title>集群和slurm调度系统使用心得</title>
