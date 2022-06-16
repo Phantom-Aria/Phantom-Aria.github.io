@@ -23,24 +23,25 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1655404632681" as="style">
+  <link rel="preload" href="/css/style.css?time=1655405119896" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>NCBI的BLAST+工具本地安装，本地建库和比对 - 我的小破站</title>
-  <meta name="keywords" content="BLAST+,null">
+  <title>NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站</title>
+  <meta name="keywords" content="BLAST+,aspera,null">
   <meta name="description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：  blastn    用核苷酸序列检索核苷酸数据库 blastp    用蛋白质序列检索蛋白质数据库 blastx    核苷酸序列通过6种阅读框翻译不同蛋白序列后，检索蛋白数据库 tblastn    蛋白序列比对核酸库，核酸数据库通过6种开放阅读框翻译不同蛋白质 tblastx    核酸序列和核">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NCBI的BLAST+工具本地安装，本地建库和比对">
+<meta property="og:title" content="NCBI的BLAST+工具本地安装，本地建库和BLAST比对">
 <meta property="og:url" content="http://www.shelven.com/2022/06/17/a.html">
 <meta property="og:site_name" content="我的小破站">
 <meta property="og:description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：  blastn    用核苷酸序列检索核苷酸数据库 blastp    用蛋白质序列检索蛋白质数据库 blastx    核苷酸序列通过6种阅读框翻译不同蛋白序列后，检索蛋白数据库 tblastn    蛋白序列比对核酸库，核酸数据库通过6种开放阅读框翻译不同蛋白质 tblastx    核酸序列和核">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-16T18:33:56.000Z">
-<meta property="article:modified_time" content="2022-06-16T18:37:07.597Z">
+<meta property="article:modified_time" content="2022-06-16T18:45:15.782Z">
 <meta property="article:tag" content="BLAST+">
+<meta property="article:tag" content="aspera">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1782,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1655404632681" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1655404632681"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1655405119896" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1655405119896"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1655404632681","sites":"/js/plugins/sites.js?time=1655404632681","friends":"/js/plugins/friends.js?time=1655404632681","parallax":"/js/plugins/parallax.js?time=1655404632681","rightMenu":"/js/plugins/rightMenu.js?time=1655404632681","contributors":"/js/plugins/contributors.js?time=1655404632681","message":"/js/thirdparty/message.js?time=1655404632681","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655404632681"},"css":{"style":"/css/style.css?time=1655404632681","message":"/css/message.css?time=1655404632681"}},
+    cdn: {"js":{"app":"/js/app.js?time=1655405119896","sites":"/js/plugins/sites.js?time=1655405119896","friends":"/js/plugins/friends.js?time=1655405119896","parallax":"/js/plugins/parallax.js?time=1655405119896","rightMenu":"/js/plugins/rightMenu.js?time=1655405119896","contributors":"/js/plugins/contributors.js?time=1655405119896","message":"/js/thirdparty/message.js?time=1655405119896","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655405119896"},"css":{"style":"/css/style.css?time=1655405119896","message":"/css/message.css?time=1655405119896"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655404632681),
+    lastupdate: new Date(1655405119896),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3040,7 +3041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        NCBI的BLAST+工具本地安装，本地建库和比对
+        NCBI的BLAST+工具本地安装，本地建库和BLAST比对
       </h1>
       <div class='new-meta-box'>
         
@@ -3103,7 +3104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="NCBI的BLAST+工具本地安装，本地建库和比对" data-path="/2022/06/17/a.html">
+      <div id="lc-pv" data-title="NCBI的BLAST+工具本地安装，本地建库和BLAST比对" data-path="/2022/06/17/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3272,7 +3273,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T02:37:07+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T02:45:15+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月17日</p>
@@ -3284,8 +3285,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BLAST/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>BLAST+</p></a></div>
-  <span hidden itemprop="keywords">BLAST+</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BLAST/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>BLAST+</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/aspera/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>aspera</p></a></div>
+  <span hidden itemprop="keywords">BLAST+ aspera</span>
 
 
         
@@ -3298,7 +3299,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和比对 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
           
           >
           
@@ -3310,7 +3311,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和比对 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
           
           >
           
@@ -3322,7 +3323,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和比对 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
           
           >
           
@@ -3460,7 +3461,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="NCBI的BLAST+工具本地安装，本地建库和比对";
+  pdata.postTitle="NCBI的BLAST+工具本地安装，本地建库和BLAST比对";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3599,7 +3600,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1655404632681.js"></script>
+<script src="/js/app.js?time=1655405119896.js"></script>
 
 
 
@@ -3783,7 +3784,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1655404632681')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1655405119896')</script>
 
 
 
@@ -3913,19 +3914,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1655404632681")
+        volantis.js("/js/plugins/sites.js?time=1655405119896")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1655404632681")
+        volantis.js("/js/plugins/friends.js?time=1655405119896")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1655404632681")
+        volantis.js("/js/plugins/contributors.js?time=1655405119896")
       }
     
   };
@@ -3994,7 +3995,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1655404632681')
+    await volantis.js('/js/plugins/aplayer.js?time=1655405119896')
   
   })();
 
@@ -4119,7 +4120,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655404632681");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655405119896");
   }
 
   function loadSearchService() {
@@ -4459,7 +4460,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1655404632681').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1655405119896').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4693,7 +4694,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/a.html","name":"NCBI的BLAST+工具本地安装，本地建库和比对"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"NCBI的BLAST+工具本地安装，本地建库和比对","description":"","datePublished":"2022-06-16T18:33:56.000Z","dateModified":"2022-06-16T18:37:07.597Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"BLAST+","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/a.html","name":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对","description":"","datePublished":"2022-06-16T18:33:56.000Z","dateModified":"2022-06-16T18:45:15.782Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"BLAST+,aspera","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
