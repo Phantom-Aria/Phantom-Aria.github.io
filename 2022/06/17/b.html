@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1655477157320" as="style">
+  <link rel="preload" href="/css/style.css?time=1655480018812" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>0基础学习三代基因组测序组装（1）——数据质控 - 我的小破站</title>
+  <title>0基础学习基因组三代测序组装（1）——数据质控 - 我的小破站</title>
   <meta name="keywords" content="nanoplot,filtlong,null">
   <meta name="description" content="最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返回的几个文件不是单纯的fq文件，如下所示：  于是我又开始恶补了一些三代测序的基础知识，开坑写个三代基因组测序组装的系列笔记~ 1 技术背景当第二代高通量测序技术进入成熟阶段后，读长过短、PCR扩增带来的偏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0基础学习三代基因组测序组装（1）——数据质控">
+<meta property="og:title" content="0基础学习基因组三代测序组装（1）——数据质控">
 <meta property="og:url" content="http://www.shelven.com/2022/06/17/b.html">
 <meta property="og:site_name" content="我的小破站">
 <meta property="og:description" content="最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返回的几个文件不是单纯的fq文件，如下所示：  于是我又开始恶补了一些三代测序的基础知识，开坑写个三代基因组测序组装的系列笔记~ 1 技术背景当第二代高通量测序技术进入成熟阶段后，读长过短、PCR扩增带来的偏">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-17T14:31:19.000Z">
-<meta property="article:modified_time" content="2022-06-17T14:41:05.593Z">
+<meta property="article:modified_time" content="2022-06-17T15:32:47.737Z">
 <meta property="article:tag" content="nanoplot">
 <meta property="article:tag" content="filtlong">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1655477157320" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1655477157320"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1655480018812" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1655480018812"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1655477157320","sites":"/js/plugins/sites.js?time=1655477157320","friends":"/js/plugins/friends.js?time=1655477157320","parallax":"/js/plugins/parallax.js?time=1655477157320","rightMenu":"/js/plugins/rightMenu.js?time=1655477157320","contributors":"/js/plugins/contributors.js?time=1655477157320","message":"/js/thirdparty/message.js?time=1655477157320","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655477157320"},"css":{"style":"/css/style.css?time=1655477157320","message":"/css/message.css?time=1655477157320"}},
+    cdn: {"js":{"app":"/js/app.js?time=1655480018812","sites":"/js/plugins/sites.js?time=1655480018812","friends":"/js/plugins/friends.js?time=1655480018812","parallax":"/js/plugins/parallax.js?time=1655480018812","rightMenu":"/js/plugins/rightMenu.js?time=1655480018812","contributors":"/js/plugins/contributors.js?time=1655480018812","message":"/js/thirdparty/message.js?time=1655480018812","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655480018812"},"css":{"style":"/css/style.css?time=1655480018812","message":"/css/message.css?time=1655480018812"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655477157320),
+    lastupdate: new Date(1655480018812),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3041,7 +3041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        0基础学习三代基因组测序组装（1）——数据质控
+        0基础学习基因组三代测序组装（1）——数据质控
       </h1>
       <div class='new-meta-box'>
         
@@ -3060,14 +3060,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%B8%89%E4%BB%A3%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">三代基因组测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%B8%89%E4%BB%A3%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">三代基因组测序分析</span></a>
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
       </span>
     
   </div>
@@ -3108,7 +3108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="0基础学习三代基因组测序组装（1）——数据质控" data-path="/2022/06/17/b.html">
+      <div id="lc-pv" data-title="0基础学习基因组三代测序组装（1）——数据质控" data-path="/2022/06/17/b.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3250,7 +3250,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T22:41:05+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T23:32:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月17日</p>
@@ -3276,7 +3276,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习三代基因组测序组装（1）——数据质控 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习基因组三代测序组装（1）——数据质控 - 我的小破站&summary="
           
           >
           
@@ -3288,7 +3288,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习三代基因组测序组装（1）——数据质控 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习基因组三代测序组装（1）——数据质控 - 我的小破站&summary="
           
           >
           
@@ -3300,7 +3300,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习三代基因组测序组装（1）——数据质控 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/b.html&title=0基础学习基因组三代测序组装（1）——数据质控 - 我的小破站&summary="
           
           >
           
@@ -3440,7 +3440,7 @@ blastp    用蛋白质序列检索蛋白质数...</p>
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="0基础学习三代基因组测序组装（1）——数据质控";
+  pdata.postTitle="0基础学习基因组三代测序组装（1）——数据质控";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3579,7 +3579,7 @@ blastp    用蛋白质序列检索蛋白质数...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1655477157320.js"></script>
+<script src="/js/app.js?time=1655480018812.js"></script>
 
 
 
@@ -3763,7 +3763,7 @@ blastp    用蛋白质序列检索蛋白质数...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1655477157320')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1655480018812')</script>
 
 
 
@@ -3893,19 +3893,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1655477157320")
+        volantis.js("/js/plugins/sites.js?time=1655480018812")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1655477157320")
+        volantis.js("/js/plugins/friends.js?time=1655480018812")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1655477157320")
+        volantis.js("/js/plugins/contributors.js?time=1655480018812")
       }
     
   };
@@ -3974,7 +3974,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1655477157320')
+    await volantis.js('/js/plugins/aplayer.js?time=1655480018812')
   
   })();
 
@@ -4099,7 +4099,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655477157320");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655480018812");
   }
 
   function loadSearchService() {
@@ -4439,7 +4439,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1655477157320').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1655480018812').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4673,7 +4673,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/三代基因组测序分析/","name":"三代基因组测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/b.html","name":"0基础学习三代基因组测序组装（1）——数据质控"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习三代基因组测序组装（1）——数据质控","description":"","datePublished":"2022-06-17T14:31:19.000Z","dateModified":"2022-06-17T14:41:05.593Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"nanoplot,filtlong","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/b.html","name":"0基础学习基因组三代测序组装（1）——数据质控"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（1）——数据质控","description":"","datePublished":"2022-06-17T14:31:19.000Z","dateModified":"2022-06-17T15:32:47.737Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"nanoplot,filtlong","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
