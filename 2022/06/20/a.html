@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.shelven.com/2022/04/16/b.html"/>
+  <link rel="canonical" href="http://www.shelven.com/2022/06/20/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,19 +28,20 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站</title>
-  <meta name="keywords" content="IGV,null">
-  <meta name="description" content="1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。 直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用">
+  <title>0基础学习基因组三代测序组装（2）——数据污染评估 - 我的小破站</title>
+  <meta name="keywords" content="python,blast+,null">
+  <meta name="description" content="前言做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。 1 下载balst+工具和数据库在之前的一篇博客中，我详细介绍了如何本地安装NCBI的blast+工具，以及下载nr&#x2F;nt库，建立本地的数据库。详情点击这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读">
-<meta property="og:url" content="http://www.shelven.com/2022/04/16/b.html">
+<meta property="og:title" content="0基础学习基因组三代测序组装（2）——数据污染评估">
+<meta property="og:url" content="http://www.shelven.com/2022/06/20/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。 直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用">
+<meta property="og:description" content="前言做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。 1 下载balst+工具和数据库在之前的一篇博客中，我详细介绍了如何本地安装NCBI的blast+工具，以及下载nr&#x2F;nt库，建立本地的数据库。详情点击这">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-16T11:32:50.000Z">
-<meta property="article:modified_time" content="2022-05-23T19:05:08.239Z">
-<meta property="article:tag" content="IGV">
+<meta property="article:published_time" content="2022-06-19T17:17:30.000Z">
+<meta property="article:modified_time" content="2022-06-19T17:22:16.416Z">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="blast+">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3019,7 +3020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/b.html">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/20/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3040,7 +3041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
+        0基础学习基因组三代测序组装（2）——数据污染评估
       </h1>
       <div class='new-meta-box'>
         
@@ -3059,14 +3060,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
       </span>
     
   </div>
@@ -3075,10 +3076,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-16T19:32:50+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-20T01:17:30+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月16日</p>
+    <p>发布于：2022年6月20日</p>
   </a>
 </div>
 
@@ -3089,13 +3090,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1k 字</p>
+      <p>字数：2.6k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3 分钟</p>
+      <p>时长：10 分钟</p>
     </a>
   </div>
 
@@ -3107,7 +3108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读" data-path="/2022/04/16/b.html">
+      <div id="lc-pv" data-title="0基础学习基因组三代测序组装（2）——数据污染评估" data-path="/2022/06/20/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3128,49 +3129,60 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="1-IGV软件下载"><a href="#1-IGV软件下载" class="headerlink" title="1. IGV软件下载"></a>1. IGV软件下载</h2><div class="story post-story"><p>IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。</p>
-<p>直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用linux版本为例，IGV只支持JAVA11版本，不用担心这个问题，下载的安装包里直接有JAVA11，解压就可以用，就是国外网站下载有点慢<del>（科学上网）</del>。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>直接在虚拟机里解压打开，运行igv.sh，会自动准备好JAVA11的运行环境，成功弹出交互式界面（终于告别了黑漆漆的命令行 <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E6%BB%91%E7%A8%BD.png' style='height:24px'></span>）。</p>
-</div><h2 id="2-导入文件"><a href="#2-导入文件" class="headerlink" title="2. 导入文件"></a>2. 导入文件</h2><div class="story post-story"><p>Genomes菜单栏上传<strong>建立索引</strong>的参考基因组.fa和.fai文件：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>File菜单栏上传<strong>排序并建立索引</strong>的.bam和.bai文件：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>如果有参考基因组注释文件，同样可以导入进去，同样导入前需要sort排序和建立index，可以用菜单栏里的igvtools直接sort和index：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/4.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-</div><h2 id="3-界面解读"><a href="#3-界面解读" class="headerlink" title="3. 界面解读"></a>3. 界面解读</h2><div class="story post-story"><p>我导入了5组bam数据，所有文件导入后可以看到如下界面，简单介绍一下各个区域和功能：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/5.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>主页面获得的信息有限，我们选取第3条染色体为例，将其放大：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/6.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>中间的界面可以通过左右拖动鼠标，或者按左右方向键来浏览染色体上的比对情况。我们在搜索框中直接搜基因名字进行染色体定位，比如CIPK家族中的CIPK7基因，回车后双击最后一栏基因注释文件中的基因名称CIPK7，可以得到详细的CIPK7基因信息<strong>（这里注意下，如果双击弹出来多个可供选择的片段的话，代表这个基因存在可变剪切）</strong>:</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/7.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>在基因注释区右键，选择expanded，可以将CIPK7基因的所有转录本显示出来。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/8.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>放大到一定程度后，我们可以看到基因注释区上方出现了核苷酸序列和氨基酸序列，我们可以点击sequence旁边的箭头，切换到另一条链的序列。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>点击核苷酸，会出现三行，分别表示不同起始位点的核苷酸翻译结果，绿色为起始密码子，红色的星号表示终止密码子。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/10.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>再来看看放大后的tracks区域，bam文件在载入后会默认生成两个tracks，一个显示测序深度（<strong>Coverage track</strong>，可以对比下<u>samtools depth</u>），一个显示比对情况（<strong>Alignment track</strong>），我们放大其中一个样本的数据信息。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>Coverage track区域灰色代表质量好，如果reads中某核苷酸与参考序列超过20%不一致的时候，IGV会根据四个碱基的计数对coverage的条形图进行着色。这里可以看到该位点处有20个reads覆盖到，8条reads测的是C核苷酸，12条reads测的是T核苷酸。如果某个位置coverage条形图只有一种颜色，即该位点测的核苷酸和参考序列完全不一样，那说明该位点是<span class='p red'>SNP位点</span>。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>Alignment tracks柱形图是和bam文件中的数据一一对应的，举个例子，我在IGV软件的ERR1698206.bam可以看到在第3条染色体位置8173028有3条reads。虚拟机中找到这个bam文件，直接samtools view查看并grep这个位置，可以找到3条定位的reads（还有三条是配对的另一条链）。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/13.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/13.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>如果一条reads中间有缺失，IGV会用黑色横杠表示，中间数字表示缺失几个核苷酸。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/14.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/14.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>IGV还用不同颜色标记异常的插入片段大小的reads，这里做的是RNA-seq数据比对，不用看reads颜色，有些reads还在质控的时候被裁短了，变成蓝色很正常（<u>因为比预期短，个人理解是这样，有待考证？</u>）。以下是官网的默认着色方案：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/15.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/15.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。</p>
+</div><h2 id="1-下载balst-工具和数据库"><a href="#1-下载balst-工具和数据库" class="headerlink" title="1 下载balst+工具和数据库"></a>1 下载balst+工具和数据库</h2><div class="story post-story"><p>在之前的一篇博客中，我详细介绍了如何本地安装NCBI的blast+工具，以及下载nr&#x2F;nt库，建立本地的数据库。<a href="https://www.shelven.com/2022/06/17/a.html">详情点击这里</a>。</p>
+<p>在做数据污染评估的时候，我们还需要知道blast最佳结果对应的物种名，因此还需要下载分类数据库的以下两个子库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ascp工具下载大数据，wget命令下载小文件（md5校验文件）</span></span><br><span class="line">ascp -QT -i /public/home/wlxie/miniconda3/envs/biosoft/etc/asperaweb_id_dsa.openssh -k1 -l 500m anonftp@ftp.ncbi.nlm.nih.gov:/pub/taxonomy/accession2taxid/nucl_gb.accession2taxid.gz ./</span><br><span class="line"></span><br><span class="line">wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/nucl_gb.accession2taxid.gz.md5</span><br><span class="line"></span><br><span class="line">ascp -QT -i /public/home/wlxie/miniconda3/envs/biosoft/etc/asperaweb_id_dsa.openssh -k1 -l 500m anonftp@ftp.ncbi.nlm.nih.gov:/pub/taxonomy/taxdump.tar.gz ./</span><br><span class="line"></span><br><span class="line">wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz.md5</span><br></pre></td></tr></table></figure>
+
+<p>md5文件校验完成之后，两个数据库分别解压。注意.gz文件用gunzip，.tar.gz文件用tar -zxvf</p>
+<p>看看这两个数据库长什么样：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>第一张图片是<strong>nucl_gb.accession2taxid</strong>，我们需要用到第二列版本信息和第三列的taxid。</p>
+<p>第二张图片是<strong>names.dmp</strong>，我们需要用到有taxid，学名和scientific name字符串的行。</p>
+<p>这两个数据库怎么使用后面会详细说明。分析思路来自于CSDN的博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42962326/article/details/105081327">风风是超人</a>，遗憾的是从17年开始，NCBI不再提供gi号与blastn结果的关联，博主的本地数据库可能版本比较早，采用的是gi号分析。</p>
+<p>我将后续的代码做了修改，下载的也都是最新的数据库。总的逻辑是利用blast结果的version号，得到nucl_gb.accession2taxid数据库中的taxid号，最后通过names.dmp中的taxid号得到学名。代码方面做了少许优化，对集群服务器可能更友好一点？</p>
+</div><h2 id="2-fq文件处理和blast"><a href="#2-fq文件处理和blast" class="headerlink" title="2 fq文件处理和blast"></a>2 fq文件处理和blast</h2><div class="story post-story"><p>质控后的数据fq文件是“@”开头的，我们要改成fa格式也就是“&gt;”开头。取前10000条序列，每个序列有4行，只取第一行标题和第二行序列。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">NR表示当前行，判断除以4的余数，余数1为标题行，只输出第一个元素即reads <span class="built_in">id</span>；余数2则为序列行，输出所有元素也就是整条序列。最后替换@符号，文件名为test.fa</span></span><br><span class="line">zcat clean_filter.fq.gz | head -n 40000 | awk &#x27;&#123;if(NR%4==1)&#123;print $1&#125;else if(NR%4==2)&#123;print $0&#125;&#125;&#x27; | sed &#x27;s/@/&gt;/g&#x27; &gt;test.fa</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">批量blast程序</span></span><br><span class="line">blastn -query test.fa -out test_blastn_nt.xml -db nt -outfmt 5 -evalue 1e-5 -num_threads 20 -max_target_seqs 1</span><br></pre></td></tr></table></figure>
+
+<p>批量blast程序注意下我们输出的格式为xml格式，也就是- outfmt 5。为什么要用xml格式，因为xml格式能给出的信息最全，我们需要知道输出的版本号</p>
+<p>evalue值根据需要设定，这里我设置1e-5</p>
+<p>最大匹配数量注意下设置1，我们只需要知道和哪个物种相似度最高，一个输出结果就足够了（虽然设置1会有警告）。</p>
+<p>看下blast生成的test_blastn_nt.xml这个结果文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>虽然是第一次接触xml格式，但是感觉非常熟悉！之前做的一个<a href="https://www.shelven.com/2022/05/03/a.html">微博爬虫小程序</a>就是扒了一个类似的html格式的文件……xml格式也挺容易解析的，可以看到比对信息以标签&lt;Iteration&gt;开始，以&lt;&#x2F;Iteration&gt;标签结束，&lt;Hit&gt;标签开始表示的是比对上的结果（因为我设置了最大比对序列数量是1，所以&lt;Hit_num&gt;只有1）；&lt;Hsp&gt;标签表示某一块的比对结果（同一条序列，若干片段比对上），因此&lt;Hsp_num&gt;标签的数量可能不止一个。</p>
+<p>当然，这些都可以不用关心，分析需要的信息我用红框标了出来。比较重要的是&lt;Hit_def&gt;标签，里面的字符串是空格隔开的，<strong>第一个元素是我们需要的物种版本号</strong>。</p>
+</div><h2 id="3-XML文件解析"><a href="#3-XML文件解析" class="headerlink" title="3 XML文件解析"></a>3 XML文件解析</h2><div class="story post-story"><p>前面说了解析的思路，以下是代码的实现。因为用的python语言写的程序，我的建议是在vscode一类的编程软件中写这些代码，如果有错误可以及时调试。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以不写，我是为了确保导入父目录的模块不出错</span></span><br><span class="line">sys.path.append(<span class="string">&quot;./&quot;</span>)</span><br><span class="line"></span><br><span class="line">xmlfile = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/test_blastn_nt.xml&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">outfile = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/filted_accession_version.txt&quot;</span>,<span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个空的字典，提取有queryID和subjectID的行</span></span><br><span class="line">dict1 = defaultdict(<span class="built_in">list</span>)</span><br><span class="line"><span class="keyword">for</span> lines <span class="keyword">in</span> xmlfile:</span><br><span class="line">    line = lines.strip()</span><br><span class="line">    read_id = re.match(<span class="string">&#x27;&lt;Iteration_query-def&gt;.*&lt;/Iteration_query-def&gt;&#x27;</span>,line)</span><br><span class="line">    Hit_def = re.match(<span class="string">&#x27;&lt;Hit_def&gt;.*&lt;/Hit_def&gt;&#x27;</span>,line)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 解析queryID</span></span><br><span class="line">    <span class="keyword">if</span> read_id != <span class="literal">None</span>:     </span><br><span class="line">        read_id = read_id.group()</span><br><span class="line">        read_id = read_id.split(<span class="string">&quot;&lt;&quot;</span>)[<span class="number">1</span>].split(<span class="string">&quot;&gt;&quot;</span>)[<span class="number">1</span>]</span><br><span class="line">        key=read_id</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 字典key值和value值赋值</span></span><br><span class="line">    <span class="keyword">elif</span> Hit_def !=<span class="literal">None</span>:        </span><br><span class="line">        Hit_def = Hit_def.group()</span><br><span class="line">        Hit_def = Hit_def.split(<span class="string">&quot;&lt;&quot;</span>)[<span class="number">1</span>].split(<span class="string">&quot;&gt;&quot;</span>)[<span class="number">1</span>]</span><br><span class="line">        dict1[key].append(Hit_def)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入文件，制表符分割</span></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict1:</span><br><span class="line">    outfile.write(key + <span class="string">&quot;\t&quot;</span> + <span class="string">&quot;\t&quot;</span>.join(dict1[key])+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看下运行结束后解析得到的文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>一共是两列，第一列是reads的queryID，第二列subjectID就是比对上的序列信息。可以看到第二列可以以空格为分隔符，提取第一个元素也就是物种版本号，后面会说。</p>
+<p>为什么要把物种版本号提出来而不直接用这段内容里的物种名呢？因为不同的物种名<strong>字段数量和位置不一样</strong>，无法用统一的命令直接提取，精确的版本号可以对应<strong>唯一一个taxid</strong>，从而被精准地注释上物种学名。</p>
+</div><h2 id="4-匹配物种学名"><a href="#4-匹配物种学名" class="headerlink" title="4 匹配物种学名"></a>4 匹配物种学名</h2><div class="story post-story"><p>这里需要注意一个问题，blast用的nt库还有物种分类用到的两个数据库，他们的<strong>更新时间是不一致的</strong>。也就是说，物种版本号不一定能完全匹配上taxid，而taxid也不一定能匹配上学名。</p>
+<p>而python语言写的程序，用到字典类型数据的时候，如果没有对应的key值匹配是会报错的，不会继续执行下去。一会儿解释，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;./&quot;</span>)</span><br><span class="line"></span><br><span class="line">accession = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/filted_accession_version.txt&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">accession2taxid = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/nucl_gb.accession2taxid&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">taxid2name = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/names.dmp&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">final_res = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/final_res.txt&quot;</span>,<span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从names.dmp提取taxid和学名，匹配有scientific name的行</span></span><br><span class="line">taxid_name_dict = &#123;&#125;        </span><br><span class="line"><span class="keyword">for</span> lines <span class="keyword">in</span> taxid2name:</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&quot;scientific name&quot;</span> <span class="keyword">in</span> lines:</span><br><span class="line">        line = lines.strip().split(<span class="string">&quot;|&quot;</span>)</span><br><span class="line">        taxid = line[<span class="number">0</span>].strip()</span><br><span class="line">        name = line[<span class="number">1</span>].strip()</span><br><span class="line">        taxid_name_dict[taxid] = name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从nucl_gb.accession2taxid提取taxid和版本号</span></span><br><span class="line">accession_taxid_dict = &#123;&#125;       </span><br><span class="line"><span class="keyword">for</span> lines <span class="keyword">in</span> accession2taxid:</span><br><span class="line">    line = lines.strip().split(<span class="string">&quot;\t&quot;</span>)</span><br><span class="line">    TAXID = line[<span class="number">2</span>]</span><br><span class="line">    VERSION = line[<span class="number">1</span>]</span><br><span class="line">    accession_taxid_dict[VERSION] = TAXID</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加两个判断条件，版本号匹配不上taxid和taxid匹配不上学名的情况。gc.collect()释放内存。</span></span><br><span class="line"><span class="keyword">for</span> lines <span class="keyword">in</span> accession:</span><br><span class="line">    line = lines.strip().split(<span class="string">&quot;\t&quot;</span>)</span><br><span class="line">    version = line[<span class="number">1</span>].split()[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">if</span> version <span class="keyword">in</span> accession_taxid_dict:</span><br><span class="line">        taxid = accession_taxid_dict[version]</span><br><span class="line">        <span class="keyword">if</span> taxid <span class="keyword">in</span> taxid_name_dict:</span><br><span class="line">            final_res.write(<span class="string">&quot;\t&quot;</span>.join(line)+<span class="string">&quot;\t&quot;</span>+taxid_name_dict[taxid]+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            final_res.write(<span class="string">&quot;\t&quot;</span>.join(line)+<span class="string">&quot;\t&quot;</span>+<span class="string">&quot;INVALID TAXID&quot;</span>+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        final_res.write(<span class="string">&quot;\t&quot;</span>.join(line)+<span class="string">&quot;\t&quot;</span>+<span class="string">&quot;INVALID ACCESSION VERSION&quot;</span>+<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    gc.collect()</span><br></pre></td></tr></table></figure>
+
+<p>如果不加最后两个判断条件，程序会在报错的那行read序列终止。</p>
+<p>通过比较两个输出结果文件行数是否一致来判断匹配是否完全。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>两个文件输出结果一致说明匹配完成，<strong>为什么这里是9338而不是我们一开始blast的10000条序列呢？那是因为有662条序列balst结果的E值大于1e-5，没有在nt中比对上合适的序列</strong></p>
+</div><h2 id="5-输出物种注释分布结果"><a href="#5-输出物种注释分布结果" class="headerlink" title="5 输出物种注释分布结果"></a>5 输出物种注释分布结果</h2><div class="story post-story"><p>到这一步就有很多种处理方法了，可以把结果文件直接用excel打开，统计reads在nt库的分布情况和比对上的物种分布。也可以直接写个python脚本做个数据统计。</p>
+<p>统计前我们先检查一下是否存在上一步匹配失败的reads。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">统计匹配失败的reads</span></span><br><span class="line">cat final_res.txt | grep &quot;INVALID TAXID&quot;</span><br><span class="line">cat final_res.txt | grep &quot;INVALID ACCESSION VERSION&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20220619/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>提示有8条reads的物种版本号比对不上taxid，且都是Pyrus x bretschneideri这个物种，说明这个物种还未在nucl_gb.accession2taxid这个NCBI官方数据库中更新。在结果文件中将其替换掉。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sed命令在原文件进行全局替换</span></span><br><span class="line">sed -i &#x27;s/INVALID ACCESSION VERSION/Pyrus x bretschneideri/g&#x27; final_res.txt</span><br></pre></td></tr></table></figure>
+
+<p>修改完成，检查无误后，用以下python脚本统计物种注释分布：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter     <span class="comment"># 引入counter模块</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;./&quot;</span>)</span><br><span class="line"></span><br><span class="line">name_file = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/final_res.txt&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">res_stastics = <span class="built_in">open</span>(<span class="string">&quot;/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Third_generation_sequencing/stastics.txt&quot;</span>,<span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line">name_list = []</span><br><span class="line"><span class="keyword">for</span> lines <span class="keyword">in</span> name_file:</span><br><span class="line">    line = lines.strip().split(<span class="string">&quot;\t&quot;</span>)</span><br><span class="line">    name = line[-<span class="number">1</span>]     <span class="comment"># 取最后一列</span></span><br><span class="line">    name_list.append(name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Counter()函数统计词频</span></span><br><span class="line">count_result = Counter(name_list)</span><br><span class="line">count_list = <span class="built_in">list</span>(count_result.items())     <span class="comment"># 注意需要创建一个list</span></span><br><span class="line">count_list.append((<span class="string">&#x27;Unmap&#x27;</span>,<span class="number">662</span>))        <span class="comment"># 注意手动添加blast失败的序列条数到list中</span></span><br><span class="line">count_list.sort(key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>],reverse=<span class="literal">True</span>) <span class="comment"># 以第二维数据值，即统计的物种学名出现次数排序</span></span><br><span class="line"></span><br><span class="line">res_stastics.write(<span class="string">&quot;Name\tHit_reads\tpercentage\n&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> count_list:</span><br><span class="line">    name = i[<span class="number">0</span>]</span><br><span class="line">    number = i[<span class="number">1</span>]</span><br><span class="line">    reads_num = <span class="number">10000</span></span><br><span class="line">    percentage =<span class="string">&quot;%.2f%%&quot;</span>%(<span class="number">100</span>*<span class="built_in">float</span>(number)/<span class="built_in">float</span>(reads_num))       <span class="comment"># 浮点两位小数的百分比</span></span><br><span class="line">    res_stastics.write(name+<span class="string">&quot;\t&quot;</span>+<span class="built_in">str</span>(number)+<span class="string">&quot;\t&quot;</span>+<span class="built_in">str</span>(percentage)+<span class="string">&quot;\n&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>需要注意手动添加blast失败的序列条数</strong>，方便最后一起统计。打开生成的stastics.txt文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/8.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>这个数据是制表符分割的，可以用excel做一个分布统计表，或者用R做一个柱状图，底下展示结果</p>
+<p><img src="https://www.shelven.com/tuchuang/20220619/9.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220619/9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可以看到，10000条序列比对结果占比最高的前两条序列（橘黄色的）是细菌的核酸序列，总数达到3437条。992条序列比对上拟南芥，662条序列未比对上nt库。可以认为这个序测序数据被细菌污染，可以和测序公司battle要求重新测一遍了……</p>
 
 </div>
   </div>
@@ -3195,7 +3207,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/16/b.html>http://www.shelven.com/2022/04/16/b.html</a></p>
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/06/20/a.html>http://www.shelven.com/2022/06/20/a.html</a></p>
               
             
           </blockquote>
@@ -3212,10 +3224,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:05:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-20T01:22:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月24日</p>
+    <p>更新于：2022年6月20日</p>
   </a>
 </div>
 
@@ -3224,8 +3236,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IGV/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>IGV</p></a></div>
-  <span hidden itemprop="keywords">IGV</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/blast/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>blast+</p></a></div>
+  <span hidden itemprop="keywords">python blast+</span>
 
 
         
@@ -3238,7 +3250,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/20/a.html&title=0基础学习基因组三代测序组装（2）——数据污染评估 - 我的小破站&summary="
           
           >
           
@@ -3250,7 +3262,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/20/a.html&title=0基础学习基因组三代测序组装（2）——数据污染评估 - 我的小破站&summary="
           
           >
           
@@ -3262,7 +3274,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/20/a.html&title=0基础学习基因组三代测序组装（2）——数据污染评估 - 我的小破站&summary="
           
           >
           
@@ -3295,15 +3307,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/17/a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>转录组数据分析笔记（5）——stringtie转录本组装和定量</p>
-          <p class='content'>stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samto...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/04/16/a.html'>
-          <p class='title'>转录组数据分析笔记（3）——samtools用法小结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排...</p>
+        <a class='next' href='/2022/06/17/b.html'>
+          <p class='title'>0基础学习基因组三代测序组装（1）——数据质控<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返...</p>
         </a>
       
     </div>
@@ -3319,7 +3326,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/04/16/b.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/06/20/a.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
@@ -3352,7 +3359,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-IGV%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">1. IGV软件下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">2. 导入文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%95%8C%E9%9D%A2%E8%A7%A3%E8%AF%BB"><span class="toc-text">3. 界面解读</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BDbalst-%E5%B7%A5%E5%85%B7%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">1 下载balst+工具和数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-fq%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%92%8Cblast"><span class="toc-text">2 fq文件处理和blast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-XML%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="toc-text">3 XML文件解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8C%B9%E9%85%8D%E7%89%A9%E7%A7%8D%E5%AD%A6%E5%90%8D"><span class="toc-text">4 匹配物种学名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%BE%93%E5%87%BA%E7%89%A9%E7%A7%8D%E6%B3%A8%E9%87%8A%E5%88%86%E5%B8%83%E7%BB%93%E6%9E%9C"><span class="toc-text">5 输出物种注释分布结果</span></a></li></ol>
     </div>
   </section>
 
@@ -3404,7 +3411,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读";
+  pdata.postTitle="0基础学习基因组三代测序组装（2）——数据污染评估";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4637,7 +4644,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/16/b.html","name":"转录组数据分析笔记（4）——IGV基因组浏览器安装和解读"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（4）——IGV基因组浏览器安装和解读","description":"","datePublished":"2022-04-16T11:32:50.000Z","dateModified":"2022-05-23T19:05:08.239Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/16/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/16/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"IGV","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/20/a.html","name":"0基础学习基因组三代测序组装（2）——数据污染评估"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（2）——数据污染评估","description":"","datePublished":"2022-06-19T17:17:30.000Z","dateModified":"2022-06-19T17:22:16.416Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/20/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python,blast+","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
