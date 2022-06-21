@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1655740550579" as="style">
+  <link rel="preload" href="/css/style.css?time=1655810866913" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-24T18:05:26.000Z">
-<meta property="article:modified_time" content="2022-05-24T18:17:49.409Z">
+<meta property="article:modified_time" content="2022-06-21T11:27:33.293Z">
 <meta property="article:tag" content="集群">
 <meta property="article:tag" content="slurm">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1655740550579" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1655740550579"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1655810866913" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1655810866913"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1655740550579","sites":"/js/plugins/sites.js?time=1655740550579","friends":"/js/plugins/friends.js?time=1655740550579","parallax":"/js/plugins/parallax.js?time=1655740550579","rightMenu":"/js/plugins/rightMenu.js?time=1655740550579","contributors":"/js/plugins/contributors.js?time=1655740550579","message":"/js/thirdparty/message.js?time=1655740550579","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655740550579"},"css":{"style":"/css/style.css?time=1655740550579","message":"/css/message.css?time=1655740550579"}},
+    cdn: {"js":{"app":"/js/app.js?time=1655810866913","sites":"/js/plugins/sites.js?time=1655810866913","friends":"/js/plugins/friends.js?time=1655810866913","parallax":"/js/plugins/parallax.js?time=1655810866913","rightMenu":"/js/plugins/rightMenu.js?time=1655810866913","contributors":"/js/plugins/contributors.js?time=1655810866913","message":"/js/thirdparty/message.js?time=1655810866913","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655810866913"},"css":{"style":"/css/style.css?time=1655810866913","message":"/css/message.css?time=1655810866913"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655740550579),
+    lastupdate: new Date(1655810866913),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3086,13 +3086,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：3.1k 字</p>
+      <p>字数：3.3k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：10 分钟</p>
+      <p>时长：11 分钟</p>
     </a>
   </div>
 
@@ -3162,6 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一次执行srun生成一个作业步，也就是一次任务加载，执行一次最简单的hostname命令如下：</p>
 <p><img src="https://www.shelven.com/tuchuang/20220524/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>-n 参数指定核数，-w参数指定节点，因此显示的hostname就是computer3。<strong>运行结束后直接释放资源</strong>。</p>
+<p>上面的例子可能没有体现出交互的意义，因为程序比较简单。有些程序在运行的过程中需要人为调整，srun才能体现出优势。</p>
 <h4 id="2-1-2-批处理模式——sbatch"><a href="#2-1-2-批处理模式——sbatch" class="headerlink" title="2.1.2 批处理模式——sbatch"></a>2.1.2 批处理模式——sbatch</h4><p>批处理模式顾名思义特点在于需要自己写批处理脚本，具体过程如下：</p>
 <ul>
 <li>编写作业脚本，指定资源数目和限制</li>
@@ -3257,6 +3258,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>顺便最后再提一下交互模式和批处理模式是可以相互结合的，脚本中可以加入srun命令，可以自行尝试。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220524/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>如上，可以用sbatch一次性创建100个job，每个job运行一次srun后面的内容，也就是提交并行的100个计算作业。也可以不加–array这个参数，srun最后加上符号&amp;在后台挂起，下一行继续用srun命令，以此来实现并行计算，不过要注意最后一行命令用<strong>wait</strong>等待所有命令运行结束后一起结束，否则读完sbatch就结束了。</p>
 <h3 id="2-2-其他用户命令"><a href="#2-2-其他用户命令" class="headerlink" title="2.2 其他用户命令"></a>2.2 其他用户命令</h3><p>这里再简单列举记录一些常用的用户命令和参数，方便自己后续用到时查阅~</p>
 <h4 id="2-2-1-sinfo-查询信息"><a href="#2-2-1-sinfo-查询信息" class="headerlink" title="2.2.1 sinfo 查询信息"></a>2.2.1 sinfo 查询信息</h4><table>
 <thead>
@@ -3468,10 +3471,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-25T02:17:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-21T19:27:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月25日</p>
+    <p>更新于：2022年6月21日</p>
   </a>
 </div>
 
@@ -3799,7 +3802,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1655740550579.js"></script>
+<script src="/js/app.js?time=1655810866913.js"></script>
 
 
 
@@ -3983,7 +3986,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1655740550579')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1655810866913')</script>
 
 
 
@@ -4113,19 +4116,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1655740550579")
+        volantis.js("/js/plugins/sites.js?time=1655810866913")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1655740550579")
+        volantis.js("/js/plugins/friends.js?time=1655810866913")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1655740550579")
+        volantis.js("/js/plugins/contributors.js?time=1655810866913")
       }
     
   };
@@ -4194,7 +4197,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1655740550579')
+    await volantis.js('/js/plugins/aplayer.js?time=1655810866913')
   
   })();
 
@@ -4319,7 +4322,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655740550579");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1655810866913");
   }
 
   function loadSearchService() {
@@ -4659,7 +4662,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1655740550579').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1655810866913').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4893,7 +4896,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/25/a.html","name":"集群和slurm调度系统使用心得"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群和slurm调度系统使用心得","description":"","datePublished":"2022-05-24T18:05:26.000Z","dateModified":"2022-05-24T18:17:49.409Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"集群,slurm","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/25/a.html","name":"集群和slurm调度系统使用心得"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群和slurm调度系统使用心得","description":"","datePublished":"2022-05-24T18:05:26.000Z","dateModified":"2022-06-21T11:27:33.293Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"集群,slurm","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
