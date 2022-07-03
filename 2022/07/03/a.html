@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.shelven.com/2022/05/25/a.html"/>
+  <link rel="canonical" href="http://www.shelven.com/2022/07/03/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,20 +28,20 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>集群和slurm调度系统使用心得 - 我的小破站</title>
-  <meta name="keywords" content="集群,slurm,null">
-  <meta name="description" content="前言随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。 比如我的小破电脑，4核，2G运行内存，在对16个10X测序深度的拟南芥转录组数据进行回帖参考基因组时，cpu满载的情况下跑了整整一个晚上，拟南芥的参考基因组还是比较小的（只有116M大小）。因此在需要">
+  <title>0基础学习基因组三代测序组装（4）——初步组装二代数据 - 我的小破站</title>
+  <meta name="keywords" content="kmergenie,SOAPdenovo2,null">
+  <meta name="description" content="前言经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。 这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。 1 安装SO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集群和slurm调度系统使用心得">
-<meta property="og:url" content="http://www.shelven.com/2022/05/25/a.html">
+<meta property="og:title" content="0基础学习基因组三代测序组装（4）——初步组装二代数据">
+<meta property="og:url" content="http://www.shelven.com/2022/07/03/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="前言随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。 比如我的小破电脑，4核，2G运行内存，在对16个10X测序深度的拟南芥转录组数据进行回帖参考基因组时，cpu满载的情况下跑了整整一个晚上，拟南芥的参考基因组还是比较小的（只有116M大小）。因此在需要">
+<meta property="og:description" content="前言经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。 这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。 1 安装SO">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-24T18:05:26.000Z">
-<meta property="article:modified_time" content="2022-06-21T11:27:33.293Z">
-<meta property="article:tag" content="集群">
-<meta property="article:tag" content="slurm">
+<meta property="article:published_time" content="2022-07-03T11:28:52.000Z">
+<meta property="article:modified_time" content="2022-07-03T11:33:05.956Z">
+<meta property="article:tag" content="kmergenie">
+<meta property="article:tag" content="SOAPdenovo2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3020,7 +3020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/25/a.html">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/03/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3041,7 +3041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        集群和slurm调度系统使用心得
+        0基础学习基因组三代测序组装（4）——初步组装二代数据
       </h1>
       <div class='new-meta-box'>
         
@@ -3060,10 +3060,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
       </span>
     
   </div>
@@ -3072,10 +3076,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-25T02:05:26+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-07-03T19:28:52+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年5月25日</p>
+    <p>发布于：2022年7月3日</p>
   </a>
 </div>
 
@@ -3086,13 +3090,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：3.3k 字</p>
+      <p>字数：2.4k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：11 分钟</p>
+      <p>时长：10 分钟</p>
     </a>
   </div>
 
@@ -3104,7 +3108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="集群和slurm调度系统使用心得" data-path="/2022/05/25/a.html">
+      <div id="lc-pv" data-title="0基础学习基因组三代测序组装（4）——初步组装二代数据" data-path="/2022/07/03/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3125,311 +3129,53 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。</p>
-<p>比如我的小破电脑，4核，2G运行内存，在对16个10X测序深度的拟南芥转录组数据进行回帖参考基因组时，cpu满载的情况下跑了整整一个晚上，拟南芥的参考基因组还是比较小的（只有116M大小）。因此在需要做大量数据处理的时候我们往往都会用到<strong>计算机集群</strong>。</p>
-</div><h2 id="1-计算机集群介绍"><a href="#1-计算机集群介绍" class="headerlink" title="1. 计算机集群介绍"></a>1. 计算机集群介绍</h2><div class="story post-story"><p>先上一段<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9B%86%E7%BE%A4/1728905?fr=aladdin">百度百科</a>的介绍</p>
-<blockquote>
-<p><strong>计算机集群</strong>简称<strong>集群，</strong>是一种计算机系统， 它通过一组松散集成的计算机软件或硬件连接起来高度紧密地协作完成计算工作。在某种意义上，他们可以被看作是一台计算机。</p>
-<p>集群系统中的单个计算机通常称为节点，通常通过局域网连接，但也有其它的可能连接方式。集群计算机通常用来改进单个计算机的计算速度和&#x2F;或可靠性。一般情况下集群计算机比单个计算机，比如工作站或超级计算机性能价格比要高得多。</p>
-</blockquote>
-<p>简单来说集群就是一群电脑连接在一起完成同一个工作，自然是比单个电脑工作效率高得多。</p>
-<p>塔大有着南疆最大的超算中心，我用测试账号登录大致看了下节点配置信息和存储规模：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>可以看到塔大集群有三个分区：debug、normal和operation，其中debug是默认分区。</p>
-<p>每个分区下都有admin91、admin92和computer1-6共计8个节点，从状态栏可以看到admin91节点处于down状态，一般来说只有故障节点才会显示状态down，但是我看了下登录节点的hostname就是admin91（<strong>admin91是登录节点</strong>），可能就是这样设置的，防止用户申请到登录节点资源（学校规定禁止在登录节点运行脚本程序，为了防止用户占用太多登录节点资源）。<strong>computer1-6都是计算节点</strong>，可以看到状态栏是idle也就是空闲的。<strong>admin92是个胖节点</strong>，状态却是drain也就是不能分配，这个我不理解，如果要运行并行命令就要用到胖节点。</p>
-<p>裸储存容量算个大概<strong>450TB</strong>左右，不算大不算小，够用就行。</p>
-<p>顺便看一下各个节点的性能：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>稍微计算一下可以发现，计算节点computer1-6每个节点有128个核，每个核2G运行内存；登录节点admin91有64个核，每个核4G运行内存<del>（不是很理解登录节点为什么要这么豪华……）</del>；胖节点admin92有256个核，每个核4G运行内存。总的来说，放在内地比可能确实不怎么样，但是在新疆可以说是奢华顶配了……</p>
-</div><h2 id="2-slurm调度系统介绍"><a href="#2-slurm调度系统介绍" class="headerlink" title="2. slurm调度系统介绍"></a>2. slurm调度系统介绍</h2><div class="story post-story"><p>塔大集群用的是slurm调度系统，简单来说就是借助slurm这个资源管理系统，将超算中心的集群计算机统一管理。slurm是个开源分布式资源管理软件，管理这种大型的计算机集群还是比较高效的，比如天河二号上就使用了 该资源管理系统。集群操作和个人电脑操作不一样的地方是，<strong>我们需要申请计算节点然后才能运行计算的命令</strong>，需要了解一下slurm的作业调度系统。</p>
-<p>了解一下基本概念：一个分区（partition）就是节点的逻辑分组，可以有不同的节点（node）；可以调用几个节点的资源创建作业步（job step），一个作业（job）就是一次资源分配，可以有多个作业步并且可以并发运行。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>再来看一下slurm调度系统的组成成分：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>主要有控制进程slurmcld，记账存储进程Slurmdbd（有的集群是收费的），节点监控进程slurmd，作业管理进程slurmstepd和用户命令工具组成，我们可以不用了解这些进程之间的相互关系，熟悉用户命令比如创建作业，提交作业和查看作业状态即可。</p>
-<h3 id="2-1-创建和提交作业"><a href="#2-1-创建和提交作业" class="headerlink" title="2.1 创建和提交作业"></a>2.1 创建和提交作业</h3><p>slurm作业调度系统有三种模式创建和提交作业：<strong>交互模式——srun</strong>，<strong>批处理模式——sbatch</strong>和<strong>分配模式——salloc</strong>，分别介绍一下~还是再次强调一下，学校集群禁止在登录界面直接运行计算命令，第一次发现会强制终止进程，第二次管理员会注销用户账号。</p>
-<h4 id="2-1-1-交互模式——srun"><a href="#2-1-1-交互模式——srun" class="headerlink" title="2.1.1 交互模式——srun"></a>2.1.1 交互模式——srun</h4><p>交互模式说白了就是我们通过命令行与集群产生可以互动的“交流”，具体过程如下：</p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。</p>
+<p>这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。</p>
+</div><h2 id="1-安装SOAPdenovo-2-0"><a href="#1-安装SOAPdenovo-2-0" class="headerlink" title="1 安装SOAPdenovo 2.0"></a>1 安装SOAPdenovo 2.0</h2><div class="story post-story"><p>github上这个软件的版本是2.0，网址点击<a target="_blank" rel="noopener" href="https://github.com/aquaskyline/SOAPdenovo2">这里</a></p>
+<p>软件下载安装过程非常顺利，如果有报错无法解决的话可以在Issue里向作者反馈。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">集群如果无法登录github，下载源码包，通过xftp传到集群</span></span><br><span class="line">tar -zxvf SOAPdenovo2</span><br><span class="line">cd SOAPdenovo2-r242</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>编译之后可以看到有如下几个文件</p>
+<p><img src="https://www.shelven.com/tuchuang/20220702/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220702/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>SOAPdenovo-127mer和SOAPdenovo-63mer是用于组装的两个程序，分<strong>别代表支持的最大k-mer为127和63</strong>，用法上是完全相同的。</p>
+<p>example.config是配置文件，组装之前我们要设置其中的参数内容；README.md是帮助文件，详细记录了各项参数的作用和设置方法。这个后面会讲到。</p>
+</div><h2 id="2-kmergenie计算最佳k值"><a href="#2-kmergenie计算最佳k值" class="headerlink" title="2 kmergenie计算最佳k值"></a>2 kmergenie计算最佳k值</h2><div class="story post-story"><p>现在组装基因组的算法主要有三种：De Bruijn graph，Overlap-Layout-Consensus和String Graph。SOAPdenovo软件组装基因组用的是De Bruijn graph算法，简单理解是通过将reads打断成k-mer后，利用k-mer之间的重复部分构建图，得到最优化路径从而拼接contig。要具体了解什么是De Bruijn graph，可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010608296/article/details/113879863">这一篇博文</a>。</p>
+<p>不同k-mer值构建的De Bruijn graph不一样，会导致组装质量的差异，因此我们需要选择一个最佳的组装k-mer大小（尽管可以用默认值<strong>23</strong>直接组装，但是效果不一定是最好的）。</p>
+<p><strong>kmergenie软件和之前的Jellyfish类似</strong>，都可以用于统计k-mer数量，kmergenie最大优点是可以对预设的多个k-mer进行分析，找到最佳的k-mer。<a target="_blank" rel="noopener" href="http://kmergenie.bx.psu.edu/">点击这里进入Kmergenie官网</a>，下载最新版本的软件。</p>
+<p><strong>注意下这个软件安装需要python &gt; 2.7，并且需要安装R和zlib</strong>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf kmergenie-1.7051.tar.gz</span><br><span class="line">cd kmergenie-1.7051</span><br><span class="line">make</span><br><span class="line">python setup.py install --user  # 安装到用户环境中，不报错说明可以使用</span><br><span class="line"></span><br><span class="line">vim file.txt    # 将两个fq文件路径写进去，一行一个</span><br><span class="line"></span><br><span class="line">/public/home/wlxie/biosoft/kmergenie-1.7051/kmergenie file.txt -o ./kmergenie_res -l 15 -k 65 -s 5 -t 30 --diploid      # 运行kmergenie</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>通过终端提交资源分配请求，指定资源数目和限制</li>
-<li>等待资源分配</li>
-<li>获得资源后，自动加载计算任务</li>
-<li>运行中，任务I&#x2F;O传递终端，可与任务进行交互</li>
-<li>任务结束后，资源被释放</li>
+<li>-o    # 输出文件位置和名称</li>
+<li>-l    # 设定的最小k值</li>
+<li>-k    # 设定的最大k值</li>
+<li>-s    # 最小k值到最大k值，每次增加的间隔（根据需要设定间隔大小）</li>
+<li>-t    # 运行的线程（CPU核）数</li>
+<li>--diploid    # 二倍体模式，前面我们已经用jellyfish确认过这是个复杂基因组。默认是单倍体模式</li>
 </ul>
-<p>一次执行srun生成一个作业步，也就是一次任务加载，执行一次最简单的hostname命令如下：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>-n 参数指定核数，-w参数指定节点，因此显示的hostname就是computer3。<strong>运行结束后直接释放资源</strong>。</p>
-<p>上面的例子可能没有体现出交互的意义，因为程序比较简单。有些程序在运行的过程中需要人为调整，srun才能体现出优势。</p>
-<h4 id="2-1-2-批处理模式——sbatch"><a href="#2-1-2-批处理模式——sbatch" class="headerlink" title="2.1.2 批处理模式——sbatch"></a>2.1.2 批处理模式——sbatch</h4><p>批处理模式顾名思义特点在于需要自己写批处理脚本，具体过程如下：</p>
-<ul>
-<li>编写作业脚本，指定资源数目和限制</li>
-<li>sbatch提交作业</li>
-<li>作业排队等待资源分配</li>
-<li>分配到资源后在首节点加载执行作业脚本</li>
-<li>任务结束释放资源</li>
-<li>运行结果定向到指定文件夹</li>
-</ul>
-<p>这个模式也是用的最多的，登录塔大集群可以在用户家目录下找到job_example文件夹，里面有不同的slurm脚本提供参考，举个最简单的例子sleep.slurm，我们cat一下看看脚本内容：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/8.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>第一行#! 指定解释器类型，和其他脚本都一样；</p>
-<p>第二行开始后面几行的#SBATCH都被识别为sbatch命令，因此后面都加上了对应参数，这里只有sbatch这一行会被识别成命令，注意不是被注释了。如果脚本里写了对应参数内容，命令运行脚本的时候就可以不用加入这些参数。</p>
-<p>第六行开始也就是#以后的部分，才是我们编写脚本要运行的命令。</p>
-<p>参考这个格式，我写了如下一个建立拟南芥参考基因组索引文件的hisat2.slurm脚本：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/10.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/10.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>申请了job名为job1，一个节点，一个核，显示队列，显示程序运行开始时间，运行程序，显示结束时间。</p>
-<p>提交直接用<code>sbatch hisat2.slurm</code>，很快就获得资源跑完了程序，当前目录下生成了索引文件和默认输出文件slurm-job号.out</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/11.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/11.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>因为输出结果在结果文件里，所以我们屏幕上是看不到运行过程的，要想监控运行过程只能在运行时输入squeue查看，后面会说。<strong>运行结束后同样会自动释放资源。</strong></p>
-<h4 id="2-1-3-分配模式——salloc"><a href="#2-1-3-分配模式——salloc" class="headerlink" title="2.1.3 分配模式——salloc"></a>2.1.3 分配模式——salloc</h4><p>分配模式相比前面两个模式更灵活一些，简单来说就是申请资源，执行运算任务后<strong>手动释放资源</strong>，可以用来在正式提交sbatch前做程序测试，检查代码正确后再写成脚本提交（不过也可以直接提交，不用sbatch）。流程如下：</p>
-<ul>
-<li>提交资源分配请求</li>
-<li>排队等待资源分配</li>
-<li>命令行执行指定的命令</li>
-<li>命令执行结束，exit手动释放资源</li>
-</ul>
-<p>这个比较简单，直接salloc后面接参数申请指定的资源就行，最后一定要exit手动释放资源。</p>
-<p>申请后可以用hostname命令看看申请的是哪个节点，确认是计算节点后再运行计算命令。</p>
-<h4 id="2-1-4-作业提交参数"><a href="#2-1-4-作业提交参数" class="headerlink" title="2.1.4 作业提交参数"></a>2.1.4 作业提交参数</h4><p>知道了三个模式的具体用法，只需要添加对应的参数就行了。没有人会具体记住所有参数，上面只有常用的几个需要记一下。这里记录一下其他常用提交参数：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-<th>类型</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-J</td>
-<td>作业名，squeue看到的作业名</td>
-<td>字符串</td>
-<td>-J wrf；表示作业名称为“wrf”</td>
-</tr>
-<tr>
-<td>-n</td>
-<td>作业申请的总cpu核心数</td>
-<td>数值</td>
-<td>-n 4；表示作业申请4个cpu核心</td>
-</tr>
-<tr>
-<td>-N</td>
-<td>作业申请的节点数</td>
-<td>数值</td>
-<td>-N 1 表示作业申请1个计算节点</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>指定作业提交的分区</td>
-<td>字符串</td>
-<td>-psilicon表示将作业提交到silicon分区</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>指定作业的执行时间</td>
-<td>数值</td>
-<td>-t 30 表示作业的执行时间不超过30分钟</td>
-</tr>
-<tr>
-<td>-o</td>
-<td>指定作业标准输出文件的名称</td>
-<td>字符串</td>
-<td>-o %j，表示使用作业号作为作业标准输出文件的名称</td>
-</tr>
-<tr>
-<td>-e</td>
-<td>指定作业标准错误输出文件名称</td>
-<td>字符串</td>
-<td>-e %j，表示使用作业号作为作业标准错误输出文件名</td>
-</tr>
-<tr>
-<td>-w</td>
-<td>指定分配特定的计算节点</td>
-<td>字符串</td>
-<td>-w computer3 表示使用computer3节点</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>作业依赖关系设置</td>
-<td>字符串</td>
-<td>-d after:123 表示本作业须待作业123开始以后再执行</td>
-</tr>
-</tbody></table>
-<p>顺便最后再提一下交互模式和批处理模式是可以相互结合的，脚本中可以加入srun命令，可以自行尝试。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220524/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>如上，可以用sbatch一次性创建100个job，每个job运行一次srun后面的内容，也就是提交并行的100个计算作业。也可以不加–array这个参数，srun最后加上符号&amp;在后台挂起，下一行继续用srun命令，以此来实现并行计算，不过要注意最后一行命令用<strong>wait</strong>等待所有命令运行结束后一起结束，否则读完sbatch就结束了。</p>
-<h3 id="2-2-其他用户命令"><a href="#2-2-其他用户命令" class="headerlink" title="2.2 其他用户命令"></a>2.2 其他用户命令</h3><p>这里再简单列举记录一些常用的用户命令和参数，方便自己后续用到时查阅~</p>
-<h4 id="2-2-1-sinfo-查询信息"><a href="#2-2-1-sinfo-查询信息" class="headerlink" title="2.2.1 sinfo 查询信息"></a>2.2.1 sinfo 查询信息</h4><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-a</td>
-<td>查看所有分区信息（含隐藏分区）</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>查看dead状态（通信异常）的节点和分区的信息，与-r参数对应</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>打印分区（或节点）的详细信息</td>
-</tr>
-<tr>
-<td>-n</td>
-<td>查看指定节点的信息</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>查看指定分区的状态</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>查看计算节点（内部通信）正常的节点和分区的状态，与-d参数对应</td>
-</tr>
-<tr>
-<td>-R</td>
-<td>查看节点不可用的原因，包括管理操作设置的异常</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>查询指定节点状态的分区或节点的信息</td>
-</tr>
-<tr>
-<td>–federation</td>
-<td>显示所有集群的分区（或节点）的信息</td>
-</tr>
-<tr>
-<td>–local</td>
-<td>仅显示当前集群的分区（或节点）的信息</td>
-</tr>
-</tbody></table>
-<h4 id="2-2-2-squeue-查询作业"><a href="#2-2-2-squeue-查询作业" class="headerlink" title="2.2.2 squeue 查询作业"></a>2.2.2 squeue 查询作业</h4><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-A</td>
-<td>查看指定账号的作业</td>
-</tr>
-<tr>
-<td>-a</td>
-<td>显示所有分区（包含隐藏）下的作业和作业步</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>按行显示作业组的每一个作业</td>
-</tr>
-<tr>
-<td>–hide</td>
-<td>不显示隐藏分区或者无权访问的分区中的作业</td>
-</tr>
-<tr>
-<td>-j</td>
-<td>根据指定的作业号查询作业信息</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>长格式显示作业信息</td>
-</tr>
-<tr>
-<td>–federation</td>
-<td>显示所有集群下的作业</td>
-</tr>
-<tr>
-<td>–local</td>
-<td>仅仅查看当前集群的作业</td>
-</tr>
-<tr>
-<td>-n</td>
-<td>按作业名查询作业或作业步</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>按分区查询作业</td>
-</tr>
-<tr>
-<td>-s</td>
-<td>查询作业步</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>指定要显示的作业的状态</td>
-</tr>
-</tbody></table>
-<h4 id="2-2-3-scancel-删除作业"><a href="#2-2-3-scancel-删除作业" class="headerlink" title="2.2.3 scancel 删除作业"></a>2.2.3 scancel 删除作业</h4><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&lt;job id&gt;</td>
-<td>删除指定job id作业</td>
-</tr>
-<tr>
-<td>–t</td>
-<td>删除指定状态的作业</td>
-</tr>
-<tr>
-<td>–account&#x3D;</td>
-<td>删除指定账号的作业</td>
-</tr>
-<tr>
-<td>–name&#x3D;</td>
-<td>删除指定名称的作业</td>
-</tr>
-<tr>
-<td>–partition&#x3D;</td>
-<td>删除指定分区的作业</td>
-</tr>
-<tr>
-<td>–reservation&#x3D;</td>
-<td>删除指定预约名称的作业</td>
-</tr>
-<tr>
-<td>–user&#x3D;</td>
-<td>删除指定用户的作业</td>
-</tr>
-<tr>
-<td>–nodelist&#x3D;</td>
-<td>删除指定节点的作业</td>
-</tr>
-</tbody></table>
-<h4 id="2-2-4-scontrol-查询详细信息"><a href="#2-2-4-scontrol-查询详细信息" class="headerlink" title="2.2.4 scontrol 查询详细信息"></a>2.2.4 scontrol 查询详细信息</h4><p>这个命令和sinfo相比更为详细，主要能获得4个方面的详细信息</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>scontrol show node &lt;name&gt;</td>
-<td>查询指定节点信息</td>
-</tr>
-<tr>
-<td>scontrol show partition &lt;name&gt;</td>
-<td>查询指定分区信息</td>
-</tr>
-<tr>
-<td>scontrol show job</td>
-<td>查询job信息，注意是所有的</td>
-</tr>
-<tr>
-<td>scontrol show config</td>
-<td>查询配置信息，也是所有的</td>
-</tr>
-</tbody></table>
+<p><strong>其原理就是设置不同k值进行基因组大小预估，将组装的基因组最大的k值作为最佳k值。</strong></p>
+<p>最终会给出kmergenie_res为前缀的一系列报告，生成的.histo文件还可以用来上一篇笔记中的GenomeScope分析，这里我们只需要看总结的html文件。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220702/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220702/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>确定组装的最佳k值为51</p>
+</div><h2 id="3-SOAPdenovo2组装contigs-x2F-scaffolds"><a href="#3-SOAPdenovo2组装contigs-x2F-scaffolds" class="headerlink" title="3 SOAPdenovo2组装contigs&#x2F;scaffolds"></a>3 SOAPdenovo2组装contigs&#x2F;scaffolds</h2><div class="story post-story"><p>复制一份example.config配置文件，重命名为run_config，修改部分参数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">maximal <span class="built_in">read</span> length</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">全局配置参数，只要高于这个参数的序列都会被截取到这个长度</span></span><br><span class="line">max_rd_len=150</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文库配置以[LIB]开头</span></span><br><span class="line">[LIB]</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">average insert size</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文库插入片段的平均长度，在实际设置时，可以参考文库size分布图，取峰值（默认200）</span></span><br><span class="line">avg_ins=200</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">if</span> sequence needs to be reversed</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">是否需要将序列反向互补，对于pair-end数据，不需要反向互补，设置为0；对于mate-pair数据，需要反向互补，设置为1</span></span><br><span class="line">reverse_seq=0</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">in</span> <span class="built_in">which</span> part(s) the reads are used</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1表示只组装contig，2表示只组装scaffold，3表示同时组装contig和scaffold，4表示只补gap</span></span><br><span class="line">asm_flags=3</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">use only first 100 bps of each <span class="built_in">read</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">序列长度阈值，作用和max_rd_len相同，大于该长度的序列会被切除到该长度</span></span><br><span class="line">rd_len_cutoff=150</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">in</span> <span class="built_in">which</span> order the reads are used <span class="keyword">while</span> scaffolding</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置不同文库数据的优先级顺序，取值范围为整数，rank值相同的多个文库，在组装scaffold时，会同时使用。</span></span><br><span class="line">rank=1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">cutoff of pair number <span class="keyword">for</span> a reliable connection (at least 3 <span class="keyword">for</span> short insert size)</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">contig或者scaffold之前的最小overlap个数，对于pair-end数据，默认值为3；对于mate-paird数据，默认值为5</span></span><br><span class="line">pair_num_cutoff=3</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">minimum aligned length to contigs <span class="keyword">for</span> a reliable <span class="built_in">read</span> location (at least 32 <span class="keyword">for</span> short insert size)</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">比对长度的最小阈值，对于pair-end数据，默认值为32；对于mate-pair数据，默认值为35</span></span><br><span class="line">map_len=32</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">a pair of fastq file, <span class="built_in">read</span> 1 file should always be followed by <span class="built_in">read</span> 2 file</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">过滤后的双端测序数据文件路径，q为fastq格式，f为fasta格式，b为bam格式</span></span><br><span class="line">q1=/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Second-generation_sequencing/20211106-BaiYiHuiNeng01/01.rawFq/00.mergeRawFq/1/clean_data/1_r    aw_1_val_1.fq</span><br><span class="line">q2=/public/home/wlxie/luobuma/luobuma/sample_1_rawdata/Second-generation_sequencing/20211106-BaiYiHuiNeng01/01.rawFq/00.mergeRawFq/1/clean_data/1_r    aw_2_val_2.fq</span><br></pre></td></tr></table></figure>
+
+<p>SOAPdenovo有6个子命令<strong>pregraph、sparse_pregraph、contig、map、scaff和all</strong>，前5个命令对应5个组装步骤，第一和第二是两种不同构图方式，all命令一次执行所有步骤，用all命令比较省事儿。</p>
+<p>SOAPdenovo命令还有一些参数用于调整，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/286159368">参数参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-s  # 配置文件</span><br><span class="line">-o  # 输出文件的前缀</span><br><span class="line">-K  # 输入的K-mer值大小，默认值23</span><br><span class="line">-p  # 程序运行时设定的线程数，默认值8</span><br><span class="line">-R  # 利用read鉴别短的重复序列，默认值不进行此操作</span><br><span class="line">-d  # 去除频数不大于该值的k-mer，默认值为0</span><br><span class="line">-D  # 去除频数不大于该值的由k-mer连接的边，默认值为1，即该边上每个点的频数都小于等于1时才去除</span><br><span class="line">-M  # 连接contig时合并相似序列的等级，默认值为1，最大值3。</span><br><span class="line">-F  # 利用read对scaffold中的gap进行填补，默认不执行</span><br><span class="line">-u  # 构建scaffold前不屏蔽高覆盖度的contig，这里高频率覆盖度指平均contig覆盖深度的2倍。默认屏蔽</span><br><span class="line">-G  # 估计gap的大小和实际补gap的大小的差异，默认值为50bp。</span><br><span class="line">-L  # 用于构建scaffold的contig的最短长度，默认为：Kmer参数值 ×2</span><br><span class="line">-k  # map步骤中kmer的大小，默认是和K一样的kmer大小</span><br><span class="line">-N  # 基因组大小</span><br><span class="line">-V  # 输出可视化的组装信息</span><br></pre></td></tr></table></figure>
+
+<p>运行组装命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/public/home/wlxie/biosoft/SOAPdenovo2-r242/SOAPdenovo-63mer all -s /public/home/wlxie/biosoft/SOAPdenovo2-r242/run_config -K 51 -R -V -o A_venetum -p 30</span><br></pre></td></tr></table></figure>
+
+<p>程序运行了3个小时，结束后生成了以下文件</p>
+<p><img src="https://www.shelven.com/tuchuang/20220702/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220702/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</div><h2 id="4-组装结果解读"><a href="#4-组装结果解读" class="headerlink" title="4 组装结果解读"></a>4 组装结果解读</h2><div class="story post-story"><p>组装结果文件其实只有两个，分别以**.contig结尾和.scafseq结尾**。因为我是在集群上运行的，slurm-11168.out是集群的输出日志文件，记录了详细的组装过程和结果。</p>
+<p>最终得到935861个contigs，总长度295302126 bp，平均长度315 bp，最长的长度38673 bp，contig N50是532 bp，contig N90是103 bp；scaffold个数77918，总长度192992858 bp，平均长度2476 bp，最长的长度108587 bp，scaffold N50是3385 bp，scaffold N90是130 bp。（可以做一个统计表）</p>
+<p>从组装的contig覆盖深度和数量还可以做一个柱状图，理论上来说是和前面k-mer分布图呈现一样的趋势，也就是一个主峰和一个杂峰，两个图相互印证目标基因组是个复杂基因组。</p>
+<p>其他的结果文件在<a target="_blank" rel="noopener" href="https://github.com/aquaskyline/SOAPdenovo2">github</a>上有解释，我先直接复制过来，以后用到再翻译翻译……</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">1. Output files from the command &quot;pregraph&quot;</span><br><span class="line">a. *.kmerFreq</span><br><span class="line">      Each row shows the number of Kmers with a frequency equals the row number. Note that those peaks of frequencies which are the integral multiple of 63 are due to the data structure.</span><br><span class="line">b. *.edge</span><br><span class="line">      Each record gives the information of an edge in the pre-graph: length, Kmers on both ends, average kmer coverage, whether it&#x27;s reverse-complementarily identical and the sequence.</span><br><span class="line">c. *.markOnEdge &amp; *.path</span><br><span class="line">      These two files are for using reads to solve small repeats.</span><br><span class="line">e. *.preArc</span><br><span class="line">      Connections between edges which are established by the read paths.</span><br><span class="line">f. *.vertex</span><br><span class="line">      Kmers at the ends of edges.</span><br><span class="line">g. *.preGraphBasic</span><br><span class="line">      Some basic information about the pre-graph: number of vertex, K value, number of edges, maximum read length etc.</span><br><span class="line">      </span><br><span class="line">2. Output files from the command &quot;contig&quot;</span><br><span class="line">a. *.contig</span><br><span class="line">      Contig information: corresponding edge index, length, kmer coverage, whether it&#x27;s tip and the sequence. Either a contig or its reverse complementry counterpart is included. Each reverse complementary contig index is indicated in the *.ContigIndex file.</span><br><span class="line">b. *.Arc</span><br><span class="line">      Arcs coming out of each edge and their corresponding coverage by reads</span><br><span class="line">c. *.updated.edge</span><br><span class="line">      Some information for each edge in graph: length, Kmers at both ends, index difference between the reverse-complementary edge and this one.</span><br><span class="line">d. *.ContigIndex</span><br><span class="line">      Each record gives information about each contig in the *.contig: it&#x27;s edge index, length, the index difference between its reverse-complementary counterpart and itself.</span><br><span class="line">      </span><br><span class="line">3. Output files from the command &quot;map&quot;</span><br><span class="line">a. *.peGrads</span><br><span class="line">      Information for each clone library: insert-size, read index upper bound, rank and pair number cutoff for a reliable link. This file can be revised manually for scaffolding tuning.</span><br><span class="line">b. *.readOnContig</span><br><span class="line">      Reads&#x27; locations on contigs. Here contigs are referred by their edge index. Howerver about half of them are not listed in the *.contig file for their reverse-complementary counterparts are included already.</span><br><span class="line">c. *.readInGap</span><br><span class="line">      This file includes reads that could be located in gaps between contigs. This information will be used to close gaps in scaffolds if &quot;-F&quot; is set.</span><br><span class="line">      </span><br><span class="line">4. Output files from the command &quot;scaff&quot;</span><br><span class="line">a. *.newContigIndex</span><br><span class="line">      Contigs are sorted according their length before scaffolding. Their new index are listed in this file.  This is useful if one wants to corresponds contigs in *.contig with those in *.links.</span><br><span class="line">b. *.links</span><br><span class="line">      Links between contigs which are established by read pairs. New index are used.</span><br><span class="line">c. *.scaf_gap</span><br><span class="line">      Contigs in gaps found by contig graph outputted by the contiging procedure. Here new index are used.</span><br><span class="line">d. *.scaf</span><br><span class="line">      Contigs for each scaffold: contig index (concordant to index in *.contig),  approximate start position on scaffold, orientation, contig length, and its links to others contigs.</span><br><span class="line">e. *.gapSeq</span><br><span class="line">      Gap sequences between contigs.</span><br><span class="line">f. *.scafSeq</span><br><span class="line">      Sequences of each scaffolds.</span><br><span class="line">g. *.contigPosInscaff</span><br><span class="line">      Contigs&#x27; positions in each scaffold.</span><br><span class="line">h. *.bubbleInScaff</span><br><span class="line">      Contigs that form bubble structures in scaffolds. Every two contigs form a bubble and the contig with higher coverage will be kept in scaffold.</span><br><span class="line">i. *.scafStatistics</span><br><span class="line">      Statistic information of final scaffold and contig.</span><br></pre></td></tr></table></figure>
+
+
 
 </div>
   </div>
@@ -3454,7 +3200,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://www.shelven.com/2022/05/25/a.html>http://www.shelven.com/2022/05/25/a.html</a></p>
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/07/03/a.html>http://www.shelven.com/2022/07/03/a.html</a></p>
               
             
           </blockquote>
@@ -3471,10 +3217,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-21T19:27:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-03T19:33:05+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月21日</p>
+    <p>更新于：2022年7月3日</p>
   </a>
 </div>
 
@@ -3483,8 +3229,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9B%86%E7%BE%A4/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>集群</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/slurm/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>slurm</p></a></div>
-  <span hidden itemprop="keywords">集群 slurm</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/kmergenie/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>kmergenie</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SOAPdenovo2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SOAPdenovo2</p></a></div>
+  <span hidden itemprop="keywords">kmergenie SOAPdenovo2</span>
 
 
         
@@ -3497,7 +3243,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/25/a.html&title=集群和slurm调度系统使用心得 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/07/03/a.html&title=0基础学习基因组三代测序组装（4）——初步组装二代数据 - 我的小破站&summary="
           
           >
           
@@ -3509,7 +3255,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/25/a.html&title=集群和slurm调度系统使用心得 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/07/03/a.html&title=0基础学习基因组三代测序组装（4）——初步组装二代数据 - 我的小破站&summary="
           
           >
           
@@ -3521,7 +3267,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/25/a.html&title=集群和slurm调度系统使用心得 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/07/03/a.html&title=0基础学习基因组三代测序组装（4）——初步组装二代数据 - 我的小破站&summary="
           
           >
           
@@ -3554,15 +3300,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/06/14/a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>基因组注释文件gbff格式转换gff3格式</p>
-          <p class='content'>前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是g...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/05/16/a.html'>
-          <p class='title'>转录组数据分析笔记（10）——初识GO/KEGG富集分析<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>前言前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和...</p>
+        <a class='next' href='/2022/07/02/a.html'>
+          <p class='title'>0基础学习基因组三代测序组装（3）——全基因组Survey<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>前言之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有...</p>
         </a>
       
     </div>
@@ -3578,7 +3319,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/25/a.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/07/03/a.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
@@ -3611,7 +3352,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9B%86%E7%BE%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 计算机集群介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slurm%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-text">2. slurm调度系统介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%92%8C%E6%8F%90%E4%BA%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.1 创建和提交作业</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94srun"><span class="toc-text">2.1.1 交互模式——srun</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E6%89%B9%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94sbatch"><span class="toc-text">2.1.2 批处理模式——sbatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-%E5%88%86%E9%85%8D%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94salloc"><span class="toc-text">2.1.3 分配模式——salloc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-%E4%BD%9C%E4%B8%9A%E6%8F%90%E4%BA%A4%E5%8F%82%E6%95%B0"><span class="toc-text">2.1.4 作业提交参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2 其他用户命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-sinfo-%E6%9F%A5%E8%AF%A2%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.1 sinfo 查询信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-squeue-%E6%9F%A5%E8%AF%A2%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.2 squeue 查询作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-scancel-%E5%88%A0%E9%99%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.3 scancel 删除作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-scontrol-%E6%9F%A5%E8%AF%A2%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.4 scontrol 查询详细信息</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85SOAPdenovo-2-0"><span class="toc-text">1 安装SOAPdenovo 2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-kmergenie%E8%AE%A1%E7%AE%97%E6%9C%80%E4%BD%B3k%E5%80%BC"><span class="toc-text">2 kmergenie计算最佳k值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SOAPdenovo2%E7%BB%84%E8%A3%85contigs-x2F-scaffolds"><span class="toc-text">3 SOAPdenovo2组装contigs&#x2F;scaffolds</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%84%E8%A3%85%E7%BB%93%E6%9E%9C%E8%A7%A3%E8%AF%BB"><span class="toc-text">4 组装结果解读</span></a></li></ol>
     </div>
   </section>
 
@@ -3663,7 +3404,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="集群和slurm调度系统使用心得";
+  pdata.postTitle="0基础学习基因组三代测序组装（4）——初步组装二代数据";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4896,7 +4637,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/25/a.html","name":"集群和slurm调度系统使用心得"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群和slurm调度系统使用心得","description":"","datePublished":"2022-05-24T18:05:26.000Z","dateModified":"2022-06-21T11:27:33.293Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/25/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"集群,slurm","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/07/03/a.html","name":"0基础学习基因组三代测序组装（4）——初步组装二代数据"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（4）——初步组装二代数据","description":"","datePublished":"2022-07-03T11:28:52.000Z","dateModified":"2022-07-03T11:33:05.956Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/07/03/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/07/03/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"kmergenie,SOAPdenovo2","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
