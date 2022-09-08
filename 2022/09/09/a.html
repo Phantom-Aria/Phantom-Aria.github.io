@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.shelven.com/2022/04/16/b.html"/>
+  <link rel="canonical" href="http://www.shelven.com/2022/09/09/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,19 +28,21 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站</title>
-  <meta name="keywords" content="IGV,null">
-  <meta name="description" content="1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。 直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用">
+  <title>深度学习——语音合成tts笔记（下） - 我的小破站</title>
+  <meta name="keywords" content="google colab,Tacotron2,HiFiGAN,null">
+  <meta name="description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。 2. 训练模型 &amp; 合成语音Tacotron2项目地址点击这里 HiFi-GAN项目地址点击这里 本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！ 2.1 Tacotron2简介简单讲一讲Tac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读">
-<meta property="og:url" content="http://www.shelven.com/2022/04/16/b.html">
+<meta property="og:title" content="深度学习——语音合成tts笔记（下）">
+<meta property="og:url" content="http://www.shelven.com/2022/09/09/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。 直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用">
+<meta property="og:description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。 2. 训练模型 &amp; 合成语音Tacotron2项目地址点击这里 HiFi-GAN项目地址点击这里 本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！ 2.1 Tacotron2简介简单讲一讲Tac">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-16T11:32:50.000Z">
-<meta property="article:modified_time" content="2022-05-23T19:05:08.239Z">
-<meta property="article:tag" content="IGV">
+<meta property="article:published_time" content="2022-09-08T19:32:17.000Z">
+<meta property="article:modified_time" content="2022-09-08T19:35:44.272Z">
+<meta property="article:tag" content="google colab">
+<meta property="article:tag" content="Tacotron2">
+<meta property="article:tag" content="HiFiGAN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3019,7 +3021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/16/b.html">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/09/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3040,7 +3042,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
+        深度学习——语音合成tts笔记（下）
       </h1>
       <div class='new-meta-box'>
         
@@ -3059,14 +3061,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
+    <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-      </span>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
+        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
       </span>
     
   </div>
@@ -3075,10 +3073,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-16T19:32:50+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-09T03:32:17+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月16日</p>
+    <p>发布于：2022年9月9日</p>
   </a>
 </div>
 
@@ -3089,13 +3087,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1k 字</p>
+      <p>字数：2.5k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3 分钟</p>
+      <p>时长：9 分钟</p>
     </a>
   </div>
 
@@ -3107,7 +3105,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读" data-path="/2022/04/16/b.html">
+      <div id="lc-pv" data-title="深度学习——语音合成tts笔记（下）" data-path="/2022/09/09/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3128,49 +3126,80 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="1-IGV软件下载"><a href="#1-IGV软件下载" class="headerlink" title="1. IGV软件下载"></a>1. IGV软件下载</h2><div class="story post-story"><p>IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。</p>
-<p>直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，这里用linux版本为例，IGV只支持JAVA11版本，不用担心这个问题，下载的安装包里直接有JAVA11，解压就可以用，就是国外网站下载有点慢<del>（科学上网）</del>。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>直接在虚拟机里解压打开，运行igv.sh，会自动准备好JAVA11的运行环境，成功弹出交互式界面（终于告别了黑漆漆的命令行 <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E6%BB%91%E7%A8%BD.png' style='height:24px'></span>）。</p>
-</div><h2 id="2-导入文件"><a href="#2-导入文件" class="headerlink" title="2. 导入文件"></a>2. 导入文件</h2><div class="story post-story"><p>Genomes菜单栏上传<strong>建立索引</strong>的参考基因组.fa和.fai文件：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>File菜单栏上传<strong>排序并建立索引</strong>的.bam和.bai文件：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>如果有参考基因组注释文件，同样可以导入进去，同样导入前需要sort排序和建立index，可以用菜单栏里的igvtools直接sort和index：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/4.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-</div><h2 id="3-界面解读"><a href="#3-界面解读" class="headerlink" title="3. 界面解读"></a>3. 界面解读</h2><div class="story post-story"><p>我导入了5组bam数据，所有文件导入后可以看到如下界面，简单介绍一下各个区域和功能：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/5.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>主页面获得的信息有限，我们选取第3条染色体为例，将其放大：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/6.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>中间的界面可以通过左右拖动鼠标，或者按左右方向键来浏览染色体上的比对情况。我们在搜索框中直接搜基因名字进行染色体定位，比如CIPK家族中的CIPK7基因，回车后双击最后一栏基因注释文件中的基因名称CIPK7，可以得到详细的CIPK7基因信息<strong>（这里注意下，如果双击弹出来多个可供选择的片段的话，代表这个基因存在可变剪切）</strong>:</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/7.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>在基因注释区右键，选择expanded，可以将CIPK7基因的所有转录本显示出来。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/8.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>放大到一定程度后，我们可以看到基因注释区上方出现了核苷酸序列和氨基酸序列，我们可以点击sequence旁边的箭头，切换到另一条链的序列。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>点击核苷酸，会出现三行，分别表示不同起始位点的核苷酸翻译结果，绿色为起始密码子，红色的星号表示终止密码子。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/10.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>再来看看放大后的tracks区域，bam文件在载入后会默认生成两个tracks，一个显示测序深度（<strong>Coverage track</strong>，可以对比下<u>samtools depth</u>），一个显示比对情况（<strong>Alignment track</strong>），我们放大其中一个样本的数据信息。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>Coverage track区域灰色代表质量好，如果reads中某核苷酸与参考序列超过20%不一致的时候，IGV会根据四个碱基的计数对coverage的条形图进行着色。这里可以看到该位点处有20个reads覆盖到，8条reads测的是C核苷酸，12条reads测的是T核苷酸。如果某个位置coverage条形图只有一种颜色，即该位点测的核苷酸和参考序列完全不一样，那说明该位点是<span class='p red'>SNP位点</span>。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>Alignment tracks柱形图是和bam文件中的数据一一对应的，举个例子，我在IGV软件的ERR1698206.bam可以看到在第3条染色体位置8173028有3条reads。虚拟机中找到这个bam文件，直接samtools view查看并grep这个位置，可以找到3条定位的reads（还有三条是配对的另一条链）。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/13.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/13.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>如果一条reads中间有缺失，IGV会用黑色横杠表示，中间数字表示缺失几个核苷酸。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/14.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/14.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<hr>
-<p>IGV还用不同颜色标记异常的插入片段大小的reads，这里做的是RNA-seq数据比对，不用看reads颜色，有些reads还在质控的时候被裁短了，变成蓝色很正常（<u>因为比预期短，个人理解是这样，有待考证？</u>）。以下是官网的默认着色方案：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220416_1/15.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220416_1/15.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+    <p>（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。</p>
+<h2 id="2-训练模型-amp-合成语音"><a href="#2-训练模型-amp-合成语音" class="headerlink" title="2. 训练模型 &amp; 合成语音"></a>2. 训练模型 &amp; 合成语音</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/NVIDIA/tacotron2">Tacotron2项目地址点击这里</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jik876/hifi-gan">HiFi-GAN项目地址点击这里</a></p>
+<p>本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！</p>
+<h3 id="2-1-Tacotron2简介"><a href="#2-1-Tacotron2简介" class="headerlink" title="2.1 Tacotron2简介"></a>2.1 Tacotron2简介</h3><p>简单讲一讲Tacotron2，它是由google推出的从文本中合成语音的神经网络结构，也就是一个语音合成（Text To Speech，TTS）框架，可以实现端到端的语音合成。Tacotron2与其前代Tacotron类似，比较重要的一个区别是在编码器模块中引入了一个双向LSTM层和卷积层，相比原来的CBHG堆叠结构和GRU循环层更为简洁。</p>
+<p>模型主要由两部分组成：</p>
+<ul>
+<li><ol>
+<li>声谱预测网络：特征预测网络，包含一个编码器和一个引入注意力机制（attention）的解码器，作用是将输入字符序列预测为梅尔频谱的帧序列。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>声码器（vocoder）：将预测的梅尔频谱帧序列转换产生时域波形样本，算是WaveNet的修订版。</li>
+</ol>
+</li>
+</ul>
+<p>原项目中的声码器我们暂时不用（<strong>上面地址提供的Tacotron 2就是没有wavenet的版本</strong>），因为有更好的工具HiFi-GAN。</p>
+<p>代码实现详解有很多博客可以参考（<a target="_blank" rel="noopener" href="https://blog.csdn.net/whjkm/article/details/89321954#commentBox">(16条消息) Tacotron2 论文 + 代码详解_HJ_彼岸的博客-CSDN博客_tacotron2</a>），<strong>这里只要知道我们是用Tacotron2生成梅尔频谱，在此基础上结合我们输入的字符序列（也就是对应的拼音文本）训练模型。</strong></p>
+<p><u>特别注意一点</u>：Tacotron 2是基于tensorflow1.5版本运行的，如果是自己电脑上配置环境的话，<strong>务必将python版本降到3.7以下！</strong>否则将会无法安装tensorflow1.5，除了tensorflow有硬性版本要求之外，其他依赖都可以安装最新版本——<strong>反复配置环境治好了我的精神内耗</strong></p>
+<p>如果你不想和我一样配置好几天环境的话，我推荐最好使用google colab，一键解决环境问题，下面会说到。</p>
+<h3 id="2-2-HiFi-GAN简介"><a href="#2-2-HiFi-GAN简介" class="headerlink" title="2.2 HiFi-GAN简介"></a>2.2 HiFi-GAN简介</h3><p>简单说下，<strong>声码器的作用就是将梅尔频谱转换成语音信号</strong>，和上面是对应的。</p>
+<p>为什么我们没有用上面Tacotron2的声码器呢，主要原因就是现在有很多更优秀的声码器供我们选择。</p>
+<p>早期比较有名的声码器WaveNet，它是一种自回归卷积神经网络，合成的效果非常好可以说和人类发声非常相似，但有个致命的缺点——合成速度太慢。直到2020年项目作者开发了这套基于GAN（生成式对抗网络）的神经网络声码器，从作者的论文里可以找到，HiFi-GAN在GPU上可以以比实时速度快167.9倍的速度生成22.05 kHz的语音，在CPU上可以以比自回归模型快13.4倍的速度生成语音，这就是它的牛逼之处。</p>
+<p>HiFi-GAN主要有一个生成器和两个判别器，具体结构就不说了，知道一下生成器和两个判别器是通过<strong>对抗学习</strong>的方法训练的，新增加了<strong>两个损失函数</strong>来提高训练的稳定性和提高模型的性能。有能力的小伙伴可以看原论文（HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis）了解详情。</p>
+<p>需要注意一下作者使用VCTK数据集进行实验，测试了3个模型（V1、V2和V3），简单来说V1是最优模型，作者发布的预训练模型以及相应的配置文件都是以V1模型为基础的。我在这篇博客使用的HiFi-GAN模型<strong>g_02500000</strong>就是作者的预训练模型，配置文件为<strong>config.json</strong>。</p>
+<blockquote>
+<p>HiFi-GAN预训练模型与配置文件下载地址：</p>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1YuOoV3lO2-Hhn1F2HJ2aQ4S0LC1JdKLd">UNIVERSAL_V1 - Google 云端硬盘</a></p>
+</blockquote>
+<h3 id="2-2-注册谷歌colab和谷歌云盘"><a href="#2-2-注册谷歌colab和谷歌云盘" class="headerlink" title="2.2 注册谷歌colab和谷歌云盘"></a>2.2 注册谷歌colab和谷歌云盘</h3><p>训练模型是一件非常消耗算力的过程，因为涉及到图形处理，我们要用GPU进行加速。我的笔记本GPU非常拉跨，跑模型立马爆显存，因此我个人比较推荐白嫖谷歌colab上面的免费专业级GPU（Nvidia K80），免费用户只能用这一种GPU，至少比我的笔记本好多了。</p>
+<p>需要注意下colab<strong>最大连接时长是12小时</strong>，12小时后会强行关闭GPU连接，因此需要注意下你是什么时候开始用GPU跑模型的，并且及时保存数据。关闭后要等待24小时才可以继续使用GPU，所以<strong>理论上可以用三个号不间断白嫖GPU资源</strong><del>（我特地申请了4个谷歌号）</del>，<strong>你只需要偶尔切换屏幕看下是否有谷歌的人机验证就行</strong>。</p>
+<p>这里为什么还推荐谷歌云盘呢，是因为谷歌云盘可以挂载到colab上，这样调用文件就非常方便，及时保存不用担心数据丢失。谷歌云盘提供15GB的免费空间，如果保存模型比较频繁的话可能不够用，但是我们可以申请无限量的团队盘（<strong>共享云端硬盘</strong>）<del>薅羊毛必备</del>。</p>
+<p><img src="https://www.shelven.com/tuchuang/20220909/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220909/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="2-3-使用colab训练模型-amp-合成语音"><a href="#2-3-使用colab训练模型-amp-合成语音" class="headerlink" title="2.3 使用colab训练模型 &amp; 合成语音"></a>2.3 使用colab训练模型 &amp; 合成语音</h3><p>我使用的colab笔记文件因为时间久远已经找不到出处了（后续如果找到会标注出来，向原作者致谢！），为了跑中文语音模型，自己也修改了很多参数和步骤，一一解释过于麻烦了….感兴趣的小伙伴可以看笔记文件。具体操作流程在底下的视频（<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TG411b7zR">或者点击此处看我的B站视频</a>）。</p>
+<div class="video"><video controls preload><source src='https://www.shelven.com/tuchuang/20220909/805849354-1-80.flv' type='video/mp4'>Your browser does not support the video tag.</video></div>
+
+<blockquote>
+<p>所有工程文件和资源如下：</p>
+<p>Tacotron2+HiFiGAN打包 链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1ngCUvifQM6ETwuG-NFQeGA">https://pan.baidu.com/s/1ngCUvifQM6ETwuG-NFQeGA</a>  提取码：z6h3  </p>
+<p>400条派蒙语音测试集 链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1g0C0Ck4P_BxdTgMirKRc-g">https://pan.baidu.com/s/1g0C0Ck4P_BxdTgMirKRc-g</a>  提取码：5ew1  </p>
+<p>1800条派蒙语音训练集 链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1IDA4lppAJGHnophQAwkxNg">https://pan.baidu.com/s/1IDA4lppAJGHnophQAwkxNg</a>  提取码：f2xk </p>
+</blockquote>
+<p>需要提及一点，colab在2022年8月1号之后不再支持tensorflow1.5，请教大佬之后我将Tacotron2项目下超参数配置hparams.py改成如下即可正常运行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> text <span class="keyword">import</span> symbols</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">hparams</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    <span class="comment"># Experiment Parameters        #</span></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    epochs = <span class="number">3</span>  <span class="comment">#500</span></span><br><span class="line">    iters_per_checkpoint = <span class="number">1000</span></span><br><span class="line">    seed = <span class="number">1234</span></span><br><span class="line">    dynamic_loss_scaling = <span class="literal">True</span></span><br><span class="line">    fp16_run = <span class="literal">False</span></span><br><span class="line">    distributed_run = <span class="literal">False</span></span><br><span class="line">    dist_backend = <span class="string">&quot;nccl&quot;</span></span><br><span class="line">    dist_url = <span class="string">&quot;tcp://localhost:54321&quot;</span></span><br><span class="line">    cudnn_enabled = <span class="literal">True</span></span><br><span class="line">    cudnn_benchmark = <span class="literal">True</span></span><br><span class="line">    ignore_layers = [<span class="string">&#x27;embedding.weight&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    <span class="comment"># Data Parameters             #</span></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    load_mel_from_disk = <span class="literal">False</span>  <span class="comment">#实际上是区别用 numpy读wav ，还是用scipy读wav</span></span><br><span class="line">    training_files = <span class="string">&#x27;filelists/zh_audio_text_train_filelist.txt&#x27;</span></span><br><span class="line">    validation_files = <span class="string">&#x27;filelists/zh_audio_text_val_filelist.txt&#x27;</span></span><br><span class="line">    text_cleaners = [<span class="string">&#x27;english_cleaners&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    <span class="comment"># Audio Parameters             #</span></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    max_wav_value = <span class="number">32768.0</span></span><br><span class="line">    sampling_rate = <span class="number">22050</span>   <span class="comment">#22050</span></span><br><span class="line">    filter_length = <span class="number">1024</span></span><br><span class="line">    hop_length = <span class="number">256</span></span><br><span class="line">    win_length = <span class="number">1024</span></span><br><span class="line">    n_mel_channels = <span class="number">80</span></span><br><span class="line">    mel_fmin = <span class="number">0.0</span></span><br><span class="line">    mel_fmax = <span class="number">8000.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    <span class="comment"># Model Parameters             #</span></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    n_symbols = <span class="built_in">len</span>(symbols)</span><br><span class="line">    symbols_embedding_dim = <span class="number">512</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Encoder parameters</span></span><br><span class="line">    encoder_kernel_size = <span class="number">5</span></span><br><span class="line">    encoder_n_convolutions = <span class="number">3</span></span><br><span class="line">    encoder_embedding_dim = <span class="number">512</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Decoder parameters</span></span><br><span class="line">    n_frames_per_step = <span class="number">1</span>  <span class="comment"># currently only 1 is supported</span></span><br><span class="line">    decoder_rnn_dim = <span class="number">1024</span></span><br><span class="line">    prenet_dim = <span class="number">256</span></span><br><span class="line">    max_decoder_steps = <span class="number">1000</span></span><br><span class="line">    gate_threshold = <span class="number">0.5</span></span><br><span class="line">    p_attention_dropout = <span class="number">0.1</span></span><br><span class="line">    p_decoder_dropout = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Attention parameters</span></span><br><span class="line">    attention_rnn_dim = <span class="number">1024</span></span><br><span class="line">    attention_dim = <span class="number">128</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Location Layer parameters</span></span><br><span class="line">    attention_location_n_filters = <span class="number">32</span></span><br><span class="line">    attention_location_kernel_size = <span class="number">31</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mel-post processing network parameters</span></span><br><span class="line">    postnet_embedding_dim = <span class="number">512</span></span><br><span class="line">    postnet_kernel_size = <span class="number">5</span></span><br><span class="line">    postnet_n_convolutions = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    <span class="comment"># Optimization Hyperparameters #</span></span><br><span class="line">    <span class="comment">################################</span></span><br><span class="line">    use_saved_learning_rate = <span class="literal">False</span></span><br><span class="line">    learning_rate = <span class="number">1e-3</span></span><br><span class="line">    weight_decay = <span class="number">1e-6</span></span><br><span class="line">    grad_clip_thresh = <span class="number">1.0</span></span><br><span class="line">    batch_size = <span class="number">2</span>  <span class="comment">#64</span></span><br><span class="line">    mask_padding = <span class="literal">True</span>  <span class="comment"># set model&#x27;s padded outputs to padded values</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_hparams</span>(<span class="params">hparams_string=<span class="literal">None</span>, verbose=<span class="literal">False</span></span>):</span><br><span class="line">    <span class="keyword">return</span> hparams</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-注意事项"><a href="#2-4-注意事项" class="headerlink" title="2.4 注意事项"></a>2.4 注意事项</h3><ul>
+<li><ol>
+<li>训练的epoch不是越多越好，我个人经验epoch 超过400会发生<strong>过拟合</strong>，测试集loss会越来越大，当然这和数据集有着密切的关系。过拟合具体表现为合成语音有部分字无法发音。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>每个epoch自动保存模型且会覆盖谷歌云盘的原文件，因此务必要<strong>隔一段时间保存到本地</strong>，以免错过最佳模型（或者你改代码，比如50 epoch保存一次）。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>对于文本的处理，需要参考Tacotron 2项目下的text文件夹中的四个文件cleaners.py、cmudict.py、numbers.py和symbols.py，我是进行了最简单的设置，可以根据自己需要更改。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>如果你原封不动用的我的工程文件，想在本地运行合成语音的推理程序，<strong>务必将cleaners选择english_cleaner</strong><del>（否则会出现古神的低语）</del>。</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>如果你是自己训练模型，个人认为筛选数据集非常重要，尽量把语气词和背景噪音去掉，否则效果会很差。</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>训练模型的参数可以根据GPU自行调整，batch_size是影响训练速度最大的因素，当你不确定显存性能如何，请务必确保运行一段时间后显存没有炸（<strong>我就是运行以后直接睡觉了，醒来发现显存在运行半小时的时候炸了，我心态也炸了</strong>）</li>
+</ol>
+</li>
+</ul>
+<p>其实这个模型效果仍然不是很让我满意，有电音的问题可以用HiFi-GAN再训练过滤一下，我是直接用的官方预训练模型，因此效果会差一点。由于现在开学了要忙着搞开题，最近也没时间再优化模型了，以后有想法会继续补充。</p>
+<p>我自己有考虑过将模型传到服务器，用服务器cpu运行推理，摆脱colab的限制，但是服务器不堪重负…一运行推理运存就炸…github上有不少前人做过纯cpu推理的GUI（<a target="_blank" rel="noopener" href="https://github.com/luoyily/MoeTTS">比如MoeTTS</a>），亲测可行。</p>
+<p>哦对了，我在做这个项目的时候，发现已经有人<strong>基于VITS</strong>做了同个游戏的端到端语音合成，甚至开发公布了API…不得不感慨这些大佬真的用心了，有API就意味着有更多的使用方式。我搭了个顺风车，通过搭建QQ机器人，写了个原神语音合成插件，<strong>效果是可以指定原神任何角色合成任意想说的语音并且发在QQ群里</strong>（没有什么技术含量，内行看个笑话），有空尽量更新出来吧！</p>
 
 </div>
   </div>
@@ -3195,7 +3224,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://www.shelven.com/2022/04/16/b.html>http://www.shelven.com/2022/04/16/b.html</a></p>
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/09/09/a.html>http://www.shelven.com/2022/09/09/a.html</a></p>
               
             
           </blockquote>
@@ -3212,10 +3241,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:05:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-09T03:35:44+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月24日</p>
+    <p>更新于：2022年9月9日</p>
   </a>
 </div>
 
@@ -3224,8 +3253,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IGV/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>IGV</p></a></div>
-  <span hidden itemprop="keywords">IGV</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/google-colab/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>google colab</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tacotron2/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tacotron2</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiFiGAN/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiFiGAN</p></a></div>
+  <span hidden itemprop="keywords">google colab Tacotron2 HiFiGAN</span>
 
 
         
@@ -3238,7 +3267,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
           
           >
           
@@ -3250,7 +3279,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
           
           >
           
@@ -3262,7 +3291,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/16/b.html&title=转录组数据分析笔记（4）——IGV基因组浏览器安装和解读 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
           
           >
           
@@ -3295,15 +3324,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/17/a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>转录组数据分析笔记（5）——stringtie转录本组装和定量</p>
-          <p class='content'>stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samto...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/04/16/a.html'>
-          <p class='title'>转录组数据分析笔记（3）——samtools用法小结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排...</p>
+        <a class='next' href='/2022/09/08/a.html'>
+          <p class='title'>深度学习——语音合成tts笔记（上）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……...</p>
         </a>
       
     </div>
@@ -3319,7 +3343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/04/16/b.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/09/09/a.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
@@ -3352,7 +3376,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-IGV%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">1. IGV软件下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">2. 导入文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%95%8C%E9%9D%A2%E8%A7%A3%E8%AF%BB"><span class="toc-text">3. 界面解读</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B-amp-%E5%90%88%E6%88%90%E8%AF%AD%E9%9F%B3"><span class="toc-text">2. 训练模型 &amp; 合成语音</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Tacotron2%E7%AE%80%E4%BB%8B"><span class="toc-text">2.1 Tacotron2简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-HiFi-GAN%E7%AE%80%E4%BB%8B"><span class="toc-text">2.2 HiFi-GAN简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%B3%A8%E5%86%8C%E8%B0%B7%E6%AD%8Ccolab%E5%92%8C%E8%B0%B7%E6%AD%8C%E4%BA%91%E7%9B%98"><span class="toc-text">2.2 注册谷歌colab和谷歌云盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E4%BD%BF%E7%94%A8colab%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B-amp-%E5%90%88%E6%88%90%E8%AF%AD%E9%9F%B3"><span class="toc-text">2.3 使用colab训练模型 &amp; 合成语音</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">2.4 注意事项</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3404,7 +3428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="转录组数据分析笔记（4）——IGV基因组浏览器安装和解读";
+  pdata.postTitle="深度学习——语音合成tts笔记（下）";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4637,7 +4661,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/16/b.html","name":"转录组数据分析笔记（4）——IGV基因组浏览器安装和解读"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（4）——IGV基因组浏览器安装和解读","description":"","datePublished":"2022-04-16T11:32:50.000Z","dateModified":"2022-05-23T19:05:08.239Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/16/b.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/16/b.html","wordCount":0,"articleSection":"学习笔记","keywords":"IGV","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/09/09/a.html","name":"深度学习——语音合成tts笔记（下）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"深度学习——语音合成tts笔记（下）","description":"","datePublished":"2022-09-08T19:32:17.000Z","dateModified":"2022-09-08T19:35:44.272Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/09/09/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/09/09/a.html","wordCount":0,"articleSection":"深度学习","keywords":"google colab,Tacotron2,HiFiGAN","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
