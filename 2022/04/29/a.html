@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1663353652362" as="style">
+  <link rel="preload" href="/css/style.css?time=1663353771663" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1663353652362" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1663353652362"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1663353771663" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1663353771663"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1663353652362","sites":"/js/plugins/sites.js?time=1663353652362","friends":"/js/plugins/friends.js?time=1663353652362","parallax":"/js/plugins/parallax.js?time=1663353652362","rightMenu":"/js/plugins/rightMenu.js?time=1663353652362","contributors":"/js/plugins/contributors.js?time=1663353652362","message":"/js/thirdparty/message.js?time=1663353652362","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1663353652362"},"css":{"style":"/css/style.css?time=1663353652362","message":"/css/message.css?time=1663353652362"}},
+    cdn: {"js":{"app":"/js/app.js?time=1663353771663","sites":"/js/plugins/sites.js?time=1663353771663","friends":"/js/plugins/friends.js?time=1663353771663","parallax":"/js/plugins/parallax.js?time=1663353771663","rightMenu":"/js/plugins/rightMenu.js?time=1663353771663","contributors":"/js/plugins/contributors.js?time=1663353771663","message":"/js/thirdparty/message.js?time=1663353771663","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1663353771663"},"css":{"style":"/css/style.css?time=1663353771663","message":"/css/message.css?time=1663353771663"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1663353652362),
+    lastupdate: new Date(1663353771663),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3549,7 +3549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1663353652362.js"></script>
+<script src="/js/app.js?time=1663353771663.js"></script>
 
 
 
@@ -3733,7 +3733,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1663353652362')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1663353771663')</script>
 
 
 
@@ -3863,19 +3863,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1663353652362")
+        volantis.js("/js/plugins/sites.js?time=1663353771663")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1663353652362")
+        volantis.js("/js/plugins/friends.js?time=1663353771663")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1663353652362")
+        volantis.js("/js/plugins/contributors.js?time=1663353771663")
       }
     
   };
@@ -3944,7 +3944,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1663353652362')
+    await volantis.js('/js/plugins/aplayer.js?time=1663353771663')
   
   })();
 
@@ -4015,44 +4015,39 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  function load_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
-    volantis.js("https://npm.elemecdn.com/twikoo@1.6.7", pjax_twikoo)
-  }
-  function pjax_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
+  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function pjax_waline() {
+    if(!document.querySelector("#waline"))return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
     let path = pdata.commentPath;
-    let placeholder = pdata.commentPlaceholder || "" || "";
     if (path.length == 0) {
       let defaultPath = '';
-      path = defaultPath || "decodeURI(window.location.pathname)"; //神奇的pathname 没错,twikoo这里就是字符串,不要乱动了
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-    twikoo.init(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/twikoo@1.6.7","path":null,"envId":"http://212.129.242.169:6543/","placeholder":null}, {
-      el: '#twikoo_container',
+    new Waline(Object.assign(Object.assign({"js":"https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js","path":null,"placeholder":"快来评论吧~","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"serverURL":"https://waline-test-26j8rroj3-phantom-aria.vercel.app","avatar":"robohash","avatarCDN":null,"pageSize":10,"lang":"zh-CN","visitor":true}, {
+      el: '#waline',
       path: path,
-      placeholder: placeholder,
-      onCommentLoaded: function() {
-        if(typeof VolantisFancyBox === "undefined") {
-          const checkFancyBox = setInterval(() => {
-            if(typeof VolantisFancyBox === "undefined") return;
-            clearInterval(checkFancyBox);
-            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
-          })
-        } else {
-          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
-        }
-      }
-    }),pdata.commentConfig))
+      placeholder: pagePlaceholder,
+      
+      // https://github.com/volantis-x/hexo-theme-volantis/issues/713
+      
+  
+  }),pdata.commentConfig));
+    fancybox_waline()
   }
-  load_twikoo();
-  volantis.pjax.push(()=>{
-    if (typeof twikoo == "undefined") {
-      load_twikoo();
+  function fancybox_waline() {
+    if(typeof VolantisFancyBox === "undefined") {
+      const checkFancyBox = setInterval(() => {
+        if(typeof VolantisFancyBox === "undefined") return;
+        clearInterval(checkFancyBox);
+        VolantisFancyBox.bind('#waline .vcontent img:not(.vemoji)');
+      })
     } else {
-      pjax_twikoo();
+      VolantisFancyBox.bind('#waline .vcontent img:not(.vemoji)');
     }
-  },'twikoo');
+  }
+  volantis.js('https://npm.elemecdn.com/@waline/client@1.6.0/dist/Waline.min.js').then(pjax_waline)
+  volantis.pjax.push(pjax_waline);
 </script>
 
 
@@ -4069,7 +4064,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1663353652362");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1663353771663");
   }
 
   function loadSearchService() {
@@ -4409,7 +4404,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1663353652362').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1663353771663').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
