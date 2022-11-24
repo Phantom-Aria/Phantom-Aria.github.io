@@ -6,8 +6,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/tags/pheatmap/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2022/11/24/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -28,14 +28,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：pheatmap - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/tags/pheatmap/index.html">
+  <title>python自学笔记（2）——运算符和参数传递 - 我的小破站</title>
+  <meta name="keywords" content="python,null">
+  <meta name="description" content="1. 运算符1.1 比较运算符python中常见的比较运算符如下：   &#x3D;&#x3D;  检查左右两个值是否相等，相等则返回True !&#x3D;  检查左右两个值是否相等，不相等则返回True &lt;&gt;  和 !&#x3D; 一样，检查两个值是否相等，不相等返回True &gt;&#x3D;  字面意思，字面意思的还有&lt;&#x3D;、 &lt; 和 &gt;   1.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python自学笔记（2）——运算符和参数传递">
+<meta property="og:url" content="http://www.shelven.com/2022/11/24/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="1. 运算符1.1 比较运算符python中常见的比较运算符如下：   &#x3D;&#x3D;  检查左右两个值是否相等，相等则返回True !&#x3D;  检查左右两个值是否相等，不相等则返回True &lt;&gt;  和 !&#x3D; 一样，检查两个值是否相等，不相等返回True &gt;&#x3D;  字面意思，字面意思的还有&lt;&#x3D;、 &lt; 和 &gt;   1.2">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-11-24T09:05:33.000Z">
+<meta property="article:modified_time" content="2022-11-24T09:07:15.822Z">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2950,7 +2955,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3012,25 +3017,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/05/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/11/24/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3039,70 +3028,368 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/05/a.html"  itemprop="url">
-        转录组数据分析笔记（9）——pheatmap绘制差异表达基因热图
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. 前言前面说到怎么用ggplot做一个火山图来查看各个基因的表达情况，火山图是以log2FC值为横坐标，以-log10（FDR）值作为纵坐标，将所有的基因都做了点状图。虽然能比较直观地看到所有基因表达情况，但我们真正感兴趣的是处理后差异表达的基因。因此，我们也可以通过前面得到的表达矩阵获得差异表达的基因名，对raw count数据进行提取和均一化，然后做一个差异基因的热图，能更直观地看到...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        python自学笔记（2）——运算符和参数传递
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/">编程自学</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" itemprop="url"><span itemprop="name">编程自学</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-05T01:16:14+08:00">2022-05-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-11-24T17:05:33+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年11月24日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：7 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/05/05/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="python自学笔记（2）——运算符和参数传递" data-path="/2022/11/24/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1. 运算符"></a>1. 运算符</h1><h3 id="1-1-比较运算符"><a href="#1-1-比较运算符" class="headerlink" title="1.1 比较运算符"></a>1.1 比较运算符</h3><p>python中常见的比较运算符如下：</p>
+<blockquote>
+<ol>
+<li>&#x3D;&#x3D;  检查左右两个值是否相等，相等则返回True</li>
+<li>!&#x3D;  检查左右两个值是否相等，不相等则返回True</li>
+<li>&lt;&gt;  和 !&#x3D; 一样，检查两个值是否相等，不相等返回True</li>
+<li>&gt;&#x3D;  字面意思，字面意思的还有&lt;&#x3D;、 &lt; 和 &gt;</li>
+</ol>
+</blockquote>
+<h3 id="1-2-算数运算符"><a href="#1-2-算数运算符" class="headerlink" title="1.2 算数运算符"></a>1.2 算数运算符</h3><p>python常见的算数运算符：</p>
+<blockquote>
+<ol>
+<li>&#x2F;  两个数相除，结果为浮点型</li>
+<li>&#x2F;&#x2F;  两个数相除，结果为<strong>向下取整的整数</strong></li>
+<li>%  取模，也就是两个整数相除的余数</li>
+<li>**  幂运算，返回乘方的结果</li>
+<li>+  两个数相加，<strong>或者字符串相连</strong></li>
+<li>*  两个数相乘，<strong>或者返回重复若干次的字符串</strong></li>
+<li>-  字面意思，两个数相减</li>
+</ol>
+</blockquote>
+<h3 id="1-3-赋值运算符"><a href="#1-3-赋值运算符" class="headerlink" title="1.3 赋值运算符"></a>1.3 赋值运算符</h3><p>顾名思义都是在赋值的时候用到的运算符</p>
+<blockquote>
+<ol>
+<li>&#x3D;  常规赋值运算，运算结果赋值给变量</li>
+<li>+&#x3D;  加法赋值运算，a +&#x3D; b等效于a &#x3D; a+b</li>
+<li>其他算数运算符都可以后面跟上&#x3D;，进行运算后赋值</li>
+</ol>
+</blockquote>
+<h3 id="1-4-位运算符"><a href="#1-4-位运算符" class="headerlink" title="1.4 位运算符"></a>1.4 位运算符</h3><p>按位运算就是将数字转换为二进制来运算的运算形式，数值是用补码来表示和存储的，计算机用位运算符进行四则运算速度快。但是我们平常可能用不到，这里稍微记录一下。</p>
+<blockquote>
+<ol>
+<li>&amp;  按位“与”：两个值如果相应位都为1，则结果为1，否则0</li>
+<li>|  按位“或”：两个值相应位有一个位1，结果就为1</li>
+<li>^  按位“异或”：两个值相应位相异，结果为1</li>
+<li>~  按位“取反”：对数据的每个二进制位取反</li>
+<li>&lt;&lt;  左移运算符：运算数的二进制全部座椅若干位，高位丢弃，低位补0；&gt;&gt;右移同理</li>
+</ol>
+</blockquote>
+<h3 id="1-5-逻辑运算符"><a href="#1-5-逻辑运算符" class="headerlink" title="1.5 逻辑运算符"></a>1.5 逻辑运算符</h3><blockquote>
+<ol>
+<li>and  逻辑“与”，两个都为True则返回True，否则False</li>
+<li>or  逻辑“或”，两个至少有一个True则返回True，否则False</li>
+<li>not  逻辑“非”，字面意思</li>
+</ol>
+</blockquote>
+<h3 id="1-6-成员和身份运算符"><a href="#1-6-成员和身份运算符" class="headerlink" title="1.6 成员和身份运算符"></a>1.6 成员和身份运算符</h3><p>python的成员运算符用来判断一个数据是否在指定的序列或者集合中，而身份运算符是用来判断两个变量是否引用自同一个对象。</p>
+<blockquote>
+<ol>
+<li>in  成员运算符，在指定序列中找到值则返回True，否则False</li>
+<li>not in  成员运算符，在指定序列中没有找到值则返回True，否则False</li>
+<li>is  身份运算符，两个标识符是否引自同一个对象，是则返回True，否则False</li>
+<li>is not  身份运算符，两个标识符是否引用同一个对象，不是则返回True，否则False</li>
+</ol>
+</blockquote>
+<p>是否引自同一个对象，简单理解就是看存储的内存位置是否一样，通过函数id()可以查看变量在内存中的存储位置。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/111.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/111.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h1 id="2-参数传递"><a href="#2-参数传递" class="headerlink" title="2. 参数传递"></a>2. 参数传递</h1><p>要理解参数传递的过程，首先要明白关于函数参数的两个具体概念：形参和实参</p>
+<ul>
+<li>定义时小括号中的参数，是用来接收参数的，称为“形参”，可以是缺省参数、不定长参数</li>
+<li>调用时小括号中的参数，是用来传递参数给函数的，称为“实参”</li>
+</ul>
+<p>向函数传递实参的方式很多，确定传递参数个数可以使用位置实参或者关键字实参，不确定传递参数个数可以使用包裹（packing）传递的方式，来包裹位置或者关键字实参，进行参数传递。</p>
+<h2 id="2-1-位置实参"><a href="#2-1-位置实参" class="headerlink" title="2.1 位置实参"></a>2.1 位置实参</h2><div class="story post-story"><p>函数调用时每个实参都要关联到函数定义中的一个形参，最简单的是按照形参的位置从左到右按照顺序传递，位置参数必须一一对应，缺一不可。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/222.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/222.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>比如上面创建了一个describe_me()函数，形参定义了需要name和age两个参数，因此在调用这个函数的时候要按照顺序提供这两个参数。在上例中，从左到右实参‘Phantom’储存在形参name中，实参26储存在形参age中，<strong>参数传递本质上就是实参到形参的赋值操作</strong>。</p>
+</div><h2 id="2-2-关键字实参"><a href="#2-2-关键字实参" class="headerlink" title="2.2 关键字实参"></a>2.2 关键字实参</h2><div class="story post-story"><p>关键字实参顾名思义是传递函数的key-Value对，在实参中将关键字和值关联，因为这种对应关系是唯一的，在调用函数的时候就不需要考虑实参的顺序。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/333.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/333.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>这种参数传递方式比较直观，能一眼看出函数调用时各个值对应的用途。</p>
+<p>关键字实参和位置实参时可以一起使用，需要注意：</p>
+<ul>
+<li>关键字实参必须在位置实参右边（写的时候<strong>位置实参优先</strong>）</li>
+<li>对同一个形参不可重复传值</li>
+</ul>
+</div><h2 id="2-3-形参的缺省"><a href="#2-3-形参的缺省" class="headerlink" title="2.3 形参的缺省"></a>2.3 形参的缺省</h2><div class="story post-story"><p>创建函数的时候可以给形参指定默认值（缺省）。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/444.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/444.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>对于缺省形参，需要注意：</p>
+<ul>
+<li>缺省参数要在非缺省参数之后（缺省形参放右边）</li>
+<li>缺省参数是可选参数，可以不传；如果传入则按照传入的值进行运算</li>
+</ul>
+</div><h2 id="2-4-形参的不定长参数（包裹传递）"><a href="#2-4-形参的不定长参数（包裹传递）" class="headerlink" title="2.4 形参的不定长参数（包裹传递）"></a>2.4 形参的不定长参数（包裹传递）</h2><div class="story post-story"><p>当传入的参数个数不确定时，可以使用包裹位置参数和包裹关键字参数进行参数传递。</p>
+<ul>
+<li>*+形参的方式传递参数，传入后根据参数的位置以<strong>元组</strong>形式保存</li>
+<li>**+形参的方式传递参数，需要使用关键字，传入后以<strong>字典</strong>形式保存，形参名字是传入字典的键</li>
+</ul>
+<p><img src="https://www.shelven.com/tuchuang/20221124/555.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/555.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>上面例子形参中的args表示arguments位置参数，kargs表示key arguments关键字参数，这个是可以自定义的。</p>
+<p>不同的参数传递方式可以混用，原则上要遵循<strong>位置参数，默认参数，包裹位置，包裹关键字</strong>的顺序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">name, age = <span class="number">26</span>, *args, **kargs</span>)  <span class="comment"># 定义和调用都遵循这样的顺序</span></span><br></pre></td></tr></table></figure>
+
+</div><h2 id="2-5-对传参的思考"><a href="#2-5-对传参的思考" class="headerlink" title="2.5 对传参的思考"></a>2.5 对传参的思考</h2><div class="story post-story"><p>在CSDN上看到一个总结写的很好，<strong>函数的参数传递本质上是从实参到形参的赋值操作，而所有的赋值操作都是“引用的赋值”，因此Python中参数的传递都是“引用传递”，不是“值传递</strong>”。这句话初看有点难以理解，首先看看什么是引用传递和值传递：</p>
+<ul>
+<li>值传递（pass by value）：调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。</li>
+<li>引用传递（pass by reference）：调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。</li>
+</ul>
+<p>根本区别在于引用传递不创建副本，最直接的理解方式就是通过查看对象的地址，看看传参前后对象在内存的位置是否改变。</p>
+<h3 id="2-5-1-可变对象的传递"><a href="#2-5-1-可变对象的传递" class="headerlink" title="2.5.1 可变对象的传递"></a>2.5.1 可变对象的传递</h3><p>复习一下，可变对象有列表、字典和集合，我们这里以列表为例。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/777.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/777.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可以看到，如果传递的对象是<strong>可变对象</strong>，实际上传递的是对象的引用（不创建副本，传递前后在内存中存储位置不变），在函数中修改对象后，<strong>直接在原始对象上做了相应的修改</strong>。</p>
+<h3 id="2-5-2-不可变对象的传递"><a href="#2-5-2-不可变对象的传递" class="headerlink" title="2.5.2 不可变对象的传递"></a>2.5.2 不可变对象的传递</h3><p>如果传递的对象是不可变类型，比如元组，字符和数字，这里以数字为例。</p>
+<p><img src="https://www.shelven.com/tuchuang/20221124/888.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20221124/888.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可以看到，如果传递的对象是<strong>不可变对象</strong>，传进函数的时候同样是对象的引用，但是不可变对象无法修改，因此在赋值操作时，系统新创建了一个对象（和原来a的存储地址不同）进行赋值，<strong>而原始对象并没有改变</strong>。</p>
+<p>也就是说，不可变对象的传递起到类似值传递的效果，但是实际上依然是引用传递的方式进行传参。</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2022/11/24/a.html>http://www.shelven.com/2022/11/24/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-24T17:07:15+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年11月24日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div>
+  <span hidden itemprop="keywords">python</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/11/24/a.html&title=python自学笔记（2）——运算符和参数传递 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/11/24/a.html&title=python自学笔记（2）——运算符和参数传递 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/11/24/a.html&title=python自学笔记（2）——运算符和参数传递 - 我的小破站&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/11/23/a.html'>
+          <p class='title'>python自学笔记（1）——数据类型<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>这两个月经历了突然的疫情隔离，研究生开题，学术论坛，研究生创新项目等等……终于在这一周尘埃落定了，得以静下心来整理整理自己的一些学习笔记。
+之前我用过一些python编写的项目，我也只是依葫芦画...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/11/24/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3110,228 +3397,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(23)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.1 比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.2 算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.3 赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.4 位运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.5 逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E6%88%90%E5%91%98%E5%92%8C%E8%BA%AB%E4%BB%BD%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">1.6 成员和身份运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%BD%8D%E7%BD%AE%E5%AE%9E%E5%8F%82"><span class="toc-text">2.1 位置实参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%85%B3%E9%94%AE%E5%AD%97%E5%AE%9E%E5%8F%82"><span class="toc-text">2.2 关键字实参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E5%BD%A2%E5%8F%82%E7%9A%84%E7%BC%BA%E7%9C%81"><span class="toc-text">2.3 形参的缺省</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%BD%A2%E5%8F%82%E7%9A%84%E4%B8%8D%E5%AE%9A%E9%95%BF%E5%8F%82%E6%95%B0%EF%BC%88%E5%8C%85%E8%A3%B9%E4%BC%A0%E9%80%92%EF%BC%89"><span class="toc-text">2.4 形参的不定长参数（包裹传递）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-%E5%AF%B9%E4%BC%A0%E5%8F%82%E7%9A%84%E6%80%9D%E8%80%83"><span class="toc-text">2.5 对传参的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-text">2.5.1 可变对象的传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-text">2.5.2 不可变对象的传递</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 20.67px; color: #6c6c6c">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 17.33px; color: #828282">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 14px; color: #999">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>33 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>76.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-11-24 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3356,14 +3453,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="python自学笔记（2）——运算符和参数传递";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4591,7 +4689,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/tags/pheatmap/","name":"pheatmap"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/24/a.html","name":"python自学笔记（2）——运算符和参数传递"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（2）——运算符和参数传递","description":"","datePublished":"2022-11-24T09:05:33.000Z","dateModified":"2022-11-24T09:07:15.822Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/24/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/24/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
