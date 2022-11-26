@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1669478438379" as="style">
+  <link rel="preload" href="/css/style.css?time=1669478780481" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-11-26T15:59:03.000Z">
-<meta property="article:modified_time" content="2022-11-26T16:00:28.789Z">
+<meta property="article:modified_time" content="2022-11-26T16:06:09.422Z">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1669478438379" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1669478438379"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1669478780481" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1669478780481"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1669478438379","sites":"/js/plugins/sites.js?time=1669478438379","friends":"/js/plugins/friends.js?time=1669478438379","parallax":"/js/plugins/parallax.js?time=1669478438379","rightMenu":"/js/plugins/rightMenu.js?time=1669478438379","contributors":"/js/plugins/contributors.js?time=1669478438379","message":"/js/thirdparty/message.js?time=1669478438379","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669478438379"},"css":{"style":"/css/style.css?time=1669478438379","message":"/css/message.css?time=1669478438379"}},
+    cdn: {"js":{"app":"/js/app.js?time=1669478780481","sites":"/js/plugins/sites.js?time=1669478780481","friends":"/js/plugins/friends.js?time=1669478780481","parallax":"/js/plugins/parallax.js?time=1669478780481","rightMenu":"/js/plugins/rightMenu.js?time=1669478780481","contributors":"/js/plugins/contributors.js?time=1669478780481","message":"/js/thirdparty/message.js?time=1669478780481","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669478780481"},"css":{"style":"/css/style.css?time=1669478780481","message":"/css/message.css?time=1669478780481"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1669478438379),
+    lastupdate: new Date(1669478780481),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3135,7 +3135,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>当然，前面说过python没有严格意义上的访问控制限制，更多还是靠编程人员的自觉&#x3D; &#x3D;</p>
 <h3 id="2-继承"><a href="#2-继承" class="headerlink" title="2 继承"></a>2 继承</h3><h4 id="2-1-继承概念"><a href="#2-1-继承概念" class="headerlink" title="2.1 继承概念"></a>2.1 继承概念</h4><p>继承是创建新类的方式，是实现代码复用的重要手段（比如一个新类继承自设计好的类，就直接具备已有类的特征，减少代码重复编写）。对于<strong>已有的类</strong>，我们称为<strong>父类或基类</strong>，而要<strong>创建的新类</strong>，我们称为<strong>子类或派生类</strong>。python支持多继承，也就是<strong>新建的类可以有一个或者多个父类</strong>。</p>
 <p>python3中默认继承<strong>object</strong>类，object是根类，是所有类的父亲。编写过程中object可以省略。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个父类(object可省)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, <span class="built_in">type</span>, color</span>):</span><br><span class="line">        self.<span class="built_in">type</span> = <span class="built_in">type</span></span><br><span class="line">        self.color = color</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%s在进食&#x27;</span> % self.<span class="built_in">type</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，括号中为父类的名字</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Pig</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setName</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.<span class="built_in">type</span> = name</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">type</span></span><br><span class="line"></span><br><span class="line">Peggy = Pig(<span class="string">&#x27;猪&#x27;</span>, <span class="string">&#x27;粉色&#x27;</span>)   <span class="comment"># 实例化对象</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Peggy是%s,颜色是%s&#x27;</span> % (Peggy.<span class="built_in">type</span>, Peggy.color))     <span class="comment"># 查看对象属性</span></span><br><span class="line">Peggy.eat()     <span class="comment"># 调用父类方法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;现在Peggy的名字叫做%s&#x27;</span> % Peggy.setName(<span class="string">&#x27;George&#x27;</span>))    <span class="comment"># 调用子类方法</span></span><br><span class="line"><span class="built_in">print</span>(Pig.__mro__)      <span class="comment"># 查看类的继承层次结构，可以用类属性__mro__或者类方法mro()</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">运行结果：</span></span><br><span class="line"><span class="string">Peggy是猪,颜色是粉色</span></span><br><span class="line"><span class="string">猪在进食</span></span><br><span class="line"><span class="string">现在Peggy的名字叫做George</span></span><br><span class="line"><span class="string">(&lt;class &#x27;__main__.Pig&#x27;&gt;, &lt;class &#x27;__main__.Animal&#x27;&gt;, &lt;class &#x27;object&#x27;&gt;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个父类(object可省)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, color</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.color = color</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%s在进食&#x27;</span> % self.<span class="built_in">type</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，括号中为父类的名字</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Pig</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setName</span>(<span class="params">self, newname</span>):</span><br><span class="line">        self.name = newname</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">type</span></span><br><span class="line"></span><br><span class="line">Peggy = Pig(<span class="string">&#x27;猪&#x27;</span>, <span class="string">&#x27;粉色&#x27;</span>)   <span class="comment"># 实例化对象</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Peggy是%s,颜色是%s&#x27;</span> % (Peggy.name, Peggy.color))     <span class="comment"># 查看对象属性</span></span><br><span class="line">Peggy.eat()     <span class="comment"># 调用父类方法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;现在Peggy的名字叫做%s&#x27;</span> % Peggy.setName(<span class="string">&#x27;George&#x27;</span>))    <span class="comment"># 调用子类方法</span></span><br><span class="line"><span class="built_in">print</span>(Pig.__mro__)      <span class="comment"># 查看类的继承层次结构，可以用类属性__mro__或者类方法mro()</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">运行结果：</span></span><br><span class="line"><span class="string">Peggy是猪,颜色是粉色</span></span><br><span class="line"><span class="string">猪在进食</span></span><br><span class="line"><span class="string">现在Peggy的名字叫做George</span></span><br><span class="line"><span class="string">(&lt;class &#x27;__main__.Pig&#x27;&gt;, &lt;class &#x27;__main__.Animal&#x27;&gt;, &lt;class &#x27;object&#x27;&gt;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>从上面的例子可以看到，子类Pig从父类Animal中继承了__init__()方法，从子类中实例化对象Peggy是可以调用父类的方法的。</p>
 <p>需要注意：</p>
@@ -3209,7 +3209,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-27T00:00:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-27T00:06:09+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年11月27日</p>
@@ -3539,7 +3539,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1669478438379.js"></script>
+<script src="/js/app.js?time=1669478780481.js"></script>
 
 
 
@@ -3723,7 +3723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1669478438379')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1669478780481')</script>
 
 
 
@@ -3853,19 +3853,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1669478438379")
+        volantis.js("/js/plugins/sites.js?time=1669478780481")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1669478438379")
+        volantis.js("/js/plugins/friends.js?time=1669478780481")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1669478438379")
+        volantis.js("/js/plugins/contributors.js?time=1669478780481")
       }
     
   };
@@ -3934,7 +3934,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1669478438379')
+    await volantis.js('/js/plugins/aplayer.js?time=1669478780481')
   
   })();
 
@@ -4054,7 +4054,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669478438379");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669478780481");
   }
 
   function loadSearchService() {
@@ -4394,7 +4394,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1669478438379').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1669478780481').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4628,7 +4628,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/26/a.html","name":"python自学笔记（4）——面向对象编程（下）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（4）——面向对象编程（下）","description":"","datePublished":"2022-11-26T15:59:03.000Z","dateModified":"2022-11-26T16:00:28.789Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/26/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/26/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/26/a.html","name":"python自学笔记（4）——面向对象编程（下）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（4）——面向对象编程（下）","description":"","datePublished":"2022-11-26T15:59:03.000Z","dateModified":"2022-11-26T16:06:09.422Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/26/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/26/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
