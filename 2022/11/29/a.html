@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1669660827000" as="style">
+  <link rel="preload" href="/css/style.css?time=1669661178629" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-11-28T18:37:37.000Z">
-<meta property="article:modified_time" content="2022-11-28T18:40:14.955Z">
+<meta property="article:modified_time" content="2022-11-28T18:46:14.870Z">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1669660827000" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1669660827000"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1669661178629" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1669661178629"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1669660827000","sites":"/js/plugins/sites.js?time=1669660827000","friends":"/js/plugins/friends.js?time=1669660827000","parallax":"/js/plugins/parallax.js?time=1669660827000","rightMenu":"/js/plugins/rightMenu.js?time=1669660827000","contributors":"/js/plugins/contributors.js?time=1669660827000","message":"/js/thirdparty/message.js?time=1669660827000","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669660827000"},"css":{"style":"/css/style.css?time=1669660827000","message":"/css/message.css?time=1669660827000"}},
+    cdn: {"js":{"app":"/js/app.js?time=1669661178629","sites":"/js/plugins/sites.js?time=1669661178629","friends":"/js/plugins/friends.js?time=1669661178629","parallax":"/js/plugins/parallax.js?time=1669661178629","rightMenu":"/js/plugins/rightMenu.js?time=1669661178629","contributors":"/js/plugins/contributors.js?time=1669661178629","message":"/js/thirdparty/message.js?time=1669661178629","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669661178629"},"css":{"style":"/css/style.css?time=1669661178629","message":"/css/message.css?time=1669661178629"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1669660827000),
+    lastupdate: new Date(1669661178629),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3229,10 +3229,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>一般用 with open() as 的方式打开文件，这种方式会自动帮我们调用f.close()</p>
-<h3 id="3-2-write-amp-read"><a href="#3-2-write-amp-read" class="headerlink" title="3.2 write() &amp; read()"></a>3.2 write() &amp; read()</h3><p>**write()**向文件写入数据，以w方式访问，如果文件名存在会先清空文件内容，文件名不存在则新建；以a方式访问，如果文件名存在则续写，文件名不存在则新建；以r方式访问则报错。</p>
-<p>**read()**从文件中读取数据，括号里面的参数代表读取的数据长度（字节数），如果不传入参数则读取所有数据。</p>
-<p>**readline()**读取一行，同时会读取一行最后的换行符\n，所以打印出来的时候会多一行空行。</p>
-<p>**readlines()**按照行的方式读取整个文件数据，返回的是一个列表，每行数据是一个元素，同样会读到换行符\n并且显示出来。</p>
+<h3 id="3-2-write-amp-read"><a href="#3-2-write-amp-read" class="headerlink" title="3.2 write() &amp; read()"></a>3.2 write() &amp; read()</h3><p>write()向文件写入数据，以w方式访问，如果文件名存在会先清空文件内容，文件名不存在则新建；以a方式访问，如果文件名存在则续写，文件名不存在则新建；以r方式访问则报错。</p>
+<p>read()从文件中读取数据，括号里面的参数代表读取的数据长度（字节数），如果不传入参数则读取所有数据。</p>
+<p>readline()读取一行，同时会读取一行最后的换行符\n，所以打印出来的时候会多一行空行。</p>
+<p>readlines()按照行的方式读取整个文件数据，返回的是一个列表，每行数据是一个元素，同样会读到换行符\n并且显示出来。</p>
 <p>需要注意一点，<strong>在多次读取的操作中，后一次读取会从上一次读完的位置开始。</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:    <span class="comment"># 只写模式创建一个新文件</span></span><br><span class="line">    f.write(<span class="string">&#x27;My name is Phantom. \nI am Aria.&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:    <span class="comment"># 追加模式进行续写</span></span><br><span class="line">    f.write(<span class="string">&#x27;\nWell, it\&#x27;s been so long.&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">生成的test.txt内容：        # 实际前面两行末尾都有换行符</span></span><br><span class="line"><span class="string">My name is Phantom.</span></span><br><span class="line"><span class="string">I am Aria.</span></span><br><span class="line"><span class="string">Well, it&#x27;s been so long.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span>    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:    <span class="comment"># 只读方式打开文件</span></span><br><span class="line">    line = f.read(<span class="number">1</span>)        <span class="comment"># read读取第一个字节</span></span><br><span class="line">    <span class="built_in">print</span>(line)</span><br><span class="line">    line = f.readline()     <span class="comment"># readline读取第一个字节后的第一行，因为读取了换行符，所以运行结果多一行空行</span></span><br><span class="line">    <span class="built_in">print</span>(line)</span><br><span class="line">    line = f.readlines()    <span class="comment"># readlines读取接下来的两行，每行数据为一个元素，返回一个列表</span></span><br><span class="line">    <span class="built_in">print</span>(line)</span><br><span class="line">    </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">运行结果：</span></span><br><span class="line"><span class="string">M</span></span><br><span class="line"><span class="string">y name is Phantom. </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[&#x27;I am Aria.\n&#x27;, &quot;Well, it&#x27;s been so long.&quot;]</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
@@ -3280,7 +3280,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-29T02:40:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-29T02:46:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年11月29日</p>
@@ -3607,7 +3607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1669660827000.js"></script>
+<script src="/js/app.js?time=1669661178629.js"></script>
 
 
 
@@ -3791,7 +3791,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1669660827000')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1669661178629')</script>
 
 
 
@@ -3921,19 +3921,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1669660827000")
+        volantis.js("/js/plugins/sites.js?time=1669661178629")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1669660827000")
+        volantis.js("/js/plugins/friends.js?time=1669661178629")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1669660827000")
+        volantis.js("/js/plugins/contributors.js?time=1669661178629")
       }
     
   };
@@ -4002,7 +4002,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1669660827000')
+    await volantis.js('/js/plugins/aplayer.js?time=1669661178629')
   
   })();
 
@@ -4122,7 +4122,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669660827000");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1669661178629");
   }
 
   function loadSearchService() {
@@ -4462,7 +4462,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1669660827000').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1669661178629').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4696,7 +4696,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/29/a.html","name":"python自学笔记（6）——函数的变量和高级用法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（6）——函数的变量和高级用法","description":"","datePublished":"2022-11-28T18:37:37.000Z","dateModified":"2022-11-28T18:40:14.955Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/29/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/29/a.html","name":"python自学笔记（6）——函数的变量和高级用法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（6）——函数的变量和高级用法","description":"","datePublished":"2022-11-28T18:37:37.000Z","dateModified":"2022-11-28T18:46:14.870Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/29/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
