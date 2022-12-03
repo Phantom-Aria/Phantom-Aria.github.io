@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
+  <link rel="preload" href="/css/style.css?time=1670085697221" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1777,8 +1777,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670085697221" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670085697221"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1855,9 +1855,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670085697221","sites":"/js/plugins/sites.js?time=1670085697221","friends":"/js/plugins/friends.js?time=1670085697221","parallax":"/js/plugins/parallax.js?time=1670085697221","rightMenu":"/js/plugins/rightMenu.js?time=1670085697221","contributors":"/js/plugins/contributors.js?time=1670085697221","message":"/js/thirdparty/message.js?time=1670085697221","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221"},"css":{"style":"/css/style.css?time=1670085697221","message":"/css/message.css?time=1670085697221"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084732670),
+    lastupdate: new Date(1670085697221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3145,10 +3145,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。
-一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，...
-      
+      <p>前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。</p>
     
   </div>
   
@@ -3213,9 +3210,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. 前言前面说到怎么用ggplot做一个火山图来查看各个基因的表达情况，火山图是以log2FC值为横坐标，以-log10（FDR）值作为纵坐标，将所有的基因都做了点状图。虽然能比较直观地看到所有基因表达情况，但我们真正感兴趣的是处理后差异表达的基因。因此，我们也可以通过前面得到的表达矩阵获得差异表达的基因名，对raw count数据进行提取和均一化，然后做一个差异基因的热图，能更直观地看到...
-      
+      <p>前面说到怎么用ggplot做一个火山图来查看各个基因的表达情况，火山图是以log2FC值为横坐标，以-log10（FDR）值作为纵坐标，将<strong>所有的基因</strong>都做了点状图。虽然能比较直观地看到所有基因表达情况，但我们真正感兴趣的是处理后差异表达的基因。因此，我们也可以通过前面得到的表达矩阵获得差异表达的基因名，对raw count数据进行提取和均一化，然后做一个差异基因的热图，能更直观地看到差异基因在各个样本中的上调下调情况。</p>
     
   </div>
   
@@ -3280,11 +3275,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. 前言前面介绍了怎么用DESeq2做两组样本的差异基因表达分析，以及怎么用dplyr包给DESeq2运行结果增加一列分组信息，我们先看下两个R包运行结束后生成的gene_0_1.csv文件是怎么样的：
-
-A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和padj这三列，通过log2FoldChange绝对值大于1，调整后的pvalue也就是padj（即F...
-      
+      <p>主要介绍下在用DESeq2得到我们想要的差异表达基因后，如何在R中用ggplot和ggrepel绘制火山图。</p>
     
   </div>
   
@@ -3349,10 +3340,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言前面说到DESeq2包需要准备两个输入文件，一个是样本列表矩阵，一个是row count定量表达矩阵，接下来我们要对样本进行两两比对，找到两组之间有多少个基因上调和下调，不进行两两比对直接把4组数据4个重复全部导进去得到的结果是没有意义的
-举个栗子，我先进行短日照的“0”组样本和经过“1”天长日照的1组样本之间进行差异基因分析，从前面整理的样本列表矩阵我们可以看到，0组样本四个重复分别是...
-      
+      <p>前面说到DESeq2包需要准备两个输入文件，一个是<strong>样本列表矩阵</strong>，一个<strong>是row count定量表达矩阵</strong>，接下来我们要对样本进行两两比对，找到两组之间有多少个基因上调和下调，不进行两两比对直接把4组数据4个重复全部导进去得到的结果是没有意义的，这里用DESeq2做表达基因的差异分析</p>
     
   </div>
   
@@ -3417,10 +3405,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        HTseq也是对有参考基因组转录数据进行表达量分析的，主要用于reads计数。这个软件功能就比较专一，不像stringtie还需要运行prepDE.py脚本进行数据转化，直接一步到位。那为什么我一开始不用HTseq呢？因为我遇到一个bug 主要还是运算速度的问题，我比较了两种定量方式，HTseq定量虽然只有一步，但是速度远不如stringtie，也可能是我的问题，下面会说到。
-1. HTse...
-      
+      <p>HTseq也是对有参考基因组转录数据进行表达量分析的，主要用于reads计数。这个软件功能就比较专一，不像stringtie还需要运行prepDE.py脚本进行数据转化，直接一步到位。那为什么我一开始不用HTseq呢？<del>因为我遇到一个bug</del> 主要还是运算速度的问题，我比较了两种定量方式，HTseq定量虽然只有一步，但是速度远不如stringtie，也可能是我的问题，下面会说到。</p>
     
   </div>
   
@@ -3485,10 +3470,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。
-在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数...
-      
+      <p>本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。</p>
     
   </div>
   
@@ -3553,10 +3535,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。
-直接上百度搜就能找到IGV官网，选择linux版本或者windows版本都行，...
-      
+      <p>IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序数据进行可视化浏览。对比samtools tview功能，这个软件有交互式操作界面，对萌新非常友好。</p>
     
   </div>
   
@@ -3621,10 +3600,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. sam文件转化bambam文件是二进制文件，占用磁盘空间小，运算速度快，samtools操作是针对bam文件的，所以我们要进行数据转化。samtools sort指令可以将bam文件进行排序，这个指令同时也可以将sam文件转化成bam文件：
-12345#!/bin/bashls *.sam | while read iddo    samtools sort -l 0 -@ 5 -o ...
-      
+      <p>本篇笔记主要记录samtools的用法。</p>
     
   </div>
   
@@ -3689,13 +3665,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：
-$ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
--p # 以几个线程运行，与电脑核数或者分配虚拟机的核数有关genome # 命名的索引文件名，可以改成自己能找到的
-
-就可以在当前...
-      
+      <p>本片笔记主要记录Hisat2的用法，以及比较四个常用的比对参考基因组的软件。</p>
     
   </div>
   
@@ -3760,9 +3730,7 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献...
-      
+      <p>本系列学习笔记数据均来自”<strong>Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering</strong>“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。<a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/28513600/">点击这里获取文献</a></p>
     
   </div>
   
@@ -4001,7 +3969,7 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
       
         <div class="webinfo-item">
           <div>小破站总字数：</div>
-          <div>92.2k 字</div>
+          <div>92.4k 字</div>
         </div>
       
 
@@ -4207,7 +4175,7 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084732670.js"></script>
+<script src="/js/app.js?time=1670085697221.js"></script>
 
 
 
@@ -4391,7 +4359,7 @@ $ hisat2-build Arabidopsis_thaliana.dna.genome.fa genome
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670085697221')</script>
 
 
 
@@ -4521,19 +4489,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084732670")
+        volantis.js("/js/plugins/sites.js?time=1670085697221")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084732670")
+        volantis.js("/js/plugins/friends.js?time=1670085697221")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084732670")
+        volantis.js("/js/plugins/contributors.js?time=1670085697221")
       }
     
   };
@@ -4602,7 +4570,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
+    await volantis.js('/js/plugins/aplayer.js?time=1670085697221')
   
   })();
 
@@ -4722,7 +4690,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221");
   }
 
   function loadSearchService() {
@@ -5062,7 +5030,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670085697221').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
+  <link rel="preload" href="/css/style.css?time=1670085697221" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站</title>
   <meta name="keywords" content="fastqc,multiqc,trim-galore,null">
-  <meta name="description" content="本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献  1">
+  <meta name="description" content="本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献">
 <meta property="og:type" content="article">
 <meta property="og:title" content="转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控">
 <meta property="og:url" content="http://www.shelven.com/2022/04/14/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献  1">
+<meta property="og:description" content="本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-14T13:13:35.000Z">
-<meta property="article:modified_time" content="2022-06-30T11:37:27.902Z">
+<meta property="article:modified_time" content="2022-12-03T16:39:16.000Z">
 <meta property="article:tag" content="fastqc">
 <meta property="article:tag" content="multiqc">
 <meta property="article:tag" content="trim-galore">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670085697221" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670085697221"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670085697221","sites":"/js/plugins/sites.js?time=1670085697221","friends":"/js/plugins/friends.js?time=1670085697221","parallax":"/js/plugins/parallax.js?time=1670085697221","rightMenu":"/js/plugins/rightMenu.js?time=1670085697221","contributors":"/js/plugins/contributors.js?time=1670085697221","message":"/js/thirdparty/message.js?time=1670085697221","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221"},"css":{"style":"/css/style.css?time=1670085697221","message":"/css/message.css?time=1670085697221"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084732670),
+    lastupdate: new Date(1670085697221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3203,6 +3203,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>本系列学习笔记数据均来自”<strong>Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering</strong>“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。<a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/28513600/">点击这里获取文献</a></p>
+<span id="more"></span>
+
 <hr>
 <h2 id="1-读文章获得RNA-Seq数据"><a href="#1-读文章获得RNA-Seq数据" class="headerlink" title="1. 读文章获得RNA-Seq数据"></a>1. 读文章获得RNA-Seq数据</h2><div class="story post-story"><p>从文章末尾我们可以获得一些测序数据信息：</p>
 <blockquote>
@@ -3298,10 +3300,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-30T19:37:27+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:39:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月30日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3324,7 +3326,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary=本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献"
           
           >
           
@@ -3336,7 +3338,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary=本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献"
           
           >
           
@@ -3348,7 +3350,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/14/a.html&title=转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控 - 我的小破站&summary=本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献"
           
           >
           
@@ -3383,8 +3385,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2022/04/15/a.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>转录组数据分析笔记（2）——使用Hisat2比对参考基因组</p>
-          <p class='content'>1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好参考基因组的文件目录下，运行命令：
-$ hisat2-build Arabidop...</p>
+          <p class='content'>本片笔记主要记录Hisat2的用法，以及比较四个常用的比对参考基因组的软件。
+
+
+1. 建立参考基因组索引在进行clean data与参考基因组比对之前，我们需要先建立参考基因组索引。进入下载好...</p>
         </a>
       
       
@@ -3630,7 +3634,7 @@ $ hisat2-build Arabidop...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084732670.js"></script>
+<script src="/js/app.js?time=1670085697221.js"></script>
 
 
 
@@ -3814,7 +3818,7 @@ $ hisat2-build Arabidop...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670085697221')</script>
 
 
 
@@ -3944,19 +3948,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084732670")
+        volantis.js("/js/plugins/sites.js?time=1670085697221")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084732670")
+        volantis.js("/js/plugins/friends.js?time=1670085697221")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084732670")
+        volantis.js("/js/plugins/contributors.js?time=1670085697221")
       }
     
   };
@@ -4025,7 +4029,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
+    await volantis.js('/js/plugins/aplayer.js?time=1670085697221')
   
   })();
 
@@ -4145,7 +4149,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221");
   }
 
   function loadSearchService() {
@@ -4485,7 +4489,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670085697221').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4719,7 +4723,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/14/a.html","name":"转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控","description":"","datePublished":"2022-04-14T13:13:35.000Z","dateModified":"2022-06-30T11:37:27.902Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/14/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/14/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"fastqc,multiqc,trim-galore","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/14/a.html","name":"转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控","description":"本系列学习笔记数据均来自”Temporal dynamics of gene expression and histone marks at the Arabidopsis shoot meristem during flowering“，原文用RNA-Seq的方式研究开花阶段，芽分生组织不同时期的基因表达量变化，4个时间段（0, 1, 2, 3），4个重复，共有16个样品。点击这里获取文献","datePublished":"2022-04-14T13:13:35.000Z","dateModified":"2022-12-03T16:39:16.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/14/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/14/a.html","wordCount":197,"articleSection":"学习笔记","keywords":"fastqc,multiqc,trim-galore","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

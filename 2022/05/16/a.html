@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
+  <link rel="preload" href="/css/style.css?time=1670085697221" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站</title>
   <meta name="keywords" content="AnnotationHub,GO/KEGG,org.At.tair.db,null">
-  <meta name="description" content="前言前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。 一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体">
+  <meta name="description" content="前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="转录组数据分析笔记（10）——初识GO&#x2F;KEGG富集分析">
 <meta property="og:url" content="http://www.shelven.com/2022/05/16/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="前言前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。 一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体">
+<meta property="og:description" content="前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-15T19:47:39.000Z">
-<meta property="article:modified_time" content="2022-05-15T20:04:18.802Z">
+<meta property="article:modified_time" content="2022-12-03T16:41:25.000Z">
 <meta property="article:tag" content="AnnotationHub">
 <meta property="article:tag" content="GO&#x2F;KEGG">
 <meta property="article:tag" content="org.At.tair.db">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670085697221" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670085697221"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670085697221","sites":"/js/plugins/sites.js?time=1670085697221","friends":"/js/plugins/friends.js?time=1670085697221","parallax":"/js/plugins/parallax.js?time=1670085697221","rightMenu":"/js/plugins/rightMenu.js?time=1670085697221","contributors":"/js/plugins/contributors.js?time=1670085697221","message":"/js/thirdparty/message.js?time=1670085697221","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221"},"css":{"style":"/css/style.css?time=1670085697221","message":"/css/message.css?time=1670085697221"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084732670),
+    lastupdate: new Date(1670085697221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3169,7 +3169,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：8 分钟</p>
+      <p>时长：9 分钟</p>
     </a>
   </div>
 
@@ -3202,9 +3202,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。</p>
+    <p>前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。</p>
+<span id="more"></span>
+
 <p>一个基因没有注释信息，那就只是一段核苷酸序列，有了注释信息我们才能知道这个基因在染色体上的定位，在具体的某个代谢途径上发挥什么功能等等。网上能找到很多注释信息的数据库，比如模式生物拟南芥TAIR，人类基因组hg19等等，Bioconductor有一个专门用来搜集注释信息数据库的工具包——AnnotationHub。</p>
-</div><h2 id="1-AnnotationHub注释数据库搜索工具"><a href="#1-AnnotationHub注释数据库搜索工具" class="headerlink" title="1. AnnotationHub注释数据库搜索工具"></a>1. AnnotationHub注释数据库搜索工具</h2><div class="story post-story"><p>用bioconductor下载Annotationhub包，载入（<strong>注：为演示结果，以下命令均在Rstudio终端输入</strong>）</p>
+<h2 id="1-AnnotationHub注释数据库搜索工具"><a href="#1-AnnotationHub注释数据库搜索工具" class="headerlink" title="1. AnnotationHub注释数据库搜索工具"></a>1. AnnotationHub注释数据库搜索工具</h2><div class="story post-story"><p>用bioconductor下载Annotationhub包，载入（<strong>注：为演示结果，以下命令均在Rstudio终端输入</strong>）</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span><span class="string">&quot;Annotationhub&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> hub <span class="operator">&lt;-</span> AnnotationHub<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">C<span class="operator">:</span><span class="punctuation">\</span>Users<span class="punctuation">\</span>HUAWEI<span class="punctuation">\</span>AppData<span class="punctuation">\</span>Local<span class="operator">/</span>R<span class="operator">/</span>cache<span class="operator">/</span>R<span class="operator">/</span>AnnotationHub</span><br><span class="line">  does not exist<span class="punctuation">,</span> create directory<span class="operator">?</span> <span class="punctuation">(</span>yes<span class="operator">/</span>no<span class="punctuation">)</span><span class="operator">:</span> yes</span><br><span class="line">  <span class="operator">|</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">==</span><span class="operator">=</span><span class="operator">|</span> <span class="number">100</span>%</span><br><span class="line"></span><br><span class="line">snapshotDate<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">:</span> <span class="number">2021</span><span class="operator">-</span><span class="number">10</span><span class="operator">-</span><span class="number">20</span></span><br><span class="line"><span class="operator">&gt;</span> hub</span><br><span class="line">AnnotationHub with <span class="number">62386</span> records</span><br><span class="line"><span class="comment"># snapshotDate(): 2021-10-20</span></span><br><span class="line"><span class="comment"># $dataprovider: Ensembl, BroadInstitute, UCSC, ftp://ftp...</span></span><br><span class="line"><span class="comment"># $species: Homo sapiens, Mus musculus, Drosophila melano...</span></span><br><span class="line"><span class="comment"># $rdataclass: GRanges, TwoBitFile, BigWigFile, EnsDb, Rl...</span></span><br><span class="line"><span class="comment"># additional mcols(): taxonomyid, genome,</span></span><br><span class="line"><span class="comment">#   description, coordinate_1_based, maintainer,</span></span><br><span class="line"><span class="comment">#   rdatadateadded, preparerclass, tags, rdatapath,</span></span><br><span class="line"><span class="comment">#   sourceurl, sourcetype </span></span><br><span class="line"><span class="comment"># retrieve records with, e.g., &#x27;object[[&quot;AH5012&quot;]]&#x27; </span></span><br></pre></td></tr></table></figure>
 
 <p>第一次使用AnnotationHub需要创建一个AnnotationHub对象。为了更直观地使用，我们将AnnotationHub对象赋值给hub变量。查看这个变量，我们可以得到如下的信息。</p>
@@ -3301,10 +3303,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T04:04:18+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:41:25+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月16日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3327,7 +3329,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary=前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。"
           
           >
           
@@ -3339,7 +3341,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary=前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。"
           
           >
           
@@ -3351,7 +3353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/16/a.html&title=转录组数据分析笔记（10）——初识GO/KEGG富集分析 - 我的小破站&summary=前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\KEGG富集分析。"
           
           >
           
@@ -3386,7 +3388,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2022/05/25/a.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>集群和slurm调度系统使用心得</p>
-          <p class='content'>前言随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从...</p>
+          <p class='content'>随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。...</p>
         </a>
       
       
@@ -3441,7 +3443,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AnnotationHub%E6%B3%A8%E9%87%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7"><span class="toc-text">1. AnnotationHub注释数据库搜索工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GO-x2F-KEGG%E5%AF%8C%E9%9B%86%E5%88%86%E6%9E%90"><span class="toc-text">2. GO&#x2F;KEGG富集分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2"><span class="toc-text">2.1 基因ID转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-GO-x2F-KEGG%E5%88%86%E6%9E%90"><span class="toc-text">2.2 GO&#x2F;KEGG分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">3. 可视化</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AnnotationHub%E6%B3%A8%E9%87%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7"><span class="toc-text">1. AnnotationHub注释数据库搜索工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GO-x2F-KEGG%E5%AF%8C%E9%9B%86%E5%88%86%E6%9E%90"><span class="toc-text">2. GO&#x2F;KEGG富集分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2"><span class="toc-text">2.1 基因ID转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-GO-x2F-KEGG%E5%88%86%E6%9E%90"><span class="toc-text">2.2 GO&#x2F;KEGG分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">3. 可视化</span></a></li></ol>
     </div>
   </section>
 
@@ -3632,7 +3634,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084732670.js"></script>
+<script src="/js/app.js?time=1670085697221.js"></script>
 
 
 
@@ -3816,7 +3818,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670085697221')</script>
 
 
 
@@ -3946,19 +3948,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084732670")
+        volantis.js("/js/plugins/sites.js?time=1670085697221")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084732670")
+        volantis.js("/js/plugins/friends.js?time=1670085697221")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084732670")
+        volantis.js("/js/plugins/contributors.js?time=1670085697221")
       }
     
   };
@@ -4027,7 +4029,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
+    await volantis.js('/js/plugins/aplayer.js?time=1670085697221')
   
   })();
 
@@ -4147,7 +4149,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221");
   }
 
   function loadSearchService() {
@@ -4487,7 +4489,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670085697221').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4721,7 +4723,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/16/a.html","name":"转录组数据分析笔记（10）——初识GO/KEGG富集分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（10）——初识GO/KEGG富集分析","description":"","datePublished":"2022-05-15T19:47:39.000Z","dateModified":"2022-05-15T20:04:18.802Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/16/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"AnnotationHub,GO/KEGG,org.At.tair.db","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/16/a.html","name":"转录组数据分析笔记（10）——初识GO/KEGG富集分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（10）——初识GO/KEGG富集分析","description":"前面介绍了如何找到差异基因，我们通过R包DESeq2获得了差异表达基因，在此基础上做了更为直观的火山图和差异表达基因热图。但是仅仅知道差异表达基因的名字还不够，我们还要知道它到底有哪些功能和特征，就比如我看到一个很养眼的动漫角色，我就要去查查出自哪部番，是怎么样的人设和背景故事，一样的道理。这里简单记录下如何使用AnnotationHub，以及怎么进行GO\\KEGG富集分析。","datePublished":"2022-05-15T19:47:39.000Z","dateModified":"2022-12-03T16:41:25.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/16/a.html","wordCount":189,"articleSection":"学习笔记","keywords":"AnnotationHub,GO/KEGG,org.At.tair.db","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

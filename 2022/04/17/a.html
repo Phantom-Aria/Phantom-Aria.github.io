@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
+  <link rel="preload" href="/css/style.css?time=1670085697221" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站</title>
   <meta name="keywords" content="stringtie,prepDE.py3,null">
-  <meta name="description" content="stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。 在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数-e，">
+  <meta name="description" content="本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="转录组数据分析笔记（5）——stringtie转录本组装和定量">
 <meta property="og:url" content="http://www.shelven.com/2022/04/17/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="stringtie转录本组装和定量1 转录本组装Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过排序的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。 在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 - e，我之前跑了一遍流程没有加参数-e，">
+<meta property="og:description" content="本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-17T15:14:21.000Z">
-<meta property="article:modified_time" content="2022-05-23T19:22:09.429Z">
+<meta property="article:modified_time" content="2022-12-03T16:35:23.000Z">
 <meta property="article:tag" content="stringtie">
 <meta property="article:tag" content="prepDE.py3">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670085697221" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670085697221"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670085697221","sites":"/js/plugins/sites.js?time=1670085697221","friends":"/js/plugins/friends.js?time=1670085697221","parallax":"/js/plugins/parallax.js?time=1670085697221","rightMenu":"/js/plugins/rightMenu.js?time=1670085697221","contributors":"/js/plugins/contributors.js?time=1670085697221","message":"/js/thirdparty/message.js?time=1670085697221","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221"},"css":{"style":"/css/style.css?time=1670085697221","message":"/css/message.css?time=1670085697221"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084732670),
+    lastupdate: new Date(1670085697221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3162,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2k 字</p>
+      <p>字数：2.1k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3201,15 +3201,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="stringtie转录本组装和定量"><a href="#stringtie转录本组装和定量" class="headerlink" title="stringtie转录本组装和定量"></a>stringtie转录本组装和定量</h2><div class="story post-story"><h3 id="1-转录本组装"><a href="#1-转录本组装" class="headerlink" title="1 转录本组装"></a>1 转录本组装</h3><p>Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过<strong>排序</strong>的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。</p>
+    <p>本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。</p>
+<span id="more"></span>
+
+<h2 id="stringtie转录本组装和定量"><a href="#stringtie转录本组装和定量" class="headerlink" title="stringtie转录本组装和定量"></a>stringtie转录本组装和定量</h2><div class="story post-story"><h3 id="1-转录本组装"><a href="#1-转录本组装" class="headerlink" title="1 转录本组装"></a>1 转录本组装</h3><p>Stringtie是一个基因和转录本组装定量的软件，stringtie的输入文件有两个，一个是经过<strong>排序</strong>的bam文件，排序可以用前面说到的samtools sort命令完成，还有一个是参考基因组的注释文件（gff或gtf格式）。</p>
 <p>在使用Stringtie进行基因或者转录本组装定量的过程中，有一个非常重要的参数 <strong>- e</strong>，我之前跑了一遍流程没有加参数-e，结果组装的结果非常差，还有大量的未注释的基因。我请教了度娘，网上的教程攻略也都是抄来抄去的没解决什么问题，官网只有这么一句解释：</p>
 <blockquote>
 <p>-e    this option directs StringTie to operate in expression estimation mode; this limits the processing of read alignments to estimating the coverage of the transcripts given with the <code>-G</code> option (hence this option requires <code>-G</code>).</p>
 </blockquote>
 <p>对于加了参数-e之后如何做的比对和组装处理还是不明了，不知道表达评估模式的原理是什么，只能自己做个大概的总结（不知正确与否）：</p>
-<div class="note "><p><strong></strong></p><ol><li>如果我们研究的样本没有很好的注释信息，研究的人少，现有的注释信息都不完善，那么我们就需要重建转录本进行注释，这个时候就不需要加参数-e。</li><li>如果样品的注释信息非常完整，比如拟南芥这种模式生物，我们不需要重建新的转录本进行注释，只对现有的参考基因组注释文件就足够了，那就要用-e参数，不需要预测新的转录本。</div></li>
+<div class="note "><p><strong></strong></p><ol><li>如果我们研究的样本没有很好的注释信息，研究的人少，现有的注释信息都不完善，那么我们就需要重建转录本进行注释，这个时候就不需要加参数-e。</li><li>如果样品的注释信息非常完整，比如拟南芥这种模式生物，我们不需要重建新的转录本进行注释，只对现有的参考基因组注释文件就足够了，那就要用-e参数，不需要预测新的转录本。</div>
+-e参数还有个比较重要的地方，<strong>只有用了-e参数后，才可以运行prepDE.py3脚本得到read count矩阵</strong>（也就是进行定量），这个脚本后面会说。</li>
 </ol>
-<p>-e参数还有个比较重要的地方，<strong>只有用了-e参数后，才可以运行prepDE.py3脚本得到read count矩阵</strong>（也就是进行定量），这个脚本后面会说。</p>
 <hr>
 <p>我们首先创建一个shell脚本进行转录本组装：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">for i in `seq 194 209`</span><br><span class="line">do</span><br><span class="line">    stringtie -p 4 -e \</span><br><span class="line">    -G /media/sf_/data/ref/Arabidopis_thaliana.gtf \    # 参考基因组注释文件</span><br><span class="line">    -o /media/sf_/data/fastq/gtf/ERR1698&quot;$i&quot;.gtf \      # 自定义输出文件</span><br><span class="line">    /media/sf_/data/fastq/bam/ERR1698&quot;$i&quot;.bam   # 输入的bam文件</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
@@ -3299,10 +3302,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T03:22:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:35:23+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月24日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3325,7 +3328,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary=本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。"
           
           >
           
@@ -3337,7 +3340,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary=本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。"
           
           >
           
@@ -3349,7 +3352,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/04/17/a.html&title=转录组数据分析笔记（5）——stringtie转录本组装和定量 - 我的小破站&summary=本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。"
           
           >
           
@@ -3390,7 +3393,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='next' href='/2022/04/16/b.html'>
           <p class='title'>转录组数据分析笔记（4）——IGV基因组浏览器安装和解读<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1. IGV软件下载IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入...</p>
+          <p class='content'>IGV（Integrative Genomics Viewer）是一个非常方便的比对软件，在使用前只需要将参考基因组和bam文件分别建立索引（即建立fai和bai文件）并载入，就可以对转录组测序...</p>
         </a>
       
     </div>
@@ -3630,7 +3633,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084732670.js"></script>
+<script src="/js/app.js?time=1670085697221.js"></script>
 
 
 
@@ -3814,7 +3817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670085697221')</script>
 
 
 
@@ -3944,19 +3947,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084732670")
+        volantis.js("/js/plugins/sites.js?time=1670085697221")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084732670")
+        volantis.js("/js/plugins/friends.js?time=1670085697221")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084732670")
+        volantis.js("/js/plugins/contributors.js?time=1670085697221")
       }
     
   };
@@ -4025,7 +4028,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
+    await volantis.js('/js/plugins/aplayer.js?time=1670085697221')
   
   })();
 
@@ -4145,7 +4148,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670085697221");
   }
 
   function loadSearchService() {
@@ -4485,7 +4488,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670085697221').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4719,7 +4722,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/17/a.html","name":"转录组数据分析笔记（5）——stringtie转录本组装和定量"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（5）——stringtie转录本组装和定量","description":"","datePublished":"2022-04-17T15:14:21.000Z","dateModified":"2022-05-23T19:22:09.429Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"stringtie,prepDE.py3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/转录组数据分析/","name":"转录组数据分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/04/17/a.html","name":"转录组数据分析笔记（5）——stringtie转录本组装和定量"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"转录组数据分析笔记（5）——stringtie转录本组装和定量","description":"本篇笔记主要记录如何用Stringtie做转录本的组装和定量，以及如何制作样本列表矩阵，为后面DESeq2分析做铺垫。","datePublished":"2022-04-17T15:14:21.000Z","dateModified":"2022-12-03T16:35:23.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/04/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/04/17/a.html","wordCount":59,"articleSection":"学习笔记","keywords":"stringtie,prepDE.py3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
