@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670083152949" as="style">
+  <link rel="preload" href="/css/style.css?time=1670083528560" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>perl语言学习笔记（1） - 我的小破站</title>
   <meta name="keywords" content="perl,null">
-  <meta name="description" content="最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;** 前面说学习perl可以只学怎么调用模块，马上啪啪打脸了，这货和python还是有点不一样的，还是抽空补补基础吧~现在做生信用的最多的就是R、python和perl，多掌握一门编程语言还是挺有必要的。记录一下自学的过程和笔记，自学视频">
+  <meta name="description" content="最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**">
 <meta property="og:type" content="article">
 <meta property="og:title" content="perl语言学习笔记（1）">
 <meta property="og:url" content="http://www.shelven.com/2022/06/16/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;** 前面说学习perl可以只学怎么调用模块，马上啪啪打脸了，这货和python还是有点不一样的，还是抽空补补基础吧~现在做生信用的最多的就是R、python和perl，多掌握一门编程语言还是挺有必要的。记录一下自学的过程和笔记，自学视频">
+<meta property="og:description" content="最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-15T16:07:31.000Z">
-<meta property="article:modified_time" content="2022-06-15T16:10:16.104Z">
+<meta property="article:modified_time" content="2022-12-03T16:05:03.000Z">
 <meta property="article:tag" content="perl">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670083152949" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083152949"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670083528560" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083528560"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670083152949","sites":"/js/plugins/sites.js?time=1670083152949","friends":"/js/plugins/friends.js?time=1670083152949","parallax":"/js/plugins/parallax.js?time=1670083152949","rightMenu":"/js/plugins/rightMenu.js?time=1670083152949","contributors":"/js/plugins/contributors.js?time=1670083152949","message":"/js/thirdparty/message.js?time=1670083152949","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083152949"},"css":{"style":"/css/style.css?time=1670083152949","message":"/css/message.css?time=1670083152949"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670083528560","sites":"/js/plugins/sites.js?time=1670083528560","friends":"/js/plugins/friends.js?time=1670083528560","parallax":"/js/plugins/parallax.js?time=1670083528560","rightMenu":"/js/plugins/rightMenu.js?time=1670083528560","contributors":"/js/plugins/contributors.js?time=1670083528560","message":"/js/thirdparty/message.js?time=1670083528560","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560"},"css":{"style":"/css/style.css?time=1670083528560","message":"/css/message.css?time=1670083528560"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670083152949),
+    lastupdate: new Date(1670083528560),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3197,6 +3197,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**</p>
+<span id="more"></span>
+
 <p>前面说学习perl可以只学怎么调用模块，马上啪啪打脸了，这货和python还是有点不一样的，还是抽空补补基础吧~现在做生信用的最多的就是R、python和perl，多掌握一门编程语言还是挺有必要的。记录一下自学的过程和笔记，自学视频来源是b站up主<a target="_blank" rel="noopener" href="https://space.bilibili.com/338686099?spm_id_from=333.337.0.0">生信技能树-jimmy</a></p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><div class="story post-story"><p>首先了解一下perl脚本的结构，以blast结果过滤的perl脚本为例，输入文件blast_m8.out是一个12列，分隔符为空格的文件：</p>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/perl -w      # 选择解释器类型为perl，-w是运行错误时提供警告信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">open</span> IN,<span class="string">&quot;blast_m8.out&quot;</span>;     <span class="comment"># 打开文件，m8格式输出的blastout文件。每次只读一行</span></span><br><span class="line"><span class="keyword">while</span> (&lt;IN&gt;) &#123;      <span class="comment"># 大括号为程序块，每个程序块是一个独立的部分，执行相对独立的功能</span></span><br><span class="line">    <span class="keyword">chomp</span>;      <span class="comment"># 去掉读进来数据结尾的换行符\n（没有换行符则不起作用）</span></span><br><span class="line">    <span class="keyword">my</span> @line=<span class="keyword">split</span> <span class="regexp">/\s+/</span>,$_;        <span class="comment"># 以空白分割(\s是匹配任何空白符，+表示匹配任意多个),存入数组中</span></span><br><span class="line">    <span class="keyword">if</span> ($line[<span class="number">2</span>] &gt;=<span class="number">50</span> &amp;&amp; $line[<span class="number">3</span>] &gt;=<span class="number">100</span>) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">&quot;$_\n&quot;</span>;       <span class="comment"># 将第三列identity值大于50，第四列序列长度大于100的blast结果输出</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">next</span>;       <span class="comment"># 否则进入下一个循环</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">close</span> IN;</span><br><span class="line"><span class="comment"># 这个脚本第四行的my也要注意下，一般是需要申明use strict;也就是使用严谨的方式，在这种方式下，任何变量都必须先定义，不使用my的话定义第一次出现的$和@运行会报错。初学可以不使用use strict。</span></span><br><span class="line"><span class="comment"># $_这个变量是使用非常多的，如果没有定义变量名称，则默认使用$_</span></span><br></pre></td></tr></table></figure>
@@ -3289,10 +3291,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-16T00:10:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:05:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月16日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3315,7 +3317,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary=最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**"
           
           >
           
@@ -3327,7 +3329,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary=最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**"
           
           >
           
@@ -3339,7 +3341,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/16/a.html&title=perl语言学习笔记（1） - 我的小破站&summary=最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**"
           
           >
           
@@ -3623,7 +3625,7 @@ blastp    用蛋白质序列检索蛋白质数...</p>
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670083152949.js"></script>
+<script src="/js/app.js?time=1670083528560.js"></script>
 
 
 
@@ -3807,7 +3809,7 @@ blastp    用蛋白质序列检索蛋白质数...</p>
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083152949')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083528560')</script>
 
 
 
@@ -3937,19 +3939,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670083152949")
+        volantis.js("/js/plugins/sites.js?time=1670083528560")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670083152949")
+        volantis.js("/js/plugins/friends.js?time=1670083528560")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670083152949")
+        volantis.js("/js/plugins/contributors.js?time=1670083528560")
       }
     
   };
@@ -4018,7 +4020,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670083152949')
+    await volantis.js('/js/plugins/aplayer.js?time=1670083528560')
   
   })();
 
@@ -4138,7 +4140,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083152949");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560");
   }
 
   function loadSearchService() {
@@ -4478,7 +4480,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670083152949').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670083528560').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4712,7 +4714,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/16/a.html","name":"perl语言学习笔记（1）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"perl语言学习笔记（1）","description":"","datePublished":"2022-06-15T16:07:31.000Z","dateModified":"2022-06-15T16:10:16.104Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/16/a.html","wordCount":0,"articleSection":"编程自学","keywords":"perl","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/16/a.html","name":"perl语言学习笔记（1）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"perl语言学习笔记（1）","description":"最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**","datePublished":"2022-06-15T16:07:31.000Z","dateModified":"2022-12-03T16:05:03.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/16/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/16/a.html","wordCount":83,"articleSection":"编程自学","keywords":"perl","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
