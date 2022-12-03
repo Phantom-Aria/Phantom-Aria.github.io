@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1777,8 +1777,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1855,9 +1855,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084104302),
+    lastupdate: new Date(1670084732670),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3119,10 +3119,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新。
-总的来说，我通过拆包游戏客户端获得5.6万条语音文件，通过github上的一个声纹识别项目分离...
-      
+      <p>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作<del>原理部分以后搞明白了再更新</del></p>
     
   </div>
   
@@ -3691,10 +3688,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是gbff格式的。提交之后被告知需要gff格式的，因为gbf格式中没有基因相关结构的位置信息。
-emmmmm….其实不是很理解，因为gbff格式和gff格式是可以相互转换的，如果gbff注释文件中有信息缺...
-      
+      <p>前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是<strong>gbff</strong>格式的。提交之后被告知需要<strong>gff</strong>格式的，因为gbf格式中没有基因相关结构的位置信息。找了一个perl脚本完成了任务。</p>
     
   </div>
   
@@ -4155,7 +4149,7 @@ emmmmm….其实不是很理解，因为gbff格式和gff格式是可以相互转
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084104302.js"></script>
+<script src="/js/app.js?time=1670084732670.js"></script>
 
 
 
@@ -4339,7 +4333,7 @@ emmmmm….其实不是很理解，因为gbff格式和gff格式是可以相互转
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
 
 
 
@@ -4469,19 +4463,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084104302")
+        volantis.js("/js/plugins/sites.js?time=1670084732670")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084104302")
+        volantis.js("/js/plugins/friends.js?time=1670084732670")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084104302")
+        volantis.js("/js/plugins/contributors.js?time=1670084732670")
       }
     
   };
@@ -4550,7 +4544,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
   
   })();
 
@@ -4670,7 +4664,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
   }
 
   function loadSearchService() {
@@ -5010,7 +5004,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

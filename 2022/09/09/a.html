@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>深度学习——语音合成tts笔记（下） - 我的小破站</title>
   <meta name="keywords" content="google colab,Tacotron2,HiFiGAN,null">
-  <meta name="description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。 2. 训练模型 &amp; 合成语音Tacotron2项目地址点击这里 HiFi-GAN项目地址点击这里 本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！ 2.1 Tacotron2简介简单讲一讲Tac">
+  <meta name="description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习——语音合成tts笔记（下）">
 <meta property="og:url" content="http://www.shelven.com/2022/09/09/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。 2. 训练模型 &amp; 合成语音Tacotron2项目地址点击这里 HiFi-GAN项目地址点击这里 本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！ 2.1 Tacotron2简介简单讲一讲Tac">
+<meta property="og:description" content="（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-09-08T19:32:17.000Z">
-<meta property="article:modified_time" content="2022-10-08T07:00:04.980Z">
+<meta property="article:modified_time" content="2022-12-03T16:20:43.000Z">
 <meta property="article:tag" content="google colab">
 <meta property="article:tag" content="Tacotron2">
 <meta property="article:tag" content="HiFiGAN">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084104302),
+    lastupdate: new Date(1670084732670),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3199,6 +3199,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。</p>
+<span id="more"></span>
+
 <h2 id="2-训练模型-amp-合成语音"><a href="#2-训练模型-amp-合成语音" class="headerlink" title="2. 训练模型 &amp; 合成语音"></a>2. 训练模型 &amp; 合成语音</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/NVIDIA/tacotron2">Tacotron2项目地址点击这里</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/jik876/hifi-gan">HiFi-GAN项目地址点击这里</a></p>
 <p>本篇博客训练模型&amp;合成语音基于以上两个开源项目，再次感谢原作者！</p>
@@ -3328,10 +3330,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-08T15:00:04+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:20:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年10月8日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3354,7 +3356,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary=（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。"
           
           >
           
@@ -3366,7 +3368,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary=（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。"
           
           >
           
@@ -3378,7 +3380,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/09/09/a.html&title=深度学习——语音合成tts笔记（下） - 我的小破站&summary=（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。"
           
           >
           
@@ -3659,7 +3661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084104302.js"></script>
+<script src="/js/app.js?time=1670084732670.js"></script>
 
 
 
@@ -3843,7 +3845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
 
 
 
@@ -3973,19 +3975,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084104302")
+        volantis.js("/js/plugins/sites.js?time=1670084732670")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084104302")
+        volantis.js("/js/plugins/friends.js?time=1670084732670")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084104302")
+        volantis.js("/js/plugins/contributors.js?time=1670084732670")
       }
     
   };
@@ -4054,7 +4056,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
   
   })();
 
@@ -4174,7 +4176,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
   }
 
   function loadSearchService() {
@@ -4514,7 +4516,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4748,7 +4750,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/09/09/a.html","name":"深度学习——语音合成tts笔记（下）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"深度学习——语音合成tts笔记（下）","description":"","datePublished":"2022-09-08T19:32:17.000Z","dateModified":"2022-10-08T07:00:04.980Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/09/09/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/09/09/a.html","wordCount":0,"articleSection":"深度学习","keywords":"google colab,Tacotron2,HiFiGAN","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/09/09/a.html","name":"深度学习——语音合成tts笔记（下）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"深度学习——语音合成tts笔记（下）","description":"（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。","datePublished":"2022-09-08T19:32:17.000Z","dateModified":"2022-12-03T16:20:43.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/09/09/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/09/09/a.html","wordCount":86,"articleSection":"深度学习","keywords":"google colab,Tacotron2,HiFiGAN","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

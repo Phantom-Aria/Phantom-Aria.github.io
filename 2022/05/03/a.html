@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>简易爬虫程序编程记录——以微博热搜为例 - 我的小破站</title>
   <meta name="keywords" content="python,爬虫,null">
-  <meta name="description" content="1. 关于爬虫百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中，经常被称为网页追逐者），是一种按照一定的规则，自动抓取互联网信息的程序或者脚本。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 我们只需要知道爬虫的作用是抓取网页的信息，其实现在互联网上充斥着大量的爬虫，包括不局限于火车票抢票软件，各种实时数据分析网站等等，本质上都是发起大量的htt">
+  <meta name="description" content="写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易爬虫程序编程记录——以微博热搜为例">
 <meta property="og:url" content="http://www.shelven.com/2022/05/03/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="1. 关于爬虫百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中，经常被称为网页追逐者），是一种按照一定的规则，自动抓取互联网信息的程序或者脚本。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。 我们只需要知道爬虫的作用是抓取网页的信息，其实现在互联网上充斥着大量的爬虫，包括不局限于火车票抢票软件，各种实时数据分析网站等等，本质上都是发起大量的htt">
+<meta property="og:description" content="写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-02T16:05:41.000Z">
-<meta property="article:modified_time" content="2022-05-02T16:07:59.402Z">
+<meta property="article:modified_time" content="2022-12-03T16:23:08.000Z">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="爬虫">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084104302),
+    lastupdate: new Date(1670084732670),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3197,10 +3197,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="1-关于爬虫"><a href="#1-关于爬虫" class="headerlink" title="1. 关于爬虫"></a>1. 关于爬虫</h2><div class="story post-story"><p>百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中，经常被称为网页追逐者），是一种按照一定的规则，自动抓取互联网信息的程序或者脚本。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。</p>
+    <p>写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。</p>
+<span id="more"></span>
+
+<h2 id="1-关于爬虫"><a href="#1-关于爬虫" class="headerlink" title="1. 关于爬虫"></a>1. 关于爬虫</h2><div class="story post-story"><p>百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中，经常被称为网页追逐者），是一种按照一定的规则，自动抓取互联网信息的程序或者脚本。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。</p>
 <p>我们只需要知道爬虫的作用是抓取网页的信息，其实现在互联网上充斥着大量的爬虫，包括不局限于火车票抢票软件，各种实时数据分析网站等等，本质上都是发起大量的http请求获得信息。爬虫技术的滥用会导致目标网站在短时间内收到大量的访问请求，进而导致服务器瘫痪，相当于是ddos攻击了。但是爬虫的便利性是不可否认的，尤其是批量操作数据和获取信息，比如批量下载我们需要的文献等等。犯罪的永远是凶手而不是工具，我们在合法的范围内应用好工具，能为我们生活提供非常大的便利。</p>
 <p>知其然知其所以然，了解这个技术的最好方法是自己去学，因此写了这个小爬虫程序。为什么拿微博热搜来练手呢，因为微博热搜网页结构非常简单明了，很容易上手……</p>
-<p>写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。</p>
 <h3 id="1-1-requests"><a href="#1-1-requests" class="headerlink" title="1.1 requests"></a>1.1 requests</h3><p>requests是最常用的Python HTTP客户端库，编写爬虫和测试服务器响应数据时经常会用到，专门用于发送HTTP请求。说白了requests最大的作用就是发起http请求，返回我们需要的网页数据，所谓爬虫就是从网页上抓取和整理我们需要的<strong>公开的</strong>信息，对于<strong>非公开的信息抓取是违法的</strong>。</p>
 <p>requests请求方式：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url, kwargs)：     发送GET请求</span><br><span class="line">requests.post(url, kwargs)：        发送POST请求</span><br><span class="line">requests.put(url, kwargs)：     发送PUT请求</span><br><span class="line">requests.delete(url, kwargs)：  发送DELETE请求</span><br><span class="line">requests.head(url, kwargs)：        发送head请求</span><br><span class="line">erquests.options(url, kwargs)： 发送options请求</span><br><span class="line">这些请求方法的参数和用法一致，必选参数为url，其他参数为可选参数</span><br></pre></td></tr></table></figure>
@@ -3282,10 +3284,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-03T00:07:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:23:08+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月3日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3308,7 +3310,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary=写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。"
           
           >
           
@@ -3320,7 +3322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary=写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。"
           
           >
           
@@ -3332,7 +3334,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/03/a.html&title=简易爬虫程序编程记录——以微博热搜为例 - 我的小破站&summary=写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。"
           
           >
           
@@ -3367,7 +3369,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2022/05/04/a.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>获得测序原始数据——初探GEO和SRA数据库</p>
-          <p class='content'>初探GEO数据库和SRA数据库最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易...</p>
+          <p class='content'>最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载...</p>
         </a>
       
       
@@ -3613,7 +3615,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084104302.js"></script>
+<script src="/js/app.js?time=1670084732670.js"></script>
 
 
 
@@ -3797,7 +3799,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
 
 
 
@@ -3927,19 +3929,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084104302")
+        volantis.js("/js/plugins/sites.js?time=1670084732670")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084104302")
+        volantis.js("/js/plugins/friends.js?time=1670084732670")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084104302")
+        volantis.js("/js/plugins/contributors.js?time=1670084732670")
       }
     
   };
@@ -4008,7 +4010,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
   
   })();
 
@@ -4128,7 +4130,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
   }
 
   function loadSearchService() {
@@ -4468,7 +4470,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4702,7 +4704,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/03/a.html","name":"简易爬虫程序编程记录——以微博热搜为例"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简易爬虫程序编程记录——以微博热搜为例","description":"","datePublished":"2022-05-02T16:05:41.000Z","dateModified":"2022-05-02T16:07:59.402Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/03/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/03/a.html","wordCount":0,"articleSection":"编程自学","keywords":"python,爬虫","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/03/a.html","name":"简易爬虫程序编程记录——以微博热搜为例"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"简易爬虫程序编程记录——以微博热搜为例","description":"写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。","datePublished":"2022-05-02T16:05:41.000Z","dateModified":"2022-12-03T16:23:08.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/03/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/03/a.html","wordCount":44,"articleSection":"编程自学","keywords":"python,爬虫","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084732670" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>深度学习——语音合成tts笔记（上） - 我的小破站</title>
   <meta name="keywords" content="拆包,声纹识别,语音转文本,null">
-  <meta name="description" content="两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新。 总的来说，我通过拆包游戏客户端获得5.6万条语音文件，通过github上的一个声纹识别项目分离其中一">
+  <meta name="description" content="两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习——语音合成tts笔记（上）">
 <meta property="og:url" content="http://www.shelven.com/2022/09/08/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新。 总的来说，我通过拆包游戏客户端获得5.6万条语音文件，通过github上的一个声纹识别项目分离其中一">
+<meta property="og:description" content="两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-09-07T19:15:04.000Z">
-<meta property="article:modified_time" content="2022-09-07T19:23:17.251Z">
+<meta property="article:modified_time" content="2022-12-03T16:20:24.000Z">
 <meta property="article:tag" content="拆包">
 <meta property="article:tag" content="声纹识别">
 <meta property="article:tag" content="语音转文本">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084732670" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084732670"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084732670","sites":"/js/plugins/sites.js?time=1670084732670","friends":"/js/plugins/friends.js?time=1670084732670","parallax":"/js/plugins/parallax.js?time=1670084732670","rightMenu":"/js/plugins/rightMenu.js?time=1670084732670","contributors":"/js/plugins/contributors.js?time=1670084732670","message":"/js/thirdparty/message.js?time=1670084732670","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670"},"css":{"style":"/css/style.css?time=1670084732670","message":"/css/message.css?time=1670084732670"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670084104302),
+    lastupdate: new Date(1670084732670),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3198,7 +3198,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作<del>原理部分以后搞明白了再更新</del>。</p>
+    <p>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作<del>原理部分以后搞明白了再更新</del></p>
+<span id="more"></span>
+
 <p>总的来说，我通过拆包游戏客户端获得5.6万条语音文件，通过github上的一个声纹识别项目分离其中一个角色的语音文件。接着用百度的语音识别API将语音识别为文本后，人工校正一遍文本，然后转换为拼音+音标，以此制作语音数据训练集和测试集。基于开源项目Tacotron2训练角色语音模型，经历400 epoch后初步训练成型，最后基于HiFiGAN合成语音。整个后半段流程是在google colab上完成的，为了完成模型训练我申请了4个谷歌账号…不得不说<strong>白嫖的GPU真香~</strong></p>
 <h2 id="1-制作数据集"><a href="#1-制作数据集" class="headerlink" title="1. 制作数据集"></a>1. 制作数据集</h2><div class="story post-story"><p>可以说整个项目大部分时间花费在整理数据集上，根据我自己的经验，数据集的语音长度在2秒-10秒之间效果最好，数量大约在2000条左右（为了涵盖尽可能多的汉字发音）。需要注意一点，不管拆包的原语音采样率如何，<strong>都要统一重采样到22050 hz</strong>，这是Tacotron2训练模型的要求。</p>
 <h3 id="1-1-Extractor2-5-vgmstream-win拆包"><a href="#1-1-Extractor2-5-vgmstream-win拆包" class="headerlink" title="1.1 Extractor2.5 + vgmstream-win拆包"></a>1.1 Extractor2.5 + vgmstream-win拆包</h3><p>首先是这款国内游戏的拆包，所有角色的语音文件都在目录D:\Genshin Impact\Genshin Impact Game\YuanShen_Data\StreamingAssets\Audio\GeneratedSoundBanks\Windows\Chinese下，我们使用软件Extractor2.5进行音频文件拆包。</p>
@@ -3294,10 +3296,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-08T03:23:17+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:20:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年9月8日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3320,7 +3322,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary=两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新"
           
           >
           
@@ -3332,7 +3334,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary=两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新"
           
           >
           
@@ -3344,7 +3346,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/09/08/a.html&title=深度学习——语音合成tts笔记（上） - 我的小破站&summary=两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新"
           
           >
           
@@ -3380,7 +3382,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='prev' href='/2022/09/09/a.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>深度学习——语音合成tts笔记（下）</p>
           <p class='content'>（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。
-2. 训练模型 &a...</p>
+
+
+2. 训练模型 ...</p>
         </a>
       
       
@@ -3626,7 +3630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670084104302.js"></script>
+<script src="/js/app.js?time=1670084732670.js"></script>
 
 
 
@@ -3810,7 +3814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084732670')</script>
 
 
 
@@ -3940,19 +3944,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670084104302")
+        volantis.js("/js/plugins/sites.js?time=1670084732670")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670084104302")
+        volantis.js("/js/plugins/friends.js?time=1670084732670")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670084104302")
+        volantis.js("/js/plugins/contributors.js?time=1670084732670")
       }
     
   };
@@ -4021,7 +4025,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084732670')
   
   })();
 
@@ -4141,7 +4145,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084732670");
   }
 
   function loadSearchService() {
@@ -4481,7 +4485,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084732670').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4715,7 +4719,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/09/08/a.html","name":"深度学习——语音合成tts笔记（上）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"深度学习——语音合成tts笔记（上）","description":"","datePublished":"2022-09-07T19:15:04.000Z","dateModified":"2022-09-07T19:23:17.251Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/09/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/09/08/a.html","wordCount":0,"articleSection":"深度学习","keywords":"拆包,声纹识别,语音转文本","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/深度学习/","name":"深度学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/09/08/a.html","name":"深度学习——语音合成tts笔记（上）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"深度学习——语音合成tts笔记（上）","description":"两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作原理部分以后搞明白了再更新","datePublished":"2022-09-07T19:15:04.000Z","dateModified":"2022-12-03T16:20:24.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/09/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/09/08/a.html","wordCount":148,"articleSection":"深度学习","keywords":"拆包,声纹识别,语音转文本","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
