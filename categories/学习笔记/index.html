@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670083528560" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1777,8 +1777,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670083528560" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083528560"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1855,9 +1855,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670083528560","sites":"/js/plugins/sites.js?time=1670083528560","friends":"/js/plugins/friends.js?time=1670083528560","parallax":"/js/plugins/parallax.js?time=1670083528560","rightMenu":"/js/plugins/rightMenu.js?time=1670083528560","contributors":"/js/plugins/contributors.js?time=1670083528560","message":"/js/thirdparty/message.js?time=1670083528560","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560"},"css":{"style":"/css/style.css?time=1670083528560","message":"/css/message.css?time=1670083528560"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670083528560),
+    lastupdate: new Date(1670084104302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3600,10 +3600,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        今天接到一个任务，大致内容是在一个植物的全长转录组数据中找拟南芥的三个同源基因。简简单单的描述，我的想法也很简单，直接找基因的CDS序列做blastn比对就完事了，结果却没有那么顺利…记录一下踩的坑和解决办法。
-1 blastn寻找同源基因三个基因TAIR号是AT4G28590、AT2G43010和AT2G34640，从全长转录组测序报告中，我找到了非冗余的转录本序列文件CD-hit-est...
-      
+      <p>今天接到一个任务，大致内容是在一个植物的全长转录组数据中找拟南芥的三个同源基因。简简单单的描述，我的想法也很简单，直接找基因的<strong>CDS序列做blastn</strong>比对就完事了，结果却没有那么顺利…记录一下踩的坑和解决办法。</p>
     
   </div>
   
@@ -3664,11 +3661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。
-这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。
-1 安...
-      
+      <p>经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。</p>
     
   </div>
   
@@ -3733,10 +3726,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。
-基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组...
-      
+      <p>之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种<strong>基因组特征</strong>的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。</p>
     
   </div>
   
@@ -4196,7 +4186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670083528560.js"></script>
+<script src="/js/app.js?time=1670084104302.js"></script>
 
 
 
@@ -4380,7 +4370,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083528560')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
 
 
 
@@ -4510,19 +4500,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670083528560")
+        volantis.js("/js/plugins/sites.js?time=1670084104302")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670083528560")
+        volantis.js("/js/plugins/friends.js?time=1670084104302")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670083528560")
+        volantis.js("/js/plugins/contributors.js?time=1670084104302")
       }
     
   };
@@ -4591,7 +4581,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670083528560')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
   
   })();
 
@@ -4711,7 +4701,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
   }
 
   function loadSearchService() {
@@ -5051,7 +5041,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670083528560').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

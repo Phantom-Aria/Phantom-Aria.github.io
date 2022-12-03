@@ -23,7 +23,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670083528560" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1777,8 +1777,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670083528560" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083528560"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1855,9 +1855,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670083528560","sites":"/js/plugins/sites.js?time=1670083528560","friends":"/js/plugins/friends.js?time=1670083528560","parallax":"/js/plugins/parallax.js?time=1670083528560","rightMenu":"/js/plugins/rightMenu.js?time=1670083528560","contributors":"/js/plugins/contributors.js?time=1670083528560","message":"/js/thirdparty/message.js?time=1670083528560","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560"},"css":{"style":"/css/style.css?time=1670083528560","message":"/css/message.css?time=1670083528560"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670083528560),
+    lastupdate: new Date(1670084104302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3121,10 +3121,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。
-1 下载balst+工具和数据库在之前的一篇博客中，我详细介绍了如何本地安装NCBI的blast+工具，以及下载nr&#x2F;nt库，建立本地的数据库。详情...
-      
+      <p>做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。</p>
     
   </div>
   
@@ -3189,12 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返回的几个文件不是单纯的fq文件，如下所示：
-
-于是我又开始恶补了一些三代测序的基础知识，开坑写个三代基因组测序组装的系列笔记~
-1 技术背景当第二代高通量测序技术进入成熟阶段后，读长过短、PCR扩增带...
-      
+      <p>最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返回的几个文件不是单纯的fq文件，于是我又开始恶补了一些三代测序的基础知识，开坑写个三代基因组测序组装的系列笔记~</p>
     
   </div>
   
@@ -3259,15 +3251,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：
-
-blastn    用核苷酸序列检索核苷酸数据库
-blastp    用蛋白质序列检索蛋白质数据库
-blastx    核苷酸序列通过6种阅读框翻译不同蛋白序列后，检索蛋白数据库
-tblastn    蛋白序列比对核酸库，核酸数据库通过6种开放阅读框翻译不同蛋白质
-tblastx    核酸序...
-      
+      <p>接触过生物学的小伙伴对<a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI在线BLAST网页</a>一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。</p>
     
   </div>
   
@@ -3729,14 +3713,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        该篇内容非常之多，主要记录自己能用的上的linux操作指令和自己的一些理解，想要用的时候方便站内搜索直接查找
-1. linux常用命令cdcd：Change directory修改（进入）工作目录，只对目录文件有效
-12345cd /    进入根(root)目录cd -    返回上次的目录cd      返回家(home)目录cd ~    返回家目录cd ..   返回上一级目录
-
-
-...
-      
+      <p>该篇内容非常之多，主要记录自己能用的上的linux操作指令和自己的一些理解，想要用的时候方便站内搜索直接查找。</p>
     
   </div>
   
@@ -4198,7 +4175,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670083528560.js"></script>
+<script src="/js/app.js?time=1670084104302.js"></script>
 
 
 
@@ -4382,7 +4359,7 @@ A-G列结果是DESeq2跑的，我们用到的只有基因名，log2FoldChange和
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083528560')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
 
 
 
@@ -4512,19 +4489,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670083528560")
+        volantis.js("/js/plugins/sites.js?time=1670084104302")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670083528560")
+        volantis.js("/js/plugins/friends.js?time=1670084104302")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670083528560")
+        volantis.js("/js/plugins/contributors.js?time=1670084104302")
       }
     
   };
@@ -4593,7 +4570,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670083528560')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
   
   })();
 
@@ -4713,7 +4690,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
   }
 
   function loadSearchService() {
@@ -5053,7 +5030,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670083528560').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

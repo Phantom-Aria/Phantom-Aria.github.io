@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670083528560" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站</title>
   <meta name="keywords" content="jellyfish,GenomeScope2.0,null">
-  <meta name="description" content="前言之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。 基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de">
+  <meta name="description" content="之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de nov">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0基础学习基因组三代测序组装（3）——全基因组Survey">
 <meta property="og:url" content="http://www.shelven.com/2022/07/02/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="前言之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。 基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de">
+<meta property="og:description" content="之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de nov">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-02T07:08:17.000Z">
-<meta property="article:modified_time" content="2022-07-02T07:30:31.832Z">
+<meta property="article:modified_time" content="2022-12-03T16:13:20.000Z">
 <meta property="article:tag" content="jellyfish">
 <meta property="article:tag" content="GenomeScope2.0">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670083528560" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083528560"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670083528560","sites":"/js/plugins/sites.js?time=1670083528560","friends":"/js/plugins/friends.js?time=1670083528560","parallax":"/js/plugins/parallax.js?time=1670083528560","rightMenu":"/js/plugins/rightMenu.js?time=1670083528560","contributors":"/js/plugins/contributors.js?time=1670083528560","message":"/js/thirdparty/message.js?time=1670083528560","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560"},"css":{"style":"/css/style.css?time=1670083528560","message":"/css/message.css?time=1670083528560"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670083528560),
+    lastupdate: new Date(1670084104302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3201,8 +3201,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。</p>
-<p>基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种<strong>基因组特征</strong>的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。</p>
+    <p>之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种<strong>基因组特征</strong>的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。</p>
+<span id="more"></span>
+
 <p>基因组复杂程度的经验性标准：</p>
 <ul>
 <li>简单基因组: 单倍体；或纯合二倍体；或杂合度低于0.5%, 且重复序列低于50%, 且GC含量在35%-65%的二倍体。</li>
@@ -3210,7 +3211,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>高复杂基因组: 杂合度&gt;1.2%；或重复序列占比大于65%。</li>
 </ul>
 <p>有条件的话，也可以用流式细胞仪对基因组大小做个预估。我这里只有二代基因组测序数据，因此用基因组二代测序数据做全基因组survey。当然，这里要注意一点，做全基因组survey的样本和后续de novo组装的样本要来自同<strong>一个个体</strong>，避免个体间基因组特征的差异。</p>
-</div><h2 id="1-原始数据质控"><a href="#1-原始数据质控" class="headerlink" title="1 原始数据质控"></a>1 原始数据质控</h2><div class="story post-story"><p>因为是对二代测序数据进行分析，质控的过程本质上和之前处理转录组二代数据一样，这里只提下过程和结果。</p>
+<h2 id="1-原始数据质控"><a href="#1-原始数据质控" class="headerlink" title="1 原始数据质控"></a>1 原始数据质控</h2><div class="story post-story"><p>因为是对二代测序数据进行分析，质控的过程本质上和之前处理转录组二代数据一样，这里只提下过程和结果。</p>
 <h3 id="1-1-fastqc生成质控报告"><a href="#1-1-fastqc生成质控报告" class="headerlink" title="1.1 fastqc生成质控报告"></a>1.1 fastqc生成质控报告</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastqc *.fq.gz -o ./</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://www.shelven.com/tuchuang/20220630/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220630/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
@@ -3352,10 +3353,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-02T15:30:31+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:13:20+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年7月2日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3378,7 +3379,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary=之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。"
           
           >
           
@@ -3390,7 +3391,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary=之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。"
           
           >
           
@@ -3402,7 +3403,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/07/02/a.html&title=0基础学习基因组三代测序组装（3）——全基因组Survey - 我的小破站&summary=之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。"
           
           >
           
@@ -3437,13 +3438,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2022/07/03/a.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>0基础学习基因组三代测序组装（4）——初步组装二代数据</p>
-          <p class='content'>前言经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-...</p>
+          <p class='content'>经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-th...</p>
         </a>
       
       
         <a class='next' href='/2022/06/20/a.html'>
           <p class='title'>0基础学习基因组三代测序组装（2）——数据污染评估<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>前言做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法...</p>
+          <p class='content'>做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定...</p>
         </a>
       
     </div>
@@ -3492,7 +3493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7"><span class="toc-text">1 原始数据质控</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-fastqc%E7%94%9F%E6%88%90%E8%B4%A8%E6%8E%A7%E6%8A%A5%E5%91%8A"><span class="toc-text">1.1 fastqc生成质控报告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-trim-galore%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="toc-text">1.2 trim-galore数据过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-k-mer%E5%88%86%E6%9E%90"><span class="toc-text">2 k-mer分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85jellyfish"><span class="toc-text">2.1 安装jellyfish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-k-mer%E9%A2%91%E6%95%B0%E5%88%86%E5%B8%83"><span class="toc-text">2.2 k-mer频数分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%A4%A7%E5%B0%8F%E3%80%81%E9%87%8D%E5%A4%8D%E7%8E%87%E3%80%81%E6%9D%82%E5%90%88%E7%8E%87%E4%BC%B0%E7%AE%97"><span class="toc-text">2.3 基因组大小、重复率、杂合率估算</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7"><span class="toc-text">1 原始数据质控</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-fastqc%E7%94%9F%E6%88%90%E8%B4%A8%E6%8E%A7%E6%8A%A5%E5%91%8A"><span class="toc-text">1.1 fastqc生成质控报告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-trim-galore%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="toc-text">1.2 trim-galore数据过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-k-mer%E5%88%86%E6%9E%90"><span class="toc-text">2 k-mer分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85jellyfish"><span class="toc-text">2.1 安装jellyfish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-k-mer%E9%A2%91%E6%95%B0%E5%88%86%E5%B8%83"><span class="toc-text">2.2 k-mer频数分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%A4%A7%E5%B0%8F%E3%80%81%E9%87%8D%E5%A4%8D%E7%8E%87%E3%80%81%E6%9D%82%E5%90%88%E7%8E%87%E4%BC%B0%E7%AE%97"><span class="toc-text">2.3 基因组大小、重复率、杂合率估算</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3683,7 +3684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670083528560.js"></script>
+<script src="/js/app.js?time=1670084104302.js"></script>
 
 
 
@@ -3867,7 +3868,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083528560')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
 
 
 
@@ -3997,19 +3998,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670083528560")
+        volantis.js("/js/plugins/sites.js?time=1670084104302")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670083528560")
+        volantis.js("/js/plugins/friends.js?time=1670084104302")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670083528560")
+        volantis.js("/js/plugins/contributors.js?time=1670084104302")
       }
     
   };
@@ -4078,7 +4079,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670083528560')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
   
   })();
 
@@ -4198,7 +4199,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
   }
 
   function loadSearchService() {
@@ -4538,7 +4539,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670083528560').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4772,7 +4773,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/07/02/a.html","name":"0基础学习基因组三代测序组装（3）——全基因组Survey"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（3）——全基因组Survey","description":"","datePublished":"2022-07-02T07:08:17.000Z","dateModified":"2022-07-02T07:30:31.832Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/07/02/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/07/02/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"jellyfish,GenomeScope2.0","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/07/02/a.html","name":"0基础学习基因组三代测序组装（3）——全基因组Survey"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（3）——全基因组Survey","description":"之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种基因组特征的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。","datePublished":"2022-07-02T07:08:17.000Z","dateModified":"2022-12-03T16:13:20.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/07/02/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/07/02/a.html","wordCount":212,"articleSection":"学习笔记","keywords":"jellyfish,GenomeScope2.0","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

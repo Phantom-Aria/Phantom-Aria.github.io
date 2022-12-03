@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670083528560" as="style">
+  <link rel="preload" href="/css/style.css?time=1670084104302" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站</title>
   <meta name="keywords" content="BLAST+,aspera,null">
-  <meta name="description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：  blastn    用核苷酸序列检索核苷酸数据库 blastp    用蛋白质序列检索蛋白质数据库 blastx    核苷酸序列通过6种阅读框翻译不同蛋白序列后，检索蛋白数据库 tblastn    蛋白序列比对核酸库，核酸数据库通过6种开放阅读框翻译不同蛋白质 tblastx    核酸序列和核">
+  <meta name="description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NCBI的BLAST+工具本地安装，本地建库和BLAST比对">
 <meta property="og:url" content="http://www.shelven.com/2022/06/17/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：  blastn    用核苷酸序列检索核苷酸数据库 blastp    用蛋白质序列检索蛋白质数据库 blastx    核苷酸序列通过6种阅读框翻译不同蛋白序列后，检索蛋白数据库 tblastn    蛋白序列比对核酸库，核酸数据库通过6种开放阅读框翻译不同蛋白质 tblastx    核酸序列和核">
+<meta property="og:description" content="接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-16T18:33:56.000Z">
-<meta property="article:modified_time" content="2022-06-17T15:33:13.270Z">
+<meta property="article:modified_time" content="2022-12-03T16:10:04.000Z">
 <meta property="article:tag" content="BLAST+">
 <meta property="article:tag" content="aspera">
 <meta name="twitter:card" content="summary">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670083528560" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083528560"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670084104302" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670084104302"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670083528560","sites":"/js/plugins/sites.js?time=1670083528560","friends":"/js/plugins/friends.js?time=1670083528560","parallax":"/js/plugins/parallax.js?time=1670083528560","rightMenu":"/js/plugins/rightMenu.js?time=1670083528560","contributors":"/js/plugins/contributors.js?time=1670083528560","message":"/js/thirdparty/message.js?time=1670083528560","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560"},"css":{"style":"/css/style.css?time=1670083528560","message":"/css/message.css?time=1670083528560"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670084104302","sites":"/js/plugins/sites.js?time=1670084104302","friends":"/js/plugins/friends.js?time=1670084104302","parallax":"/js/plugins/parallax.js?time=1670084104302","rightMenu":"/js/plugins/rightMenu.js?time=1670084104302","contributors":"/js/plugins/contributors.js?time=1670084104302","message":"/js/thirdparty/message.js?time=1670084104302","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302"},"css":{"style":"/css/style.css?time=1670084104302","message":"/css/message.css?time=1670084104302"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670083528560),
+    lastupdate: new Date(1670084104302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3201,7 +3201,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>接触过生物学的小伙伴对<a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI在线BLAST网页</a>一定不陌生，简单介绍一下这个网页的5种比对工具：</p>
+    <p>接触过生物学的小伙伴对<a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI在线BLAST网页</a>一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。</p>
+<span id="more"></span>
+
 <ul>
 <li>blastn    用核苷酸序列检索核苷酸数据库</li>
 <li>blastp    用蛋白质序列检索蛋白质数据库</li>
@@ -3349,10 +3351,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T23:33:13+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:10:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月17日</p>
+    <p>更新于：2022年12月4日</p>
   </a>
 </div>
 
@@ -3375,7 +3377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary=接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。"
           
           >
           
@@ -3387,7 +3389,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary=接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。"
           
           >
           
@@ -3399,7 +3401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/06/17/a.html&title=NCBI的BLAST+工具本地安装，本地建库和BLAST比对 - 我的小破站&summary=接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。"
           
           >
           
@@ -3440,10 +3442,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='next' href='/2022/06/16/a.html'>
           <p class='title'>perl语言学习笔记（1）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式**&#x3D; &#x3D;**
+          <p class='content'>最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式&#x3D; &#x3D;
 
 
-前面说学习perl可以...</p>
+前面说学习perl可以只学怎么...</p>
         </a>
       
     </div>
@@ -3683,7 +3685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670083528560.js"></script>
+<script src="/js/app.js?time=1670084104302.js"></script>
 
 
 
@@ -3867,7 +3869,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083528560')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670084104302')</script>
 
 
 
@@ -3997,19 +3999,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670083528560")
+        volantis.js("/js/plugins/sites.js?time=1670084104302")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670083528560")
+        volantis.js("/js/plugins/friends.js?time=1670084104302")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670083528560")
+        volantis.js("/js/plugins/contributors.js?time=1670084104302")
       }
     
   };
@@ -4078,7 +4080,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670083528560')
+    await volantis.js('/js/plugins/aplayer.js?time=1670084104302')
   
   })();
 
@@ -4198,7 +4200,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083528560");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670084104302");
   }
 
   function loadSearchService() {
@@ -4538,7 +4540,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670083528560').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670084104302').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4772,7 +4774,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/a.html","name":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对","description":"","datePublished":"2022-06-16T18:33:56.000Z","dateModified":"2022-06-17T15:33:13.270Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"BLAST+,aspera","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/06/17/a.html","name":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"NCBI的BLAST+工具本地安装，本地建库和BLAST比对","description":"接触过生物学的小伙伴对NCBI在线BLAST网页一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。","datePublished":"2022-06-16T18:33:56.000Z","dateModified":"2022-12-03T16:10:04.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/06/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/06/17/a.html","wordCount":104,"articleSection":"学习笔记","keywords":"BLAST+,aspera","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
