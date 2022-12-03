@@ -23,23 +23,23 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1670082711788" as="style">
+  <link rel="preload" href="/css/style.css?time=1670083152949" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>python自学笔记（6）——函数的变量和高级用法 - 我的小破站</title>
   <meta name="keywords" content="python,null">
-  <meta name="description" content="前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。 1. 函数的变量之前笔记中的例子已经对函数参数传递过程做了总结，提到了怎么调用函数的返回值，怎么实现函数的嵌套，基本概念用法都已经提过，这里只是做个思考和补充。 1.1 局部变量 函数内部的定义的变量 局部变量只在函数内部生效">
+  <meta name="description" content="前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python自学笔记（6）——函数的变量和高级用法">
 <meta property="og:url" content="http://www.shelven.com/2022/11/29/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。 1. 函数的变量之前笔记中的例子已经对函数参数传递过程做了总结，提到了怎么调用函数的返回值，怎么实现函数的嵌套，基本概念用法都已经提过，这里只是做个思考和补充。 1.1 局部变量 函数内部的定义的变量 局部变量只在函数内部生效">
+<meta property="og:description" content="前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-11-28T18:37:37.000Z">
-<meta property="article:modified_time" content="2022-11-28T18:46:14.870Z">
+<meta property="article:modified_time" content="2022-12-03T15:54:38.000Z">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1670082711788" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1670082711788"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1670083152949" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1670083152949"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1670082711788","sites":"/js/plugins/sites.js?time=1670082711788","friends":"/js/plugins/friends.js?time=1670082711788","parallax":"/js/plugins/parallax.js?time=1670082711788","rightMenu":"/js/plugins/rightMenu.js?time=1670082711788","contributors":"/js/plugins/contributors.js?time=1670082711788","message":"/js/thirdparty/message.js?time=1670082711788","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670082711788"},"css":{"style":"/css/style.css?time=1670082711788","message":"/css/message.css?time=1670082711788"}},
+    cdn: {"js":{"app":"/js/app.js?time=1670083152949","sites":"/js/plugins/sites.js?time=1670083152949","friends":"/js/plugins/friends.js?time=1670083152949","parallax":"/js/plugins/parallax.js?time=1670083152949","rightMenu":"/js/plugins/rightMenu.js?time=1670083152949","contributors":"/js/plugins/contributors.js?time=1670083152949","message":"/js/thirdparty/message.js?time=1670083152949","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083152949"},"css":{"style":"/css/style.css?time=1670083152949","message":"/css/message.css?time=1670083152949"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670082711788),
+    lastupdate: new Date(1670083152949),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3201,6 +3201,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。</p>
+<span id="more"></span>
+
 <h2 id="1-函数的变量"><a href="#1-函数的变量" class="headerlink" title="1. 函数的变量"></a>1. 函数的变量</h2><div class="story post-story"><p>之前笔记中的例子已经对函数参数传递过程做了总结，提到了怎么调用函数的返回值，怎么实现函数的嵌套，基本概念用法都已经提过，这里只是做个思考和补充。</p>
 <h3 id="1-1-局部变量"><a href="#1-1-局部变量" class="headerlink" title="1.1 局部变量"></a>1.1 局部变量</h3><ul>
 <li>函数内部的定义的变量</li>
@@ -3352,10 +3354,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-29T02:46:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-03T23:54:38+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年11月29日</p>
+    <p>更新于：2022年12月3日</p>
   </a>
 </div>
 
@@ -3378,7 +3380,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary=前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。"
           
           >
           
@@ -3390,7 +3392,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary=前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。"
           
           >
           
@@ -3402,7 +3404,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/11/29/a.html&title=python自学笔记（6）——函数的变量和高级用法 - 我的小破站&summary=前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。"
           
           >
           
@@ -3447,7 +3449,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='next' href='/2022/11/28/a.html'>
           <p class='title'>python自学笔记（5）——装饰器<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>这里讲一讲前面提到的python装饰器，@classmethod和@staticmethod是python内置装饰器，在了解什么是装饰器之前首先要了解函数的几个特征。
-1. 有关函数的几个概念1...</p>
+
+
+1. 有关函数的几个概...</p>
         </a>
       
     </div>
@@ -3687,7 +3691,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1670082711788.js"></script>
+<script src="/js/app.js?time=1670083152949.js"></script>
 
 
 
@@ -3871,7 +3875,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1670082711788')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1670083152949')</script>
 
 
 
@@ -4001,19 +4005,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1670082711788")
+        volantis.js("/js/plugins/sites.js?time=1670083152949")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1670082711788")
+        volantis.js("/js/plugins/friends.js?time=1670083152949")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1670082711788")
+        volantis.js("/js/plugins/contributors.js?time=1670083152949")
       }
     
   };
@@ -4082,7 +4086,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1670082711788')
+    await volantis.js('/js/plugins/aplayer.js?time=1670083152949')
   
   })();
 
@@ -4202,7 +4206,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670082711788");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1670083152949");
   }
 
   function loadSearchService() {
@@ -4542,7 +4546,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1670082711788').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1670083152949').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4776,7 +4780,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/29/a.html","name":"python自学笔记（6）——函数的变量和高级用法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（6）——函数的变量和高级用法","description":"","datePublished":"2022-11-28T18:37:37.000Z","dateModified":"2022-11-28T18:46:14.870Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/29/a.html","wordCount":0,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/编程自学/","name":"编程自学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/11/29/a.html","name":"python自学笔记（6）——函数的变量和高级用法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python自学笔记（6）——函数的变量和高级用法","description":"前面在通过讲什么是高阶函数（能够接受函数作为参数传入的函数，或者可以返回函数对象的函数）引出了装饰器的由来和存在的意义。这里对python函数的其他基础概念做个补充和记录。","datePublished":"2022-11-28T18:37:37.000Z","dateModified":"2022-12-03T15:54:38.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/11/29/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/11/29/a.html","wordCount":86,"articleSection":"学习笔记","keywords":"python","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
