@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1676987396965" as="style">
+  <link rel="preload" href="/css/style.css?time=1677160767530" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-24T18:05:26.000Z">
-<meta property="article:modified_time" content="2022-12-03T16:29:06.000Z">
+<meta property="article:modified_time" content="2023-02-23T13:59:10.394Z">
 <meta property="article:tag" content="集群">
 <meta property="article:tag" content="slurm">
 <meta name="twitter:card" content="summary">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1676987396965" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1676987396965"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1677160767530" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1677160767530"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1676987396965","sites":"/js/plugins/sites.js?time=1676987396965","friends":"/js/plugins/friends.js?time=1676987396965","parallax":"/js/plugins/parallax.js?time=1676987396965","rightMenu":"/js/plugins/rightMenu.js?time=1676987396965","contributors":"/js/plugins/contributors.js?time=1676987396965","message":"/js/thirdparty/message.js?time=1676987396965","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1676987396965"},"css":{"style":"/css/style.css?time=1676987396965","message":"/css/message.css?time=1676987396965"}},
+    cdn: {"js":{"app":"/js/app.js?time=1677160767530","sites":"/js/plugins/sites.js?time=1677160767530","friends":"/js/plugins/friends.js?time=1677160767530","parallax":"/js/plugins/parallax.js?time=1677160767530","rightMenu":"/js/plugins/rightMenu.js?time=1677160767530","contributors":"/js/plugins/contributors.js?time=1677160767530","message":"/js/thirdparty/message.js?time=1677160767530","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1677160767530"},"css":{"style":"/css/style.css?time=1677160767530","message":"/css/message.css?time=1677160767530"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1676987396965),
+    lastupdate: new Date(1677160767530),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3157,13 +3157,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：3.3k 字</p>
+      <p>字数：3.6k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：11 分钟</p>
+      <p>时长：12 分钟</p>
     </a>
   </div>
 
@@ -3503,6 +3503,136 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>查询配置信息，也是所有的</td>
 </tr>
 </tbody></table>
+<h3 id="2023-x2F-02-x2F-23-补充"><a href="#2023-x2F-02-x2F-23-补充" class="headerlink" title="2023&#x2F;02&#x2F;23 补充"></a>2023&#x2F;02&#x2F;23 补充</h3><p>因为经常要用到<code>scontrol show job</code>来查看当前作业得运行情况、占用资源情况等等，因此更新一下该命令主要输出项：</p>
+<p><img src="https://www.shelven.com/tuchuang/20220524/1111.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220524/1111.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JobId</td>
+<td>作业号</td>
+</tr>
+<tr>
+<td>UserId</td>
+<td>用户名（用户ID）</td>
+</tr>
+<tr>
+<td>GroupId</td>
+<td>用户组（组ID）</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>优先级，越大越优先，如果为0则表示被管理员挂起，不允许运行</td>
+</tr>
+<tr>
+<td>Nice</td>
+<td>Nice值，越小越优先，­20到19</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>记账用户名</td>
+</tr>
+<tr>
+<td>JobState</td>
+<td>作业状态。– PENDING：排队中；– RUNNING：运行中；– COMPLETED：已完成；– CANCELLED：已取消</td>
+</tr>
+<tr>
+<td>Requeue</td>
+<td>节点失效时，是否重排队，0为否，1为是</td>
+</tr>
+<tr>
+<td>Restarts</td>
+<td>失败时，是否重运行，0为否，1为是</td>
+</tr>
+<tr>
+<td>BatchFlag</td>
+<td>是否为批处理作业，0为否，1为是</td>
+</tr>
+<tr>
+<td>Reboot</td>
+<td>节点空闲时是否重启节点，0为否，1为是</td>
+</tr>
+<tr>
+<td>RunTime</td>
+<td>已运行时间</td>
+</tr>
+<tr>
+<td>TimeLimit</td>
+<td>作业允许的剩余运行时间</td>
+</tr>
+<tr>
+<td>TimeMin</td>
+<td>最小时间</td>
+</tr>
+<tr>
+<td>SubmitTime</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>EligibleTime</td>
+<td>获得认可时间</td>
+</tr>
+<tr>
+<td>StartTime</td>
+<td>开始运行时间</td>
+</tr>
+<tr>
+<td>EndTime</td>
+<td>预计结束时间</td>
+</tr>
+<tr>
+<td>Partition</td>
+<td>队列名</td>
+</tr>
+<tr>
+<td>AllocNode:Sid</td>
+<td>分配的节点:系统ID号</td>
+</tr>
+<tr>
+<td>NodeList</td>
+<td>实际运行节点列表</td>
+</tr>
+<tr>
+<td>BatchHost</td>
+<td>批处理节点名</td>
+</tr>
+<tr>
+<td>NumNodes</td>
+<td>节点数</td>
+</tr>
+<tr>
+<td>NumCPUs</td>
+<td>CPU核数</td>
+</tr>
+<tr>
+<td>NumTasks</td>
+<td>任务数</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>作业命令</td>
+</tr>
+<tr>
+<td>WorkDir</td>
+<td>工作目录</td>
+</tr>
+<tr>
+<td>StdErr</td>
+<td>标准出错输出文件</td>
+</tr>
+<tr>
+<td>StdIn</td>
+<td>标准输入文件</td>
+</tr>
+<tr>
+<td>StdOut</td>
+<td>标准输出文件</td>
+</tr>
+</tbody></table>
 
 </div>
   </div>
@@ -3544,10 +3674,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:29:06+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-23T21:59:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年12月4日</p>
+    <p>更新于：2023年2月23日</p>
   </a>
 </div>
 
@@ -3684,7 +3814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9B%86%E7%BE%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 计算机集群介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slurm%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-text">2. slurm调度系统介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%92%8C%E6%8F%90%E4%BA%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.1 创建和提交作业</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94srun"><span class="toc-text">2.1.1 交互模式——srun</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E6%89%B9%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94sbatch"><span class="toc-text">2.1.2 批处理模式——sbatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-%E5%88%86%E9%85%8D%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94salloc"><span class="toc-text">2.1.3 分配模式——salloc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-%E4%BD%9C%E4%B8%9A%E6%8F%90%E4%BA%A4%E5%8F%82%E6%95%B0"><span class="toc-text">2.1.4 作业提交参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2 其他用户命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-sinfo-%E6%9F%A5%E8%AF%A2%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.1 sinfo 查询信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-squeue-%E6%9F%A5%E8%AF%A2%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.2 squeue 查询作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-scancel-%E5%88%A0%E9%99%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.3 scancel 删除作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-scontrol-%E6%9F%A5%E8%AF%A2%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.4 scontrol 查询详细信息</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9B%86%E7%BE%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 计算机集群介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slurm%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-text">2. slurm调度系统介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%92%8C%E6%8F%90%E4%BA%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.1 创建和提交作业</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94srun"><span class="toc-text">2.1.1 交互模式——srun</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E6%89%B9%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94sbatch"><span class="toc-text">2.1.2 批处理模式——sbatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-%E5%88%86%E9%85%8D%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94salloc"><span class="toc-text">2.1.3 分配模式——salloc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-%E4%BD%9C%E4%B8%9A%E6%8F%90%E4%BA%A4%E5%8F%82%E6%95%B0"><span class="toc-text">2.1.4 作业提交参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2 其他用户命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-sinfo-%E6%9F%A5%E8%AF%A2%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.1 sinfo 查询信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-squeue-%E6%9F%A5%E8%AF%A2%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.2 squeue 查询作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-scancel-%E5%88%A0%E9%99%A4%E4%BD%9C%E4%B8%9A"><span class="toc-text">2.2.3 scancel 删除作业</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-scontrol-%E6%9F%A5%E8%AF%A2%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-text">2.2.4 scontrol 查询详细信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2023-x2F-02-x2F-23-%E8%A1%A5%E5%85%85"><span class="toc-text">2023&#x2F;02&#x2F;23 补充</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3851,7 +3981,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1676987396965.js"></script>
+<script src="/js/app.js?time=1677160767530.js"></script>
 
 
 
@@ -4035,7 +4165,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1676987396965')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1677160767530')</script>
 
 
 
@@ -4165,19 +4295,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1676987396965")
+        volantis.js("/js/plugins/sites.js?time=1677160767530")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1676987396965")
+        volantis.js("/js/plugins/friends.js?time=1677160767530")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1676987396965")
+        volantis.js("/js/plugins/contributors.js?time=1677160767530")
       }
     
   };
@@ -4246,7 +4376,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1676987396965')
+    await volantis.js('/js/plugins/aplayer.js?time=1677160767530')
   
   })();
 
@@ -4366,7 +4496,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1676987396965");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1677160767530");
   }
 
   function loadSearchService() {
@@ -4706,7 +4836,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1676987396965').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1677160767530').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4940,7 +5070,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/25/a.html","name":"集群和slurm调度系统使用心得"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群和slurm调度系统使用心得","description":"随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。","datePublished":"2022-05-24T18:05:26.000Z","dateModified":"2022-12-03T16:29:06.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/25/a.html","wordCount":97,"articleSection":"学习笔记","keywords":"集群,slurm","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/25/a.html","name":"集群和slurm调度系统使用心得"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"集群和slurm调度系统使用心得","description":"随着各种组学技术和生物信息学技术的发展，高通量测序现在已经广泛应用到生命科学的多个领域，这些测序数据动辄几个G甚至几十上百G（主要看物种和测序深度），个人电脑对这些大量的数据处理时有些力不从心。","datePublished":"2022-05-24T18:05:26.000Z","dateModified":"2023-02-23T13:59:10.394Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/25/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/25/a.html","wordCount":97,"articleSection":"学习笔记","keywords":"集群,slurm","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
