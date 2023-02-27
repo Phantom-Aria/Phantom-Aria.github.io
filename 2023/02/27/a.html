@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.shelven.com/2022/05/04/a.html"/>
+  <link rel="canonical" href="http://www.shelven.com/2023/02/27/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,21 +27,20 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>获得测序原始数据——初探GEO和SRA数据库 - 我的小破站</title>
-  <meta name="keywords" content="SRA,SRA Toolkit,GEO,null">
-  <meta name="description" content="最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。">
+  <title>0基础学习基因组三代测序组装（6）——基因组polish - 我的小破站</title>
+  <meta name="keywords" content="NextPolish,Racon,null">
+  <meta name="description" content="三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获得测序原始数据——初探GEO和SRA数据库">
-<meta property="og:url" content="http://www.shelven.com/2022/05/04/a.html">
+<meta property="og:title" content="0基础学习基因组三代测序组装（6）——基因组polish">
+<meta property="og:url" content="http://www.shelven.com/2023/02/27/a.html">
 <meta property="og:site_name" content="我的小破站">
-<meta property="og:description" content="最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。">
+<meta property="og:description" content="三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-03T20:02:37.000Z">
-<meta property="article:modified_time" content="2022-12-03T16:24:11.000Z">
-<meta property="article:tag" content="SRA">
-<meta property="article:tag" content="SRA Toolkit">
-<meta property="article:tag" content="GEO">
+<meta property="article:published_time" content="2023-02-27T03:02:16.000Z">
+<meta property="article:modified_time" content="2023-02-27T03:05:01.000Z">
+<meta property="article:tag" content="NextPolish">
+<meta property="article:tag" content="Racon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3092,7 +3091,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/04/a.html">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/02/27/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3113,7 +3112,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        获得测序原始数据——初探GEO和SRA数据库
+        0基础学习基因组三代测序组装（6）——基因组polish
       </h1>
       <div class='new-meta-box'>
         
@@ -3132,10 +3131,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
       </span>
     
   </div>
@@ -3144,10 +3147,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-04T04:02:37+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-27T11:02:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年5月4日</p>
+    <p>发布于：2023年2月27日</p>
   </a>
 </div>
 
@@ -3158,13 +3161,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.7k 字</p>
+      <p>字数：1.3k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：9 分钟</p>
+      <p>时长：5 分钟</p>
     </a>
   </div>
 
@@ -3176,7 +3179,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="获得测序原始数据——初探GEO和SRA数据库" data-path="/2022/05/04/a.html">
+      <div id="lc-pv" data-title="0基础学习基因组三代测序组装（6）——基因组polish" data-path="/2023/02/27/a.html">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -3197,67 +3200,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。</p>
+    <p>三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。</p>
 <span id="more"></span>
 
-<h1 id="初探GEO数据库和SRA数据库"><a href="#初探GEO数据库和SRA数据库" class="headerlink" title="初探GEO数据库和SRA数据库"></a>初探GEO数据库和SRA数据库</h1><h2 id="1-GEO数据库"><a href="#1-GEO数据库" class="headerlink" title="1. GEO数据库"></a>1. GEO数据库</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/geo/">先上数据库链接，点击这里</a></p>
-<p>GEO数据库全称Gene Expression Omnibus database，是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。它创建于2000年，收录了世界各国研究机构提交的大多数高通量基因表达数据，GEO除了二代测序数据，还包含<strong>芯片测序</strong>、<strong>单细胞测序数据</strong>。</p>
-<p>GEO数据库有四种数据存放类型**GSE数据编号(Series)、GPL数据编号(GEO platforms)、GSM数据编号(Samples)和GDS数据编号(Datasets)**。</p>
-<p>一篇文章可以有一个或者多个GSE(Series)数据集，一个GSE里面可以有一个或者多个GSM(Samples)样本，如果做的是基因芯片，那每个数据集也会有自己对应的芯片平台，就是GPL(GEO platforms)。GSE编号一般为作者提交时生成的原始数据编号，后续NCBI中的工作人员会根据研究目的、样品类型等信息归纳整合为一个GDS(Datasets)，整理后的数据还会有GEO profile数据，也就是基因在这次实验中的表达数据。我平常文献里看到最多的就是GSE编号，可以直接在GEO数据库的搜索框里输入查看。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>我个人比较关注的是tools栏目里的<strong>FTP Site</strong>功能。ftp是文件传输协议，ftp访问的界面非常干净，如果我只需要下载GEO数据库里的文件，而不关注其他多余信息的话，可以通过这个界面非常快速地找到对应GSE编号下所有作者上传到GEO数据库的文件，目录结构层次一目了然。如下图所示，datasets对应GDS编号；platforms对应GPL编号；samples对应GSM编号；series对应GSE编号，网站还很贴心地给了README.txt里面写了帮助文档，包括怎么用ftp访问等等</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在Browse Content这个栏目里，我们也能看到这个数据库的一些概览，比如现在有多少数据集，多少个芯片平台，多少上传的样品等等信息。我翻看了一下两年前jimmy出的教程，那个时候的GEO数据库收录的信息只有现在的一半不到，两年时间这些数据呈井喷式的发展，大数据时代信息发展之快也确实让我挺震惊。</p>
-<p>尤其是点开基因芯片的平台，以上传的样品数量对这些芯片平台进行排序，发现两年前独占鳌头的Affymetrix公司的HG-U133（也是最古老的基因芯片）已经被illumina公司高通量测序芯片全面超越了接近两倍，这也意味着高通量测序在这两年发展已经不仅仅是快速发展了，简直是火箭式发展……这也是大势所趋。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>GEO数据库的搜索地址也很有规律性，比如只有最后的GSE编号不同，其他网址字段都是一模一样的，这也算是方便搜索的一个没什么用处的小技巧？……</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>看点有用的，我们根据文献得到的GSE编号进行搜索，可以看到如下页面，前半部分是作者的一些信息，我们可以获得测序物种、作者的联系方式、发表的文章PMID等等，而我们更需要获取的信息在后半部分：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>样本信息这里解释一下，有三种主要的数据类型：</p>
-<ul>
-<li><p>SOFT  平台信息芯片中探针与基因的对应关系注释文件，样品单独的表达量，所有信息文件</p>
-</li>
-<li><p>MINiML  XML格式的所有数据，同SOFT文件单格式不同，和HTML格式差不多</p>
-</li>
-<li><p>TXT  这是样品表达矩阵的数据文件，我的理解是总结类型文件，不如用底下的原始数据</p>
-</li>
-</ul>
-<p>原始数据信息也说一下，<strong>这里可能会给原始测序的raw data，也可能不给；有的时候会给raw count表达矩阵，也有的时候不给；样品表达矩阵也是有的时候给的raw count，有的时候给的FPKM</strong>（比如上面这种情况）。就…挺离谱的，没有标准，如果我们要跑Deseq2复现作者的结论，通过FPKM得到的表达矩阵还不能用。希望网站能制定点相关标准吧（题外话，不然对于我们这种小白，找不到数据直接痛苦面具）</p>
-<p>我个人觉得，这个数据库比较重要的是可以获得样品分组信息和SRA数据库的链接地址，方便我们下载测序原始数据（后面介绍怎么下载）。<strong>如果不想跑原始数据，也可以直接拿样品表达矩阵来跑转录组下游分析</strong>。直接用表达矩阵就是要当心作者拿漂亮数据坑你。</p>
-</div><h2 id="2-SRA数据库"><a href="#2-SRA数据库" class="headerlink" title="2. SRA数据库"></a>2. SRA数据库</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/sra">同样的先上数据库链接，点这里</a></p>
-<p>其实从网址上就可以看出端倪，这俩数据库都是NCBI旗下的俩兄弟，都是NCBI一个亲爹亲妈养的。我百度的时候也发现，很多人把这两个数据库混在一起，或者叫GEO&#x2F;SRA数据库，其实两者还是有区别的。</p>
-<p>SRA数据库是三大核酸数据库之一，我之前的笔记也有介绍过<a href="https://www.shelven.com/2022/04/14/a.html?keyword=%E8%81%94%E7%9B%9F">（点击这里查看）</a>。我个人的理解是，SRA数据库存放的是原始测序文件，而GEO数据库存放的大部分是经过作者处理以后的数据文件（有的也包括了原始测序文件），相对而言SRA数据库更大也更存粹，而NCBI官方也给了下载SRA数据的小工具——<strong>SRA Toolkit</strong>。</p>
-<p>SRA数据类型包含如下四种，看到前缀知道这是SRA数据库，了解一下就行：</p>
-<ul>
-<li><p>Studies  研究课题（前缀为ERP或SRP，包含多个Experiment)</p>
-</li>
-<li><p>Experiments  实验设计（前缀为SRS，包含Sample、DNA source、测序平台和测序数据等信息）</p>
-</li>
-<li><p>Samples  样品信息（前缀为SRX，包含一个或多个Runs)</p>
-</li>
-<li><p>Runs  测序结果集（SSR开头的记录，代表测序仪器所产生的reads）</p>
-</li>
-</ul>
-<h3 id="主要说说数据下载方式"><a href="#主要说说数据下载方式" class="headerlink" title="主要说说数据下载方式"></a><strong>主要说说数据下载方式</strong></h3><p>前几天也有同学问我sra数据库的原始测序数据怎么下载的，找不到下载方式，看的教程都是NCBI上直接下载的。emmmmmm我的第一反应是这不就是NCBI旗下的子数据库嘛……还能从哪儿下载…</p>
-<p>废话不多说，直接看官网给的下载工具——<a target="_blank" rel="noopener" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software">SRA Toolkit</a></p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/8.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>这是一个官方给的小工具合集，提供我们各种操作系统下的安装包，我把linux和windows安装包都下了。安装步骤都是一样的，解压，把bin文件夹路径加到系统环境变量，搞定。windows需要打开cmd命令行运行一次prefetch（下载命令），按照提示输入<code>vdb-config --interactive</code>起到类似激活的作用就行了。linux里甚至都不需要编译（也可以conda安装）。可能有的同学对自己的windows系统不熟悉，不知道怎么改自己的系统环境变量，其实这个比linux改环境变量更容易，百度一下吧&#x3D; &#x3D;</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/9.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><strong>我个人更推荐在windows系统安装SRA Toolkit</strong>，SRA数据库本身服务器在国外，国内访问下载速度慢到令人发指（个位数Kb&#x2F;s，甚至直接没有），而类似转录组这种数据，细菌可能还好点，动植物做个10X测序动不动就是几个G十几个G，加上分组和生物学重复动辄几十上百G，那点速度下到天荒地老也下不完。纯命令行的linux系统使用代理服务相对windows系统来说要麻烦一点，说白了，windows系统更容易科学上网，为了下载数据没有别的办法。</p>
-<p>我们用的就是SRA Toolkit工具包里的<strong>prefetch命令</strong>下载原始数据，prefetch有个最大的好处是只要知道SRA数据库的数据类型编号，就可以<strong>直接下载</strong>对应的原始数据。如果要批量下载，可以将数据编号写入txt文件中再运行prefetch命令，或者直接写个循环语句。所以这里的关键是怎么得到数据编号，比如SRR编号等等。</p>
-<p>前面GEO数据库提供了SRA数据库的链接，我们可以直接点开（或者点击原始数据底下的<strong>SRA Run Selector</strong>）：</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/10.jpg.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/10.jpg.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>点击右上角的<strong>Send results to Run selector</strong>:</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>我们可以看到，这个项目一共有16个基因组测序数据，难道要16个wget命令一个一个下载麽？不需要，如果要下载的基因组数据数量多肯定不行。我们可以从Accession list里获取不同前缀的各种run数据，后面用prefetch命令结合循环语句，直接一步下载。</p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/12.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>把Accession list的编号全部复制下来，以linux为例运行<code>cat &gt; id</code>，回车后粘贴编号，按ctrl+c退出，这样就生成了一个名为id的文件，里面内容是我们要下载的基因组测序数据编号。</p>
-<p>写一个循环语句<code>cat id | while read id ;do prefetch $id &amp;;done</code> ，就可以全部下载了，这里没有指定输出目录，最终所有原始测序数据会输出到<strong>根目录下。</strong></p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/13.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/13.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://www.shelven.com/tuchuang/20220504/14.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20220504/14.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>最后顺便说一句，下载测序原始数据的方法很多，不仅仅是官方给的这个小工具。还可以用aspera遵循一定的下载格式也可以下载原始数据，或者用最原始的wget简单粗暴直接下载，只是说这些方法都或多或少受到网络限制的影响，prefetch也只是相对稳定一点。前面的笔记我也介绍过爬虫的编程方法，分解网页结构，批量抓取我们需要的信息，这也不失为一种方法。人是活的，不要拘泥于一种思路。</p>
+<p>常用软件主要有Pilon、Racon，针对PacBio的有Quiver &amp; Arrow，针对Nanopore的有NanoPolish，以及武汉希望组为NextDenovo配套开发的NextPolish等等。<strong>要注意下先进行三代测序数据矫正，再进行二代测序数据矫正，顺序不能反</strong>，因为三代数据读长长准确率低，二代读长短准确率高，利用二代测序测序数据对三代测序数据进行纠错可以将三代测序错误率降低到二代测序的水平。如果不先进行三代序列纠错，由于基因组上存在过高错误率，导致二代序列的错误比对，影响最终polish效果。</p>
+<p>这里以前面用NextDenovo组装的植物三代基因组为例，介绍下Racon和NextPolish用法。</p>
+<h2 id="1-Racon"><a href="#1-Racon" class="headerlink" title="1. Racon"></a>1. Racon</h2><div class="story post-story"><p>racon的基本用法如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">racon [options ...] &lt;sequences&gt; &lt;overlaps&gt; &lt;target sequences&gt;</span><br></pre></td></tr></table></figure>
+
+<p>需要用到三种输入文件：sequences是指用来纠错的三代基因组测序数据（后面以原始数据称呼）；target sequences指<strong>需要校正的组装后的基因组数据</strong>（后面以组装基因组称呼）；overlaps指回比到组装基因组的原始数据文件，其中包含了所有的overlaps，其文件格式为MHAP&#x2F;PAF&#x2F;SAM三种之一。</p>
+<p>因此在使用Racon之前需要使用其他比对工具将三代数据回贴到组装基因组上，在<a href="https://www.shelven.com/2022/04/15/a.html">转录组分析笔记</a>中有介绍过相关软件，我这里用minimap2进行比对，这是专门针对三代测序数据开发的比对工具，运行速度较快。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minimap2 -a -t 20 &lt;target sequences&gt; &lt;sequences&gt; &gt; minimap_1.sam</span><br></pre></td></tr></table></figure>
+
+<p><code>-a</code>表示结果为sam格式，<code>&lt;target sequences&gt;</code>处传入组装基因组的绝对路径，<code>&lt;sequences&gt;</code>处传入原始数据的绝对路径，比对结果的sam文件命名为minimap_1.sam</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">racon -t 50 &lt;sequences&gt; minimap_1.sam &lt;target sequences&gt; &gt; racon_minimap_1.fasta</span><br></pre></td></tr></table></figure>
+
+<p>如上一次循环下来（大约3小时），得到的racon_minimap_1.fasta就是经过一次三代数据校正的组装基因组。</p>
+<p>一般要用三代数据polish 2-4次，之后用二代数据继续校正4次左右，可以写脚本循环，需要注意<strong>racon因为要一次读入三代原始数据和回比的sam数据，内存需求量非常大</strong>，申请的内核数需要自己计算一下，否则会报内存溢出的错误（220Mb的基因组，100X测序深度，申请50个核才能跑动）。</p>
+<p>脚本文件racon.sh如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">minimap2 -a -t 50 $1 $2 &gt; minimap_1.sam</span><br><span class="line">racon -t 50 $2 minimap_1.sam $1 &gt; racon_minimap_1.fasta</span><br><span class="line"></span><br><span class="line">minimap2 -a -t 50 racon_minimap_1.fasta $2 &gt; minimap_2.sam</span><br><span class="line">racon -t 50 $2 minimap_2.sam racon_minimap_1.fasta &gt; racon_minimap_2.fasta</span><br></pre></td></tr></table></figure>
+
+<p>recon.slurm：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -J recon</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -N 1</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -n 50</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -t 7200</span></span><br><span class="line"></span><br><span class="line">date</span><br><span class="line">bash racon.sh /public/home/wlxie/NextDenovo/03_rundir/03.ctg_graph/nd.asm.fasta /public/home/wlxie/luobuma/luobuma/baima_rawdata/Third_generation_sequencing/clean_filter.fq</span><br><span class="line">date</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbatch recon.slurm</span><br></pre></td></tr></table></figure>
+
+<p>可以从输出日志中看到，racon运行主要分两步，分别是校准overlap和生成共有序列（也就是去重），<strong>在生成共有序列（consensus sequence）之后再进行二代数据的纠错</strong>。</p>
+<p>这一步的Racon检测出两个contig可能是嵌合体（chimeric），所谓嵌合contig，该contig的某段区域可能可以比对上不同的染色体，或者头尾部分可能分别属于不同的染色体。第一遍racon的时候没有检测到，第二遍racon才出现这个提示，我不确定这两个contig是否真的是嵌合体，最终还是需要Hi-C数据来验证。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230227/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230227/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我这里两次循环得到polish的结果文件<code>racon_minimap_2.fasta</code>，接下来用NextPolish软件继续用二代数据polish。</p>
+</div><h2 id="2-NextPolish"><a href="#2-NextPolish" class="headerlink" title="2. NextPolish"></a>2. NextPolish</h2><div class="story post-story"><p>NextPolish是武汉那希望组开发的与NextDenovo配套的基因组polish软件，支持二代短读长、三代长读长和HiFi数据进行纠错。</p>
+<p>和之前的NextDenovo操作方法类似，首先需要准备一个input文件，写入二代数据的绝对路径到sgs.fofn：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">realpath ./1.fq ./2.fq &gt; sgs.fofn</span><br></pre></td></tr></table></figure>
+
+<p>从doc文件夹中copy一份配置文件run.cfg，修改参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[General]</span><br><span class="line">job_type = slurm	# local, slurm, sge, pbs, lsf塔大学校集群选择slurm</span><br><span class="line">job_prefix = nextPolish</span><br><span class="line">task = best		# all, default, best, 1, 2, 5, 12, 1212…  1，2是两个不同的短读长算法模块，5是长读长算法模块，默认best</span><br><span class="line">rewrite = yes</span><br><span class="line">deltmp = yes	# 删除临时结果文件</span><br><span class="line">rerun = 3		# 重复执行polish次数</span><br><span class="line">parallel_jobs = 20	# 每个job线程数</span><br><span class="line">multithread_jobs = 5	# job数</span><br><span class="line">genome = /public/home/wlxie/baima_polish/racon_minimap_2.fasta</span><br><span class="line">genome_size = auto</span><br><span class="line">workdir = ./01_rundir</span><br><span class="line">polish_options = -p &#123;multithread_jobs&#125;</span><br><span class="line"></span><br><span class="line">[sgs_option] #optional</span><br><span class="line">sgs_fofn = ./sgs.fofn	# 输入文件位置（一行一条）</span><br><span class="line">sgs_options = -max_depth 100 -bwa	# 使用bwa进行比对</span><br></pre></td></tr></table></figure>
+
+<p>长reads和HiFi的两段配置信息删除，<strong>只留下短读长sgs_options</strong>。</p>
+<p>这个软件的优点是速度快（<strong>100线程，4次polish，220Mb的基因组，72G的二代数据量仅仅用了8小时</strong>），而且只需要提供配置和输入文件就可以到polish结束出结果，经过4次Polish结果的迭代，最终结果如下:</p>
+<p><img src="https://www.shelven.com/tuchuang/20230227/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230227/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>Contig N50比一开始NextDenovo组装结果大，也就是组装效果更好。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230227/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230227/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 
 </div>
   </div>
@@ -3282,7 +3265,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://www.shelven.com/2022/05/04/a.html>http://www.shelven.com/2022/05/04/a.html</a></p>
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/02/27/a.html>http://www.shelven.com/2023/02/27/a.html</a></p>
               
             
           </blockquote>
@@ -3299,10 +3282,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-04T00:24:11+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-27T11:05:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年12月4日</p>
+    <p>更新于：2023年2月27日</p>
   </a>
 </div>
 
@@ -3311,8 +3294,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SRA/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SRA</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SRA-Toolkit/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SRA Toolkit</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GEO/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>GEO</p></a></div>
-  <span hidden itemprop="keywords">SRA SRA Toolkit GEO</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/NextPolish/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>NextPolish</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Racon/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Racon</p></a></div>
+  <span hidden itemprop="keywords">NextPolish Racon</span>
 
 
         
@@ -3325,7 +3308,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary=最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/02/27/a.html&title=0基础学习基因组三代测序组装（6）——基因组polish - 我的小破站&summary=三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。"
           
           >
           
@@ -3337,7 +3320,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary=最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/02/27/a.html&title=0基础学习基因组三代测序组装（6）——基因组polish - 我的小破站&summary=三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。"
           
           >
           
@@ -3349,7 +3332,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2022/05/04/a.html&title=获得测序原始数据——初探GEO和SRA数据库 - 我的小破站&summary=最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/02/27/a.html&title=0基础学习基因组三代测序组装（6）——基因组polish - 我的小破站&summary=三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。"
           
           >
           
@@ -3382,18 +3365,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/05/05/a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>转录组数据分析笔记（9）——pheatmap绘制差异表达基因热图</p>
-          <p class='content'>前面说到怎么用ggplot做一个火山图来查看各个基因的表达情况，火山图是以log2FC值为横坐标，以-log10（FDR）值作为纵坐标，将所有的基因都做了点状图。虽然能比较直观地看到所有基因表达...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/05/03/a.html'>
-          <p class='title'>简易爬虫程序编程记录——以微博热搜为例<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>写的这个小爬虫程序主要是应用requests库和lxml包的etree库，简单介绍一下。
-
-
-1. 关于爬虫百度百科对于爬虫的定义是，网络爬虫（又被称为网页蜘蛛、网络机器人，在 FOAF 社区中...</p>
+        <a class='next' href='/2023/02/23/a.html'>
+          <p class='title'>0基础学习基因组三代测序组装（5）——三代数据组装<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>前段时间比较忙，现在继续整理基因组测序组装系列的学习笔记。第四篇笔记写的二代测序基因组组装，主要是演示二代测序数据组装的主流工具SOAPdenovo 2.0是如何应用的。我这里有了二代和三代的测...</p>
         </a>
       
     </div>
@@ -3409,7 +3384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/04/a.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/02/27/a.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
@@ -3442,7 +3417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-GEO%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">1. GEO数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SRA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">2. SRA数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-text">主要说说数据下载方式</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Racon"><span class="toc-text">1. Racon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-NextPolish"><span class="toc-text">2. NextPolish</span></a></li></ol>
     </div>
   </section>
 
@@ -3494,7 +3469,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="获得测序原始数据——初探GEO和SRA数据库";
+  pdata.postTitle="0基础学习基因组三代测序组装（6）——基因组polish";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4698,7 +4673,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2022/05/04/a.html","name":"获得测序原始数据——初探GEO和SRA数据库"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"获得测序原始数据——初探GEO和SRA数据库","description":"最近在看转录组数据分析的文献，想下载一些原始数据自己跑一跑的，发现自己对于几个高通量测序数据库还是有些不太熟悉。以我现在的经验来看，EBI数据库的原始测序数据最容易获得，可以直接在EBI官网下载需要的fastq格式文件，但是NCBI的SRA数据库下载数据还是有些麻烦的，做个学习笔记记录下。","datePublished":"2022-05-03T20:02:37.000Z","dateModified":"2022-12-03T16:24:11.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2022/05/04/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2022/05/04/a.html","wordCount":145,"articleSection":"学习笔记","keywords":"SRA,SRA Toolkit,GEO","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/02/27/a.html","name":"0基础学习基因组三代测序组装（6）——基因组polish"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（6）——基因组polish","description":"三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffold N50。","datePublished":"2023-02-27T03:02:16.000Z","dateModified":"2023-02-27T03:05:01.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/02/27/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/02/27/a.html","wordCount":103,"articleSection":"学习笔记","keywords":"NextPolish,Racon","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
