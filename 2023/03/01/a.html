@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/archives/2022/09/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/03/01/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,18 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>归档：2022/9 - 我的小破站</title>
+  <title>0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数） - 我的小破站</title>
   <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/archives/2022/09/index.html">
+  <meta name="description" content="通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）">
+<meta property="og:url" content="http://www.shelven.com/2023/03/01/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-03-01T12:39:05.000Z">
+<meta property="article:modified_time" content="2023-03-01T12:42:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2265,7 +2269,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3021,7 +3025,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3084,28 +3088,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/20/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/03/01/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3114,246 +3098,353 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/20/a.html"  itemprop="url">
-        深度学习笔记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>开坑记录一下学习人工智能(深度学习为主)的笔记，方便以后回顾学习~整理自点头教育</p>
+    
+      <h1 class="title" itemprop="name headline">
+        0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-01T20:39:05+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年3月1日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.3k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：9 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）" data-path="/2023/03/01/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。</p>
+<span id="more"></span>
+
+<p>复习一下前面说到的contig N50，按照contig从短到长的顺序依次相加，当相加的长度达到Contig总长度的一半，最后一个Contig长度即为<strong>contig N50</strong>.</p>
+<p>contig N50是基因组组装质量的第一指标，一般来说越高越好，但是contig N50不能完全代表一个基因组组装质量的高低，比如reads的错误连接也会使contig N50变高。接下来介绍几个现在常用的评估基因组组装质量的软件和方法。</p>
+<h2 id="1-保守型基因评估"><a href="#1-保守型基因评估" class="headerlink" title="1. 保守型基因评估"></a>1. 保守型基因评估</h2><div class="story post-story"><p>BUSCO（Benchmarking Universal Single-Copy Orthologs）评估是在基因含量层面上评估基因组完整性。简单来说，通过已有的直系同源数据库进行基因组比对，同源的生物之间有保守基因序列，能比对上的基因数越多说明组装的结果越靠谱。</p>
+<p>安装过程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1. 源码安装（需要安装前置软件）</span></span><br><span class="line">git clone https://gitlab.com/ezlab/busco.git</span><br><span class="line">cd busco/</span><br><span class="line">python setup.py install</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">前置软件：</span></span><br><span class="line">https://biopython.org/</span><br><span class="line">https://pandas.pydata.org/</span><br><span class="line">https://jgi.doe.gov/data-and-tools/software-tools/bbtools/</span><br><span class="line">https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST</span><br><span class="line">http://bioinf.uni-greifswald.de/augustus/</span><br><span class="line">https://github.com/soedinglab/metaeuk</span><br><span class="line">https://github.com/hyattpd/Prodigal</span><br><span class="line">http://hmmer.org/</span><br><span class="line">https://github.com/smirarab/sepp/</span><br><span class="line">https://www.r-project.org/</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2. conda安装（推荐）</span></span><br><span class="line">conda install -c conda-forge -c bioconda busco=5.3.2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>conda安装可能会比较慢，需要多试几次。实在不行就源码下载编译，不过需要下载非常多的前置软件，不同软件可能会有环境冲突问题、gcc版本问题等等<del>（我花了大半天时间在折腾环境）</del>。安装之后通过<code>busco -h</code>查看是否安装成功，如果提示缺什么软件就用conda补上（我当前环境中没有安装pandas就会有提示）。</p>
+<p>通过<code>busco --list-datasets</code>可以查看当前有哪些物种的数据库，我的植物是双子叶龙胆目，这里的数据库只有<strong>真双子叶植物（eudicots）</strong>分支离的最近，因此选择这个数据库，v5版本所有单拷贝直系同源数据库网址<a target="_blank" rel="noopener" href="https://busco-data.ezlab.org/v5/data/lineages/">https://busco-data.ezlab.org/v5/data/lineages/</a></p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>下载的数据库放在<code>busco_downloads</code>文件夹中，解压即可使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup wget https://busco-data.ezlab.org/v5/data/lineages/eudicots_odb10.2020-09-10.tar.gz &amp;</span><br><span class="line">tar -zxvf eudicots_odb10.2020-09-10.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>busco的详细参数可以看官网的user guide <a target="_blank" rel="noopener" href="https://busco.ezlab.org/busco_userguide.html">User guide BUSCO v5.4.4 (ezlab.org)</a></p>
+<p>简单讲一讲格式和能用到的参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">busco -i [SEQUENCE_FILE] -l [LINEAGE] -o [OUTPUT_NAME] -m [MODE] [OTHER OPTIONS]</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line">主要参数：</span><br><span class="line"> -i		序列文件位置</span><br><span class="line"> -l		下载的同源物种保守基因数据库位置</span><br><span class="line"> -o		输出文件名</span><br><span class="line"> -m		模式，分为genome,proteins,transcriptome三种</span><br><span class="line"> 其他参数：</span><br><span class="line"> --cpu		设置cpu数量</span><br><span class="line"> --download		在线下载数据库，根据分类有&quot;all&quot;、&quot;prokaryota&quot;、&quot;eukaryota&quot;和&quot;virus&quot; （不推荐，速度慢）</span><br><span class="line"> --offline		离线模式，不会更新数据库</span><br><span class="line">&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>以下是我跑的程序，大约用了1个小时：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">busco -i /public/home/wlxie/NextPolish/01_rundir/genome.nextpolish.fasta -l /public/home/wlxie/busco_soft/busco/test_data/eukaryota/busco_downloads/lineages/eudicots_odb10 -o baima -m genome --cpu 8 --offline</span><br></pre></td></tr></table></figure>
+
+<p>截至2023&#x2F;02&#x2F;28，<strong>真双子叶植物库有2326个保守BUSCO基因序列</strong>，比对结果文件在short_summary.specific.xxx.xxx.txt中，如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li>Complete BUSCOs (C)    多少个基因完全比对上BUSCOs</li>
+<li>Complete and single-copy BUSCOs (S)    多少个基因比对上单拷贝的BUSCOs</li>
+<li>Complete and duplicated BUSCOs (D)    多少个基因比对上多拷贝的BUSCOs</li>
+<li>Fragmented BUSCOs (F)    多少个基因部分比对上BUSCOs，可能基因只是部分存在</li>
+<li>Missing BUSCOs (M)    多少个基因没有比对上BUSCOs，可能这些直系同源基因是缺失的</li>
+</ul>
+<p>从上面的数据看，组装结果还是不错的。从中也可以看到BUSCO运行的<strong>两个步骤</strong>：<strong>用metaeuk进行基因预测</strong>（真核生物可以用tBLASTn与对应的BUSCO数据库序列进行比对从而确定候选区域，然后使用 Augustus 软件进行基因结构预测，两个软件可以替代metaeuk，详细参数见官网），以及<strong>HMMER进行同源基因的比对</strong>，从而评估基因组组装的完整性。</p>
+<p>官方还提供了相应的python程序绘制结果图（调用了R包ggplot2），先将BUSCO结果文件放到新建的文件夹，运行相应的py程序，指定工作目录即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir summaries</span><br><span class="line"></span><br><span class="line">cp baima/short_summary.specific.eudicots_odb10.baima.txt summaries</span><br><span class="line"></span><br><span class="line">generate_plot.py -wd summaries</span><br></pre></td></tr></table></figure>
+
+<p>结果图如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/3.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>当然，有结果数据就可以自己做更好看的图了，不一定要用官方的。</p>
+</div><h2 id="2-长末端重复序列评估"><a href="#2-长末端重复序列评估" class="headerlink" title="2. 长末端重复序列评估"></a>2. 长末端重复序列评估</h2><div class="story post-story"><p>2018年发表在Nucleic Acids Research上的一篇文章<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6265445/">Assessing genome assembly quality using the LTR Assembly Index (LAI)</a>，研究者提出了一种对长末端重复序列（long terminal repeats,LTRs）评估从而评价基因组完整度的方法，并且开发了对应的分析工具<code>LTR_retriever</code></p>
+<p>具体的LTR注释我会在后续的基因组注释笔记中更新，这里暂时跳过原理和背景部分，介绍下文章中提出的评估核心——LAI指数（LTR Assembly Index，LAI），也就是长末端重复序列组装指数。<code>raw LAI = (完整LTR-RTs长度/总LTR长度)*100</code>，修正后，<code>LAI = raw LAI + 2.8138 × (94 – 整个基因组LTR identity)</code>。</p>
+<p>以下是一个完整的LTR-RTs的结构示意图：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>文章还阐明LAI独立于基因组大小、LTR-RT含量以及基因空间评估指标（如BUSCO和CEGMA）等参数，可以用于鉴定低质量的基因组区域。使用这个指标要求**基因组中完整的LTR-RTs应至少占基因组0.1%且总LTR-RTs长度至少占5%**。</p>
+<p>文章最后给出了LAI评价基因组完整度的三个指标：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>LAI</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Draft</td>
+<td>0 ≤ LAI &lt; 10</td>
+<td>Apple (v1.0), Cacao (v1.0)</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>10 ≤ LAI &lt; 20</td>
+<td>Arabidopsis (TAIR10), Grape (12X)</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td>20 ≤ LAI</td>
+<td>Rice (MSUv7), Maize (B73 v4)</td>
+</tr>
+</tbody></table>
+<h3 id="2-1-LTR序列预测"><a href="#2-1-LTR序列预测" class="headerlink" title="2.1 LTR序列预测"></a>2.1 LTR序列预测</h3><p><code>LTR_retriever</code>需要以<code>LTR_finder</code>和&#x2F;或<code>ltrharvest</code>的LTR预测结果文件为输入，也可以整合两个软件的预测结果作为输入（或者其他符合格式的LTR结果文件），因此需要先安装并运行以上软件，我这里以文章中提到的软件和参数运行。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">LTR_finder、ltrharvest和LTR_retriever安装（ltrharvest是genometools软件的一部分）</span></span><br><span class="line"></span><br><span class="line">conda install -c bioconda ltr_finder</span><br><span class="line">conda install -c bioconda genometools-genometools</span><br><span class="line">conda install -c bioconda ltr_retriever</span><br></pre></td></tr></table></figure>
+
+<p><strong>LTR_finder</strong>预测LTR序列（参数均由作者给出，只有文件是自己的）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -n 10</span></span><br><span class="line"></span><br><span class="line">ltr_finder -D 15000 -d 1000 -L 7000 -l 100 -p 20 -C -M 0.85 /public/home/wlxie/NextPolish/01_rundir/genome.nextpolish.fasta &gt; baima_ltrfinder.scn</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数解释：</p>
+<p>-D NUM     Max distance between 5’&amp;3’LTR, default is 20000	# 5’和3’LTR之间的最大距离</p>
+<p>-d NUM     Min distance between 5’&amp;3’LTR, default is 1000</p>
+<p>-L NUM     Max length of 5’&amp;3’LTR, default is 3500	# 5’和3’LTR最大长度</p>
+<p>-l NUM     Min length of 5’&amp;3’LTR, default is 100</p>
+<p>-p NUM     min length of exact match pair, default is 20	# 完全匹配最小长度</p>
+<p>-C         detect Centriole, delete highly repeat regions	# 检测中心粒，删除高度重复区域</p>
+<p>-M NUM     min LTR similarity threshold, default is 0.00, [0,1]	#最小LTR相似度</p>
+</blockquote>
+<p><strong>ltrharvest</strong>预测LTR序列（ltrharvest参数均由作者给出，只有文件是自己的）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -n 10</span></span><br><span class="line"></span><br><span class="line">mkdir index</span><br><span class="line"></span><br><span class="line">gt suffixerator -db /public/home/wlxie/NextPolish/01_rundir/genome.nextpolish.fasta -indexname index/baima -tis -suf -lcp -des -ssp -sds -dna</span><br><span class="line"></span><br><span class="line">gt ltrharvest -index index/baima -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes &gt; baima_ltrharvest.scn</span><br></pre></td></tr></table></figure>
+
+<p>这里要注意下要先使用genome tools里的suffixerator<strong>创建基因组索引文件</strong>，然后才可以使用ltrharvest进行LTR预测。</p>
+<blockquote>
+<p>创建基因组索引的参数不做解释了，可以 gt suffixerator -help 查看。稍微记录下ltrharvest参数：</p>
+<p>-minlenltr  specify minimum length for each LTR，default: 100</p>
+<p>-mintsd     specify minimum length for each TSD，default: 4</p>
+<p>-motif      specify 2 nucleotides startmotif + 2 nucleotides endmotif: ****</p>
+<p>-motifmis   specify maximum number of mismatches in motif [0,3]，default: 4</p>
+<p>-similar    specify similaritythreshold in range [1..100%]，default: 85.00</p>
+<p>-vic        specify the number of nucleotides (to the left and to the right) that will be searched for TSDs and&#x2F;or motifs around 5’ 				and 3’boundary of predicted LTR retrotransposons, default: 60</p>
+<p>-seed       specify minimum seed length for exact repeats，default: 30</p>
+<p>-seqids     use sequence descriptions instead of sequence numbers in GFF3 output，default: no</p>
+</blockquote>
+<p>以上两个软件以同样的LTR最小相似度0.85预测LTR，得到两个结果文件<code>baima_ltrfinder.scn</code>和<code>baima_ltrharvest.scn</code>。</p>
+<h3 id="2-2-LAI指数计算"><a href="#2-2-LAI指数计算" class="headerlink" title="2.2 LAI指数计算"></a>2.2 LAI指数计算</h3><p>用上一步的输出的两个结果文件，运行<code>LTR_retriever</code>鉴定LTR和计算LAI指数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -n 20</span></span><br><span class="line"></span><br><span class="line">LTR_retriever -genome /public/home/wlxie/NextPolish/01_rundir/genome.nextpolish.fasta -inharvest baima_ltrharvest.scn -infinder baima_ltrfinder.scn -threads 20</span><br></pre></td></tr></table></figure>
+
+<p>这一步运行结果如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><strong>其他文件可以后续做LTR分析用到</strong>，这里我们只要看最后一个LAI的计算结果文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230228/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230228/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可以看到这个结果文件中包含了整个genome和各个contig的raw LAI和LAI指数，这里就只看整个genome的LAI指数15.37，根据上面文章作者提到的分类，属于Reference级别，也就是说可以认为达到参考基因组级别。</p>
+
+</div>
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-20T00:58:05+08:00">2022-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2022/09/20/a.html' itemprop="url">
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/03/01/a.html>http://www.shelven.com/2023/03/01/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-01T20:42:23+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年3月1日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/09/b.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/03/01/a.html&title=0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数） - 我的小破站&summary=通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/03/01/a.html&title=0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数） - 我的小破站&summary=通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/03/01/a.html&title=0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数） - 我的小破站&summary=通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/02/27/a.html'>
+          <p class='title'>0基础学习基因组三代测序组装（6）——基因组polish<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>三代基因组de novo组装后得到一系列contig，由于三代测序的错误率较高，我们需要对组装结果进行打磨（以下均用polish表示）以提高基因组的拼接指标如Contig N50，Scaffol...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/03/01/a.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/b.html"  itemprop="url">
-        go-cqhttp扫码登录异常的解决方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>假期用自己的服务器搭建了一个基于 Nonebot2 和 go-cqhttp 框架的QQ聊天机器人，使用的开源项目是绪山真寻bot（<a target="_blank" rel="noopener" href="https://github.com/HibiKier/zhenxun_bot">项目地址点击这里</a>）。因为项目提供了一键安装包，这里就不详细说安装过程了，简单说下首次运行或者切换bot QQ号会碰到的go-cqhttp扫码登陆异常的问题。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T19:43:05+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/">QQ机器人</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="url"><span itemprop="name">QQ机器人</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/b.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/09/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/09/a.html"  itemprop="url">
-        深度学习——语音合成tts笔记（下）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>（接上篇博客）做完数据集，我们手里现在有训练集（train set）和测试集（test set）音频文件，以及对应的拼音文本，接下来就可以跑Tacotron2来训练模型了。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-09T03:32:17+08:00">2022-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/09/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/08/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/08/a.html"  itemprop="url">
-        深度学习——语音合成tts笔记（上）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作<del>原理部分以后搞明白了再更新</del></p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-08T03:15:04+08:00">2022-09-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/08/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
+  </article>
   
 
 
-	
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3361,228 +3452,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(30)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BF%9D%E5%AE%88%E5%9E%8B%E5%9F%BA%E5%9B%A0%E8%AF%84%E4%BC%B0"><span class="toc-text">1. 保守型基因评估</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%95%BF%E6%9C%AB%E7%AB%AF%E9%87%8D%E5%A4%8D%E5%BA%8F%E5%88%97%E8%AF%84%E4%BC%B0"><span class="toc-text">2. 长末端重复序列评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-LTR%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B"><span class="toc-text">2.1 LTR序列预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-LAI%E6%8C%87%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="toc-text">2.2 LAI指数计算</span></a></li></ol></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>46 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>115.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-03-01 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3607,14 +3508,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3623,14 +3525,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4818,7 +4720,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://www.shelven.com/archives/2022/9/","name":"9月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/03/01/a.html","name":"0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）","description":"通过前面的纠错和校正步骤，我们得到了组装完成的基因组序列，接下来就是进行基因组的组装质量评估。质量评估的软件和方法比较多，这里分两篇博客记录，本篇主要演示如何用BUSCO和LAI指数评价基因组组装质量。","datePublished":"2023-03-01T12:39:05.000Z","dateModified":"2023-03-01T12:42:23.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/03/01/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/03/01/a.html","wordCount":101,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
