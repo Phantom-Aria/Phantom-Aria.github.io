@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/page/3/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/03/07/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/page/3/index.html">
+  <title>0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异 - 我的小破站</title>
+  <meta name="keywords" content="GATK,null">
+  <meta name="description" content="基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异">
+<meta property="og:url" content="http://www.shelven.com/2023/03/07/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-03-07T09:53:32.000Z">
+<meta property="article:modified_time" content="2023-03-07T09:56:00.000Z">
+<meta property="article:tag" content="GATK">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3021,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3084,15 +3089,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/09/08/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/03/07/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3101,650 +3099,424 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/08/a.html"  itemprop="url">
-        深度学习——语音合成tts笔记（上）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>两个月的暑假已经结束了，假期里自学了一点深度学习的内容，很多地方还是一知半解的，这里稍微记录一下。之前刷到一个很有意思的语音合成视频，抱着试试看的心态想自己做一个模型，于是给自己挖了一个大坑……涉及到深度学习的知识我还需要慢慢学，因此本篇博客重点还是记录下自己的踩坑操作<del>原理部分以后搞明白了再更新</del></p>
+    
+      <h1 class="title" itemprop="name headline">
+        0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-08T03:15:04+08:00">2022-09-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">深度学习</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-07T17:53:32+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年3月7日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：4.5k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：18 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/09/08/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异" data-path="/2023/03/07/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 <a target="_blank" rel="noopener" href="http://www.broadinstitute.org/">Broad Institute</a>开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。</p>
+<span id="more"></span>
+
+<h2 id="1-GATK安装"><a href="#1-GATK安装" class="headerlink" title="1. GATK安装"></a>1. GATK安装</h2><div class="story post-story"><p>GATK的运行依赖于JAVA环境，目前（2023年3月6日）GATK更新到版本4.3.0，可以直接用conda下载。为了避免环境冲突，最好创建一个新环境专门用于GATK和相关变异检测工具运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda create -n GATK</span><br><span class="line">conda install -c bioconda gatk</span><br><span class="line"></span><br><span class="line">conda install bwa-mem2</span><br><span class="line">conda install samtools</span><br></pre></td></tr></table></figure>
+
+<p>bwa-mem2和samtools用于双端序列比对回基因组，需要单独下载这两个软件，后面再说。</p>
+<p>安装完成之后可以通过<code>gatk --help</code>查看是否正常。</p>
+</div><h2 id="2-流程详解"><a href="#2-流程详解" class="headerlink" title="2. 流程详解"></a>2. 流程详解</h2><div class="story post-story"><p>流程内容主要参考官网<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360035535932-Germline-short-variant-discovery-SNPs-Indels-">Best Practices Workflows的文章</a>。</p>
+<p>GATK工具的变异注释主要包括3个部分：<strong>数据预处理（Data Pre-processing）、变异检测（Variant Discovery）和变异优化（Callset Refinement）</strong>。</p>
+<p>以Germline short variant discovery (SNPs + Indels) ，即胚系短变异的发现为例，官网对多个样本（群组数据，Cohort Data）的变异检测分析流程如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>单个样本（Single-Sample Data）的变异检测标准流程如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>分析流程基本类似，以我前面组装的三代<strong>植物</strong>基因组为例跑一下这两个流程，<strong>强调一下我用的是植物基因组，后续无法用Germline的注释数据资源对变异集进行功能注释！</strong>因此这里只跑到变异集过滤的步骤，拿到SNP和INDEL。</p>
+<h3 id="2-1-数据预处理"><a href="#2-1-数据预处理" class="headerlink" title="2.1 数据预处理"></a>2.1 数据预处理</h3><ol>
+<li><strong>构建参考基因组索引</strong>：组装的基因组作为reference参考基因组，首先需要对参考基因组建立索引，方便后续进行比对和对参考基因组进行查询。<strong>注意三个软件的索引文件不同，每个软件都必须建立索引</strong>。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">ref=$1</span><br><span class="line"></span><br><span class="line">bwa-mem2 index $ref</span><br><span class="line">samtools faidx $ref</span><br><span class="line">referencename=`basename $ref | sed  &quot;s/fasta/dict/&quot; `		# .fasta文件后缀改为.dict</span><br><span class="line">gatk CreateSequenceDictionary -R $ref -O $referencename </span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>fasta文件转化uBAM文件，标记adapter 序列</strong>：组装好的基因组格式是fasta格式，需要转换成uBAM格式（umapped的BAM文件），接着标记illumina二代测序的adapter序列。本质上都是调用了Picard工具，也可以直接用java写脚本。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line"></span><br><span class="line">gatk FastqToSam -F1 raw_fastq/$&#123;sampleName&#125;_1.fq.gz -F2 raw_fastq/$&#123;sampleName&#125;_2.fq.gz -RG $sampleName -SM $sampleName -O ubam/$&#123;sampleName&#125;.bam</span><br><span class="line"></span><br><span class="line">gatk MarkIlluminaAdapters -I ubam/$&#123;sampleName&#125;.bam -O markadapeters/$&#123;sampleName&#125;.markadapeters.bam -M markadapeters/$&#123;sampleName&#125;.metrics.txt</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>标记后的序列转化成fastq格式，回比参考基因组，得到干净的BAM文件</strong>：第二和第三步来自官方的文章<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360039568932--How-to-Map-and-clean-up-short-read-sequence-data-efficiently">(How to) Map and clean up short read sequence data efficiently</a>，通过联合SamToFastq、BWA - MEM和MergeBamAlignment三个程序，节省比对时间，绕过占用空间过大的SAM文件，MergeBamAlignment可以将已排序的SAM中的定义信息（我这里将SAM文件转换成BAM文件）与uBAM中的定义信息进行合并，得到干净的BAM并进行排序和构建索引。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line">threads=50</span><br><span class="line">ref=/public/home/wlxie/biosoft/GATK_file/gatk/ref/luobuma.fasta</span><br><span class="line"></span><br><span class="line">gatk SamToFastq -I markadapeters/$&#123;sampleName&#125;.markadapeters.bam -F  interleaved_fq/$&#123;sampleName&#125;_1.interleaved.fq.gz -F2  interleaved_fq/$&#123;sampleName&#125;_2.interleaved.fq.gz -CLIP_ATTR XT -CLIP_ACT 2</span><br><span class="line"></span><br><span class="line">bwa-mem2 mem -M -t $threads $ref  interleaved_fq/$&#123;sampleName&#125;_1.interleaved.fq.gz interleaved_fq/$&#123;sampleName&#125;_2.interleaved.fq.gz | samtools view -Sb - &gt; raw_bam/$&#123;sampleName&#125;.bam</span><br><span class="line"></span><br><span class="line">gatk MergeBamAlignment -R $ref -UNMAPPED  ubam/$&#123;sampleName&#125;.bam -O align_bam/$&#123;sampleName&#125;.bam -ALIGNED  raw_bam/$&#123;sampleName&#125;.bam -MC true --CREATE_INDEX true</span><br><span class="line"></span><br><span class="line">rm -rf markadapeters/$&#123;sampleName&#125;.markadapeters.ba interleaved_fq/$&#123;sampleName&#125;_1.interleaved.fq.gz  interleaved_fq/$&#123;sampleName&#125;_2.interleaved.fq.gz raw_bam/$&#123;sampleName&#125;.bam 	# 删除中间文件</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>标记重复序列</strong>：做SNP分析前最重要的一点就是标记重复序列（mark duplicate），二代测序是在PCR扩增的基础上进行的，因此PCR扩增产生的多拷贝会结合到flowcell的不同位置，生成完全相同的测序cluster，最后得到重复序列。这一步就是标记这些重复序列（但是没有删除，对结果应该不影响），最后得到一个<strong>metrics文件</strong>（duplicate的统计信息）和一个<strong>bam文件</strong>（duplicate的详细信息，注意要创建索引）。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line"></span><br><span class="line">gatk MarkDuplicates -I align_bam/$&#123;sampleName&#125;.bam -O markdup/$&#123;sampleName&#125;.markdup.bam -M markdup/$&#123;sampleName&#125;.markdup_metrics.txt --CREATE_INDEX true</span><br><span class="line"></span><br><span class="line">rm -rf  align_bam/$&#123;sampleName&#125;.bam 	# 删除中间文件</span><br></pre></td></tr></table></figure>
+
+<p>最终生成的bam文件进行下一步变异检测，可以用<code>samtools -view</code> 查看bam文件的内容（也没啥好看的，感兴趣可以看看之前博客写的<a href="https://www.shelven.com/2022/04/15/a.html">sam文件格式解读</a>）。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<ul>
+<li>注意：官网的数据预处理后续还有一步<strong>碱基质量重校正BQSR</strong>（Base Quality Scores Recallbrate），官方提供了两个工具BaseRecalibrator和ApplyBQSR。第一个工具计算需要校正的reads和特征值，输出校准表文件，需要注意的是，<strong>这个工具需要一个或者多个已知且可靠的物种变异位点数据库</strong>，比如人类就有千人基因组计划的各种变异位点数据库，1000G_omni2.5.hg38.vcf.gz、dbsnp_146.hg38.vcf.gz等等；第二个工具根据第一个工具生成校准表，重新调整原来BAM文件中的碱基质量值，重新输出到一个新的BAM文件中。</li>
+</ul>
+<p>因为我这个植物没有已知的可靠变异位点数据，因此不用做最后这一步。</p>
+<p><strong>本部分程序需要运行10小时。</strong></p>
+<h3 id="2-2-变异检测"><a href="#2-2-变异检测" class="headerlink" title="2.2 变异检测"></a>2.2 变异检测</h3><p>因为我只有一个样本，所以可以按照单个样本（Single-Sample Data）的标准流程来做，也可以按照多样本（Cohort Data）的流程做。该部分主要用到的工具是HaplotypeCaller，两个流程只是对HaplotypeCaller工具产生的结果做了不同的处理，最后都是得到包含SNP和Indel的VCF文件。我也将分别跑两个流程来对比下差异。</p>
+<p>首先要明白HaplotypeCaller这个工具具体做了什么，是怎么找出单碱基变异的：</p>
+<ul>
+<li><strong>1.定义活跃区域</strong>（<a target="_blank" rel="noopener" href="https://software.broadinstitute.org/gatk/documentation/article?id=4147">Define active regions</a>）：根据是否存在变异来确定需要操作的基因组的活跃区域。</li>
+<li><strong>2.通过组装活跃区域确定单倍型</strong>（<a target="_blank" rel="noopener" href="https://software.broadinstitute.org/gatk/documentation/article?id=4146">Determine haplotypes by assembly of the active region</a>）：对于每个活跃区域，构建一个类似De Bruijn图来重新组装活性区域，识别可能的单倍型，然后用Smith-Waterman算法将每个单倍型与参考基因组单倍型重新比对，发现潜在的变异位点。</li>
+<li><strong>3.确定read单倍型似然值</strong>（<a target="_blank" rel="noopener" href="https://software.broadinstitute.org/gatk/documentation/article?id=4441">Determine likelihoods of the haplotypes given the read data</a>）：对每个活跃区域使用PairHMM算法对每个read与每个单倍型进行两两比对，生成单倍型似然矩阵，将似然值边缘化，以获得每个潜在变异位点的等位基因的可能性。</li>
+<li><strong>4.指定样本基因型</strong>（<a target="_blank" rel="noopener" href="https://software.broadinstitute.org/gatk/documentation/article?id=4442">Assign sample genotypes</a>）：对每个潜在的变异位点使用贝叶斯算法，转化每个位点的基因型的似然值。然后将最可能的基因型指定为样本基因型。</li>
+</ul>
+<p>以上流程翻译自<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360056969012-HaplotypeCaller">HaplotypeCaller – GATK (broadinstitute.org)</a>，这个工具可用参数非常之多，下面跑的流程就展示一些常用的。</p>
+<h4 id="2-2-1-多样本的SNP和INDEL检测"><a href="#2-2-1-多样本的SNP和INDEL检测" class="headerlink" title="2.2.1 多样本的SNP和INDEL检测"></a>2.2.1 多样本的SNP和INDEL检测</h4><ol>
+<li><strong>使用HaplotypeCaller的GVCF模式，找到每个样本SNP和INDEL变异</strong>。在GVCF模式下，每个样本的结果文件以gvcf（genomic vcf）格式文件呈现，实际上gvcf格式和vcf格式类似，gvcf记录所有位点的突变情况，并且提供这些位点是否是纯和的置信度，主要还是方便将所有样本的gvcf联合起来方便分析。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line">threads=50</span><br><span class="line">ref=/public/home/wlxie/biosoft/GATK_file/gatk/ref/luobuma.fasta</span><br><span class="line"></span><br><span class="line">gatk HaplotypeCaller -R $ref --native-pair-hmm-threads $&#123;threads&#125; --emit-ref-confidence GVCF -I ../../pre_processing/markdup/$&#123;sampleName&#125;.markdup.bam -O $&#123;sampleName&#125;.g.vcf.gz</span><br></pre></td></tr></table></figure>
+
+<p>这一步是整个SNP和IDEL检测中运行时间最长，需要算力最多的一步（主要是Pair-HMM算法花时间），Pair-HMM算法在本地调用的线程数是可以更改的，官方是给定默认值为4。GATK4.0版本开始放弃了多线程任务，<strong>这个参数可能是更新后遗漏的，因为我这里用的50线程和默认的4线程跑几乎没有区别，都是在28小时左右完成，此处参数存疑</strong>。</p>
+<ol start="2">
+<li><strong>建库合并所有样本的GVCF文件（单样本不用做这步），并将GVCF文件转化为VCF文件</strong>。对于多样本的GVCF合并，现在<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360035890411?id=3893">官方建议</a>用GenomicsDBImport这个工具进行建库合并，速度会快很多。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line">threads=50</span><br><span class="line">ref=/public/home/wlxie/biosoft/GATK_file/gatk/ref/luobuma.fasta</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">gatk GenomicsDBImport $(<span class="keyword">for</span> file <span class="keyword">in</span> `<span class="built_in">ls</span> *.g.vcf.gz`; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">&quot;-V <span class="variable">$file</span>&quot;</span>; <span class="keyword">done</span>)  --genomicsdb-workspace-path database -L chr01		<span class="comment"># 单样本不用做这步，因为就一个GVCF。多样本注意-L参数是建库必须的,根据fasta参考基因组的染色体名称命名，拆分</span></span></span><br><span class="line"></span><br><span class="line">gatk GenotypeGVCFs -R $ref -V $&#123;sampleName&#125;.g.vcf.gz -O raw_variants.vcf.gz		# 多样本使用参数-V gendb://database 也就是上一步建的数据库名，单样本直接用gvcf文件</span><br></pre></td></tr></table></figure>
+
+<p>可以看看最后生成的VCF文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>文件解读放在最后过滤和拆分SNP和INDEL的时候再说，这里是初步得到变异信息，需要经过过滤和筛选。</p>
+<p><strong>本部分程序需要运行28小时。</strong></p>
+<h4 id="2-2-2-单个样本的SNP和INDEL检测"><a href="#2-2-2-单个样本的SNP和INDEL检测" class="headerlink" title="2.2.2 单个样本的SNP和INDEL检测"></a>2.2.2 单个样本的SNP和INDEL检测</h4><p><strong>使用HaplotypeCaller默认的single-sample模式，直接生成统计SNP和INDEL变异的VCF文件</strong>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line">threads=50</span><br><span class="line">ref=/public/home/wlxie/biosoft/GATK_file/gatk/ref/baima.fasta</span><br><span class="line"></span><br><span class="line">gatk HaplotypeCaller -R $ref --native-pair-hmm-threads $&#123;threads&#125; -I ../../pre_processing/markdup/$&#123;sampleName&#125;.markdup.bam -O $&#123;sampleName&#125;.vcf.gz</span><br></pre></td></tr></table></figure>
+
+<p>同上一个步骤，此处参数<code>--native-pair-hmm-threads</code>对运算速度的提升存疑，最后同样是生成VCF文件，<strong>运行时间同样为28小时</strong>。</p>
+<h3 id="2-3-变异过滤（优化）"><a href="#2-3-变异过滤（优化）" class="headerlink" title="2.3 变异过滤（优化）"></a>2.3 变异过滤（优化）</h3><p>变异集过滤方法主要有两种：</p>
+<ul>
+<li>1.软过滤：基于机器学习的方法，对原始vcf文件进行变异质量重矫正和过滤。比如有基于卷积神经网络CNN的CNNVariantTrain（有预训练的模型1D和2D），VariantRecalibrator、ApplyVQSR等可以用已知的人类变异数据集作为训练集，检测得到的SNP和INDEL的准确性（官方推荐用于人类变异过滤的方法，Variant Quality Score Recalibration，VQSR）。缺点显而易见，需要已知的真实变异数据集，<strong>除人类以外大多数生物都没有这方面的数据集</strong>。如果是研究人类基因组的话，可以从GATK官网资源处下载。</li>
+<li>2.硬过滤：通过对6个指标的硬性阈值筛选质量合格的SNP和INDEL。</li>
+</ul>
+<p>记录下硬过滤的6个指标，有些说明看不懂干脆都放英文了，参考自官网<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360035890471-Hard-filtering-germline-short-variants">Hard-filtering germline short variants</a>：</p>
+<blockquote>
+<p>（1）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#QualByDepth">QualByDepth (QD)</a>：This is the variant confidence (from the QUAL field) divided by the unfiltered depth of non-hom-ref samples. 变异置信度，官方建议过滤该值小于2的变异。</p>
+<p>（2）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#FisherStrand">FisherStrand (FS)</a>：This is the Phred-scaled probability that there is strand bias at the site.</p>
+<p>（3）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#StrandOddsRatio">StrandOddsRatio (SOR)</a>：This is another way to estimate strand bias using a test similar to the symmetric odds ratio test.</p>
+<p>（4）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#RMSMappingQuality">RMSMappingQuality (MQ)</a>：This is the root mean square mapping quality over all the reads at the site.比对reads质量的平方根。</p>
+<p>（5）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#MappingQualityRankSumTest">MappingQualityRankSumTest (MQRankSum)</a>：This is the u-based z-approximation from the Rank Sum Test for mapping qualities. </p>
+<p>（6）<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/9570266920219--Tool-Documentation-Index#ReadPosRankSumTest">ReadPosRankSumTest (ReadPosRankSum)</a>：This is the u-based z-approximation from the Rank Sum Test for site position within reads. </p>
+</blockquote>
+<p>看不懂没关系，官方给出了6个硬过滤指标在SNP和INDEL中的阈值设置，详情可以看<a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360035890471-Hard-filtering-germline-short-variants">Hard-filtering germline short variants – GATK (broadinstitute.org)</a>。以下例子均以官方的硬过滤指标为准，感兴趣可以去官网看各个参数的作用或者自己微调。</p>
+<p>SelectVariants工具用于从vcf文件中提取SNP和INDEL信息，VariantFiltration工具用于硬过滤筛选：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">sampleName=$1</span><br><span class="line">threads=50</span><br><span class="line">VARIANTS=/public/home/wlxie/biosoft/GATK_file/gatk/variants_discover/luobuma/raw_variants.vcf.gz</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">SNP筛选、过滤和提取</span></span><br><span class="line">gatk SelectVariants -select-type SNP -V $VARIANTS --restrict-alleles-to BIALLELIC  -O $&#123;sampleName&#125;_SNP.vcf.gz		# BIALLELIC 限制双等位基因，不考虑其他等位多态性</span><br><span class="line">gatk VariantFiltration -V $&#123;sampleName&#125;_SNP.vcf.gz --filter-expression &quot;QD &lt; 2.0 || MQ &lt; 40.0 || FS &gt; 60.0 || SOR &gt; 3.0 || MQRankSum &lt; -12.5 || ReadPosRankSum &lt; -8.0&quot; --filter-name &quot;Filter&quot; -O $&#123;sampleName&#125;_SNP.filter.vcf.gz</span><br><span class="line">gatk SelectVariants  -V $&#123;sampleName&#125;_SNP.filter.vcf.gz --exclude-filtered true -O final.$&#123;sampleName&#125;_SNP.vcf.gz		# 只显示通过过滤的变异（pass）</span><br><span class="line">rm -rf $&#123;sampleName&#125;_SNP.vcf.gz*</span><br><span class="line">rm -rf $&#123;sampleName&#125;_SNP.filter.vcf.gz*</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">INDEL筛选、过滤和提取</span></span><br><span class="line">gatk SelectVariants -select-type INDEL -V $VARIANTS --restrict-alleles-to BIALLELIC  -O $&#123;sampleName&#125;_INDEL.vcf.gz		# BIALLELIC 限制双等位基因，不考虑其他等位多态性</span><br><span class="line">gatk VariantFiltration -V $&#123;sampleName&#125;_INDEL.vcf.gz --filter-expression &quot;QD &lt; 2.0 || FS &gt; 200.0 || SOR &gt; 10.0 || MQRankSum &lt; -12.5 || ReadPosRankSum &lt; -8.0&quot; --filter-name &quot;Filter&quot; -O $&#123;sampleName&#125;_INDEL.filter.vcf.gz</span><br><span class="line">gatk SelectVariants  -V $&#123;sampleName&#125;_INDEL.filter.vcf.gz --exclude-filtered true -O final.$&#123;sampleName&#125;_INDEL.vcf.gz		# 只显示通过过滤的变异（pass）</span><br><span class="line">rm -rf $&#123;sampleName&#125;_INDEL.vcf.gz*</span><br><span class="line">rm -rf $&#123;sampleName&#125;_INDEL.filter.vcf.gz*</span><br></pre></td></tr></table></figure>
+
+<p>得到的<code>final.sampleName_SNP.vcf.gz</code>和<code>final.sampleName_INDEL.vcf.gz</code>为最终的变异集结果文件。</p>
+</div><h2 id="3-结果文件解读"><a href="#3-结果文件解读" class="headerlink" title="3. 结果文件解读"></a>3. 结果文件解读</h2><div class="story post-story"><p>因为结果文件时一个压缩过后的vcf文件，且vcf文件中前面带<code>#</code>部分的注释内容是用不到的，后面每一行代表一个变异位点信息，因此可以直直接统计行数来得到最终的SNP和INDEL的数量。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zcat final.luobuma_SNP.vcf.gz | grep -v -P &quot;^#&quot; -c</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20230306/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>用2.2.1多样本流程的SNP和INDEL结果文件为<code>final.luobuma_SNP.vcf.gz</code>和<code>final.luobuma_INDEL.vcf.gz</code>；用2.2.2单个样本流程的SNP和INDEL结果为<code>final.luobuma_sm_SNP.vcf.gz</code>和<code>final.luobuma_sm_INDEL.vcf.gz</code>。可以看到两者在统计SNP和INDEL数量上的差距非常小，<strong>说明这两个流程对单样本来说都是可以用的</strong>。</p>
+<p>以<code>final.luobuma_SNP.vcf.gz</code>文件进行解读，通过<code>less -S</code>命令一行一条信息查看文件内容：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20230306/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230306/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>每列信息如下：</p>
+<ul>
+<li>1.CHROM：染色体信息</li>
+<li>2.POS：变异所在参考基因组的位置</li>
+<li>3.ID：变异的ID，如果有参考变异集，会给出id，否则为<code>.</code>表示新发现的变异</li>
+<li>4.REF：变异在参考基因组上的信息，必须为ATCGN五个之一</li>
+<li>5.ALT：突变之后的情况，类型同上，<code>.</code>表示缺失</li>
+<li>6.QUAL：突变后的质量值，质量值越高越可靠，通常只用pass的数据</li>
+<li>7.FILTER：是否通过过滤</li>
+<li>8.INFO：每个位点的详细信息（包括硬过滤的指标，详细可以到header里找）</li>
+<li>9.FORMAT：格式</li>
+<li>10.样本名（实际是前面格式的具体值）</li>
+</ul>
+<p>主要解释一下第九列和第十列，就是上图中红色框框起来的部分，两列值是用冒号分隔且一一对应的，需要注意的值是<strong>GT</strong>：</p>
+<ul>
+<li><strong>GT</strong>：0表示和参考序列一致（REF allele），1表示和样本序列一致（ALT allele），双等位基因只有0和1，0&#x2F;1和0|1表示杂合，1&#x2F;1和1|1表示纯和。“|”和“&#x2F;”区别是前者是phased genotype，就是知道REF&#x2F;ALT allele是来自于父本还是母本，在这里对我这个植物基因组没有什么意义，全都统计进杂合和纯和SNP个数就行。</li>
+<li>AD：REF和ALT allele的覆盖度，在二倍体是是用逗号分割的两个值表示，前一个代表参考基因组的基因型，后者代表样本基因型。</li>
+<li>DP：样本中该位点覆盖度，AD两个数字的和。</li>
+</ul>
+<h3 id="3-1-杂合率统计"><a href="#3-1-杂合率统计" class="headerlink" title="3.1 杂合率统计"></a>3.1 杂合率统计</h3><p>分别统计SNP和INDEL文件中杂合单碱基变异的个数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zcat final.luobuma_SNP.vcf.gz | grep -c &quot;0/1&quot;</span><br><span class="line">zcat final.luobuma_SNP.vcf.gz | grep -c &quot;0|1&quot;</span><br><span class="line">zcat final.luobuma_INDEL.vcf.gz | grep -c &quot;0/1&quot;</span><br><span class="line">zcat final.luobuma_INDEL.vcf.gz | grep -c &quot;0|1&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>杂合率 &#x3D; (杂合SNP数 + 杂合INDEL数) &#x2F; 基因组大小</strong></p>
+<table>
+<thead>
+<tr>
+<th>杂合SNP数(Hetero SNP)</th>
+<th>杂合INDEL数(Hetero Indel)</th>
+<th>基因组大小(bp)</th>
+<th>杂合率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1,233,471</td>
+<td>287,207</td>
+<td>230,888,863</td>
+<td>0.66%</td>
+</tr>
+</tbody></table>
+<p>此处计算的杂合率可以和前面做的基因组Survey做个比较，说明基因组Survey的可靠性。</p>
+<h3 id="3-2-单碱基准确度计算"><a href="#3-2-单碱基准确度计算" class="headerlink" title="3.2 单碱基准确度计算"></a>3.2 单碱基准确度计算</h3><p>我们知道测序过程中不可避免地存在错误，三代测序数据单碱基变异的来源，包括<u>真实的单碱基变异</u>和<u>测序错误导致的单碱基变异</u>。<strong>当测序错误导致的单碱基变异存在于参考基因组上时，利用二代测序数据进行单碱基变异的检测时，会将其识别为纯合单碱基变异</strong>。因此，可以将三代数据组装的最终版基因组作为参考基因组，利用二代数据将纯合子单碱基变异率作为组装结果的错误率，即:</p>
+<p><strong>组装结果的准确率 &#x3D; 1 - 纯合子单碱基变异率</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zcat final.luobuma_SNP.vcf.gz | grep -c &quot;1/1&quot;</span><br><span class="line">zcat final.luobuma_SNP.vcf.gz | grep -c &quot;1|1&quot;</span><br><span class="line">zcat final.luobuma_INDEL.vcf.gz | grep -c &quot;1/1&quot;</span><br><span class="line">zcat final.luobuma_INDEL.vcf.gz | grep -c &quot;1|1&quot;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>纯和SNP数(Homo SNP)</th>
+<th>纯和INDEL数(Homo Indel)</th>
+<th>基因组大小(bp)</th>
+<th>纯和子单碱基变异率</th>
+<th>组装结果准确率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4,176</td>
+<td>8,580</td>
+<td>230,888,863</td>
+<td>0.005525%</td>
+<td>99.994475%</td>
+</tr>
+</tbody></table>
+<p>这种单碱基准确度的计算结果也可以作为基因组组装质量的评估指标之一，即<strong>序列一致性评估</strong>——利用高质量的二代测序数据来评估三代测序数据组装结果在单碱基水平上的准确性。</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/03/07/a.html>http://www.shelven.com/2023/03/07/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-07T17:56:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年3月7日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/13/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GATK/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>GATK</p></a></div>
+  <span hidden itemprop="keywords">GATK</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/03/07/a.html&title=0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异 - 我的小破站&summary=基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/03/07/a.html&title=0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异 - 我的小破站&summary=基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/03/07/a.html&title=0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异 - 我的小破站&summary=基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/03/02/a.html'>
+          <p class='title'>0基础学习基因组三代测序组装（8）——基因组组装质量评估（QUAST）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>接上一篇博客，这一篇博客继续介绍一个常用的评估基因组组装质量的软件——QUAST
+
+
+1. QUAST介绍QUAST（Quality Assessment Tool for Genome Ass...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/03/07/a.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/13/a.html"  itemprop="url">
-        frp内网穿透配置笔记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>过一段时间要到校外学习，而学校的资源只能在校园内网下才能使用（登录集群可以看到登录ip是10开头的A类地址，无法公网ip访问）。为了方便在校外访问校园内网的集群，我手里正好也有一个备案过的服务器和域名，于是自己用frp搭建了一个反向代理服务器，穿透了校园内网，这里记录下自己搭建过程。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-13T03:55:04+08:00">2022-07-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/">网络相关</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" itemprop="url"><span itemprop="name">网络相关</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/13/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/05/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/05/a.html"  itemprop="url">
-        blastn & blastp 寻找同源基因
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>今天接到一个任务，大致内容是在一个植物的全长转录组数据中找拟南芥的三个同源基因。简简单单的描述，我的想法也很简单，直接找基因的<strong>CDS序列做blastn</strong>比对就完事了，结果却没有那么顺利…记录一下踩的坑和解决办法。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-05T19:25:26+08:00">2022-07-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/05/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/03/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/03/a.html"  itemprop="url">
-        0基础学习基因组三代测序组装（4）——初步组装二代数据
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-03T19:28:52+08:00">2022-07-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/03/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/02/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/02/a.html"  itemprop="url">
-        0基础学习基因组三代测序组装（3）——全基因组Survey
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种<strong>基因组特征</strong>的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-02T15:08:17+08:00">2022-07-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/02/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/20/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/20/a.html"  itemprop="url">
-        0基础学习基因组三代测序组装（2）——数据污染评估
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>做完基因组三代测序数据质控之后，我们把所有reads的Q值控制在7以上，每个read的长度在1000bp以上。我们不能明确自己的测序数据是否被其他物种污染，这个时候就要用balst比对的方法确定测序数据是否被污染，以及污染的来源。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-20T01:17:30+08:00">2022-06-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/20/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/17/b.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/17/b.html"  itemprop="url">
-        0基础学习基因组三代测序组装（1）——数据质控
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>最近拿到一个植物基因组的三代和二代测序数据，想通过以三代测序数据为主，二代测序数据为辅的方式学习一下如何拼接组装一个基因组。但是三代测序数据刚到手就懵了，与之前学习的转录组分析不一样，三代测序返回的几个文件不是单纯的fq文件，于是我又开始恶补了一些三代测序的基础知识，开坑写个三代基因组测序组装的系列笔记~</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-17T22:31:19+08:00">2022-06-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/17/b.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/17/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/17/a.html"  itemprop="url">
-        NCBI的BLAST+工具本地安装，本地建库和BLAST比对
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>接触过生物学的小伙伴对<a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI在线BLAST网页</a>一定不陌生，简单介绍一下这个网页的5种比对工具：blastn、blastp、blastx、tblastn和tblastx，以及如何进行本地建库和blast比对。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-17T02:33:56+08:00">2022-06-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/17/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/16/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/16/a.html"  itemprop="url">
-        perl语言学习笔记（1）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>最近在处理三代测序的下机数据，用到了一些挺好用的perl脚本，但是苦于没接触这种类型的编程语言，想根据情况改一些代码却看不懂实现方式&#x3D; &#x3D;</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-16T00:07:31+08:00">2022-06-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/">编程自学</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" itemprop="url"><span itemprop="name">编程自学</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/16/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/06/14/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/14/a.html"  itemprop="url">
-        基因组注释文件gbff格式转换gff3格式
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>前几天老师布置了一个任务，寻找夹竹桃科Apocynaceae分类下的物种参考基因组，我在plaBiPD网站和NCBI的genome数据库中只找到包括罗布麻在内的5个已发表物种参考基因组，且都是<strong>gbff</strong>格式的。提交之后被告知需要<strong>gff</strong>格式的，因为gbf格式中没有基因相关结构的位置信息。找了一个perl脚本完成了任务。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-14T01:09:45+08:00">2022-06-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/14/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/page/2/">
-            <section class="post prev white-box shadow" >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          3 / 5
-        </p>
-        
-          <a class="next" rel="next" href="/page/4/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
 </div>
@@ -3754,228 +3526,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(33)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-GATK%E5%AE%89%E8%A3%85"><span class="toc-text">1. GATK安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3"><span class="toc-text">2. 流程详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">2.1 数据预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8F%98%E5%BC%82%E6%A3%80%E6%B5%8B"><span class="toc-text">2.2 变异检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E5%A4%9A%E6%A0%B7%E6%9C%AC%E7%9A%84SNP%E5%92%8CINDEL%E6%A3%80%E6%B5%8B"><span class="toc-text">2.2.1 多样本的SNP和INDEL检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E5%8D%95%E4%B8%AA%E6%A0%B7%E6%9C%AC%E7%9A%84SNP%E5%92%8CINDEL%E6%A3%80%E6%B5%8B"><span class="toc-text">2.2.2 单个样本的SNP和INDEL检测</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%8F%98%E5%BC%82%E8%BF%87%E6%BB%A4%EF%BC%88%E4%BC%98%E5%8C%96%EF%BC%89"><span class="toc-text">2.3 变异过滤（优化）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BB%93%E6%9E%9C%E6%96%87%E4%BB%B6%E8%A7%A3%E8%AF%BB"><span class="toc-text">3. 结果文件解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%9D%82%E5%90%88%E7%8E%87%E7%BB%9F%E8%AE%A1"><span class="toc-text">3.1 杂合率统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%8D%95%E7%A2%B1%E5%9F%BA%E5%87%86%E7%A1%AE%E5%BA%A6%E8%AE%A1%E7%AE%97"><span class="toc-text">3.2 单碱基准确度计算</span></a></li></ol></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/BUSCO/" style="font-size: 14px; color: #999">BUSCO</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GATK/" style="font-size: 14px; color: #999">GATK</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/LAI/" style="font-size: 14px; color: #999">LAI</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/QUAST/" style="font-size: 14px; color: #999">QUAST</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>48 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>121.1k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-03-07 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4007,8 +3589,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -5212,7 +4794,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/03/07/a.html","name":"0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异","description":"基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产生的人类全外显子和全基因组数据，经过多个版本的优化迭代，GATK集合了多种高通量测序数据处理和质控的软件，如今GATK可以说是对DNA和RNA-seq数据检测SNP和Indel的标准。","datePublished":"2023-03-07T09:53:32.000Z","dateModified":"2023-03-07T09:56:00.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/03/07/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/03/07/a.html","wordCount":189,"articleSection":"学习笔记","keywords":"GATK","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
