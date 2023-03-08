@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/archives/2022/07/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/03/08/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>归档：2022/7 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/archives/2022/07/index.html">
+  <title>绕过双重封锁部署ChatGPT到zhenxun_bot - 我的小破站</title>
+  <meta name="keywords" content="ChatGPT,null">
+  <meta name="description" content="作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="绕过双重封锁部署ChatGPT到zhenxun_bot">
+<meta property="og:url" content="http://www.shelven.com/2023/03/08/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-03-08T13:54:56.000Z">
+<meta property="article:modified_time" content="2023-03-08T14:01:24.000Z">
+<meta property="article:tag" content="ChatGPT">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2265,7 +2270,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3021,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3084,28 +3089,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/13/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/03/08/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3114,254 +3099,302 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/13/a.html"  itemprop="url">
-        frp内网穿透配置笔记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>过一段时间要到校外学习，而学校的资源只能在校园内网下才能使用（登录集群可以看到登录ip是10开头的A类地址，无法公网ip访问）。为了方便在校外访问校园内网的集群，我手里正好也有一个备案过的服务器和域名，于是自己用frp搭建了一个反向代理服务器，穿透了校园内网，这里记录下自己搭建过程。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        绕过双重封锁部署ChatGPT到zhenxun_bot
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/">QQ机器人</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/">网络相关</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" itemprop="url"><span itemprop="name">网络相关</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="url"><span itemprop="name">QQ机器人</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-13T03:55:04+08:00">2022-07-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/">网络相关</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" itemprop="url"><span itemprop="name">网络相关</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-08T21:54:56+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年3月8日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：3.3k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：16 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/07/13/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="绕过双重封锁部署ChatGPT到zhenxun_bot" data-path="/2023/03/08/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从<strong>2023年3月2日傍晚</strong>开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。</p>
+<span id="more"></span>
+
+<p>因此，现在摆在眼前的问题是如何绕过双重封锁调用OpenAI的API接口？最稳妥的方式当然是给服务器挂个全局代理，但是我的服务器本身就在作代理服务器，给服务器再上个代理会比较麻烦……这里记录下自己实现的方式，顺便记录下是如何部署ChatGPT到zhenxun_bot（这个bot真的超级好用！）上的。</p>
+<p>本人在这方面是小白，只是记录实现过程。</p>
+<p><strong>此部分内容需要以部署zhenxun_bot为前提、有一个未上GFW名单的域名（国内需要实名）</strong>。</p>
+<h2 id="1-部署ChatGPT到zhenxun-bot"><a href="#1-部署ChatGPT到zhenxun-bot" class="headerlink" title="1. 部署ChatGPT到zhenxun_bot"></a>1. 部署ChatGPT到zhenxun_bot</h2><div class="story post-story"><p>时间过去太久，已经找不到写插件的原作者了…我是在原插件的基础上copy和修改了一部分代码，实际上就是在zhenxun_bot的AI插件基础上做的一点删改（可能有些没删干净，懒得查了）。如果没有修改路径的话，原文件路径是<code>/zhenxun_bot/plugins/ai/data_source.py</code>，下面代码替代原文件内容（原文件最好另存以防万一）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> utils.http_utils <span class="keyword">import</span> AsyncHttpx</span><br><span class="line"><span class="keyword">from</span> configs.path_config <span class="keyword">import</span> IMAGE_PATH, DATA_PATH</span><br><span class="line"><span class="keyword">from</span> services.log <span class="keyword">import</span> logger</span><br><span class="line"><span class="keyword">from</span> utils.message_builder <span class="keyword">import</span> image, face</span><br><span class="line"><span class="keyword">from</span> configs.config <span class="keyword">import</span> Config, NICKNAME</span><br><span class="line"><span class="keyword">from</span> .utils <span class="keyword">import</span> ai_message_manager</span><br><span class="line"><span class="keyword">from</span> copy <span class="keyword">import</span> deepcopy</span><br><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> GPT2TokenizerFast</span><br><span class="line"><span class="keyword">import</span> openai</span><br><span class="line"></span><br><span class="line">openai.api_key = <span class="string">&quot;xxxxxxxxxxxxxx&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">import</span> ujson <span class="keyword">as</span> json</span><br><span class="line"><span class="keyword">except</span> ModuleNotFoundError:</span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">session_config = &#123;</span><br><span class="line">    <span class="string">&#x27;preset&#x27;</span>: <span class="string">&#x27;你是一个大型语言模型，可以回答我的问题。如果我有任何问题，请随时告诉你，你会尽力为我解答。&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;context&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">sessions = &#123;&#125;</span><br><span class="line">tokenizer = GPT2TokenizerFast.from_pretrained(<span class="string">&quot;gpt2-large&quot;</span>)</span><br><span class="line">check_url = <span class="string">&quot;https://v2.alapi.cn/api/censor/text&quot;</span></span><br><span class="line">index = <span class="number">0</span></span><br><span class="line">anime_data = json.load(<span class="built_in">open</span>(DATA_PATH / <span class="string">&quot;anime.json&quot;</span>, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf8&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取对话session</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_chat_session</span>(<span class="params">sessionid</span>):</span><br><span class="line">    <span class="keyword">if</span> sessionid <span class="keyword">not</span> <span class="keyword">in</span> sessions:</span><br><span class="line">        config = deepcopy(session_config)</span><br><span class="line">        config[<span class="string">&#x27;id&#x27;</span>] = sessionid</span><br><span class="line">        sessions[sessionid] = config</span><br><span class="line">    <span class="keyword">return</span> sessions[sessionid]</span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">chat_with_gpt</span>(<span class="params">prompt</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        resp = openai.Completion.create(</span><br><span class="line">            model = <span class="string">&quot;text-davinci-003&quot;</span>, </span><br><span class="line">            temperature = <span class="number">0.9</span>,</span><br><span class="line">            max_tokens=<span class="number">3000</span>,</span><br><span class="line">            top_p=<span class="number">1</span>,</span><br><span class="line">            presence_penalty=<span class="number">0</span>,</span><br><span class="line">            frequency_penalty=<span class="number">0</span>,</span><br><span class="line">            prompt=prompt)</span><br><span class="line">        resp = resp[<span class="string">&#x27;choices&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;text&#x27;</span>]</span><br><span class="line">    <span class="keyword">except</span> openai.OpenAIError <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;openai 接口报错: &#x27;</span> + <span class="built_in">str</span>(e))</span><br><span class="line">        resp = <span class="built_in">str</span>(e)</span><br><span class="line">    <span class="keyword">return</span> resp</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">get_chat_result</span>(<span class="params">text: <span class="built_in">str</span>, img_url: <span class="built_in">str</span>, user_id: <span class="built_in">int</span>, nickname: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    获取 AI 返回值，顺序： 特殊回复 -&gt; GPT3 -&gt; 青云客</span></span><br><span class="line"><span class="string">    :param text: 问题</span></span><br><span class="line"><span class="string">    :param img_url: 图片链接</span></span><br><span class="line"><span class="string">    :param user_id: 用户id</span></span><br><span class="line"><span class="string">    :param nickname: 用户昵称</span></span><br><span class="line"><span class="string">    :return: 回答</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">global</span> index</span><br><span class="line">    ai_message_manager.add_message(user_id, text)</span><br><span class="line">    special_rst = <span class="keyword">await</span> ai_message_manager.get_result(user_id, nickname)</span><br><span class="line">    <span class="keyword">if</span> special_rst:</span><br><span class="line">        ai_message_manager.add_result(user_id, special_rst)</span><br><span class="line">        <span class="keyword">return</span> special_rst</span><br><span class="line">    <span class="keyword">if</span> index == <span class="number">5</span>:</span><br><span class="line">        index = <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(text) &lt; <span class="number">6</span> <span class="keyword">and</span> random.random() &lt; <span class="number">0.6</span>:</span><br><span class="line">        keys = anime_data.keys()</span><br><span class="line">        <span class="keyword">for</span> key <span class="keyword">in</span> keys:</span><br><span class="line">            <span class="keyword">if</span> text.find(key) != -<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> random.choice(anime_data[key]).replace(<span class="string">&quot;你&quot;</span>, nickname)</span><br><span class="line">    rst = <span class="keyword">await</span> GPT_3(text, user_id)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> rst:</span><br><span class="line">        rst = <span class="keyword">await</span> xie_ai(text)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> rst:</span><br><span class="line">        <span class="keyword">return</span> no_result()</span><br><span class="line">    <span class="keyword">if</span> nickname:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nickname) &lt; <span class="number">5</span>:</span><br><span class="line">            <span class="keyword">if</span> random.random() &lt; <span class="number">0.5</span>:</span><br><span class="line">                nickname = <span class="string">&quot;~&quot;</span>.join(nickname) + <span class="string">&quot;~&quot;</span></span><br><span class="line">                <span class="keyword">if</span> random.random() &lt; <span class="number">0.2</span>:</span><br><span class="line">                    <span class="keyword">if</span> nickname.find(<span class="string">&quot;大人&quot;</span>) == -<span class="number">1</span>:</span><br><span class="line">                        nickname += <span class="string">&quot;大~人~&quot;</span></span><br><span class="line">        rst = <span class="built_in">str</span>(rst).replace(<span class="string">&quot;小主人&quot;</span>, nickname).replace(<span class="string">&quot;小朋友&quot;</span>, nickname)</span><br><span class="line">    ai_message_manager.add_result(user_id, rst)</span><br><span class="line">    <span class="keyword">return</span> rst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># GPT3接口</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">GPT_3</span>(<span class="params">msg: <span class="built_in">str</span>, sessionid: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    获取GPT3接口的回复</span></span><br><span class="line"><span class="string">    指令如下(群内需@机器人)：1.[重置会话] 请发送 重置会话2.[设置人格] 请发送 设置人格+人格描述3.[重置人格] 请发送 重置人格。</span></span><br><span class="line"><span class="string">    注意：重置会话不会清空人格,重置人格会重置会话!设置人格后人格将一直存在，除非重置人格或重启逻辑端!</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> msg.strip() == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;您好，我是人工智能助手，如果您有任何问题，请随时告诉我，我将尽力回答。\n如果您需要重置我们的会话，请回复`重置会话`&#x27;</span></span><br><span class="line">        <span class="comment"># 获得对话session</span></span><br><span class="line">        session = get_chat_session(sessionid)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;重置会话&#x27;</span> == msg.strip():</span><br><span class="line">            session[<span class="string">&#x27;context&#x27;</span>] = <span class="string">&#x27;&#x27;</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;会话已重置&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;重置人格&#x27;</span> == msg.strip():</span><br><span class="line">            session[<span class="string">&#x27;context&#x27;</span>] = <span class="string">&#x27;&#x27;</span></span><br><span class="line">            session[<span class="string">&#x27;preset&#x27;</span>] = session_config[<span class="string">&#x27;preset&#x27;</span>]</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;人格已重置&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> msg.strip().startswith(<span class="string">&#x27;设置人格&#x27;</span>):</span><br><span class="line">            session[<span class="string">&#x27;preset&#x27;</span>] = msg.strip().replace(<span class="string">&#x27;设置人格&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            session[<span class="string">&#x27;context&#x27;</span>] = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="comment"># 处理上下文逻辑</span></span><br><span class="line">        token_limit = <span class="number">4096</span> - <span class="number">3000</span> - <span class="built_in">len</span>(tokenizer.encode(session[<span class="string">&#x27;preset&#x27;</span>])) - <span class="number">3</span></span><br><span class="line">        session[<span class="string">&#x27;context&#x27;</span>] = session[<span class="string">&#x27;context&#x27;</span>] + <span class="string">&quot;\n\nQ:&quot;</span> + msg + <span class="string">&quot;\nA:&quot;</span></span><br><span class="line">        ids = tokenizer.encode(session[<span class="string">&#x27;context&#x27;</span>])</span><br><span class="line">        tokens = tokenizer.decode(ids[-token_limit:])</span><br><span class="line">        <span class="comment"># 计算可发送的字符数量</span></span><br><span class="line">        char_limit = <span class="built_in">len</span>(<span class="string">&#x27;&#x27;</span>.join(tokens))</span><br><span class="line">        session[<span class="string">&#x27;context&#x27;</span>] = session[<span class="string">&#x27;context&#x27;</span>][-char_limit:]</span><br><span class="line">        <span class="comment"># 从最早的提问开始截取</span></span><br><span class="line">        pos = session[<span class="string">&#x27;context&#x27;</span>].find(<span class="string">&#x27;Q:&#x27;</span>)</span><br><span class="line">        session[<span class="string">&#x27;context&#x27;</span>] = session[<span class="string">&#x27;context&#x27;</span>][pos:]</span><br><span class="line">        <span class="comment"># 设置预设</span></span><br><span class="line">        msg = session[<span class="string">&#x27;preset&#x27;</span>] + <span class="string">&#x27;\n\n&#x27;</span> + session[<span class="string">&#x27;context&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line">        <span class="comment"># 与ChatGPT交互获得对话内容</span></span><br><span class="line">        message = chat_with_gpt(msg)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;会话ID: &quot;</span> + <span class="built_in">str</span>(sessionid))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;ChatGPT返回内容: &quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(message)</span><br><span class="line">        <span class="keyword">return</span> message </span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> error:</span><br><span class="line">        traceback.print_exc()</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">str</span>(<span class="string">&#x27;异常: &#x27;</span> + <span class="built_in">str</span>(error)) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 屑 AI</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">xie_ai</span>(<span class="params">text: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    获取青云客回复</span></span><br><span class="line"><span class="string">    :param text: 问题</span></span><br><span class="line"><span class="string">    :return: 青云可回复</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    res = <span class="keyword">await</span> AsyncHttpx.get(<span class="string">f&quot;http://api.qingyunke.com/api.php?key=free&amp;appid=0&amp;msg=<span class="subst">&#123;text&#125;</span>&quot;</span>)</span><br><span class="line">    content = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        data = json.loads(res.text)</span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">&quot;result&quot;</span>] == <span class="number">0</span>:</span><br><span class="line">            content = data[<span class="string">&quot;content&quot;</span>]</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;菲菲&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                content = content.replace(<span class="string">&quot;菲菲&quot;</span>, NICKNAME)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;艳儿&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                content = content.replace(<span class="string">&quot;艳儿&quot;</span>, NICKNAME)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;公众号&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                content = <span class="string">&quot;&quot;</span></span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;&#123;br&#125;&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                content = content.replace(<span class="string">&quot;&#123;br&#125;&quot;</span>, <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;提示&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                content = content[: content.find(<span class="string">&quot;提示&quot;</span>)]</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;淘宝&quot;</span> <span class="keyword">in</span> content <span class="keyword">or</span> <span class="string">&quot;taobao.com&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">            <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">                r = re.search(<span class="string">&quot;&#123;face:(.*)&#125;&quot;</span>, content)</span><br><span class="line">                <span class="keyword">if</span> r:</span><br><span class="line">                    id_ = r.group(<span class="number">1</span>)</span><br><span class="line">                    content = content.replace(</span><br><span class="line">                        <span class="string">&quot;&#123;&quot;</span> + <span class="string">f&quot;face:<span class="subst">&#123;id_&#125;</span>&quot;</span> + <span class="string">&quot;&#125;&quot;</span>, <span class="built_in">str</span>(face(<span class="built_in">int</span>(id_)))</span><br><span class="line">                    )</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            content</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> content <span class="keyword">and</span> <span class="keyword">not</span> Config.get_config(<span class="string">&quot;ai&quot;</span>, <span class="string">&quot;ALAPI_AI_CHECK&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">await</span> check_text(content)</span><br><span class="line">        )</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        logger.error(<span class="string">f&quot;Ai xie_ai 发生错误 <span class="subst">&#123;<span class="built_in">type</span>(e)&#125;</span>：<span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hello</span>() -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    一些打招呼的内容</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    result = random.choice(</span><br><span class="line">        (</span><br><span class="line">            <span class="string">&quot;哦豁？！&quot;</span>,</span><br><span class="line">            <span class="string">&quot;你好！Ov&lt;&quot;</span>,</span><br><span class="line">            <span class="string">f&quot;库库库，呼唤<span class="subst">&#123;NICKNAME&#125;</span>做什么呢&quot;</span>,</span><br><span class="line">            <span class="string">&quot;我在呢！&quot;</span>,</span><br><span class="line">            <span class="string">&quot;呼呼，叫俺干嘛&quot;</span>,</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    img = random.choice(os.listdir(IMAGE_PATH / <span class="string">&quot;zai&quot;</span>))</span><br><span class="line">    <span class="keyword">if</span> img[-<span class="number">4</span>:] == <span class="string">&quot;.gif&quot;</span>:</span><br><span class="line">        result += image(img, <span class="string">&quot;zai&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        result += image(img, <span class="string">&quot;zai&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 没有回答时回复内容</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">no_result</span>() -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    没有回答时的回复</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        random.choice(</span><br><span class="line">            [</span><br><span class="line">                <span class="string">&quot;你在说啥子？&quot;</span>,</span><br><span class="line">                <span class="string">f&quot;纯洁的<span class="subst">&#123;NICKNAME&#125;</span>没听懂&quot;</span>,</span><br><span class="line">                <span class="string">&quot;下次再告诉你(下次一定)&quot;</span>,</span><br><span class="line">                <span class="string">&quot;你觉得我听懂了吗？嗯？&quot;</span>,</span><br><span class="line">                <span class="string">&quot;我！不！知！道！&quot;</span>,</span><br><span class="line">            ]</span><br><span class="line">        )</span><br><span class="line">        + image(random.choice(os.listdir(IMAGE_PATH / <span class="string">&quot;noresult&quot;</span>)), <span class="string">&quot;noresult&quot;</span>)</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">check_text</span>(<span class="params">text: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    ALAPI文本检测，主要针对青云客API，检测为恶俗文本改为无回复的回答</span></span><br><span class="line"><span class="string">    :param text: 回复</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> Config.get_config(<span class="string">&quot;alapi&quot;</span>, <span class="string">&quot;ALAPI_TOKEN&quot;</span>):</span><br><span class="line">        <span class="keyword">return</span> text</span><br><span class="line">    params = &#123;<span class="string">&quot;token&quot;</span>: Config.get_config(<span class="string">&quot;alapi&quot;</span>, <span class="string">&quot;ALAPI_TOKEN&quot;</span>), <span class="string">&quot;text&quot;</span>: text&#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        data = (<span class="keyword">await</span> AsyncHttpx.get(check_url, timeout=<span class="number">2</span>, params=params)).json()</span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">&quot;code&quot;</span>] == <span class="number">200</span>:</span><br><span class="line">            <span class="keyword">if</span> data[<span class="string">&quot;data&quot;</span>][<span class="string">&quot;conclusion_type&quot;</span>] == <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        logger.error(<span class="string">f&quot;检测违规文本错误...<span class="subst">&#123;<span class="built_in">type</span>(e)&#125;</span>：<span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> text</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>openai.api_key</code>需要上官网获取后填入</strong></p>
+<p>实际上就是把原来的图灵接口替换成GPT3接口。引入openai库和transformers库，使用了前者的<code>openai.Completion.create()</code>方法和后者<code>GPT2TokenizerFast.from_pretrained()</code>预训练的GPT2模型和分词器。</p>
+<p>关键在于前者，因为OpenAI的API网站已经上了GFW名单，所以我们现在就算有api_key也无法调用API接口（会显示超时）。以下是解决方法。</p>
+</div><h2 id="2-托管域名到CLOUDFLARE"><a href="#2-托管域名到CLOUDFLARE" class="headerlink" title="2. 托管域名到CLOUDFLARE"></a>2. 托管域名到CLOUDFLARE</h2><div class="story post-story"><p>后面我们要用到CLOUDFLARE，没有账户的话注册一个：<a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a></p>
+<p>注册之后点击右边的<code>Websites</code>，按照操作流程添加主域名，修改两个DNS服务器名字。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>比如我这里用阿里云买了一个域名，需要登录阿里云的域名控制台，点击管理，进入右边DNS修改页面</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>修改原来默认的DNS服务器为<code>lorna.ns.cloudflare.com</code>和<code>ram.ns.cloudflare.com</code>。</p>
+<p>中间可能还需要你邮件确认，按照提示操作就可以。</p>
+</div><h2 id="3-创建CLOUDFLARE-Workers"><a href="#3-创建CLOUDFLARE-Workers" class="headerlink" title="3. 创建CLOUDFLARE Workers"></a>3. 创建CLOUDFLARE Workers</h2><div class="story post-story"><p>该步骤参考来自<a target="_blank" rel="noopener" href="https://github.com/noobnooc/noobnooc/discussions/9">github [noobnooc]</a>，感谢大佬提供的解决方案！</p>
+<p>回到CLOUDFLARE，点击右边的创建Workers——Create a Service，这里直接确认创建一个服务。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>创建之后点击<code>Quick edit</code>修改workers代码如下（<strong>起到代理api.openai.com的作用</strong>）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">// Website you intended to retrieve <span class="keyword">for</span> users.</span><br><span class="line">const upstream = <span class="string">&#x27;api.openai.com&#x27;</span></span><br><span class="line"></span><br><span class="line">// Custom pathname <span class="keyword">for</span> the upstream website.</span><br><span class="line">const upstream_path = <span class="string">&#x27;/&#x27;</span></span><br><span class="line"></span><br><span class="line">// Website you intended to retrieve <span class="keyword">for</span> users using mobile devices.</span><br><span class="line">const upstream_mobile = upstream</span><br><span class="line"></span><br><span class="line">// Countries <span class="keyword">and</span> regions where you wish to suspend your service.</span><br><span class="line">const blocked_region = []</span><br><span class="line"></span><br><span class="line">// IP addresses which you wish to block <span class="keyword">from</span> using your service.</span><br><span class="line">const blocked_ip_address = [<span class="string">&#x27;0.0.0.0&#x27;</span>, <span class="string">&#x27;127.0.0.1&#x27;</span>]</span><br><span class="line"></span><br><span class="line">// Whether to use HTTPS protocol <span class="keyword">for</span> upstream address.</span><br><span class="line">const https = true</span><br><span class="line"></span><br><span class="line">// Whether to disable cache.</span><br><span class="line">const disable_cache = false</span><br><span class="line"></span><br><span class="line">// Replace texts.</span><br><span class="line">const replace_dict = &#123;</span><br><span class="line">    <span class="string">&#x27;$upstream&#x27;</span>: <span class="string">&#x27;$custom_domain&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">addEventListener(<span class="string">&#x27;fetch&#x27;</span>, event =&gt; &#123;</span><br><span class="line">    event.respondWith(fetchAndApply(event.request));</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> function fetchAndApply(request) &#123;</span><br><span class="line">    const region = request.headers.get(<span class="string">&#x27;cf-ipcountry&#x27;</span>).toUpperCase();</span><br><span class="line">    const ip_address = request.headers.get(<span class="string">&#x27;cf-connecting-ip&#x27;</span>);</span><br><span class="line">    const user_agent = request.headers.get(<span class="string">&#x27;user-agent&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    let response = null;</span><br><span class="line">    let url = new URL(request.url);</span><br><span class="line">    let url_hostname = url.hostname;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (https == true) &#123;</span><br><span class="line">        url.protocol = <span class="string">&#x27;https:&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        url.protocol = <span class="string">&#x27;http:&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">await</span> device_status(user_agent)) &#123;</span><br><span class="line">        var upstream_domain = upstream;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        var upstream_domain = upstream_mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    url.host = upstream_domain;</span><br><span class="line">    <span class="keyword">if</span> (url.pathname == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">        url.pathname = upstream_path;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        url.pathname = upstream_path + url.pathname;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (blocked_region.includes(region)) &#123;</span><br><span class="line">        response = new Response(<span class="string">&#x27;Access denied: WorkersProxy is not available in your region yet.&#x27;</span>, &#123;</span><br><span class="line">            status: <span class="number">403</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (blocked_ip_address.includes(ip_address)) &#123;</span><br><span class="line">        response = new Response(<span class="string">&#x27;Access denied: Your IP address is blocked by WorkersProxy.&#x27;</span>, &#123;</span><br><span class="line">            status: <span class="number">403</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        let method = request.method;</span><br><span class="line">        let request_headers = request.headers;</span><br><span class="line">        let new_request_headers = new Headers(request_headers);</span><br><span class="line"></span><br><span class="line">        new_request_headers.<span class="built_in">set</span>(<span class="string">&#x27;Host&#x27;</span>, upstream_domain);</span><br><span class="line">        new_request_headers.<span class="built_in">set</span>(<span class="string">&#x27;Referer&#x27;</span>, url.protocol + <span class="string">&#x27;//&#x27;</span> + url_hostname);</span><br><span class="line"></span><br><span class="line">        let original_response = <span class="keyword">await</span> fetch(url.href, &#123;</span><br><span class="line">            method: method,</span><br><span class="line">            headers: new_request_headers,</span><br><span class="line">            body: request.body</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        connection_upgrade = new_request_headers.get(<span class="string">&quot;Upgrade&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (connection_upgrade &amp;&amp; connection_upgrade.toLowerCase() == <span class="string">&quot;websocket&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> original_response;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        let original_response_clone = original_response.clone();</span><br><span class="line">        let original_text = null;</span><br><span class="line">        let response_headers = original_response.headers;</span><br><span class="line">        let new_response_headers = new Headers(response_headers);</span><br><span class="line">        let status = original_response.status;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (disable_cache) &#123;</span><br><span class="line">			new_response_headers.<span class="built_in">set</span>(<span class="string">&#x27;Cache-Control&#x27;</span>, <span class="string">&#x27;no-store&#x27;</span>);</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">        new_response_headers.<span class="built_in">set</span>(<span class="string">&#x27;access-control-allow-origin&#x27;</span>, <span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">        new_response_headers.<span class="built_in">set</span>(<span class="string">&#x27;access-control-allow-credentials&#x27;</span>, true);</span><br><span class="line">        new_response_headers.delete(<span class="string">&#x27;content-security-policy&#x27;</span>);</span><br><span class="line">        new_response_headers.delete(<span class="string">&#x27;content-security-policy-report-only&#x27;</span>);</span><br><span class="line">        new_response_headers.delete(<span class="string">&#x27;clear-site-data&#x27;</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (new_response_headers.get(<span class="string">&quot;x-pjax-url&quot;</span>)) &#123;</span><br><span class="line">            new_response_headers.<span class="built_in">set</span>(<span class="string">&quot;x-pjax-url&quot;</span>, response_headers.get(<span class="string">&quot;x-pjax-url&quot;</span>).replace(<span class="string">&quot;//&quot;</span> + upstream_domain, <span class="string">&quot;//&quot;</span> + url_hostname));</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">        const content_type = new_response_headers.get(<span class="string">&#x27;content-type&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (content_type != null &amp;&amp; content_type.includes(<span class="string">&#x27;text/html&#x27;</span>) &amp;&amp; content_type.includes(<span class="string">&#x27;UTF-8&#x27;</span>)) &#123;</span><br><span class="line">            original_text = <span class="keyword">await</span> replace_response_text(original_response_clone, upstream_domain, url_hostname);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            original_text = original_response_clone.body</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">        response = new Response(original_text, &#123;</span><br><span class="line">            status,</span><br><span class="line">            headers: new_response_headers</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> response;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> function replace_response_text(response, upstream_domain, host_name) &#123;</span><br><span class="line">    let text = <span class="keyword">await</span> response.text()</span><br><span class="line"></span><br><span class="line">    var i, j;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> replace_dict) &#123;</span><br><span class="line">        j = replace_dict[i]</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="string">&#x27;$upstream&#x27;</span>) &#123;</span><br><span class="line">            i = upstream_domain</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="string">&#x27;$custom_domain&#x27;</span>) &#123;</span><br><span class="line">            i = host_name</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (j == <span class="string">&#x27;$upstream&#x27;</span>) &#123;</span><br><span class="line">            j = upstream_domain</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="string">&#x27;$custom_domain&#x27;</span>) &#123;</span><br><span class="line">            j = host_name</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        let re = new RegExp(i, <span class="string">&#x27;g&#x27;</span>)</span><br><span class="line">        text = text.replace(re, j);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> function device_status(user_agent_info) &#123;</span><br><span class="line">    var agents = [<span class="string">&quot;Android&quot;</span>, <span class="string">&quot;iPhone&quot;</span>, <span class="string">&quot;SymbianOS&quot;</span>, <span class="string">&quot;Windows Phone&quot;</span>, <span class="string">&quot;iPad&quot;</span>, <span class="string">&quot;iPod&quot;</span>];</span><br><span class="line">    var flag = true;</span><br><span class="line">    <span class="keyword">for</span> (var v = <span class="number">0</span>; v &lt; agents.length; v++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (user_agent_info.indexOf(agents[v]) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            flag = false;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改之后点击右下角<code>Save and deploy</code>，此时worker地址还不能直接代替openai的API地址，需要进一步绑定前面的域名（CLOUDFLARE Workers只能绑定托管到CLOUDFLARE的域名，所以有了前面一步）。</p>
+</div><h2 id="4-绑定域名"><a href="#4-绑定域名" class="headerlink" title="4. 绑定域名"></a>4. 绑定域名</h2><div class="story post-story"><p>点击Workers进入管理页面，点击<code>Triggers</code>——<code>Add Custom Domain</code>，将前面托管的域名填进去，可以用自己喜欢的二级域名：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>大约过几分钟，custom domains显示Certificate 为 <code>Activate</code>即可。</p>
+<p>这个时候就可以通过你绑定的域名来访问<code>api.openai.com</code>了，可以通过其他POST工具调试接口，就不多说了。</p>
+</div><h2 id="5-修改openai库"><a href="#5-修改openai库" class="headerlink" title="5. 修改openai库"></a>5. 修改openai库</h2><div class="story post-story"><p>前面做的一系列步骤是让你可以通过其他域名访问openai的API网站，但是前面第一步写的插件调用了<code>openai.Completion.create()</code>方法函数，此时仍然会直接访问api.openai.com，这个时候就是扒源代码修改了。</p>
+<p><code>locate openai</code>先找到服务器上openai下载的位置，在对应的路径修改，比如我的文件路径是<code>/root/anaconda3/lib/python3.9/site-packages/openai</code>，修改该路径下的__init__.py文件：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>第34行<code>api_base</code>后面的网址<strong>改为刚刚绑定的网址</strong>（&#x2F;v1的部分不要动）。</p>
+<p>上述步骤完成后，重启zhenxun_bot就可以在<strong>不对自己服务器做任何代理的情况下正常调用OpenAI的API接口了</strong>。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230308/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230308/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>顺便说一下，2022年12月申请的openAI账号每个账户有18美元的额度，现在（2023年3月）申请的账号就只有5美元额度了，emmmmmmm…</p>
+<p>不过上面的那个插件用的是<code>text-davinci-003</code>模型，和ChatGPT用的模型稍有不同，就在前几天ChatGPT公开了API，所使用的模型为<code>gpt-3.5-turbo</code>。并且我前面用的方法是<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/completions/create">Create completion</a>，和ChatGPT创建实例的方法<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/chat/create">Create chat completion</a>是不同的，且收费也不一样，现在ChatGPT API收费标准是0.002美元&#x2F;1000 tokens，token数和字数是不一样的，要看分词器怎么分，不过现在API输出上限均为4096 token。有空再更新一下模型方法，这里只是做个记录。</p>
+<p>详细的API调用方法需要参考官网<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/chat/create">API Reference - OpenAI API</a></p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/03/08/a.html>http://www.shelven.com/2023/03/08/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-08T22:01:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年3月8日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/05/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ChatGPT/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ChatGPT</p></a></div>
+  <span hidden itemprop="keywords">ChatGPT</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/03/08/a.html&title=绕过双重封锁部署ChatGPT到zhenxun_bot - 我的小破站&summary=作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/03/08/a.html&title=绕过双重封锁部署ChatGPT到zhenxun_bot - 我的小破站&summary=作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/03/08/a.html&title=绕过双重封锁部署ChatGPT到zhenxun_bot - 我的小破站&summary=作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/03/07/a.html'>
+          <p class='title'>0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>基因组组装完成之后，我们就可以对基因组进行变异分析了。这里主要介绍由 Broad Institute开发的一款基因组分析工具GATK，这款工具设计之初是用于处理分析Illumina二代测序技术产...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/03/08/a.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/05/a.html"  itemprop="url">
-        blastn & blastp 寻找同源基因
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>今天接到一个任务，大致内容是在一个植物的全长转录组数据中找拟南芥的三个同源基因。简简单单的描述，我的想法也很简单，直接找基因的<strong>CDS序列做blastn</strong>比对就完事了，结果却没有那么顺利…记录一下踩的坑和解决办法。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-05T19:25:26+08:00">2022-07-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/05/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/03/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/03/a.html"  itemprop="url">
-        0基础学习基因组三代测序组装（4）——初步组装二代数据
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>经过前面的全基因组特征调查（survey）后，我们发现这是一个复杂基因组，杂合度较高，可以以二代+三代测序技术相结合的策略进行全基因组组装，还可以以Hi-C（高通量染色体捕获技术，High-through chromosome conformation capture）技术进行辅助组装。这里我用华大开发的二代测序组装工具SOAPdenovo，用二代测序数据对进行初步基因组组装。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-03T19:28:52+08:00">2022-07-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/03/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/07/02/a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="我的小破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="我的小破站">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/07/02/a.html"  itemprop="url">
-        0基础学习基因组三代测序组装（3）——全基因组Survey
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>之前说到如何对三代测序数据做污染评估，取随机序列做blastn比对nt库，确定物种分布情况。实际blast比对还要考虑比对的序列长度和ONT本身数据错误率，以及结合GC-depth确定是否有污染。基因组三代测序数据组装之前，我们还要做一个全基因组survey。主要是为了减少盲目性，先做低深度的基因组分析，也是初步了解物种<strong>基因组特征</strong>的有效方法，比如评估基因组大小和杂合情况，为后续全基因组de novo组装策略指定提供指导。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-02T15:08:17+08:00">2022-07-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/07/02/a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
+  </article>
   
 
 
-	
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3369,228 +3402,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(33)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%83%A8%E7%BD%B2ChatGPT%E5%88%B0zhenxun-bot"><span class="toc-text">1. 部署ChatGPT到zhenxun_bot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%89%98%E7%AE%A1%E5%9F%9F%E5%90%8D%E5%88%B0CLOUDFLARE"><span class="toc-text">2. 托管域名到CLOUDFLARE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BACLOUDFLARE-Workers"><span class="toc-text">3. 创建CLOUDFLARE Workers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-text">4. 绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BF%AE%E6%94%B9openai%E5%BA%93"><span class="toc-text">5. 修改openai库</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/BUSCO/" style="font-size: 14px; color: #999">BUSCO</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/ChatGPT/" style="font-size: 14px; color: #999">ChatGPT</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GATK/" style="font-size: 14px; color: #999">GATK</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/LAI/" style="font-size: 14px; color: #999">LAI</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/QUAST/" style="font-size: 14px; color: #999">QUAST</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 14px; color: #999">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>49 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>124.4k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-03-08 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3615,14 +3458,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="绕过双重封锁部署ChatGPT到zhenxun_bot";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3631,14 +3475,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4826,7 +4670,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://www.shelven.com/archives/2022/7/","name":"7月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/网络相关/","name":"网络相关"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/QQ机器人/","name":"QQ机器人"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/03/08/a.html","name":"绕过双重封锁部署ChatGPT到zhenxun_bot"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"绕过双重封锁部署ChatGPT到zhenxun_bot","description":"作为一个从ChatGPT公测用到现在的用户，有些无奈很难言说。本来OpenAI就不对咱们这个区域开放，使用官方的API搭建应用可以不借助VPN访问，算是解除了区域限制。但是，从2023年3月2日傍晚开始，API接口就开始没有响应了，官网没有问题，四处查询发现可能是API的域名上了GFW名单（暂不确定，有可能重大会议过去后会恢复？）。","datePublished":"2023-03-08T13:54:56.000Z","dateModified":"2023-03-08T14:01:24.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/03/08/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/03/08/a.html","wordCount":167,"articleSection":"网络相关","keywords":"ChatGPT","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
