@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/archives/page/2/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/03/17/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>归档 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/archives/page/2/index.html">
+  <title>SSL证书申请和部署 - 我的小破站</title>
+  <meta name="keywords" content="建站,null">
+  <meta name="description" content="不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~ 一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSL证书申请和部署">
+<meta property="og:url" content="http://www.shelven.com/2023/03/17/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~ 一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-03-17T10:00:39.000Z">
+<meta property="article:modified_time" content="2023-03-17T10:02:39.000Z">
+<meta property="article:tag" content="建站">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -2265,7 +2270,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3021,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3084,850 +3089,311 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-	  <article id="arc" class="post article white-box reveal shadow">
-			
-			
-				
-				
-					
-						
-						<h2>2023</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/17/a.html">
-									<time>03-17</time>
-									
-										SSL证书申请和部署
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/16/a.html">
-									<time>03-16</time>
-									
-										基因组注释（2）——散在重复序列注释
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/12/a.html">
-									<time>03-12</time>
-									
-										基因组注释（1）——串联重复序列注释
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/08/a.html">
-									<time>03-08</time>
-									
-										绕过双重封锁部署ChatGPT到zhenxun_bot
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/07/a.html">
-									<time>03-07</time>
-									
-										0基础学习三代基因组测序组装（9）——GATK检测植物基因组SNP和INDEL变异
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/02/a.html">
-									<time>03-02</time>
-									
-										0基础学习基因组三代测序组装（8）——基因组组装质量评估（QUAST）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/03/01/a.html">
-									<time>03-01</time>
-									
-										0基础学习基因组三代测序组装（7）——基因组组装质量评估（BUSCO、LAI指数）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/02/27/a.html">
-									<time>02-27</time>
-									
-										0基础学习基因组三代测序组装（6）——基因组polish
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/02/23/a.html">
-									<time>02-23</time>
-									
-										0基础学习基因组三代测序组装（5）——三代数据组装
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/02/21/a.html">
-									<time>02-21</time>
-									
-										解决github DNS污染的三种方法
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2023/02/09/a.html">
-									<time>02-09</time>
-									
-										校园网代理服务器的搭建
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						
-						<h2>2022</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/12/18/a.html">
-									<time>12-18</time>
-									
-										基于requests和Xpath改进微信公众号爬虫
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/12/14/a.html">
-									<time>12-14</time>
-									
-										应用requests、Xpath和selenium编写爬虫脚本
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/12/10/a.html">
-									<time>12-10</time>
-									
-										HTTP基本原理
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/29/b.html">
-									<time>11-29</time>
-									
-										python自学笔记（7）——模块、包和库
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/29/a.html">
-									<time>11-29</time>
-									
-										python自学笔记（6）——函数的变量和高级用法
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/28/a.html">
-									<time>11-28</time>
-									
-										python自学笔记（5）——装饰器
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/26/a.html">
-									<time>11-26</time>
-									
-										python自学笔记（4）——面向对象编程（下）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/25/a.html">
-									<time>11-25</time>
-									
-										python自学笔记（3）——面向对象编程（上）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/24/a.html">
-									<time>11-24</time>
-									
-										python自学笔记（2）——运算符和参数传递
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/11/23/a.html">
-									<time>11-23</time>
-									
-										python自学笔记（1）——数据类型
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/20/a.html">
-									<time>09-20</time>
-									
-										深度学习笔记
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/09/b.html">
-									<time>09-09</time>
-									
-										go-cqhttp扫码登录异常的解决方法
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/09/a.html">
-									<time>09-09</time>
-									
-										深度学习——语音合成tts笔记（下）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/09/08/a.html">
-									<time>09-08</time>
-									
-										深度学习——语音合成tts笔记（上）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/07/13/a.html">
-									<time>07-13</time>
-									
-										frp内网穿透配置笔记
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/07/05/a.html">
-									<time>07-05</time>
-									
-										blastn & blastp 寻找同源基因
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/07/03/a.html">
-									<time>07-03</time>
-									
-										0基础学习基因组三代测序组装（4）——初步组装二代数据
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/07/02/a.html">
-									<time>07-02</time>
-									
-										0基础学习基因组三代测序组装（3）——全基因组Survey
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/06/20/a.html">
-									<time>06-20</time>
-									
-										0基础学习基因组三代测序组装（2）——数据污染评估
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/06/17/b.html">
-									<time>06-17</time>
-									
-										0基础学习基因组三代测序组装（1）——数据质控
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/06/17/a.html">
-									<time>06-17</time>
-									
-										NCBI的BLAST+工具本地安装，本地建库和BLAST比对
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/06/16/a.html">
-									<time>06-16</time>
-									
-										perl语言学习笔记（1）
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/06/14/a.html">
-									<time>06-14</time>
-									
-										基因组注释文件gbff格式转换gff3格式
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/25/a.html">
-									<time>05-25</time>
-									
-										集群和slurm调度系统使用心得
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/16/a.html">
-									<time>05-16</time>
-									
-										转录组数据分析笔记（10）——初识GO/KEGG富集分析
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/08/a.html">
-									<time>05-08</time>
-									
-										视频一键转字符动画——python函数封装和调用练习
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/05/a.html">
-									<time>05-05</time>
-									
-										转录组数据分析笔记（9）——pheatmap绘制差异表达基因热图
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/04/a.html">
-									<time>05-04</time>
-									
-										获得测序原始数据——初探GEO和SRA数据库
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/05/03/a.html">
-									<time>05-03</time>
-									
-										简易爬虫程序编程记录——以微博热搜为例
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/29/a.html">
-									<time>04-29</time>
-									
-										vscode远程连接和快速搭建python环境
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/25/a.html">
-									<time>04-25</time>
-									
-										转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/20/b.html">
-									<time>04-20</time>
-									
-										linux操作指令总结整理
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/20/a.html">
-									<time>04-20</time>
-									
-										shell脚本基本语法总结
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/18/a.html">
-									<time>04-18</time>
-									
-										转录组数据分析笔记（7）——DESeq2差异分析
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/17/b.html">
-									<time>04-17</time>
-									
-										转录组数据分析笔记（6）——HTseq计数定量
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/17/a.html">
-									<time>04-17</time>
-									
-										转录组数据分析笔记（5）——stringtie转录本组装和定量
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/16/b.html">
-									<time>04-16</time>
-									
-										转录组数据分析笔记（4）——IGV基因组浏览器安装和解读
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/16/a.html">
-									<time>04-16</time>
-									
-										转录组数据分析笔记（3）——samtools用法小结
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/15/a.html">
-									<time>04-15</time>
-									
-										转录组数据分析笔记（2）——使用Hisat2比对参考基因组
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/14/a.html">
-									<time>04-14</time>
-									
-										转录组数据分析笔记（1）——如何用fastqc和trim-galore做测序数据质控
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2022/04/13/a.html">
-									<time>04-13</time>
-									
-										小破站正式对外开放啦！
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/03/17/a.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="我的小破站">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="我的小破站">
+    <meta itemprop="description" content="">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        SSL证书申请和部署
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">个人主页</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" itemprop="url"><span itemprop="name">个人主页</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-17T18:00:39+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年3月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="SSL证书申请和部署" data-path="/2023/03/17/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作<del>（虽然现在也没好到哪儿去）</del>。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~</p>
+<p>一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作</p>
+<span id="more"></span>
+
+<h2 id="1-SSL部署的意义"><a href="#1-SSL部署的意义" class="headerlink" title="1. SSL部署的意义"></a>1. SSL部署的意义</h2><div class="story post-story"><p>前面在<a href="https://www.shelven.com/2022/12/10/a.html">http原理</a>部分说过，HTTPS的安全基础是ssl，部署ssl之后有以下优点：</p>
+<blockquote>
+<ol>
+<li>建立数据信息安全通道，保障信息安全</li>
+<li>有https协议的网站更容易被google、baidu收录</li>
+<li>用户浏览https协议的网站地址有锁头标志，不会显示信息安全提醒页面</li>
+</ol>
+</blockquote>
+</div><h2 id="2-申请SSL证书"><a href="#2-申请SSL证书" class="headerlink" title="2. 申请SSL证书"></a>2. 申请SSL证书</h2><div class="story post-story"><p>我是在腾讯云上购买的轻量云服务器，在哪个服务器供应商买的服务器就到对应的平台，搜索SSL证书，点击申请免费证书</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>选择第一个免费版即可，填写你要绑定的域名，验证方法选择手动DNS验证，提交申请</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/2.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>这一步需要到对应的域名供应商那里进行DNS解析</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我是在阿里云买的域名，因此在阿里云控制台找到你要绑定的域名，添加记录，输入上面图红框里的对应信息</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>回到腾讯云，点击<strong>验证域名</strong>即可，后续根据自己的服务器类型（我是Apache 服务器）选择对应的证书。第一次申请的话可能会让你完善身份信息。需要注意，如果域名被托管到其他平台，需要到对应的托管平台进行DNS解析，否则会查询不到解析记录。</p>
+</div><h2 id="3-部署SSL证书"><a href="#3-部署SSL证书" class="headerlink" title="3. 部署SSL证书"></a>3. 部署SSL证书</h2><div class="story post-story"><p>申请成功后，进入SSL证书管理平台，点击已签发，就可以看到刚刚申请的SSL证书了，首先把证书下载到本地</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>解压可以看到如下四个文件，<code>.crt</code>后缀的是证书链和证书文件，<code>.csr</code>后缀的是提供给CA的文件，<code>.key</code>后缀是私钥文件</p>
+<p><img src="https://www.shelven.com/tuchuang/20230317/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230317/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>再次强调一下Apache服务器、Nginx服务器等等的部署目录是不同的，我这里是apache服务器，需要将上面的四个文件上传到服务器<code>/etc/httpd/ssl/</code>目录下。</p>
+<p><strong>如果之前部署过ssl证书，到这一步以后直接<code>service network restart</code>重启http服务就行了。</strong></p>
+<p>如果是第一次安装，进入<code>/etc/httpd/conf</code>目录，修改 <code>httpd.conf</code> 配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Include conf.modules.d/*.conf	# 第56行确保该命令未被注释，用于加载SSL的配置目录</span><br></pre></td></tr></table></figure>
+
+<p>进入<code>/etc/httpd/conf.modules.d</code>目录，修改<code>00-ssl.conf</code> 配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LoadModule ssl_module modules/mod_ssl.so	# 第1行确保该命令未被注释，用于加载SSL模块</span><br></pre></td></tr></table></figure>
+
+<p>进入<code>/etc/httpd/conf.d</code>目录，修改<code>ssl.conf</code>配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DocumentRoot &quot;/var/www/html&quot;	# 配置虚拟主机的位置，路径可以改，建议还是用默认的</span><br><span class="line">ServerName xxxxx.com 	# 填写证书网站名称</span><br><span class="line">SSLEngine on	# 确保SSL功能打开</span><br><span class="line">SSLCertificateFile /etc/httpd/ssl/xxxxx.com.crt	# 确定证书路径</span><br><span class="line">SSLCertificateKeyFile /etc/httpd/ssl/xxxxx.com.key	# 确定私钥路径</span><br><span class="line">SSLCertificateChainFile /etc/httpd/ssl/root_bundle.crt	# 确定证书链路径</span><br></pre></td></tr></table></figure>
+
+<p>以上配置完成后，重启网络服务<code>service network restart</code>，这个时候再访问网站就是https协议了。</p>
+<p>参考自<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/35243">SSL 证书 Apache 服务器 SSL 证书安装部署（Linux）-证书安装-文档中心-腾讯云 (tencent.com)</a></p>
+<p>需要注意下，证书到期之后不会自动部署…一般这种免费的SSL证书时间都是1年，在到期前一个月会有提醒，申请完成之后直接覆盖快到期的原证书即可。<del>（省下了一笔自动部署的90块钱）</del></p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/03/17/a.html>http://www.shelven.com/2023/03/17/a.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-17T18:02:39+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年3月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%BB%BA%E7%AB%99/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>建站</p></a></div>
+  <span hidden itemprop="keywords">建站</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/03/17/a.html&title=SSL证书申请和部署 - 我的小破站&summary=不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~
+一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/03/17/a.html&title=SSL证书申请和部署 - 我的小破站&summary=不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~
+一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/03/17/a.html&title=SSL证书申请和部署 - 我的小破站&summary=不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~
+一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/03/16/a.html'>
+          <p class='title'>基因组注释（2）——散在重复序列注释<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>前面我们注释了串联重复序列（Tandem repeat，TR），接下来是对散在重复序列（也称转座子，transposable element，TE）进行注释。注释之后我们对所有重复序列在基因组上...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/03/17/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+  
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3935,228 +3401,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(35)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-SSL%E9%83%A8%E7%BD%B2%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">1. SSL部署的意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%94%B3%E8%AF%B7SSL%E8%AF%81%E4%B9%A6"><span class="toc-text">2. 申请SSL证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%83%A8%E7%BD%B2SSL%E8%AF%81%E4%B9%A6"><span class="toc-text">3. 部署SSL证书</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/BUSCO/" style="font-size: 14px; color: #999">BUSCO</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/ChatGPT/" style="font-size: 14px; color: #999">ChatGPT</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GATK/" style="font-size: 14px; color: #999">GATK</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GMATA/" style="font-size: 14px; color: #999">GMATA</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/LAI/" style="font-size: 14px; color: #999">LAI</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/QUAST/" style="font-size: 14px; color: #999">QUAST</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/RepeatMasker/" style="font-size: 14px; color: #999">RepeatMasker</a> <a href="/tags/RepeatModeler/" style="font-size: 14px; color: #999">RepeatModeler</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/TRF/" style="font-size: 14px; color: #999">TRF</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 16.5px; color: #888">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>52 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>129.9k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-03-17 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4181,14 +3457,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="SSL证书申请和部署";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4197,14 +3474,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -5392,7 +4669,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/个人主页/","name":"个人主页"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/03/17/a.html","name":"SSL证书申请和部署"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SSL证书申请和部署","description":"不知不觉这个小破站运行也快要一年整了，一年前网站刚开放，我天天修bug到凌晨两三点的情景还历历在目……主要还是自己对网站搭建框架不熟悉，看不懂代码整不清楚linux操作（虽然现在也没好到哪儿去）。一年过去了通过自学确实学习了很多计算机方面的知识，有空再做个总结吧~\n一年前想写如何部署ssl证书的，如今一年快到了正好要续上ssl证书，这篇博客算是补档吧~记录下自己的操作","datePublished":"2023-03-17T10:00:39.000Z","dateModified":"2023-03-17T10:02:39.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/03/17/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/03/17/a.html","wordCount":185,"articleSection":"个人主页","keywords":"建站","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
