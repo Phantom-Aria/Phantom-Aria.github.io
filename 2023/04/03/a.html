@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1680859301430" as="style">
+  <link rel="preload" href="/css/style.css?time=1680921553606" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-04-03T14:09:26.000Z">
-<meta property="article:modified_time" content="2023-04-07T09:20:48.000Z">
+<meta property="article:modified_time" content="2023-04-08T02:38:55.000Z">
 <meta property="article:tag" content="Barker3">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1781,8 +1781,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1680859301430" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1680859301430"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1680921553606" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1680921553606"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1859,9 +1859,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1680859301430","sites":"/js/plugins/sites.js?time=1680859301430","friends":"/js/plugins/friends.js?time=1680859301430","parallax":"/js/plugins/parallax.js?time=1680859301430","rightMenu":"/js/plugins/rightMenu.js?time=1680859301430","contributors":"/js/plugins/contributors.js?time=1680859301430","message":"/js/thirdparty/message.js?time=1680859301430","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1680859301430"},"css":{"style":"/css/style.css?time=1680859301430","message":"/css/message.css?time=1680859301430"}},
+    cdn: {"js":{"app":"/js/app.js?time=1680921553606","sites":"/js/plugins/sites.js?time=1680921553606","friends":"/js/plugins/friends.js?time=1680921553606","parallax":"/js/plugins/parallax.js?time=1680921553606","rightMenu":"/js/plugins/rightMenu.js?time=1680921553606","contributors":"/js/plugins/contributors.js?time=1680921553606","message":"/js/thirdparty/message.js?time=1680921553606","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1680921553606"},"css":{"style":"/css/style.css?time=1680921553606","message":"/css/message.css?time=1680921553606"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1680859301430),
+    lastupdate: new Date(1680921553606),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3160,7 +3160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.6k 字</p>
+      <p>字数：2.7k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3302,7 +3302,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>然后用Apocynaceae祖先节点和子节点的已发表基因组的植物学名，一个一个去搜NCBI网站的Genome库，有protein序列的就可以直接下载。</p>
 <p><img src="https://www.shelven.com/tuchuang/20230403/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230403/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>等待运行结果出来后，我会对两种方式的运行时间、预测的基因数量等做个对比。</p>
+<p>两种同源蛋白建库方式预测的基因数量和花费的时间：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>OrthoDB Plant数据库</th>
+<th>自建蛋白数据库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>花费时间</td>
+<td>13 h</td>
+<td>12.5 h</td>
+</tr>
+<tr>
+<td>预测基因数</td>
+<td>23746</td>
+<td>23953</td>
+</tr>
+</tbody></table>
+<p>用自建蛋白数据库跑braker预测的基因数更多，且花费时间更短。后续以该预测结果继续分析。</p>
 
 </div>
   </div>
@@ -3344,10 +3364,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-07T17:20:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-08T10:38:55+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年4月7日</p>
+    <p>更新于：2023年4月8日</p>
   </a>
 </div>
 
@@ -3646,7 +3666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1680859301430.js"></script>
+<script src="/js/app.js?time=1680921553606.js"></script>
 
 
 
@@ -3830,7 +3850,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1680859301430')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1680921553606')</script>
 
 
 
@@ -3960,19 +3980,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1680859301430")
+        volantis.js("/js/plugins/sites.js?time=1680921553606")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1680859301430")
+        volantis.js("/js/plugins/friends.js?time=1680921553606")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1680859301430")
+        volantis.js("/js/plugins/contributors.js?time=1680921553606")
       }
     
   };
@@ -4041,7 +4061,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1680859301430')
+    await volantis.js('/js/plugins/aplayer.js?time=1680921553606')
   
   })();
 
@@ -4161,7 +4181,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1680859301430");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1680921553606");
   }
 
   function loadSearchService() {
@@ -4501,7 +4521,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1680859301430').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1680921553606').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4735,7 +4755,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/04/03/a.html","name":"基因组注释（4）——基因预测"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因组注释（4）——基因预测","description":"在对基因组重复序列和ncRNA进行注释后，接下来是基因预测和功能注释，这也是寻找功能基因的基础和前提。这里主要记录下怎么用Braker3进行基因组的基因预测（也就是结构注释）。","datePublished":"2023-04-03T14:09:26.000Z","dateModified":"2023-04-07T09:20:48.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/04/03/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/04/03/a.html","wordCount":88,"articleSection":"学习笔记","keywords":"Barker3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/04/03/a.html","name":"基因组注释（4）——基因预测"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因组注释（4）——基因预测","description":"在对基因组重复序列和ncRNA进行注释后，接下来是基因预测和功能注释，这也是寻找功能基因的基础和前提。这里主要记录下怎么用Braker3进行基因组的基因预测（也就是结构注释）。","datePublished":"2023-04-03T14:09:26.000Z","dateModified":"2023-04-08T02:38:55.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/04/03/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/04/03/a.html","wordCount":88,"articleSection":"学习笔记","keywords":"Barker3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
