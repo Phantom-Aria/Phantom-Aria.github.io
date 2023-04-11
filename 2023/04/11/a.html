@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/tags/ggplot2/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/04/11/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,19 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：ggplot2 - 我的小破站</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/tags/ggplot2/index.html">
+  <title>基因组注释（5）——预测基因筛选 - 我的小破站</title>
+  <meta name="keywords" content="TEsorter,null">
+  <meta name="description" content="注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基因组注释（5）——预测基因筛选">
+<meta property="og:url" content="http://www.shelven.com/2023/04/11/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-04-11T14:58:20.000Z">
+<meta property="article:modified_time" content="2023-04-11T15:05:47.000Z">
+<meta property="article:tag" content="TEsorter">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3021,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3083,25 +3088,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/04/25/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/04/11/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3110,68 +3099,292 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/04/25/a.html"  itemprop="url">
-        转录组数据分析笔记（8）——ggplot2和ggrepel绘制火山图
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>主要介绍下在用DESeq2得到我们想要的差异表达基因后，如何在R中用ggplot和ggrepel绘制火山图。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        基因组注释（5）——预测基因筛选
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/">基因组三代测序分析</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">基因组三代测序分析</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-25T04:53:27+08:00">2022-04-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">转录组数据分析</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">转录组数据分析</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-04-11T22:58:20+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年4月11日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：883 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        <div>
-          <a class='readmore' href='/2022/04/25/a.html' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="基因组注释（5）——预测基因筛选" data-path="/2023/04/11/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。</p>
+<span id="more"></span>
+
+<p>这里记录下<code>TEsorter</code>软件筛选预测基因的方法。</p>
+<h2 id="1-TEsorter安装"><a href="#1-TEsorter安装" class="headerlink" title="1. TEsorter安装"></a>1. TEsorter安装</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/zhangrengang/TEsorter">TEsorter</a>原本是用于调用<a target="_blank" rel="noopener" href="https://github.com/oushujun/LTR_retriever">LTR_retriever</a>鉴别长末端重复序列反转座子（LTR-RTs），也可以用于其他类型TE的鉴别，其鉴定原理为将待测序列与数据库<a target="_blank" rel="noopener" href="http://repeatexplorer.org/?page_id=918">REXdb</a>（整合viridiplantae_v3.0 + metazoa_v3）的TE序列进行比对。</p>
+<p>也可以使用<a target="_blank" rel="noopener" href="http://gydb.org/">GyDB</a>数据库进行比对，官网上有具体的参数用法。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/zhangrengang/TEsorter">zhangrengang&#x2F;TEsorter: TEsorter: an accurate and fast method to classify LTR-retrotransposons in plant genomes (github.com)</a></p>
+<p><code>TEsorter</code>提供conda安装，但是我没有安装成功，这里还是新建conda环境后手动安装各种依赖：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">conda create -n &quot;TEs&quot;</span><br><span class="line">conda activate TEs</span><br><span class="line"></span><br><span class="line">conda install python==3.11		# 官方要求python版本高于3，否则运行会报错</span><br><span class="line">conda install biopython</span><br><span class="line">conda install xopen</span><br><span class="line">conda install hmmer</span><br><span class="line">conda install blast</span><br><span class="line"></span><br><span class="line">git clone https://ghproxy.com/https://github.com/zhangrengang/TEsorter.git		# 从github镜像网站下载</span><br><span class="line">cd TEsorter</span><br><span class="line">python setup.py install</span><br><span class="line"></span><br><span class="line">TEsorter TEsorter/test/rice6.9.5.liban	# 测试</span><br></pre></td></tr></table></figure>
+
+</div><h2 id="2-TEsorter运行"><a href="#2-TEsorter运行" class="headerlink" title="2. TEsorter运行"></a>2. TEsorter运行</h2><div class="story post-story"><p>这里有一个问题，Braker预测基因有<code>gtf</code>和<code>gff3</code>两种格式的输出结果，<strong>但是两者的行数不一样</strong>。<code>braker.aa</code>蛋白序列和<code>braker.codingseq</code>基因序列的条数与<code>gtf</code>文件中的<code>transcript</code>条数一致，但是比<code>gff3</code>文件中的<code>mRNA</code>条数多（按理来说两者应该是一致的）。</p>
+<p>后来发现Braker加入<code>--gff3</code>参数生成的<code>gff3文件mRNA数量 + gtf文件的mRNA数量 = gtf文件的transcript数量</code>，不理解为什么有这种关系，方便起见我这里处理了<code>gtf</code>结果文件。</p>
+<p>TEsorter软件可以输入<strong>基因序列</strong>或者<strong>蛋白序列</strong>，以基因序列为例，简单编写脚本如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -n 8</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -t 7200</span></span><br><span class="line"></span><br><span class="line">TEsorter /public/home/wlxie/baima_pre_mydb/braker.codingseq -eval 1e-6 -p 8</span><br></pre></td></tr></table></figure>
+
+<p>大约十几分钟运行完毕。</p>
+</div><h2 id="3-结果文件处理"><a href="#3-结果文件处理" class="headerlink" title="3. 结果文件处理"></a>3. 结果文件处理</h2><div class="story post-story"><p>结果文件如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230411/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230411/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><code>.tsv</code>后缀的文件中以列表形式列出了所有预测的TE类型，一个基因可能有多种类型的TE插入，因此需要处理结果文件，统计含有TE的基因，并在<code>gtf</code>结果文件中将该基因去除。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">筛选含有TE的基因</span></span><br><span class="line">grep -v &quot;^#&quot; braker.codingseq.rexdb.cls.tsv | cut -f1 | sort | uniq | cut -f1 -d &quot;_&quot; | sort | uniq &gt; TE-genes.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">去除含有TE的基因序列</span></span><br><span class="line">grep -Fvf /public/home/wlxie/biosoft/TEsorter/baima_mydb/TE-genes.txt braker.gtf | awk &#x27;$3 ~ /gene/&#x27; &gt; baima_gene_only.gtf</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">去除含有TE的转录本序列</span></span><br><span class="line">grep -Fvf /public/home/wlxie/biosoft/TEsorter/baima_mydb/TE-genes.txt braker.gtf | awk &#x27;$3 ~ /transcript/&#x27; &gt; baima_transcript.gtf </span><br></pre></td></tr></table></figure>
+
+<p>可以看看去除TE序列后的转录本和基因数量：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(base) wlxie 17:03:52 ~/baima_pre_mydb</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> baima_transcript.gtf | <span class="built_in">wc</span> -l</span></span><br><span class="line">23716</span><br><span class="line">(base) wlxie 17:04:05 ~/baima_pre_mydb</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> baima_gene_only.gtf | <span class="built_in">wc</span> -l</span></span><br><span class="line">20742</span><br></pre></td></tr></table></figure>
+
+<p>本想通过<code>gffread</code>软件根据处理后的gtf文件重新提取基因组的蛋白序列，但是运行过程中总是报错<code>no genomic sequence available</code>，原因暂时未知（可能是因为braker预测结果braker.gtf不是标准的gtf文件格式，同样用gffread做gtf2gff转换的时候会有部分信息丢失）。</p>
+<p>可以直接写一个脚本处理<code>braker.aa</code>文件，根据前面筛选的<code>TE-genes.txt</code>文件，去除含有TE的蛋白序列，这里后续用到再做更新。</p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/04/11/a.html>http://www.shelven.com/2023/04/11/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-11T23:05:47+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年4月11日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TEsorter/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>TEsorter</p></a></div>
+  <span hidden itemprop="keywords">TEsorter</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/04/11/a.html&title=基因组注释（5）——预测基因筛选 - 我的小破站&summary=注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/04/11/a.html&title=基因组注释（5）——预测基因筛选 - 我的小破站&summary=注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/04/11/a.html&title=基因组注释（5）——预测基因筛选 - 我的小破站&summary=注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/04/03/a.html'>
+          <p class='title'>基因组注释（4）——基因预测<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>在对基因组重复序列和ncRNA进行注释后，接下来是基因预测和功能注释，这也是寻找功能基因的基础和前提。这里主要记录下怎么用Braker3进行基因组的基因预测（也就是结构注释）。
+
+
+基因预测的方...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/04/11/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3179,228 +3392,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(39)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-TEsorter%E5%AE%89%E8%A3%85"><span class="toc-text">1. TEsorter安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-TEsorter%E8%BF%90%E8%A1%8C"><span class="toc-text">2. TEsorter运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BB%93%E6%9E%9C%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">3. 结果文件处理</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/BUSCO/" style="font-size: 14px; color: #999">BUSCO</a> <a href="/tags/Barker3/" style="font-size: 14px; color: #999">Barker3</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/ChatGPT/" style="font-size: 14px; color: #999">ChatGPT</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GATK/" style="font-size: 14px; color: #999">GATK</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GMATA/" style="font-size: 14px; color: #999">GMATA</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/LAI/" style="font-size: 14px; color: #999">LAI</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/QUAST/" style="font-size: 14px; color: #999">QUAST</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/RepeatMasker/" style="font-size: 14px; color: #999">RepeatMasker</a> <a href="/tags/RepeatModeler/" style="font-size: 14px; color: #999">RepeatModeler</a> <a href="/tags/Rfam-Infernal/" style="font-size: 14px; color: #999">Rfam/Infernal</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/TEsorter/" style="font-size: 14px; color: #999">TEsorter</a> <a href="/tags/TRF/" style="font-size: 14px; color: #999">TRF</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/singularity/" style="font-size: 14px; color: #999">singularity</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/tRNAscan-SE/" style="font-size: 14px; color: #999">tRNAscan-SE</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 14px; color: #999">容器</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 16.5px; color: #888">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>56 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>138.6k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-04-11 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3425,14 +3448,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="基因组注释（5）——预测基因筛选";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4636,7 +4660,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/tags/ggplot2/","name":"ggplot2"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/04/11/a.html","name":"基因组注释（5）——预测基因筛选"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因组注释（5）——预测基因筛选","description":"注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如TransposonPSI、TEsorter等）将含有转座子的基因找出并去除。","datePublished":"2023-04-11T14:58:20.000Z","dateModified":"2023-04-11T15:05:47.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/04/11/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/04/11/a.html","wordCount":132,"articleSection":"学习笔记","keywords":"TEsorter","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
