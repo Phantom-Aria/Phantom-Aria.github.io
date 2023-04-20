@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.shelven.com/tags/ffmpeg/"/>
+  
+  <link rel="canonical" href="http://www.shelven.com/2023/04/20/a.html"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -27,14 +27,18 @@
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：ffmpeg - 我的小破站</title>
+  <title>基因组共线性分析——MCScanX - 我的小破站</title>
   <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的小破站">
-<meta property="og:url" content="http://www.shelven.com/tags/ffmpeg/index.html">
+  <meta name="description" content="因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基因组共线性分析——MCScanX">
+<meta property="og:url" content="http://www.shelven.com/2023/04/20/a.html">
 <meta property="og:site_name" content="我的小破站">
+<meta property="og:description" content="因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-04-20T15:55:19.000Z">
+<meta property="article:modified_time" content="2023-04-20T15:57:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -3021,7 +3025,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3083,25 +3087,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2022/05/08/a.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.shelven.com/2023/04/20/a.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="我的小破站">
   </span>
@@ -3110,64 +3098,340 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/08/a.html"  itemprop="url">
-        视频一键转字符动画——python函数封装和调用练习
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>捣鼓了几天python代码，我现在也越来越发现python的魅力所在，它的强大之处在于有非常多的第三方库可以随意调用。我不需要知道这些第三方库各种函数的实现方式，只要知道这些函数有什么作用，能得到什么结果。只要构思好自己的想法，找到对应的库就可以一步步按照我的思路编写程序，实现我想要的结果，整个构思到实现的过程让我非常愉悦~</p>
+    
+      <h1 class="title" itemprop="name headline">
+        基因组共线性分析——MCScanX
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://www.shelven.com/tuchuang/avatar.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Phantom</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-04-20T23:55:19+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年4月20日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.7k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：10 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="基因组共线性分析——MCScanX" data-path="/2023/04/20/a.html">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。</p>
+<span id="more"></span>
+
+<h2 id="1-共线性分析"><a href="#1-共线性分析" class="headerlink" title="1. 共线性分析"></a>1. 共线性分析</h2><div class="story post-story"><p>在樊龙江主编的《植物基因组学》中提到，植物起源于水生藻类，不同植物在基因水平上具有一定保守性（也就是具有一定的相同基因）。在一定的亲缘关系内，这种基因组水平上的保守性（基因组区块排列顺序保守性），也就是不同植物基因组间的共线性。</p>
+<p>当我们拿到两个植物基因组数据，想要分析两个物种间是否存在基因进化历史、染色体结构变异、重要功能基因的插入缺失或者鉴定全基因组复制事件的时候，就可以利用一些基因组共线性分析工具进行直观的作图和分析。</p>
+<p>做共线性分析之前需要区分两个描述基因组共线性的名词：</p>
+<ul>
+<li><p>Synteny：两个物种的一组基因位点，在每个物种中位于同一条<strong>染色体</strong>（顺序不一定相同）。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</li>
+<li><p>Collinearity：两个物种的一组基因位点，分别位于各自的同一条<strong>染色体</strong>上，并且顺序也是一致的。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/2.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</li>
+</ul>
+<p>这里染色体打了个重点，因为所有的共线性分析都是基于染色体水平的基因组进行比较的，只有contig数据分析的话意义不大。现在的共线性研究以及开发的工具一般用的是collinearity（包括后面要说的MCScanx）。</p>
+<p><strong>共线性分析的原理主要都是分为三步：</strong></p>
+<ol>
+<li>获得基因在染色体上的位置（如基因组注释得到的gff文件）。</li>
+<li>将基因的CDS&#x2F;蛋白序列进行比对，得到高度相似的基因对（Anchoring）。</li>
+<li>鉴定相同基因排列顺序的共线性区块（Chaining），不同软件算法不一样，这里不讨论算法只讨论如何应用。</li>
+</ol>
+<p>其他就不过多介绍了，接下来主要讲讲MCScanX软件的用法。</p>
+</div><h2 id="2-下载和编译MCScanX"><a href="#2-下载和编译MCScanX" class="headerlink" title="2. 下载和编译MCScanX"></a>2. 下载和编译MCScanX</h2><div class="story post-story"><p>按照官网克隆仓库，编译即可。<a target="_blank" rel="noopener" href="https://github.com/wyp1125/MCScanX">MCScanX github官网</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wyp1125/MCScanX.git</span><br><span class="line">cd MCScanX</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>编译之后可以看到主文件的<code>MCScanX</code>、<code>MCScanX_h</code>和<code>Duplicate_gene_classifier</code>三个核心分析程序，以及<strong>downstream_analyses</strong>下游分析文件夹中的12个与下游分析有关的java和perl文件。</p>
+</div><h2 id="3-运行MCScanX"><a href="#3-运行MCScanX" class="headerlink" title="3. 运行MCScanX"></a>3. 运行MCScanX</h2><div class="story post-story"><h3 id="3-1-数据预处理"><a href="#3-1-数据预处理" class="headerlink" title="3.1 数据预处理"></a>3.1 数据预处理</h3><p>MCScan支持的输入文件有两个：</p>
+<ul>
+<li>m8输出格式的BLASTP比对结果文件</li>
+<li>记录染色体、基因名称以及起始和终止位点4个信息的gff文件</li>
+</ul>
+<p>这里以棉花基因组和近缘物种可可基因组为例，两者都可以在NCBI上找到蛋白序列和注释的gff3文件。由于上机课中给的蛋白序列和gff文件都是处理好的，如果自己处理gff文件，总体思路是从gff文件的第3列提取’gene’关键词，从第9列分离基因名称信息，保留第1列染色体信息，保留第4列和第5列保留start和end信息即可。</p>
+<p>这里输入的gff文件不是标准格式，简单写个python脚本处理：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">file_path = <span class="string">&#x27;./Theobroma_cacao.chr.gff3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    temp = pd.read_csv(file, sep = <span class="string">&#x27;\t&#x27;</span>,comment = <span class="string">&#x27;#&#x27;</span>, header = <span class="literal">None</span>)     <span class="comment"># 制表符分隔，#号为注释标识，无列名</span></span><br><span class="line">    temp = temp.drop(temp[temp[<span class="number">2</span>] != <span class="string">&#x27;gene&#x27;</span>].index)     <span class="comment"># 第3列不为gene的行的索引，drop()删除</span></span><br><span class="line">    temp = temp[[<span class="number">0</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line">    temp[<span class="number">8</span>] = temp[<span class="number">8</span>].<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.split(<span class="string">&#x27;;&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;=&#x27;</span>)[<span class="number">1</span>].split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">1</span>])    <span class="comment"># 对第9列的处理，只取geneid</span></span><br><span class="line">    temp.to_csv(<span class="string">&#x27;Tcacao.gff3&#x27;</span>, header = <span class="literal">None</span>, index = <span class="literal">None</span>, sep = <span class="string">&#x27;\t&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当然，根据官网的表述，最好将染色体名称改为<code>两个字母（物种缩写） + 数字（代表染色体编号）</code>的形式。不改也没关系，两个基因组的染色体名字不要一样就好了，不改的话只有在下游分析对共线性区块分组的时候有点影响（添加的物种那列只显示两个字母）<del>实质上不会有什么影响</del>。</p>
+<p><strong>这步检查一下gene数量与pep文件的蛋白质条数是否一样</strong>，不一样的话可能是pep中有转录本蛋白序列，重新筛选完整的gff3文件，再用gffread提取蛋白序列，这里就不赘述了，如果处理有问题后续在更新。</p>
+<p>本例中，棉花<em>Gossypium herbaceum</em>相关文件前缀为<strong>Gh</strong>；可可<em>Theobroma cacao</em>相关文件前缀为<strong>Tcacao</strong>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">合并蛋白序列（方便做基因组组内和组间共线性分析）</span></span><br><span class="line">cat Gh.pep Tcacao.pep &gt; Gh_Tcacao.pep</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">blast建库</span></span><br><span class="line">makeblastdb -in /public/home/wlxie/biosoft/MCScanX/Data/ExerciseData/Gh_Tcacao.pep -dbtype prot -input_type fasta -out Gh_Tcacao</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">蛋白序列拆分40份（方便提交并行任务到集群）</span></span><br><span class="line">perl fasta-splitter.pl --n-parts 40 Gh_Tcacao.pep</span><br><span class="line">mkdir Gh_Tcacao</span><br><span class="line">mv Gh_Tcacao.part* Gh_Tcacao</span><br></pre></td></tr></table></figure>
+
+<p>用到的蛋白序列拆分perl脚本来自于<a target="_blank" rel="noopener" href="https://github.com/KirillKryukov">Kirill Kryukov</a>，具体在哪个仓库找不到了……这里<a href="https://www.shelven.com/tuchuang/20230420/fasta-splitter.pl">提供下载</a>，拆分后文件夹名称如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/1.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>上面拆分的40个蛋白序列名称数字部分是等宽的，不方便提交并行任务到集群，这里简单修改下文件名称。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取目录下所有文件列表</span></span><br><span class="line">path = <span class="string">&#x27;/public/home/wlxie/biosoft/MCScanX/Data/ExerciseData/Gh_Tcacao/&#x27;</span></span><br><span class="line">fileList = os.listdir(path)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置待修改的前缀和后缀</span></span><br><span class="line">prefix = <span class="string">&#x27;Gh_Tcacao_&#x27;</span></span><br><span class="line">suffix = <span class="string">&#x27;.pep&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 批量修改文件名</span></span><br><span class="line">m = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> fileList:</span><br><span class="line">    old_path = path + os.sep + file</span><br><span class="line">    <span class="keyword">if</span> os.path.isdir(old_path):</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    new_path = path + os.sep + prefix + <span class="built_in">str</span>(m) + suffix</span><br><span class="line">    os.rename(old_path, new_path)</span><br><span class="line">    m += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>修改之后提交40个blastp并行任务，每个任务4核，很快就可以跑完。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --array=1-40</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --cpus-per-task=4</span></span><br><span class="line"></span><br><span class="line">echo start on  $(date)</span><br><span class="line">srun blastp -query Gh_Tcacao$&#123;SLURM_ARRAY_TASK_ID&#125;.pep -out Gh_Tcacao_$&#123;SLURM_ARRAY_TASK_ID&#125;.blast -db Gh_Tcacao -outfmt 6 -num_threads 4 -num_alignments 5 -evalue 1e-10</span><br><span class="line">echo end on $(date)</span><br></pre></td></tr></table></figure>
+
+<p>最后合并blastp结果。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat Gh_Tcacao_*.blast &gt; Gh_Tcacao.blast</span><br><span class="line">rm Gh_Tcacao_*.blast</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-运行MCScanX和结果解读"><a href="#3-2-运行MCScanX和结果解读" class="headerlink" title="3.2 运行MCScanX和结果解读"></a>3.2 运行MCScanX和结果解读</h3><p>MCScanX有三个主命令：</p>
+<ol>
+<li>MCScanX共线性分析</li>
+<li>MCScanX_h也是共线性分析，输入不是BLASTP文件，而是第三方检测的以制表符分隔的成对同源关系文件</li>
+<li>Duplicate_gene_classifier使用MCScanX的算法鉴定singleton（单基因）和重复基因</li>
+</ol>
+<p>这里用MCScanX，前面处理好了的blastp结果文件和gff文件放在同一个文件夹，输入的文件相对路径要到文件名的前缀部分</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./MCScanX Data/ExerciseData/Gh_Tcacao</span><br></pre></td></tr></table></figure>
+
+<p>结果文件如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/4.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><code>.collinearity</code> 是两个基因组共线性结果文件（默认分析collinearity），包含了本次运行的参数、计算出的共线性区块等。还可以根据这个文件用<code>grep</code>的方法提取两个物种之间的同源基因（提取第二列第三列物种名字不一样的行，去重复，计数），这里也不赘述了。</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/5.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><code>.html</code> 这个文件夹每个文件对应一条染色体共线性分析结果，包括基因座的共线性区块数量、基因名称（串联重复基因会标红）和具体比对上哪些共线性区块：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/6.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><code>.tandem</code>文件显示基因组内所有串联重复基因对：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230420/7.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="3-3-下游分析和作图"><a href="#3-3-下游分析和作图" class="headerlink" title="3.3 下游分析和作图"></a>3.3 下游分析和作图</h3><p>官方在<code>downstream_analyses</code>文件夹中提供了12个下游分析的perl和java脚本。我个人将这个文件下的分析工具分为两类：</p>
+<ol>
+<li>功能相关（此部分与数据处理相关）</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Detect_syntenic_tandem_arrays 检测串联重复基因</span></span><br><span class="line">../../../downstream_analyses/detect_collinear_tandem_arrays -g Gh_Tcacao.gff -b Gh_Tcacao.blast -c Gh_Tcacao.collinearity -o tandem_arrays</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Dissect_multiple_alignment 将共线性区块分为物种内和物种间共线性区块</span></span><br><span class="line">../../../downstream_analyses/dissect_multiple_alignment -g Gh_Tcacao.gff -c Gh_Tcacao.collinearity -o dissect_multiple_alignment</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add_kaks_to_synteny.pl 计算ka和ks值（在collinearity结果后面增加两列，执行时间较长）</span></span><br><span class="line">cat Gh.cds Tcacao.cds &gt; Gh_Tcacao.cds	# 需要cds序列</span><br><span class="line">perl ../../../downstream_analyses/add_kaks_to_synteny.pl -i Gh_Tcacao.collinearity -d Gh_Tcacao.cds -o add_kaks_to_synteny</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">group_collinear_genes.pl 基因分组，构建基因家族（结果文件需要去掉第一行无效信息）</span></span><br><span class="line">perl ../../../downstream_analyses/group_collinear_genes.pl -i Gh_Tcacao.collinearity -o group_collinear_genes</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以及以下几种功能就不一一试了</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">detect_collinearity_within_gene_families.pl	检测基因家族的共线性基因对，需要用到前面构建的基因家族文件</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">origin_enrichment_analysis.pl	根据Duplicate_gene_classifier的结果识别输入基因家族的重复基因起源的潜在富集？不太懂什么意思</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>作图相关（此部分均有对应的配置文件，在downstream_analyses文件夹操作，其他文件路径java会发生未知错误）</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dot_plotter 两组染色体所有共线性区块做点图</span></span><br><span class="line">java dot_plotter -g ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.gff -s ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.collinearity -c dot.ctl -o dot.png</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dot.ctl配置文件内容如下</span></span><br><span class="line">800	//x轴维度（像素大小，下同，不再赘述）</span><br><span class="line">800	//y轴维度</span><br><span class="line">Ghir_A01,Ghir_A02,Ghir_A03,Ghir_A04,Ghir_A05,Ghir_A06,Ghir_A07,Ghir_A08,Ghir_A09,Ghir_A10,Ghir_A11,Ghir_A12,Ghir_A13	//x轴染色体名称</span><br><span class="line">Chromosome_1,Chromosome_2,Chromosome_3,Chromosome_4,Chromosome_5,Chromosome_6,Chromosome_7,Chromosome_8,Chromosome_9	//y轴染色体名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20230420/dot.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/dot.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dual_synteny_plotter</span></span><br><span class="line">java dual_synteny_plotter -g ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.gff -s ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.collinearity -c dual_synteny.ctl -o dual_synteny.png</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dual_synteny.ctl</span></span><br><span class="line">600	//图宽</span><br><span class="line">800	//图高</span><br><span class="line">Ghir_A01,Ghir_A02,Ghir_A03,Ghir_A04,Ghir_A05,Ghir_A06,Ghir_A07,Ghir_A08,Ghir_A09,Ghir_A10,Ghir_A11,Ghir_A12,Ghir_A13	//位于左边的染色体名称</span><br><span class="line">Chromosome_1,Chromosome_2,Chromosome_3,Chromosome_4,Chromosome_5,Chromosome_6,Chromosome_7,Chromosome_8,Chromosome_9	//位于右边的染色体名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20230420/dual_synteny.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/dual_synteny.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">circle_plotter</span></span><br><span class="line">java circle_plotter -g ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.gff -s ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.collinearity -c circle.ctl -o circle.png</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">circle.ctl</span></span><br><span class="line">800	//图宽和高</span><br><span class="line">Ghir_A01,Ghir_A02,Ghir_A03,Ghir_A04,Ghir_A05,Ghir_A06,Ghir_A07,Ghir_A08,Ghir_A09,Ghir_A10,Ghir_A11,Ghir_A12,Ghir_A13,Chromosome_1,Chromosome_2,Chromosome_3,Chromosome_4,Chromosome_5,Chromosome_6,Chromosome_7,Chromosome_8,Chromosome_9	//环状图的染色体名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20230420/circle.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/circle.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">bar_plotter</span></span><br><span class="line">java bar_plotter -g ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.gff -s ../Data/ExerciseData/Gh_Tcacao/Gh_Tcacao.collinearity -c bar.ctl -o bar.png</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">bar.ctl</span></span><br><span class="line">800	//x轴维度</span><br><span class="line">800	//y轴维度</span><br><span class="line">Ghir_A01,Ghir_A02,Ghir_A03,Ghir_A04,Ghir_A05,Ghir_A06,Ghir_A07,Ghir_A08,Ghir_A09,Ghir_A10,Ghir_A11,Ghir_A12,Ghir_A13	//参考染色体</span><br><span class="line">Chromosome_1,Chromosome_2,Chromosome_3,Chromosome_4,Chromosome_5,Chromosome_6,Chromosome_7,Chromosome_8,Chromosome_9	//目标染色体</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.shelven.com/tuchuang/20230420/bar.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230420/bar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">还有两个作图的工具也不一一试了，以后有需要再做</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">family_circle_plotter	基因家族同源基因圆形图，红线连接一个基因家族所有同源基因</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">family_tree_plotter	基因家族树，共线性基因对用红线连接，串联重复基因用蓝线连接</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到这个软件绘图还是非常简单方便的，不过图片质量不是很好，作图的像素点大小都是由自己定义的，因此排版缩放也很容易失真。还是比较推荐JCVI一类的软件，引入多种过滤参数功能更强大，且做的图是矢量图，比较好看……而且有docker镜像，不怕安装依赖的问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">singularity -d build jcvi.sif docker://tanghaibao/jcvi</span><br></pre></td></tr></table></figure>
+
+<p>以后有空再更新吧~</p>
+
+</div>
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-08T01:43:17+08:00">2022-05-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/">编程自学</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" itemprop="url"><span itemprop="name">编程自学</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2022/05/08/a.html' itemprop="url">
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文由<a href="https://www.shelven.com/">Phantom</a>创作，转载请注明出处</p>
+
+              
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://www.shelven.com/2023/04/20/a.html>http://www.shelven.com/2023/04/20/a.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-20T23:57:53+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年4月20日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.shelven.com/2023/04/20/a.html&title=基因组共线性分析——MCScanX - 我的小破站&summary=因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shelven.com/2023/04/20/a.html&title=基因组共线性分析——MCScanX - 我的小破站&summary=因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.shelven.com/2023/04/20/a.html&title=基因组共线性分析——MCScanX - 我的小破站&summary=因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。"
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/04/11/a.html'>
+          <p class='title'>基因组注释（5）——预测基因筛选<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>注释得到的基因集中，可能某些基因存在被转座子插入的情况，该基因会在后续功能注释的时候被注释上，但实际在基因组中该基因可能已经被插入失活。因此在基因组的功能注释前，需要用检测转座子软件（如Tran...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/04/20/a.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 欢迎小伙伴们留言评论~</p>
     
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3175,228 +3439,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/'>
-          <img no-lazy src='https://www.shelven.com/tuchuang/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Phantom</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">我的小破站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1269035311@com.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Phantom-Aria/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"
-            active-action="action-categoriesQQE69CBAE599A8E4BABA"
-            ><div class='name'>QQ机器人</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" href="/categories/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"
-            active-action="action-categoriesE4B8AAE4BABAE4B8BBE9A1B5"
-            ><div class='name'>个人主页</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/" href="/categories/%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%89%E4%BB%A3%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE59FBAE59BA0E7BB84E4B889E4BBA3E6B58BE5BA8FE58886E69E90"
-            ><div class='name'>基因组三代测序分析</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(39)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE6B7B1E5BAA6E5ADA6E4B9A0"
-            ><div class='name'>深度学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/" href="/categories/%E7%BC%96%E7%A8%8B%E8%87%AA%E5%AD%A6/"
-            active-action="action-categoriesE7BC96E7A88BE887AAE5ADA6"
-            ><div class='name'>编程自学</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"
-            active-action="action-categoriesE7BD91E7BB9CE79BB8E585B3"
-            ><div class='name'>网络相关</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            active-action="action-categoriesE8BDACE5BD95E7BB84E695B0E68DAEE58886E69E90"
-            ><div class='name'>转录组数据分析</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%B1%E7%BA%BF%E6%80%A7%E5%88%86%E6%9E%90"><span class="toc-text">1. 共线性分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BD%E5%92%8C%E7%BC%96%E8%AF%91MCScanX"><span class="toc-text">2. 下载和编译MCScanX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%90%E8%A1%8CMCScanX"><span class="toc-text">3. 运行MCScanX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">3.1 数据预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E8%BF%90%E8%A1%8CMCScanX%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%A3%E8%AF%BB"><span class="toc-text">3.2 运行MCScanX和结果解读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%8B%E6%B8%B8%E5%88%86%E6%9E%90%E5%92%8C%E4%BD%9C%E5%9B%BE"><span class="toc-text">3.3 下游分析和作图</span></a></li></ol></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AnnotationHub/" style="font-size: 14px; color: #999">AnnotationHub</a> <a href="/tags/BLAST/" style="font-size: 14px; color: #999">BLAST+</a> <a href="/tags/BUSCO/" style="font-size: 14px; color: #999">BUSCO</a> <a href="/tags/Barker3/" style="font-size: 14px; color: #999">Barker3</a> <a href="/tags/Canu/" style="font-size: 14px; color: #999">Canu</a> <a href="/tags/ChatGPT/" style="font-size: 14px; color: #999">ChatGPT</a> <a href="/tags/DESeq2/" style="font-size: 14px; color: #999">DESeq2</a> <a href="/tags/GATK/" style="font-size: 14px; color: #999">GATK</a> <a href="/tags/GEO/" style="font-size: 14px; color: #999">GEO</a> <a href="/tags/GMATA/" style="font-size: 14px; color: #999">GMATA</a> <a href="/tags/GO-KEGG/" style="font-size: 14px; color: #999">GO/KEGG</a> <a href="/tags/GenomeScope2-0/" style="font-size: 14px; color: #999">GenomeScope2.0</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTseq/" style="font-size: 14px; color: #999">HTseq</a> <a href="/tags/HiFiGAN/" style="font-size: 14px; color: #999">HiFiGAN</a> <a href="/tags/IGV/" style="font-size: 14px; color: #999">IGV</a> <a href="/tags/LAI/" style="font-size: 14px; color: #999">LAI</a> <a href="/tags/NextDenovo/" style="font-size: 14px; color: #999">NextDenovo</a> <a href="/tags/NextPolish/" style="font-size: 14px; color: #999">NextPolish</a> <a href="/tags/QUAST/" style="font-size: 14px; color: #999">QUAST</a> <a href="/tags/Racon/" style="font-size: 14px; color: #999">Racon</a> <a href="/tags/RepeatMasker/" style="font-size: 14px; color: #999">RepeatMasker</a> <a href="/tags/RepeatModeler/" style="font-size: 14px; color: #999">RepeatModeler</a> <a href="/tags/Rfam-Infernal/" style="font-size: 14px; color: #999">Rfam/Infernal</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 19px; color: #777">R语言</a> <a href="/tags/SOAPdenovo2/" style="font-size: 14px; color: #999">SOAPdenovo2</a> <a href="/tags/SRA/" style="font-size: 14px; color: #999">SRA</a> <a href="/tags/SRA-Toolkit/" style="font-size: 14px; color: #999">SRA Toolkit</a> <a href="/tags/TEsorter/" style="font-size: 14px; color: #999">TEsorter</a> <a href="/tags/TRF/" style="font-size: 14px; color: #999">TRF</a> <a href="/tags/Tacotron2/" style="font-size: 14px; color: #999">Tacotron2</a> <a href="/tags/Xpath/" style="font-size: 14px; color: #999">Xpath</a> <a href="/tags/aspera/" style="font-size: 14px; color: #999">aspera</a> <a href="/tags/bioperl/" style="font-size: 14px; color: #999">bioperl</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast</a> <a href="/tags/blast/" style="font-size: 14px; color: #999">blast+</a> <a href="/tags/dplyr/" style="font-size: 14px; color: #999">dplyr</a> <a href="/tags/fastqc/" style="font-size: 14px; color: #999">fastqc</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/filtlong/" style="font-size: 14px; color: #999">filtlong</a> <a href="/tags/ggplot2/" style="font-size: 14px; color: #999">ggplot2</a> <a href="/tags/ggrepel/" style="font-size: 14px; color: #999">ggrepel</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/go-cqhttp/" style="font-size: 14px; color: #999">go-cqhttp</a> <a href="/tags/google-colab/" style="font-size: 14px; color: #999">google colab</a> <a href="/tags/hisat2/" style="font-size: 14px; color: #999">hisat2</a> <a href="/tags/jellyfish/" style="font-size: 14px; color: #999">jellyfish</a> <a href="/tags/kmergenie/" style="font-size: 14px; color: #999">kmergenie</a> <a href="/tags/linux%E6%8C%87%E4%BB%A4/" style="font-size: 14px; color: #999">linux指令</a> <a href="/tags/multiqc/" style="font-size: 14px; color: #999">multiqc</a> <a href="/tags/nanoplot/" style="font-size: 14px; color: #999">nanoplot</a> <a href="/tags/numpy/" style="font-size: 14px; color: #999">numpy</a> <a href="/tags/org-At-tair-db/" style="font-size: 14px; color: #999">org.At.tair.db</a> <a href="/tags/perl/" style="font-size: 16.5px; color: #888">perl</a> <a href="/tags/pheatmap/" style="font-size: 14px; color: #999">pheatmap</a> <a href="/tags/pillow/" style="font-size: 14px; color: #999">pillow</a> <a href="/tags/prepDE-py3/" style="font-size: 14px; color: #999">prepDE.py3</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/qq-bot/" style="font-size: 14px; color: #999">qq bot</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/samtools/" style="font-size: 14px; color: #999">samtools</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/shell%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">shell脚本</a> <a href="/tags/singularity/" style="font-size: 14px; color: #999">singularity</a> <a href="/tags/slurm/" style="font-size: 14px; color: #999">slurm</a> <a href="/tags/stringtie/" style="font-size: 14px; color: #999">stringtie</a> <a href="/tags/tRNAscan-SE/" style="font-size: 14px; color: #999">tRNAscan-SE</a> <a href="/tags/trim-galore/" style="font-size: 14px; color: #999">trim-galore</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">代理服务器</a> <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 16.5px; color: #888">内网穿透</a> <a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" style="font-size: 14px; color: #999">反向代理</a> <a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">声纹识别</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 14px; color: #999">容器</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 16.5px; color: #888">建站</a> <a href="/tags/%E6%8B%86%E5%8C%85/" style="font-size: 14px; color: #999">拆包</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 21.5px; color: #666">爬虫</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC/" style="font-size: 14px; color: #999">语音转文本</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 14px; color: #999">集群</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>57 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站存活时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>小破站总字数：</div>
-          <div>141.9k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>小破站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2023-04-20 日</div> 
-        </div>
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3421,14 +3495,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="基因组共线性分析——MCScanX";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4632,7 +4707,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/tags/ffmpeg/","name":"ffmpeg"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"我的小破站","url":"http://www.shelven.com/","keywords":null,"description":"","author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","description":""},"publisher":{"@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.shelven.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/04/20/a.html","name":"基因组共线性分析——MCScanX"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因组共线性分析——MCScanX","description":"因为自己的生信基础知识比较薄弱，最近在华农跟着王老师上了一些植物基因组课程，记录一下。这一次主要结合课堂内容、MCScanX官方文档以及自己的理解，演示基因组共线性工具MCScanX的用法。","datePublished":"2023-04-20T15:55:19.000Z","dateModified":"2023-04-20T15:57:53.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/04/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/04/20/a.html","wordCount":95,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
