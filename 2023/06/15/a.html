@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1686759989589" as="style">
+  <link rel="preload" href="/css/style.css?time=1686819463277" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-14T16:24:17.000Z">
-<meta property="article:modified_time" content="2023-06-14T16:26:14.000Z">
+<meta property="article:modified_time" content="2023-06-15T08:57:25.000Z">
 <meta property="article:tag" content="三维基因组学">
 <meta property="article:tag" content="HiC-Pro">
 <meta property="article:tag" content="HiCPlotter">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1686759989589" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1686759989589"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1686819463277" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1686819463277"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1686759989589","sites":"/js/plugins/sites.js?time=1686759989589","friends":"/js/plugins/friends.js?time=1686759989589","parallax":"/js/plugins/parallax.js?time=1686759989589","rightMenu":"/js/plugins/rightMenu.js?time=1686759989589","contributors":"/js/plugins/contributors.js?time=1686759989589","message":"/js/thirdparty/message.js?time=1686759989589","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686759989589"},"css":{"style":"/css/style.css?time=1686759989589","message":"/css/message.css?time=1686759989589"}},
+    cdn: {"js":{"app":"/js/app.js?time=1686819463277","sites":"/js/plugins/sites.js?time=1686819463277","friends":"/js/plugins/friends.js?time=1686819463277","parallax":"/js/plugins/parallax.js?time=1686819463277","rightMenu":"/js/plugins/rightMenu.js?time=1686819463277","contributors":"/js/plugins/contributors.js?time=1686819463277","message":"/js/thirdparty/message.js?time=1686819463277","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686819463277"},"css":{"style":"/css/style.css?time=1686819463277","message":"/css/message.css?time=1686819463277"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1686759989589),
+    lastupdate: new Date(1686819463277),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3295,9 +3295,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="3-4-鉴定染色质区室和TAD（HiTC包）"><a href="#3-4-鉴定染色质区室和TAD（HiTC包）" class="headerlink" title="3.4 鉴定染色质区室和TAD（HiTC包）"></a>3.4 鉴定染色质区室和TAD（HiTC包）</h3><p>这里使用的数据来自尤师姐提供的<code>LG02_50000_abs.bed</code>与<code>LG02_50000_iced.matrix</code>文件，也是HiC-Pro跑出来的结果文件。</p>
 <p>因为用到了R包，集群R有点问题，我暂时传到本地用自己电脑跑了下：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载和加载HiTC包</span></span><br><span class="line"><span class="operator">&gt;</span> BiocManager<span class="operator">::</span>install<span class="punctuation">(</span><span class="string">&quot;HiTC&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> setwd<span class="punctuation">(</span><span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span>HiTC<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入数据（importC函数读取HiC-pro的结果）</span></span><br><span class="line"><span class="operator">&gt;</span> mydata <span class="operator">&lt;-</span> importC<span class="punctuation">(</span><span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50000_iced.matrix&quot;</span><span class="punctuation">,</span> xgi.bed <span class="operator">=</span> <span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50000_abs.bed&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 主成分分析</span></span><br><span class="line"><span class="operator">&gt;</span> pc <span class="operator">&lt;-</span> pca.hic<span class="punctuation">(</span>mydata<span class="operator">$</span>LG02LG02<span class="punctuation">,</span> npc <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span> asGRangesList <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> write.csv<span class="punctuation">(</span>pc<span class="punctuation">,</span> file <span class="operator">=</span> <span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50k.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># 热图展示</span></span><br><span class="line"><span class="operator">&gt;</span> mapC<span class="punctuation">(</span>mydata<span class="operator">$</span>LG02LG02<span class="punctuation">,</span> trim.range <span class="operator">=</span> <span class="number">0.94</span><span class="punctuation">,</span> col.pos <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;white&quot;</span><span class="punctuation">,</span> <span class="string">&quot;red&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载和加载HiTC包</span></span><br><span class="line"><span class="operator">&gt;</span> BiocManager<span class="operator">::</span>install<span class="punctuation">(</span><span class="string">&quot;HiTC&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> setwd<span class="punctuation">(</span><span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span>HiTC<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入数据（importC函数读取HiC-pro的结果）</span></span><br><span class="line"><span class="operator">&gt;</span> mydata <span class="operator">&lt;-</span> importC<span class="punctuation">(</span><span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50000_iced.matrix&quot;</span><span class="punctuation">,</span> xgi.bed <span class="operator">=</span> <span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50000_abs.bed&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 主成分分析和鉴定Compartment</span></span><br><span class="line"><span class="operator">&gt;</span> pc <span class="operator">&lt;-</span> pca.hic<span class="punctuation">(</span>mydata<span class="operator">$</span>LG02LG02<span class="punctuation">,</span> npc <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span> asGRangesList <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> write.csv<span class="punctuation">(</span>pc<span class="punctuation">,</span> file <span class="operator">=</span> <span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG02_50k.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> mydata2 <span class="operator">&lt;-</span> read.table<span class="punctuation">(</span><span class="string">&quot;D:/zhuomian/D5_50Kb/D5_50Kb/LG03_50k.csv&quot;</span><span class="punctuation">,</span>header <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">,</span>sep <span class="operator">=</span> <span class="string">&quot;,&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> barplot<span class="punctuation">(</span>mydata2<span class="operator">$</span>score<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 热图展示</span></span><br><span class="line"><span class="operator">&gt;</span> mapC<span class="punctuation">(</span>mydata<span class="operator">$</span>LG02LG02<span class="punctuation">,</span> trim.range <span class="operator">=</span> <span class="number">0.94</span><span class="punctuation">,</span> col.pos <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;white&quot;</span><span class="punctuation">,</span> <span class="string">&quot;red&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 
-<p>这里主成分分析得到的LG02_50k.csv就可以统计作图鉴定染色质区室了。</p>
+<p>这里主成分分析得到的LG02_50k.csv，统计第一主成分score做条形图就可以鉴定染色质区室Compartment A&#x2F;B了，以下链接是提出者的文章。</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/</a></p>
+<img src="https://www.shelven.com/tuchuang/20230614/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230614/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom:80%;" />
+
 <p>跑出来的互作热图如下：</p>
 <img src="https://www.shelven.com/tuchuang/20230614/9.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230614/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom:80%;" />
 
@@ -3306,7 +3309,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <img src="https://www.shelven.com/tuchuang/20230614/10.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230614/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom:80%;" />
 
-<p>关于如何用HiTC包分析Hi-C数据，也可以这篇2023年4月25日的一篇文章：</p>
+<p>关于如何用HiTC包分析Hi-C数据，也可以看bioconductor的一篇文章：</p>
 <p><a target="_blank" rel="noopener" href="https://bioconductor.org/packages/release/bioc/vignettes/HiTC/inst/doc/HiC_analysis.pdf">Analyzing Hi-C data with the HiTC BioC package (bioconductor.org)</a></p>
 
 </div>
@@ -3349,7 +3352,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-15T00:26:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-15T16:57:25+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年6月15日</p>
@@ -3651,7 +3654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1686759989589.js"></script>
+<script src="/js/app.js?time=1686819463277.js"></script>
 
 
 
@@ -3835,7 +3838,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1686759989589')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1686819463277')</script>
 
 
 
@@ -3965,19 +3968,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1686759989589")
+        volantis.js("/js/plugins/sites.js?time=1686819463277")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1686759989589")
+        volantis.js("/js/plugins/friends.js?time=1686819463277")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1686759989589")
+        volantis.js("/js/plugins/contributors.js?time=1686819463277")
       }
     
   };
@@ -4046,7 +4049,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1686759989589')
+    await volantis.js('/js/plugins/aplayer.js?time=1686819463277')
   
   })();
 
@@ -4166,7 +4169,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686759989589");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686819463277");
   }
 
   function loadSearchService() {
@@ -4506,7 +4509,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1686759989589').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1686819463277').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4740,7 +4743,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/15/a.html","name":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域","description":"本篇笔记主要记录三维基因组学的学习，以及演示如何利用Hi-C数据分析Compartment和拓扑关联结构域（TAD），所使用的分析Hi-C数据的软件为HiC-Pro，可视化软件为HiCPlotter和R包HiTC。","datePublished":"2023-06-14T16:24:17.000Z","dateModified":"2023-06-14T16:26:14.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/15/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/15/a.html","wordCount":107,"articleSection":"学习笔记","keywords":"三维基因组学,HiC-Pro,HiCPlotter,HiTC","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/15/a.html","name":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域","description":"本篇笔记主要记录三维基因组学的学习，以及演示如何利用Hi-C数据分析Compartment和拓扑关联结构域（TAD），所使用的分析Hi-C数据的软件为HiC-Pro，可视化软件为HiCPlotter和R包HiTC。","datePublished":"2023-06-14T16:24:17.000Z","dateModified":"2023-06-15T08:57:25.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/15/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/15/a.html","wordCount":107,"articleSection":"学习笔记","keywords":"三维基因组学,HiC-Pro,HiCPlotter,HiTC","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
