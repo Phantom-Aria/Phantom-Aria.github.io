@@ -22,13 +22,13 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1686819463277" as="style">
+  <link rel="preload" href="/css/style.css?time=1686905543997" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>三维基因组学——如何用Hi-C数据分析拓扑关联结构域 - 我的小破站</title>
-  <meta name="keywords" content="三维基因组学,HiC-Pro,HiCPlotter,HiTC,null">
+  <meta name="keywords" content="HiC-Pro,HiCPlotter,HiTC,null">
   <meta name="description" content="本篇笔记主要记录三维基因组学的学习，以及演示如何利用Hi-C数据分析Compartment和拓扑关联结构域（TAD），所使用的分析Hi-C数据的软件为HiC-Pro，可视化软件为HiCPlotter和R包HiTC。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三维基因组学——如何用Hi-C数据分析拓扑关联结构域">
@@ -38,8 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-14T16:24:17.000Z">
-<meta property="article:modified_time" content="2023-06-15T08:57:25.000Z">
-<meta property="article:tag" content="三维基因组学">
+<meta property="article:modified_time" content="2023-06-16T08:49:30.000Z">
 <meta property="article:tag" content="HiC-Pro">
 <meta property="article:tag" content="HiCPlotter">
 <meta property="article:tag" content="HiTC">
@@ -1784,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1686819463277" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1686819463277"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1686905543997" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1686905543997"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1686819463277","sites":"/js/plugins/sites.js?time=1686819463277","friends":"/js/plugins/friends.js?time=1686819463277","parallax":"/js/plugins/parallax.js?time=1686819463277","rightMenu":"/js/plugins/rightMenu.js?time=1686819463277","contributors":"/js/plugins/contributors.js?time=1686819463277","message":"/js/thirdparty/message.js?time=1686819463277","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686819463277"},"css":{"style":"/css/style.css?time=1686819463277","message":"/css/message.css?time=1686819463277"}},
+    cdn: {"js":{"app":"/js/app.js?time=1686905543997","sites":"/js/plugins/sites.js?time=1686905543997","friends":"/js/plugins/friends.js?time=1686905543997","parallax":"/js/plugins/parallax.js?time=1686905543997","rightMenu":"/js/plugins/rightMenu.js?time=1686905543997","contributors":"/js/plugins/contributors.js?time=1686905543997","message":"/js/thirdparty/message.js?time=1686905543997","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686905543997"},"css":{"style":"/css/style.css?time=1686905543997","message":"/css/message.css?time=1686905543997"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1686819463277),
+    lastupdate: new Date(1686905543997),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3133,10 +3132,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    <a class="category-link" href="/categories/%E4%B8%89%E7%BB%B4%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/">三维基因组学</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E4%B8%89%E7%BB%B4%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/" itemprop="url"><span itemprop="name">三维基因组学</span></a>
       </span>
     
   </div>
@@ -3352,10 +3355,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-15T16:57:25+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-16T16:49:30+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月15日</p>
+    <p>更新于：2023年6月16日</p>
   </a>
 </div>
 
@@ -3364,8 +3367,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%B8%89%E7%BB%B4%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>三维基因组学</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiC-Pro/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiC-Pro</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiCPlotter/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiCPlotter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiTC/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiTC</p></a></div>
-  <span hidden itemprop="keywords">三维基因组学 HiC-Pro HiCPlotter HiTC</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiC-Pro/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiC-Pro</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiCPlotter/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiCPlotter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HiTC/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>HiTC</p></a></div>
+  <span hidden itemprop="keywords">HiC-Pro HiCPlotter HiTC</span>
 
 
         
@@ -3434,6 +3437,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2023/06/16/a.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>群体基因组学——概述和图表详解</p>
+          <p class='content'>最近看群体遗传学的文章，苦于不能理解研究者做的另人眼花缭乱的图表……哎，该补补基础了。这篇笔记先从樊龙江主编的《植物基因组学》教材开始学习基础概念，有部分摘自知乎和一些文献，加上这个领域论文图表...</p>
+        </a>
       
       
         <a class='next' href='/2023/06/13/a.html'>
@@ -3654,7 +3662,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1686819463277.js"></script>
+<script src="/js/app.js?time=1686905543997.js"></script>
 
 
 
@@ -3838,7 +3846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1686819463277')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1686905543997')</script>
 
 
 
@@ -3968,19 +3976,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1686819463277")
+        volantis.js("/js/plugins/sites.js?time=1686905543997")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1686819463277")
+        volantis.js("/js/plugins/friends.js?time=1686905543997")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1686819463277")
+        volantis.js("/js/plugins/contributors.js?time=1686905543997")
       }
     
   };
@@ -4049,7 +4057,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1686819463277')
+    await volantis.js('/js/plugins/aplayer.js?time=1686905543997')
   
   })();
 
@@ -4169,7 +4177,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686819463277");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1686905543997");
   }
 
   function loadSearchService() {
@@ -4509,7 +4517,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1686819463277').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1686905543997').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4743,7 +4751,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/15/a.html","name":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域","description":"本篇笔记主要记录三维基因组学的学习，以及演示如何利用Hi-C数据分析Compartment和拓扑关联结构域（TAD），所使用的分析Hi-C数据的软件为HiC-Pro，可视化软件为HiCPlotter和R包HiTC。","datePublished":"2023-06-14T16:24:17.000Z","dateModified":"2023-06-15T08:57:25.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/15/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/15/a.html","wordCount":107,"articleSection":"学习笔记","keywords":"三维基因组学,HiC-Pro,HiCPlotter,HiTC","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/三维基因组学/","name":"三维基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/15/a.html","name":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"三维基因组学——如何用Hi-C数据分析拓扑关联结构域","description":"本篇笔记主要记录三维基因组学的学习，以及演示如何利用Hi-C数据分析Compartment和拓扑关联结构域（TAD），所使用的分析Hi-C数据的软件为HiC-Pro，可视化软件为HiCPlotter和R包HiTC。","datePublished":"2023-06-14T16:24:17.000Z","dateModified":"2023-06-16T08:49:30.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/15/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/15/a.html","wordCount":107,"articleSection":"学习笔记","keywords":"HiC-Pro,HiCPlotter,HiTC","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
