@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1687257847460" as="style">
+  <link rel="preload" href="/css/style.css?time=1687591735662" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-20T10:40:24.000Z">
-<meta property="article:modified_time" content="2023-06-20T10:43:58.959Z">
+<meta property="article:modified_time" content="2023-06-24T07:28:17.000Z">
 <meta property="article:tag" content="群体基因组学">
 <meta property="article:tag" content="Tassel5">
 <meta property="article:tag" content="Plink">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1687257847460" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1687257847460"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1687591735662" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1687591735662"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1687257847460","sites":"/js/plugins/sites.js?time=1687257847460","friends":"/js/plugins/friends.js?time=1687257847460","parallax":"/js/plugins/parallax.js?time=1687257847460","rightMenu":"/js/plugins/rightMenu.js?time=1687257847460","contributors":"/js/plugins/contributors.js?time=1687257847460","message":"/js/thirdparty/message.js?time=1687257847460","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1687257847460"},"css":{"style":"/css/style.css?time=1687257847460","message":"/css/message.css?time=1687257847460"}},
+    cdn: {"js":{"app":"/js/app.js?time=1687591735662","sites":"/js/plugins/sites.js?time=1687591735662","friends":"/js/plugins/friends.js?time=1687591735662","parallax":"/js/plugins/parallax.js?time=1687591735662","rightMenu":"/js/plugins/rightMenu.js?time=1687591735662","contributors":"/js/plugins/contributors.js?time=1687591735662","message":"/js/thirdparty/message.js?time=1687591735662","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1687591735662"},"css":{"style":"/css/style.css?time=1687591735662","message":"/css/message.css?time=1687591735662"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687257847460),
+    lastupdate: new Date(1687591735662),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3207,6 +3207,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>PLINK和TASSEL都是做GWAS分析用的经典软件，两个软件都有linux版本和windows版本，我这里是在linux集群环境中跑的分析流程，所有软件下载linux版本，两款软件可以在下方官网中安装：</p>
 <p><a target="_blank" rel="noopener" href="https://www.cog-genomics.org/plink/2.0/">PLINK 2.0 (cog-genomics.org)</a>、<a target="_blank" rel="noopener" href="https://tassel.bitbucket.io/">Tassel</a></p>
 <p>TASSEL官网有tassel pipeline命令行的帮助文档，一些常用的参数可以参考<a target="_blank" rel="noopener" href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/Tassel5PipelineCLI.pdf">Tassel5PipelineCLI.pdf (bytebucket.org)</a></p>
+<p>TASSEL中文文档可以参考本站<a href="https://www.shelven.com/tuchuang/20230619/Tassel5.pdf">Tassel5中文操作手册.pdf</a></p>
 <h2 id="1-数据格式"><a href="#1-数据格式" class="headerlink" title="1. 数据格式"></a>1. 数据格式</h2><div class="story post-story"><p>plink的数据格式有两套，每套各自的前缀名称相同，一套后缀为<code>.bed</code>、<code>.bin</code>和<code>.fam</code>，另一套后缀为<code>.map</code>和<code>.ped</code>，后面的分析以第一套为例，读取速度比较快。</p>
 <p>那么这三个是怎么来的呢？我们做群体重测序后，通过GATK等软件做变异检测最终会生成一个VCF文件，通过软件<code>plink</code>可以将VCF文件转化成上面的三个文件，分别展示一下三个文件的内容和结构：</p>
 <p><img src="https://www.shelven.com/tuchuang/20230619/1.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230619/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
@@ -3326,10 +3327,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-20T18:43:58+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-24T15:28:17+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月20日</p>
+    <p>更新于：2023年6月24日</p>
   </a>
 </div>
 
@@ -3628,7 +3629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1687257847460.js"></script>
+<script src="/js/app.js?time=1687591735662.js"></script>
 
 
 
@@ -3812,7 +3813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1687257847460')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1687591735662')</script>
 
 
 
@@ -3942,19 +3943,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1687257847460")
+        volantis.js("/js/plugins/sites.js?time=1687591735662")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1687257847460")
+        volantis.js("/js/plugins/friends.js?time=1687591735662")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1687257847460")
+        volantis.js("/js/plugins/contributors.js?time=1687591735662")
       }
     
   };
@@ -4023,7 +4024,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1687257847460')
+    await volantis.js('/js/plugins/aplayer.js?time=1687591735662')
   
   })();
 
@@ -4143,7 +4144,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1687257847460");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1687591735662");
   }
 
   function loadSearchService() {
@@ -4483,7 +4484,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1687257847460').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1687591735662').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4717,7 +4718,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/群体基因组学/","name":"群体基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/20/a.html","name":"群体基因组学——GWAS分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"群体基因组学——GWAS分析","description":"本篇笔记主要记录如何在linux命令行中用TASSEL5和PLINK2软件做GWAS分析，以及如何可视化GWAS结果（在R中绘制曼哈顿图和QQ图）。关于GWAS是做什么的，以及基本概念介绍可以看上一篇笔记介绍：群体基因组学——概述和图表详解 - 我的小破站 (shelven.com)","datePublished":"2023-06-20T10:40:24.000Z","dateModified":"2023-06-20T10:43:58.959Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/20/a.html","wordCount":142,"articleSection":"学习笔记","keywords":"群体基因组学,Tassel5,Plink","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/群体基因组学/","name":"群体基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/06/20/a.html","name":"群体基因组学——GWAS分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"群体基因组学——GWAS分析","description":"本篇笔记主要记录如何在linux命令行中用TASSEL5和PLINK2软件做GWAS分析，以及如何可视化GWAS结果（在R中绘制曼哈顿图和QQ图）。关于GWAS是做什么的，以及基本概念介绍可以看上一篇笔记介绍：群体基因组学——概述和图表详解 - 我的小破站 (shelven.com)","datePublished":"2023-06-20T10:40:24.000Z","dateModified":"2023-06-24T07:28:17.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/06/20/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/06/20/a.html","wordCount":142,"articleSection":"学习笔记","keywords":"群体基因组学,Tassel5,Plink","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
