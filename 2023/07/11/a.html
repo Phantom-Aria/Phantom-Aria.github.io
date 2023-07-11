@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1689070574617" as="style">
+  <link rel="preload" href="/css/style.css?time=1689079832318" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-11T10:04:56.000Z">
-<meta property="article:modified_time" content="2023-07-11T10:16:05.000Z">
+<meta property="article:modified_time" content="2023-07-11T12:49:53.000Z">
 <meta property="article:tag" content="juicer2">
 <meta property="article:tag" content="Hi-C染色体挂载">
 <meta name="twitter:card" content="summary">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1689070574617" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1689070574617"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1689079832318" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1689079832318"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1689070574617","sites":"/js/plugins/sites.js?time=1689070574617","friends":"/js/plugins/friends.js?time=1689070574617","parallax":"/js/plugins/parallax.js?time=1689070574617","rightMenu":"/js/plugins/rightMenu.js?time=1689070574617","contributors":"/js/plugins/contributors.js?time=1689070574617","message":"/js/thirdparty/message.js?time=1689070574617","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070574617"},"css":{"style":"/css/style.css?time=1689070574617","message":"/css/message.css?time=1689070574617"}},
+    cdn: {"js":{"app":"/js/app.js?time=1689079832318","sites":"/js/plugins/sites.js?time=1689079832318","friends":"/js/plugins/friends.js?time=1689079832318","parallax":"/js/plugins/parallax.js?time=1689079832318","rightMenu":"/js/plugins/rightMenu.js?time=1689079832318","contributors":"/js/plugins/contributors.js?time=1689079832318","message":"/js/thirdparty/message.js?time=1689079832318","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689079832318"},"css":{"style":"/css/style.css?time=1689079832318","message":"/css/message.css?time=1689079832318"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689070574617),
+    lastupdate: new Date(1689079832318),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3204,7 +3204,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 
 <p>对于一个没有遗传图谱，也没有近缘物种参考基因组的物种，考虑到光学图谱费用昂贵，一般最划算用的最多的是测一个Hi-C来进行基因组染色体级别组装。一些经典的Hi-C辅助组装的软件应运而生，比如<code>LACHESIS</code>、<code>3D-DNA</code>、<code>YaHS</code>等等。这篇笔记主要记录下软件<code>3D-DNA的</code>染色体挂载流程。</p>
-<p>然而<code>3D-DNA</code>不能直接处理Hi-C下机数据，因此总的流程是用<code>juicer2</code>先处理Hi-C数据，再用<code>3D-DNA</code>进行染色体挂载，最后用<code>juicer box</code>进行手工纠错。</p>
+<p>然而<code>3D-DNA</code>不能直接处理Hi-C下机数据，因此总的流程是用<code>juicer2</code>先处理Hi-C数据，再用<code>3D-DNA</code>进行染色体挂载，最后用<code>juicer box</code>进行手工纠错。流程参考自Baylor College of Medicine &amp; Rice University Aiden团队<a target="_blank" rel="noopener" href="https://aidenlab.org/assembly/manual_180322.pdf">Genome Assembly Cookbook</a>，这两个软件也是出自他们团队。</p>
 <h2 id="juicer2"><a href="#juicer2" class="headerlink" title="juicer2"></a>juicer2</h2><div class="story post-story"><p>Juicer是一款非常经典的Hi-C数据处理软件，但是配置运行起来稍微有点麻烦，花了小半天时间踩坑记录一下。<strong>需要非常注意的一点</strong>，直接从github官网拉取的juicer仓库是<strong>juicer2</strong>，在release版本中有一个稳定版<strong>juicer1.6</strong>，两者的配置和产生的结果文件是不一样的！！！</p>
 <p>秉着软件用新不用旧的原则，本篇笔记全程用的是<code>juicer2</code>，如果有软件运行问题可以在<a target="_blank" rel="noopener" href="https://groups.google.com/g/3d-genomics">3D Genomics - Google 网上论坛</a>交流，或者在github官方提Issues（不建议）。</p>
 <p>顺便提一下我使用<code>Juicer2</code>过程中碰到的版本问题：</p>
@@ -3312,7 +3312,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T18:16:05+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T20:49:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年7月11日</p>
@@ -3614,7 +3614,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1689070574617.js"></script>
+<script src="/js/app.js?time=1689079832318.js"></script>
 
 
 
@@ -3798,7 +3798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1689070574617')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1689079832318')</script>
 
 
 
@@ -3928,19 +3928,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1689070574617")
+        volantis.js("/js/plugins/sites.js?time=1689079832318")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1689070574617")
+        volantis.js("/js/plugins/friends.js?time=1689079832318")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1689070574617")
+        volantis.js("/js/plugins/contributors.js?time=1689079832318")
       }
     
   };
@@ -4009,7 +4009,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1689070574617')
+    await volantis.js('/js/plugins/aplayer.js?time=1689079832318')
   
   })();
 
@@ -4129,7 +4129,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070574617");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689079832318");
   }
 
   function loadSearchService() {
@@ -4469,7 +4469,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1689070574617').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1689079832318').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4703,7 +4703,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/11/a.html","name":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据","description":"前面经过三代数据结合二代数据的组装和polish，已经把基因组组装成了contigs的水平，下一步就是进一步提升到染色体水平。从实现的方式上来说有Bionano的光学图谱技术（作用是减少Scaffold数量，基因组纠错），Hi-C技术，遗传图谱以及依靠算法实现的基于近缘物种参考基因组的染色体水平组装（比如RagTag）。","datePublished":"2023-07-11T10:04:56.000Z","dateModified":"2023-07-11T10:16:05.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/11/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/11/a.html","wordCount":161,"articleSection":"学习笔记","keywords":"juicer2,Hi-C染色体挂载","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/11/a.html","name":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据","description":"前面经过三代数据结合二代数据的组装和polish，已经把基因组组装成了contigs的水平，下一步就是进一步提升到染色体水平。从实现的方式上来说有Bionano的光学图谱技术（作用是减少Scaffold数量，基因组纠错），Hi-C技术，遗传图谱以及依靠算法实现的基于近缘物种参考基因组的染色体水平组装（比如RagTag）。","datePublished":"2023-07-11T10:04:56.000Z","dateModified":"2023-07-11T12:49:53.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/11/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/11/a.html","wordCount":161,"articleSection":"学习笔记","keywords":"juicer2,Hi-C染色体挂载","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
