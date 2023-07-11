@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1689070137746" as="style">
+  <link rel="preload" href="/css/style.css?time=1689070574617" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-11T10:04:56.000Z">
-<meta property="article:modified_time" content="2023-07-11T10:08:40.000Z">
+<meta property="article:modified_time" content="2023-07-11T10:16:05.000Z">
 <meta property="article:tag" content="juicer2">
 <meta property="article:tag" content="Hi-C染色体挂载">
 <meta name="twitter:card" content="summary">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1689070137746" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1689070137746"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1689070574617" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1689070574617"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1689070137746","sites":"/js/plugins/sites.js?time=1689070137746","friends":"/js/plugins/friends.js?time=1689070137746","parallax":"/js/plugins/parallax.js?time=1689070137746","rightMenu":"/js/plugins/rightMenu.js?time=1689070137746","contributors":"/js/plugins/contributors.js?time=1689070137746","message":"/js/thirdparty/message.js?time=1689070137746","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070137746"},"css":{"style":"/css/style.css?time=1689070137746","message":"/css/message.css?time=1689070137746"}},
+    cdn: {"js":{"app":"/js/app.js?time=1689070574617","sites":"/js/plugins/sites.js?time=1689070574617","friends":"/js/plugins/friends.js?time=1689070574617","parallax":"/js/plugins/parallax.js?time=1689070574617","rightMenu":"/js/plugins/rightMenu.js?time=1689070574617","contributors":"/js/plugins/contributors.js?time=1689070574617","message":"/js/thirdparty/message.js?time=1689070574617","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070574617"},"css":{"style":"/css/style.css?time=1689070574617","message":"/css/message.css?time=1689070574617"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689070137746),
+    lastupdate: new Date(1689070574617),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3211,7 +3211,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li><p><code>juicer2</code>配置的<code>juicer_tools</code>版本要在<strong>2.0</strong>以上，否则会报错<code>Exception in thread &quot;main&quot; java.lang.RuntimeException: Unknown command: statistics</code>，该报错会直接导致无法生成<code>inter.txt</code>、<code>inter_hists.m</code> 、<code>inter_30.txt</code>和<code>inter_30_hists.m</code>文件，也就是Hi-C互作的统计数据和矩阵。</p>
 </li>
-<li><p><code>juicer2</code>结果文件中<strong>不会自动产生merged_nodups.txt文件</strong>，该文件原本作为<code>3D-DNA</code>的输入文件，在<code>juicer2</code>中被同名的<code>merged_nodups.bam</code>文件和<code>merged*.txt</code>代替。如果想要<code>merged_nodups.txt</code>文件，<strong>需要加上参数–assembly</strong>。</p>
+<li><p><code>juicer2</code>结果文件中<strong>不会自动产生merged_nodups.txt文件</strong>，该文件原本作为<code>3D-DNA</code>的输入文件，在<code>juicer2</code>中被同名的<code>merged_nodups.bam</code>文件和<code>merged*.txt</code>代替。如果想要<code>merged_nodups.txt</code>文件，<strong>需要加上参数--assembly</strong>。</p>
 </li>
 </ul>
 <h3 id="1-下载和配置juice2"><a href="#1-下载和配置juice2" class="headerlink" title="1. 下载和配置juice2"></a>1. 下载和配置juice2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 拉取最新版本的juicer2仓库（这里用的github镜像，集群可能有dns污染无法直接访问github）</span><br><span class="line">git clone https://ghproxy.com/https://github.com/aidenlab/juicer.git</span><br><span class="line">cd juicer</span><br><span class="line"></span><br><span class="line"># juicer主目录下配置scripts（必需）</span><br><span class="line">## 个人电脑的是建立软链接到CPU文件夹下，其他如slurm、LSF、AWS和Univa等集群或者云端跑juicer是建立软链接或者复制到对应文件夹的scripts文件夹下</span><br><span class="line">ln -s CPU scripts</span><br><span class="line"></span><br><span class="line"># scripts/common文件夹中下载juicer_tools（必需）</span><br><span class="line">cd scripts/common</span><br><span class="line">wget -c https://ghproxy.com/https://github.com/aidenlab/Juicebox/releases/download/v2.20.00/juicer_tools.2.20.00.jar</span><br><span class="line"># 修改文件属性为可执行文件后，建立软链接</span><br><span class="line">ln -s juicer_tools.2.20.00.jar juicer_tools.jar</span><br></pre></td></tr></table></figure>
@@ -3246,7 +3246,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>上面的限速步骤主要是跑BWA，因为第一次跑juicer不知道要多久，就稍微申请多一点的核数<del>（虽然集群没有GPU，但是CPU资源很充足平常没人用）。</del></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个slurm作业</span><br><span class="line">vim juicer.slurm</span><br><span class="line"></span><br><span class="line"># 提交slurm作业</span><br><span class="line">sbatch juicer.slurm</span><br></pre></td></tr></table></figure>
 
-<p><code>juicer.slurm</code>文件内容如下<strong>（再次提醒–assembly 参数非常重要）</strong>：</p>
+<p><code>juicer.slurm</code>文件内容如下<strong>（再次提醒--assembly 参数非常重要）</strong>：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#SBATCH -N 1</span><br><span class="line">#SBATCH -n 30</span><br><span class="line">#SBATCH -t 7200</span><br><span class="line"></span><br><span class="line">/public/home/wlxie/biosoft/juicer/scripts/juicer.sh \</span><br><span class="line">-z /public/home/wlxie/biosoft/juicer/reference/genome.fa \</span><br><span class="line">-p /public/home/wlxie/biosoft/juicer/restriction_sites/genome.chrom.sizes \</span><br><span class="line">-y /public/home/wlxie/biosoft/juicer/restriction_sites/genome_MboI.txt \</span><br><span class="line">-s MboI \</span><br><span class="line">-D /public/home/wlxie/biosoft/juicer \</span><br><span class="line">-t 30 \</span><br><span class="line">--assembly</span><br></pre></td></tr></table></figure>
 
 <p>运行时间可以参考一下我这里220 Mb的参考基因组，Hi-C测序数据39G（双端测序，gz文件），实际上运行了13小时才出结果。</p>
@@ -3261,8 +3261,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p>aligned文件夹有以下结果文件：</p>
 <p><img src="https://www.shelven.com/tuchuang/20230710/3.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230710/3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>我这里实际上是多了一些文件，因为一开始没有加上<code>--assembly</code>参数，所以一直运行到出hic结果文件，而且没有<code>merged_nodups.txt</code></p>
-<p>我做染色体挂载<strong>只需要最后一个文件</strong>，所以加了上面的参数，并且添加<code>-S final</code>参数，这样就省去了前面比对和去重复的时间，半个小时可以重新跑完出结果。</p>
+<p>我这里实际上是多了一些文件（实际上跑了两遍），因为一开始没有加上<code>--assembly</code>参数，所以一直运行到出hic结果文件，而且没有<code>merged_nodups.txt</code>。</p>
+<p>我做染色体挂载<strong>只需要最后一个文件</strong>，第二次运行加了上面的参数，并且加上<code>-S final</code>参数，这样就省去了前面比对和去重复的时间（90%以上的时间花在这里），一个小时可以重新跑完出结果。</p>
 <p>顺便了解一下其他结果文件的用途：</p>
 <blockquote>
 <ul>
@@ -3312,7 +3312,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T18:08:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T18:16:05+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年7月11日</p>
@@ -3614,7 +3614,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1689070137746.js"></script>
+<script src="/js/app.js?time=1689070574617.js"></script>
 
 
 
@@ -3798,7 +3798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1689070137746')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1689070574617')</script>
 
 
 
@@ -3928,19 +3928,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1689070137746")
+        volantis.js("/js/plugins/sites.js?time=1689070574617")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1689070137746")
+        volantis.js("/js/plugins/friends.js?time=1689070574617")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1689070137746")
+        volantis.js("/js/plugins/contributors.js?time=1689070574617")
       }
     
   };
@@ -4009,7 +4009,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1689070137746')
+    await volantis.js('/js/plugins/aplayer.js?time=1689070574617')
   
   })();
 
@@ -4129,7 +4129,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070137746");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689070574617");
   }
 
   function loadSearchService() {
@@ -4469,7 +4469,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1689070137746').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1689070574617').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4703,7 +4703,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/11/a.html","name":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据","description":"前面经过三代数据结合二代数据的组装和polish，已经把基因组组装成了contigs的水平，下一步就是进一步提升到染色体水平。从实现的方式上来说有Bionano的光学图谱技术（作用是减少Scaffold数量，基因组纠错），Hi-C技术，遗传图谱以及依靠算法实现的基于近缘物种参考基因组的染色体水平组装（比如RagTag）。","datePublished":"2023-07-11T10:04:56.000Z","dateModified":"2023-07-11T10:08:40.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/11/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/11/a.html","wordCount":161,"articleSection":"学习笔记","keywords":"juicer2,Hi-C染色体挂载","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/11/a.html","name":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（1）——juicer2处理Hi-C数据","description":"前面经过三代数据结合二代数据的组装和polish，已经把基因组组装成了contigs的水平，下一步就是进一步提升到染色体水平。从实现的方式上来说有Bionano的光学图谱技术（作用是减少Scaffold数量，基因组纠错），Hi-C技术，遗传图谱以及依靠算法实现的基于近缘物种参考基因组的染色体水平组装（比如RagTag）。","datePublished":"2023-07-11T10:04:56.000Z","dateModified":"2023-07-11T10:16:05.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/11/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/11/a.html","wordCount":161,"articleSection":"学习笔记","keywords":"juicer2,Hi-C染色体挂载","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
