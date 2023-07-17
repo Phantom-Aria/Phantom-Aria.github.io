@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1689256902407" as="style">
+  <link rel="preload" href="/css/style.css?time=1689585997765" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-13T13:47:54.000Z">
-<meta property="article:modified_time" content="2023-07-13T14:01:28.000Z">
+<meta property="article:modified_time" content="2023-07-17T09:25:30.000Z">
 <meta property="article:tag" content="Hi-C染色体挂载">
 <meta property="article:tag" content="3D-DNA">
 <meta property="article:tag" content="JBAT">
@@ -1783,8 +1783,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1689256902407" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1689256902407"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1689585997765" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1689585997765"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1861,9 +1861,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1689256902407","sites":"/js/plugins/sites.js?time=1689256902407","friends":"/js/plugins/friends.js?time=1689256902407","parallax":"/js/plugins/parallax.js?time=1689256902407","rightMenu":"/js/plugins/rightMenu.js?time=1689256902407","contributors":"/js/plugins/contributors.js?time=1689256902407","message":"/js/thirdparty/message.js?time=1689256902407","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689256902407"},"css":{"style":"/css/style.css?time=1689256902407","message":"/css/message.css?time=1689256902407"}},
+    cdn: {"js":{"app":"/js/app.js?time=1689585997765","sites":"/js/plugins/sites.js?time=1689585997765","friends":"/js/plugins/friends.js?time=1689585997765","parallax":"/js/plugins/parallax.js?time=1689585997765","rightMenu":"/js/plugins/rightMenu.js?time=1689585997765","contributors":"/js/plugins/contributors.js?time=1689585997765","message":"/js/thirdparty/message.js?time=1689585997765","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689585997765"},"css":{"style":"/css/style.css?time=1689585997765","message":"/css/message.css?time=1689585997765"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689256902407),
+    lastupdate: new Date(1689585997765),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3162,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：3.1k 字</p>
+      <p>字数：3.2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3314,6 +3314,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 创建run_postview.slurm脚本</span><br><span class="line">vim run_postview.slurm</span><br><span class="line"></span><br><span class="line"># 脚本内容如下</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">#!/bin/bash</span><br><span class="line">#SBATCH -n 30</span><br><span class="line">#SBATCH -N 1</span><br><span class="line">#SBATCH -t 7200</span><br><span class="line"></span><br><span class="line">/public/home/wlxie/biosoft/3d-dna/run-asm-pipeline-post-review.sh \</span><br><span class="line">         -r /public/home/wlxie/biosoft/3d-dna/baima_diploid/genome_rawchrom.review.assembly \</span><br><span class="line">         /public/home/wlxie/biosoft/juicer/reference/genome.fa \</span><br><span class="line">         /public/home/wlxie/biosoft/juicer/aligned/merged_nodups.txt</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 运行脚本</span><br><span class="line">sbatch run_postview.slurm</span><br></pre></td></tr></table></figure>
 
 <p>静静等待生成最终的fasta序列就可以啦，如果前面做过contig基因组草图注释的话，还需要将注释的基因信息转坐标到最终的染色体水平基因组上；如果没做过注释的话，跑一遍注释流程吧！</p>
+</div><h2 id="2023-7-17补充"><a href="#2023-7-17补充" class="headerlink" title="2023.7.17补充"></a>2023.7.17补充</h2><div class="story post-story"><p>最终生成的基因组序列要看<code>genome.FINAL.fasta</code>，发现染色体数目和前面手动标定染色体边界的数目不一致，这很正常。可以用seqkit工具统计下各个染色体的长度，如下：</p>
+<p><img src="https://www.shelven.com/tuchuang/20230712/11.png" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20230712/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>可以看到前11条是染色体级别的contig，这和手动标记的染色体数目一致，后面的contig长度占比非常小，可以标记区分一下，这些都要放在组装的基因组文件里。</p>
 
 </div>
   </div>
@@ -3355,10 +3358,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-13T22:01:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-17T17:25:30+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年7月13日</p>
+    <p>更新于：2023年7月17日</p>
   </a>
 </div>
 
@@ -3490,7 +3493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%92%8C%E9%85%8D%E7%BD%AE3D-DNA"><span class="toc-text">1. 下载和配置3D-DNA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%90%E8%A1%8C3D-DNA"><span class="toc-text">2. 运行3D-DNA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3D-DNA%E7%BB%93%E6%9E%9C%E6%96%87%E4%BB%B6"><span class="toc-text">3. 3D-DNA结果文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AF%BC%E5%85%A5JBAT"><span class="toc-text">4. 导入JBAT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%B0%83%E6%95%B4Hi-C%E4%BA%92%E4%BD%9C%E5%9B%BE"><span class="toc-text">5. 调整Hi-C互作图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3D-DNA%E5%A4%84%E7%90%86"><span class="toc-text">6. 3D-DNA处理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%92%8C%E9%85%8D%E7%BD%AE3D-DNA"><span class="toc-text">1. 下载和配置3D-DNA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%90%E8%A1%8C3D-DNA"><span class="toc-text">2. 运行3D-DNA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3D-DNA%E7%BB%93%E6%9E%9C%E6%96%87%E4%BB%B6"><span class="toc-text">3. 3D-DNA结果文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AF%BC%E5%85%A5JBAT"><span class="toc-text">4. 导入JBAT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%B0%83%E6%95%B4Hi-C%E4%BA%92%E4%BD%9C%E5%9B%BE"><span class="toc-text">5. 调整Hi-C互作图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3D-DNA%E5%A4%84%E7%90%86"><span class="toc-text">6. 3D-DNA处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2023-7-17%E8%A1%A5%E5%85%85"><span class="toc-text">2023.7.17补充</span></a></li></ol>
     </div>
   </section>
 
@@ -3657,7 +3660,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1689256902407.js"></script>
+<script src="/js/app.js?time=1689585997765.js"></script>
 
 
 
@@ -3841,7 +3844,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1689256902407')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1689585997765')</script>
 
 
 
@@ -3971,19 +3974,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1689256902407")
+        volantis.js("/js/plugins/sites.js?time=1689585997765")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1689256902407")
+        volantis.js("/js/plugins/friends.js?time=1689585997765")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1689256902407")
+        volantis.js("/js/plugins/contributors.js?time=1689585997765")
       }
     
   };
@@ -4052,7 +4055,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1689256902407')
+    await volantis.js('/js/plugins/aplayer.js?time=1689585997765')
   
   })();
 
@@ -4172,7 +4175,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689256902407");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1689585997765");
   }
 
   function loadSearchService() {
@@ -4512,7 +4515,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1689256902407').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1689585997765').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4746,7 +4749,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/13/a.html","name":"Hi-C染色体挂载（2）——3D-DNA配置运行和手动调整Hi-C互作图"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（2）——3D-DNA配置运行和手动调整Hi-C互作图","description":"前一篇博客主要讲了如何使用juicer进行Hi-C测序的下机数据处理，这篇博客我们按照Aiden团队的基因组组装“CookBook”继续接下来的操作，主要记录下3D-DNA软件的配置运行，以及如何手动调整结果。","datePublished":"2023-07-13T13:47:54.000Z","dateModified":"2023-07-13T14:01:28.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/13/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/13/a.html","wordCount":105,"articleSection":"学习笔记","keywords":"Hi-C染色体挂载,3D-DNA,JBAT","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/07/13/a.html","name":"Hi-C染色体挂载（2）——3D-DNA配置运行和手动调整Hi-C互作图"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hi-C染色体挂载（2）——3D-DNA配置运行和手动调整Hi-C互作图","description":"前一篇博客主要讲了如何使用juicer进行Hi-C测序的下机数据处理，这篇博客我们按照Aiden团队的基因组组装“CookBook”继续接下来的操作，主要记录下3D-DNA软件的配置运行，以及如何手动调整结果。","datePublished":"2023-07-13T13:47:54.000Z","dateModified":"2023-07-17T09:25:30.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/07/13/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/07/13/a.html","wordCount":105,"articleSection":"学习笔记","keywords":"Hi-C染色体挂载,3D-DNA,JBAT","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
