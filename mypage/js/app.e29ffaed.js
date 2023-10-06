@@ -4203,7 +4203,7 @@
       de = le.exports,
       fe = r("9483");
     "https:" === window.location.protocol &&
-      Object(fe["a"])("".concat("", "service-worker.js"), {
+      Object(fe["a"])("".concat("", "mypage/service-worker.js"), {
         ready: function () {
           console.log("App is being served from cache by a service worker.");
         },
