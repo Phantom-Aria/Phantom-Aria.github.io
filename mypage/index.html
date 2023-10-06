@@ -1,105 +1,166 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta content="webkit" name="renderer">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <title>音乐解锁</title>
-    <meta content="音乐,解锁,ncm,qmc,mgg,mflac,qq音乐,网易云音乐,加密" name="keywords">
-    <meta content="音乐解锁 - 在任何设备上解锁已购的加密音乐！" name="description">
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是浏览器标题</title>
     <style>
-      #loader {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: 1010;
-        margin: -75px 0 0 -75px;
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #1db1ff;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0);
+        h2 {
+            color: darkslateblue;
         }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      #loader-mask {
-        text-align: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: 1009;
-        background-color: rgba(242, 246, 252, 0.88);
-      }
-      @media (prefers-color-scheme: dark) {
-        #loader-mask {
-          color: #fff;
-          background-color: rgba(0, 0, 0, 0.85);
-        }
-        #loader-mask a {
-          color: #ddd;
-        }
-        #loader-mask a:hover {
-          color: #1db1ff;
-        }
-      }
-      #loader-source {
-        font-size: 1.5rem;
-      }
-      #loader-tips-timeout {
-        font-size: 1.2rem;
-      }
     </style>
-      <link href="css/app.5388e39c.css" rel="preload" as="style">
-      <link href="css/chunk-vendors.094863c6.css" rel="preload" as="style">
-      <link href="js/app.e29ffaed.js" rel="preload" as="script">
-      <link href="js/chunk-vendors.5db7ca01.js" rel="preload" as="script">
-      <link href="css/chunk-vendors.094863c6.css" rel="stylesheet">
-      <link href="css/app.5388e39c.css" rel="stylesheet">
-      <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
-      <link rel="manifest" href="web-manifest.json">
-      <meta name="theme-color" content="#4DBA87">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-status-bar-style" content="default">
-      <meta name="apple-mobile-web-app-title" content="音乐解锁">
-      <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon-152x152.png">
-      <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#4DBA87">
-      <meta name="msapplication-TileImage" content="./img/icons/msapplication-icon-144x144.png">
-      <meta name="msapplication-TileColor" content="#000000">
-  </head>
-  <body>
-    <div id="loader-mask">
-      <div id="loader"></div>
-      <noscript>
-        <h3 id="loader-js">请启用JavaScript</h3>
-      </noscript>
-      <!-- <h3 id="loader-source">请勿直接运行源代码！</h3> -->
-      <div id="loader-tips-outdated" hidden>
-        <h2>您可能在使用不受支持的<span style="color: #f00">过时</span>浏览器，这可能导致此应用无法正常工作。</h2>
-        <h3>如果您使用双核浏览器，您可以尝试切换到 <span style="color: #f00">“极速模式”</span> 解决此问题。</h3>
-        <!-- <h3>或者，您可以尝试更换下方的几个浏览器之一。</h3> -->
-      </div>
-      <!-- <h3 id="loader-tips-timeout" hidden>音乐解锁采用了一些新特性！建议使用 <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Microsoft Edge Chromium</a> 
-        <a href="https://www.google.cn/chrome/" target="_blank">Google Chrome</a>
-        <a href="https://www.firefox.com.cn/" target="_blank">Mozilla Firefox</a> | <a href="https://git.unlock-music.dev/um/web/wiki/使用提示" target="_blank">使用提示</a>
-      </h3> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>首页H1标题，h标签会让文本换行，范围1-6</h1>
+    <h2>HTML并不是一门编程语言，全称是超文本标记语言，本质上是用来构建网页元素的标记语言</h2>
+    <h2>编程语言比如javascript，用来写页面逻辑，调用接口，操作&连接数据库等等</h2>
+    <h3>HTML CSS Javascript构成web开发的基石</h3>
+    <p>如果把web开发比喻成我的世界，那么：HTML就是各种方块，CSS就是这些方块的外观、布局，Javascript决定行为、动作等</p>
+    <h3>一般首页html文件命名为index.html</h3>
+    <p>HTML的除了普通的标签样式以外，还有天生的自闭合标签，比如br hr input等</p>
+    <h3>head部分与网页呈现的部分无关，定义页面标题，链接工程内的其他css文件或者javascript文件，搜索引擎可以搜到的网站描述，关键词等数据</h3>
+    <p>在vscode中，快捷添加单行注释是ctrl+/，块级注释要选中再Alt+shift+A</p> 
+    <!-- 这是一个注释，在哪一行用就会给哪一行全部注释 -->
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quia alias tempore natus perspiciatis commodi sapiente fugit ducimus id, in ut deleniti sint sequi explicabo, totam pariatur quidem. Non, quis?
+        Lorem 会输出占位用的无意义内容
+    </p>
+
+    <p>
+        网页中按F12，元素页面底下可以看到浏览器提供的默认样式（用户代理样式表）
+    </p>
+    <p>
+        标签可以是行级元素或者块级元素，行级元素之间不会新起一段，其所占空间与内容本身大小有关，比如<span>span</span> img <a href="https://www.shelven.com" target="_blank">a(链接标签,跳转其他链接，需要给属性href,target属性可以打开新的页面)</a> <strong>strong</strong>  <em>em</em> 等
+    </p>
+    <h3>
+        块级元素会新起一段，占据当前给定行的百分百宽度，包括div h p form等
+    </h3>
+    <h3>
+        标签属性和值以键值对形式存在，具体有哪些属性和值，可以在<a href="https://www.runoob.com/html/html5-intro.html">这里查看</a>
+    </h3>
+    <!-- 列表样式:无序列表和有序列表,区别为ul和ol -->
+    <ul>
+        <li>无序列表项1 顺便vscode向下复制一行是alt+shift+下箭头</li>
+        <li>无序列表项2</li>
+        <li>无序列表项3</li>
+        <li>无序列表项4</li>
+    </ul>
+    <ol>
+        <li>有序列表项1 顺便这种复制粘贴方法也可以选中多行后alt+shift+下箭头</li>
+        <li>有序列表项2</li>
+        <li>有序列表项3</li>
+        <li>有序列表项4</li>
+    </ol>
+    <h3>
+        表格标签为table,对应的分为表头thead和表体tbody,都有行列的概念,tr是行,th是列,td在表体中为值
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>qq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>phantom</td>
+                <td>28</td>
+                <td>1021618642</td>
+            </tr>
+            <tr>
+                <td>aria</td>
+                <td>26</td>
+                <td>1269035311</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!-- hr是水平分割线,br是一个空行 -->
+    <h3>表单form,注意html表单只能给外观不能给功能,功能实现需要javascript</h3>
+    <br>
+    <form>
+        <div>
+            <label>姓名:</label>
+            <input type="text">
+        </div>
+        <br>
+        <div>
+            <label>年龄:</label>
+            <input type="text">
+        </div>
+        <br>
+        <div>
+            <label>更大的输入框</label>
+            <textarea name="输入框" id="1" cols="50" rows="10"></textarea>
+        </div>
+        <br>
+        <label>性别</label>
+        <select name="选项" id="2">
+            <option value="male">男</option>
+            <option value="female">女</option>
+            <option value="unknow">未知</option>
+        </select>
+    </form>
+    <hr>
+    <h3>按钮标签</h3>
+    <button>这是一个按钮</button>
+    <h3>img标签</h3>
+    <img 
+        src="https://www.shelven.com/tuchuang/avatar.jpg" 
+        alt="这是备选标记,图片显示不出来的时候显示这句话"
+        weight="500"
+        height="500"
+    >
+    <hr>
+    <h4></h4>
+    <p><strong>CSS的四种引入方式</strong></p>
+    <h1 style="color:brown">内联样式(直接写进html元素,仅对当前的html元素有效,上面的h1标签没变)</h1>
+    <h2>内部样式表,需要自己写入css规则,注意style标签写在head中,我这里改了h2的color,上面h2标签的内容颜色就变了</h2>
+    <h3>外部样式表,需要在head中引入link:css,在外部写css规则,href引入</h3>
+    <h4>导入样式表，可以使用 @import 规则在一个 CSS 文件中引入另一个 CSS 文件。例如，在 styles.css 文件中引入 common.css 文件</h4>
+    <h4>@import url("common.css");</h4>
+    <h4>这种方式与外部样式表类似，但需要注意 @import 规则必须位于 CSS 文件的顶部。</h4>
+    <hr>
+    <p><strong>什么是选择器(selector)?</strong></p>
+    <p>选择器的作用是选择html元素,比如选择h1,就会选择所有的h1标签</p>
+    <p>那什么是类选择器?</p>
+    <h2>类选择器是.+类名的形式,需要class属性来指定</h2>
+    <p class="mystyle">这里用类选择器,指定了p标签的class属性为我在css文件中写的mystyle</p>
+    <h2>id选择器是#+名称的形式</h2>
+    <p id="myid">这里用了id选择器，指定p标签的id属性值为css中写的myid</p>
+    <h2>属性选择器（用的比较少）</h2>
+    <a href="https://www.baidu.com" title="nihao">这是一个有title属性的a标签</a>
+    <br>
+    <a href="https://www.baidu.com">这是一个没有title属性的a标签</a>
+    <h2>通用选择器 *,适用于所有元素</h2>
+    <h2>还可以有组合的写法，见css文件（有空格是父子组合，有逗号表示同时选中两种）</h2>
+    <div>
+        <h1>这是div中的H1元素,被选中并修改颜色，其他的h1不影响</h1>
     </div>
-    
-    <div id="app"></div>
-    <script src="./loader.js"></script>
-    <script src="js/chunk-vendors.5db7ca01.js"></script>
-    <script src="js/app.e29ffaed.js"></script>
-  </body>
+    <hr>
+    <p><strong>css是由优先级的</strong></p>
+    <ul>
+        <li>相同的规则按照加载顺序，写在后面的优先级更高</li>
+        <li>继承的样式优先级低于直接指定的</li>
+        <li>内联样式优先级最高，除了!important</li>
+        <li>类型选择器小于类选择器（class）小于ID选择器</li>
+    </ul>
+    <hr>
+    <h3>盒子模型</h3>
+    <p><strong>盒子模型重要的属性由三个</strong></p>
+    <ul>
+        <li>边框 border 边框宽度，类型，颜色</li>
+        <li>填充部分 padding 上下左右填充的距离，也可以单独指定padding-top这样的</li>
+        <li>外边距 margin</li>
+        <li>后两个可以直接指定4个方向（按照顺时针）</li>
+    </ul>
+    <div class="box">
+        这里是div内容
+    </div>
+    <script src="js/index.js">
+    </script>
+</body>
 </html>
