@@ -501,7 +501,7 @@
   1: function (e, t) {},
   2: function (e, t) {},
   "2e83": function (e, t, r) {
-    e.exports = r.p + "js/0.bb00e0b9.worker.js";
+    e.exports = r.p + "mypage/js/0.bb00e0b9.worker.js";
   },
   3: function (e, t) {},
   "321b": function (e, t, r) {
