@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1697274406046" as="style">
+  <link rel="preload" href="/css/style.css?time=1697274585124" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-13T13:43:20.000Z">
-<meta property="article:modified_time" content="2023-10-14T09:06:29.000Z">
+<meta property="article:modified_time" content="2023-10-14T09:09:37.000Z">
 <meta property="article:tag" content="Barker3">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1781,8 +1781,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1697274406046" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1697274406046"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1697274585124" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1697274585124"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1859,9 +1859,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1697274406046","sites":"/js/plugins/sites.js?time=1697274406046","friends":"/js/plugins/friends.js?time=1697274406046","parallax":"/js/plugins/parallax.js?time=1697274406046","rightMenu":"/js/plugins/rightMenu.js?time=1697274406046","contributors":"/js/plugins/contributors.js?time=1697274406046","message":"/js/thirdparty/message.js?time=1697274406046","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1697274406046"},"css":{"style":"/css/style.css?time=1697274406046","message":"/css/message.css?time=1697274406046"}},
+    cdn: {"js":{"app":"/js/app.js?time=1697274585124","sites":"/js/plugins/sites.js?time=1697274585124","friends":"/js/plugins/friends.js?time=1697274585124","parallax":"/js/plugins/parallax.js?time=1697274585124","rightMenu":"/js/plugins/rightMenu.js?time=1697274585124","contributors":"/js/plugins/contributors.js?time=1697274585124","message":"/js/thirdparty/message.js?time=1697274585124","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1697274585124"},"css":{"style":"/css/style.css?time=1697274585124","message":"/css/message.css?time=1697274585124"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697274406046),
+    lastupdate: new Date(1697274585124),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3303,7 +3303,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>我跑了一遍有三十多个基因存在start位置大于end位置的情况，这可以手动修改。但是预测的5’和3’UTR区域<strong>不止一个</strong>，有的也会相隔甚远，基本上来说，只有最后一个5’UTR区域和第一个3’UTR区域比较靠谱，所以仍然要写脚本筛选UTR，并修改gene和mRNA所在的位置。</p>
 <p>这种问题就要扒<code>gushr.py</code>的源码看作者对UTR区域筛选的处理方式了……emmmmm还是直接说结论吧，braker的结果对UTR区域的注释确实不那么友好，现阶段我只能给出上面的思路，最后还是要写脚本自己处理gff文件筛选UTR区域，以后有空再去实现了。</p>
 <h3 id="现在比较着急想要某基因的CDS上下游区域怎么办呢？"><a href="#现在比较着急想要某基因的CDS上下游区域怎么办呢？" class="headerlink" title="现在比较着急想要某基因的CDS上下游区域怎么办呢？"></a>现在比较着急想要某基因的CDS上下游区域怎么办呢？</h3><p>从注释文件中查找到目的基因，拿gff文件和基因组文件，直接提取braker预测的基因上下游一段区域，自己取舍一下。</p>
-<h3 id="有没有更好的方式注释UTR区域呢？"><a href="#有没有更好的方式注释UTR区域呢？" class="headerlink" title="有没有更好的方式注释UTR区域呢？"></a>有没有更好的方式注释UTR区域呢？</h3><p>我的理解是最好测一个全长转录组，以组装的基因组做参考基因组，拼接非冗余的全长转录本，可以比较明确的区分各基因的UTR区域。</p>
+<h3 id="有没有更好的方式注释UTR区域呢？"><a href="#有没有更好的方式注释UTR区域呢？" class="headerlink" title="有没有更好的方式注释UTR区域呢？"></a>有没有更好的方式注释UTR区域呢？</h3><p>我的理解是最好测一个全长转录组，以组装的基因组做参考基因组，拼接非冗余的全长转录本，可以比较明确的区分各基因的UTR区域。最后记得导入UCSC基因组浏览器看一看结果。</p>
 <p>总之这么长一串的踩坑和处理记录，估计别人也都用不了，就当是自己操作的备份吧hhhhhhhhh</p>
 
 </div>
@@ -3346,7 +3346,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-14T17:06:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-14T17:09:37+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年10月14日</p>
@@ -3651,7 +3651,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1697274406046.js"></script>
+<script src="/js/app.js?time=1697274585124.js"></script>
 
 
 
@@ -3835,7 +3835,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1697274406046')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1697274585124')</script>
 
 
 
@@ -3965,19 +3965,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1697274406046")
+        volantis.js("/js/plugins/sites.js?time=1697274585124")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1697274406046")
+        volantis.js("/js/plugins/friends.js?time=1697274585124")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1697274406046")
+        volantis.js("/js/plugins/contributors.js?time=1697274585124")
       }
     
   };
@@ -4046,7 +4046,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1697274406046')
+    await volantis.js('/js/plugins/aplayer.js?time=1697274585124')
   
   })();
 
@@ -4166,7 +4166,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1697274406046");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1697274585124");
   }
 
   function loadSearchService() {
@@ -4506,7 +4506,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1697274406046').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1697274585124').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4740,7 +4740,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/10/13/a.html","name":"关于braker3 UTR区域注释的踩坑记录以及补充"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于braker3 UTR区域注释的踩坑记录以及补充","description":"在基因组注释（4）——基因预测这篇博客中记录了怎么用braker3进行蛋白编码基因的预测，当时为了方便安装和使用，直接下载了官方的singularity容器。用过braker3的朋友会发现，官方给的BRAKER标准运行流程中是不包括UTR区域预测的，也就是说，最后得到的gtf&#x2F;gff文件中没有3’或者5’UTR区域的信息。\n前排提示，以下操作是个人尝试，不保证一定正确。","datePublished":"2023-10-13T13:43:20.000Z","dateModified":"2023-10-14T09:06:29.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/10/13/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/10/13/a.html","wordCount":191,"articleSection":"学习笔记","keywords":"Barker3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因组三代测序分析/","name":"基因组三代测序分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/10/13/a.html","name":"关于braker3 UTR区域注释的踩坑记录以及补充"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于braker3 UTR区域注释的踩坑记录以及补充","description":"在基因组注释（4）——基因预测这篇博客中记录了怎么用braker3进行蛋白编码基因的预测，当时为了方便安装和使用，直接下载了官方的singularity容器。用过braker3的朋友会发现，官方给的BRAKER标准运行流程中是不包括UTR区域预测的，也就是说，最后得到的gtf&#x2F;gff文件中没有3’或者5’UTR区域的信息。\n前排提示，以下操作是个人尝试，不保证一定正确。","datePublished":"2023-10-13T13:43:20.000Z","dateModified":"2023-10-14T09:09:37.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/10/13/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/10/13/a.html","wordCount":191,"articleSection":"学习笔记","keywords":"Barker3","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
