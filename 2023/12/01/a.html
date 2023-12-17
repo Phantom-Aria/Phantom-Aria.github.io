@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1702829465419" as="style">
+  <link rel="preload" href="/css/style.css?time=1702829763805" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-12-01T09:34:24.000Z">
-<meta property="article:modified_time" content="2023-12-17T16:10:26.000Z">
+<meta property="article:modified_time" content="2023-12-17T16:15:44.000Z">
 <meta property="article:tag" content="OrthoFinder">
 <meta property="article:tag" content="r8s">
 <meta property="article:tag" content="cafe5">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1702829465419" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1702829465419"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1702829763805" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1702829763805"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1702829465419","sites":"/js/plugins/sites.js?time=1702829465419","friends":"/js/plugins/friends.js?time=1702829465419","parallax":"/js/plugins/parallax.js?time=1702829465419","rightMenu":"/js/plugins/rightMenu.js?time=1702829465419","contributors":"/js/plugins/contributors.js?time=1702829465419","message":"/js/thirdparty/message.js?time=1702829465419","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702829465419"},"css":{"style":"/css/style.css?time=1702829465419","message":"/css/message.css?time=1702829465419"}},
+    cdn: {"js":{"app":"/js/app.js?time=1702829763805","sites":"/js/plugins/sites.js?time=1702829763805","friends":"/js/plugins/friends.js?time=1702829763805","parallax":"/js/plugins/parallax.js?time=1702829763805","rightMenu":"/js/plugins/rightMenu.js?time=1702829763805","contributors":"/js/plugins/contributors.js?time=1702829763805","message":"/js/thirdparty/message.js?time=1702829763805","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702829763805"},"css":{"style":"/css/style.css?time=1702829763805","message":"/css/message.css?time=1702829763805"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1702829465419),
+    lastupdate: new Date(1702829763805),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3425,7 +3425,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>具体来说，第一行是物种数量 + <strong>空格</strong> + 比对的序列长度，后面每行是物种名（不能有.这个符号），两个以上的空格，以及比对的序列（一行的形式），简单写个python脚本处理一下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个字典保存蛋白序列信息</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">protein_sequence</span>(<span class="params">file_path</span>):</span><br><span class="line">    sequences = &#123;&#125;</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        content = file.read()</span><br><span class="line">    blocks = content.split(<span class="string">&#x27;&gt;&#x27;</span>)     </span><br><span class="line">    <span class="keyword">for</span> block <span class="keyword">in</span> blocks[<span class="number">1</span>:]:</span><br><span class="line">        index = block.find(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">        header = block[:index]</span><br><span class="line">        sequence = block[index + <span class="number">1</span>: -<span class="number">1</span>].replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        sequences[header] = sequence</span><br><span class="line">    <span class="keyword">return</span> sequences</span><br><span class="line"></span><br><span class="line">sequences = protein_sequence(<span class="string">&#x27;./基因家族进化/mcmctree/SpeciesTreeAlignment.fa&#x27;</span>)</span><br><span class="line"></span><br><span class="line">species_number = <span class="built_in">len</span>(sequences)</span><br><span class="line">sequence_length = <span class="built_in">len</span>(sequences[<span class="built_in">next</span>(<span class="built_in">iter</span>(sequences))])  <span class="comment"># 获取第一个序列的长度(实际上每个都是一样的)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存成mcmctree需要的phylip格式</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mcmctree.phylip&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">f&#x27;<span class="subst">&#123;species_number&#125;</span> <span class="subst">&#123;sequence_length&#125;</span>\n&#x27;</span>)	<span class="comment"># 一个空格</span></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> sequences.items():</span><br><span class="line">        f.write(<span class="string">f&#x27;<span class="subst">&#123;key&#125;</span>  <span class="subst">&#123;value&#125;</span>\n&#x27;</span>)	<span class="comment"># 两个空格</span></span><br></pre></td></tr></table></figure>
 
-<p>和<code>r8s</code>一样，<code>mcmctree</code>估算分歧时间也需要化石证据做校准，<strong>区别在于mcmctree时间尺度是100个百万年（100Mya）</strong>，比如我这里用了水稻和拟南芥以及拟南芥和葡萄的分歧时间做校准，也是上<a target="_blank" rel="noopener" href="http://www.timetree.org/%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%EF%BC%8C%E4%B8%8D%E8%B5%98%E8%BF%B0%E4%BA%86%E3%80%82">http://www.timetree.org/这个网站，不赘述了。</a></p>
+<p>和<code>r8s</code>一样，<code>mcmctree</code>估算分歧时间也需要化石证据做校准，<strong>区别在于mcmctree时间尺度是100个百万年（100Mya）</strong>，比如我这里用了水稻和拟南芥以及拟南芥和葡萄的分歧时间做校准，也是用<a target="_blank" rel="noopener" href="http://www.timetree.org/">http://www.timetree.org/</a></p>
 <p>mcmctree是在树文件中加入校准时间，并且要删除所有枝长、标签等内容，第一行加入物种数量，树的数量，直接拿<code>orthofinder</code>做的物种树<code>Species_Tree/SpeciesTree_rooted.txt</code>，修改后的物种树长这个样子：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 修改后的物种树命名为mcmctree.tree</span><br><span class="line">10 1</span><br><span class="line">(Os&#x27;&gt;1.421&lt;1.635&#x27;,(At&#x27;&gt;1.098&lt;1.244&#x27;,(Vv,(Cr,(Vt,((Av,Ap),(Mt,(As,Cg))))))));</span><br></pre></td></tr></table></figure>
 
@@ -3440,7 +3440,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>再跑一次<code>mcmctree mcmctree.ctl</code>，就生成了<code>FigTree.tre</code>这个分歧树的结果文件，这个文件可以直接在<a target="_blank" rel="noopener" href="https://www.chiplot.online/treeGallery.html">Tree Gallery (chiplot.online)</a>可视化：</p>
 <p><img src="https://www.shelven.com/tuchuang/20231130/11.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20231130/11.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>注意下时间尺度即可，还可以加上地质时间标尺等等，可以看开发者的b站教学视频：</p>
-<p>[小驰Coding的个人空间-小驰Coding个人主页-哔哩哔哩视频 (bilibili.com)</p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/30493771/channel/collectiondetail?sid=192106">小驰Coding的个人空间-小驰Coding个人主页-哔哩哔哩视频 (bilibili.com)</a></p>
 
 </div>
   </div>
@@ -3482,7 +3482,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-18T00:10:26+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-18T00:15:44+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年12月18日</p>
@@ -3788,7 +3788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1702829465419.js"></script>
+<script src="/js/app.js?time=1702829763805.js"></script>
 
 
 
@@ -3972,7 +3972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1702829465419')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1702829763805')</script>
 
 
 
@@ -4102,19 +4102,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1702829465419")
+        volantis.js("/js/plugins/sites.js?time=1702829763805")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1702829465419")
+        volantis.js("/js/plugins/friends.js?time=1702829763805")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1702829465419")
+        volantis.js("/js/plugins/contributors.js?time=1702829763805")
       }
     
   };
@@ -4183,7 +4183,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1702829465419')
+    await volantis.js('/js/plugins/aplayer.js?time=1702829763805')
   
   })();
 
@@ -4303,7 +4303,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702829465419");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702829763805");
   }
 
   function loadSearchService() {
@@ -4643,7 +4643,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1702829465419').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1702829763805').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4877,7 +4877,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/比较基因组学/","name":"比较基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/12/01/a.html","name":"基因家族收缩扩张分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族收缩扩张分析","description":"最近用自己组装的植物基因组在做基因家族分析，简单记录下自己对数据的处理以及分析的流程。\n随着现在测序技术的普及，越来越多的植物做了全基因组测序，对于基因组比较小的植物，现在纯做基因组组装和注释已经很难发文章了，一般来说我们还要再提出和解决一些生物学问题，最基础的就是通过比较基因组学，对系统发育中的代表性物种之间的基因家族进行比较分析、构建系统发育图谱，来揭示这些基因家族的起源和功能。","datePublished":"2023-12-01T09:34:24.000Z","dateModified":"2023-12-17T16:10:26.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/12/01/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/12/01/a.html","wordCount":193,"articleSection":"学习笔记","keywords":"OrthoFinder,r8s,cafe5,mcmctree","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/比较基因组学/","name":"比较基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/12/01/a.html","name":"基因家族收缩扩张分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族收缩扩张分析","description":"最近用自己组装的植物基因组在做基因家族分析，简单记录下自己对数据的处理以及分析的流程。\n随着现在测序技术的普及，越来越多的植物做了全基因组测序，对于基因组比较小的植物，现在纯做基因组组装和注释已经很难发文章了，一般来说我们还要再提出和解决一些生物学问题，最基础的就是通过比较基因组学，对系统发育中的代表性物种之间的基因家族进行比较分析、构建系统发育图谱，来揭示这些基因家族的起源和功能。","datePublished":"2023-12-01T09:34:24.000Z","dateModified":"2023-12-17T16:15:44.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/12/01/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/12/01/a.html","wordCount":193,"articleSection":"学习笔记","keywords":"OrthoFinder,r8s,cafe5,mcmctree","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
