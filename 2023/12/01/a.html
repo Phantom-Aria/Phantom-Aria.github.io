@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1702865718801" as="style">
+  <link rel="preload" href="/css/style.css?time=1702871020232" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-12-01T09:34:24.000Z">
-<meta property="article:modified_time" content="2023-12-18T02:14:59.000Z">
+<meta property="article:modified_time" content="2023-12-18T03:43:27.000Z">
 <meta property="article:tag" content="OrthoFinder">
 <meta property="article:tag" content="r8s">
 <meta property="article:tag" content="cafe5">
@@ -1784,8 +1784,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1702865718801" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1702865718801"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1702871020232" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1702871020232"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1862,9 +1862,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1702865718801","sites":"/js/plugins/sites.js?time=1702865718801","friends":"/js/plugins/friends.js?time=1702865718801","parallax":"/js/plugins/parallax.js?time=1702865718801","rightMenu":"/js/plugins/rightMenu.js?time=1702865718801","contributors":"/js/plugins/contributors.js?time=1702865718801","message":"/js/thirdparty/message.js?time=1702865718801","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702865718801"},"css":{"style":"/css/style.css?time=1702865718801","message":"/css/message.css?time=1702865718801"}},
+    cdn: {"js":{"app":"/js/app.js?time=1702871020232","sites":"/js/plugins/sites.js?time=1702871020232","friends":"/js/plugins/friends.js?time=1702871020232","parallax":"/js/plugins/parallax.js?time=1702871020232","rightMenu":"/js/plugins/rightMenu.js?time=1702871020232","contributors":"/js/plugins/contributors.js?time=1702871020232","message":"/js/thirdparty/message.js?time=1702871020232","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702871020232"},"css":{"style":"/css/style.css?time=1702871020232","message":"/css/message.css?time=1702871020232"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1702865718801),
+    lastupdate: new Date(1702871020232),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3427,7 +3427,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>和<code>r8s</code>一样，<code>mcmctree</code>估算分歧时间也需要化石证据做校准，<strong>区别在于mcmctree时间尺度是100个百万年（100Mya）</strong>，比如我这里用了水稻和拟南芥以及拟南芥和葡萄的分歧时间做校准，也是用<a target="_blank" rel="noopener" href="http://www.timetree.org/">http://www.timetree.org/</a></p>
 <p>mcmctree是在树文件中加入校准时间，并且要删除所有枝长、标签等内容，第一行加入物种数量，树的数量，直接拿<code>orthofinder</code>做的物种树<code>Species_Tree/SpeciesTree_rooted.txt</code>，修改后的物种树长这个样子：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 修改后的物种树命名为mcmctree.tree</span><br><span class="line">10 1</span><br><span class="line">((((((((As,Cg),Mt),(Av,Ap)),Vt),Cr),Vv)&#x27;B(1.098,1.244)&#x27;,At)&#x27;B(1.421,1.635)&#x27;,Os);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 修改后的物种树命名为mcmctree.tree</span><br><span class="line">10 1</span><br><span class="line">((((((((As,Cg),Mt),(Av,Ap)),Vt),Cr),Vv),At)&#x27;B(1.098,1.244)&#x27;,Os)&#x27;B(1.421,1.635)&#x27;;</span><br></pre></td></tr></table></figure>
 
 <p>注意树中的物种名称和序列比对文件中的要一致，我这里隐去了物种信息，知道意思就行。</p>
 <p>还需要修改一下配置文件，这里我参考生信技工的一篇文章，具体参数的意思就不重复造轮子了，<a target="_blank" rel="noopener" href="https://yanzhongsino.github.io/2021/03/25/bioinfo_phylogeny_caculate.divergence.time/">估算系统树分歧时间 —— paml.mcmctree,r8s | 生信技工 (yanzhongsino.github.io)</a></p>
@@ -3438,7 +3438,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 修改out.BV文件名为in.BV</span><br><span class="line">mv out.BV in.BV</span><br><span class="line"></span><br><span class="line"># 修改配置文件</span><br><span class="line">usedata = 2</span><br></pre></td></tr></table></figure>
 
 <p>再跑一次<code>mcmctree mcmctree.ctl</code>，就生成了<code>FigTree.tre</code>这个分歧树的结果文件，这个文件可以直接在<a target="_blank" rel="noopener" href="https://www.chiplot.online/treeGallery.html">Tree Gallery (chiplot.online)</a>可视化：</p>
-<p><img src="https://www.shelven.com/tuchuang/20231130/11.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20231130/11.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://www.shelven.com/tuchuang/20231130/12.jpg" class="lazyload" data-srcset="https://www.shelven.com/tuchuang/20231130/12.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>注意下时间尺度即可，还可以加上地质时间标尺等等，可以看开发者的b站教学视频：</p>
 <p><a target="_blank" rel="noopener" href="https://space.bilibili.com/30493771/channel/collectiondetail?sid=192106">小驰Coding的个人空间-小驰Coding个人主页-哔哩哔哩视频 (bilibili.com)</a></p>
 
@@ -3482,7 +3482,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-18T10:14:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-18T11:43:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年12月18日</p>
@@ -3788,7 +3788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1702865718801.js"></script>
+<script src="/js/app.js?time=1702871020232.js"></script>
 
 
 
@@ -3972,7 +3972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1702865718801')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1702871020232')</script>
 
 
 
@@ -4102,19 +4102,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1702865718801")
+        volantis.js("/js/plugins/sites.js?time=1702871020232")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1702865718801")
+        volantis.js("/js/plugins/friends.js?time=1702871020232")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1702865718801")
+        volantis.js("/js/plugins/contributors.js?time=1702871020232")
       }
     
   };
@@ -4183,7 +4183,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1702865718801')
+    await volantis.js('/js/plugins/aplayer.js?time=1702871020232')
   
   })();
 
@@ -4303,7 +4303,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702865718801");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1702871020232");
   }
 
   function loadSearchService() {
@@ -4643,7 +4643,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1702865718801').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1702871020232').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4877,7 +4877,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/比较基因组学/","name":"比较基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/12/01/a.html","name":"基因家族收缩扩张分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族收缩扩张分析","description":"最近用自己组装的植物基因组在做基因家族分析，简单记录下自己对数据的处理以及分析的流程。\n随着现在测序技术的普及，越来越多的植物做了全基因组测序，对于基因组比较小的植物，现在纯做基因组组装和注释已经很难发文章了，一般来说我们还要再提出和解决一些生物学问题，最基础的就是通过比较基因组学，对系统发育中的代表性物种之间的基因家族进行比较分析、构建系统发育图谱，来揭示这些基因家族的起源和功能。","datePublished":"2023-12-01T09:34:24.000Z","dateModified":"2023-12-18T02:14:59.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/12/01/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/12/01/a.html","wordCount":193,"articleSection":"学习笔记","keywords":"OrthoFinder,r8s,cafe5,mcmctree","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/比较基因组学/","name":"比较基因组学"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2023/12/01/a.html","name":"基因家族收缩扩张分析"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族收缩扩张分析","description":"最近用自己组装的植物基因组在做基因家族分析，简单记录下自己对数据的处理以及分析的流程。\n随着现在测序技术的普及，越来越多的植物做了全基因组测序，对于基因组比较小的植物，现在纯做基因组组装和注释已经很难发文章了，一般来说我们还要再提出和解决一些生物学问题，最基础的就是通过比较基因组学，对系统发育中的代表性物种之间的基因家族进行比较分析、构建系统发育图谱，来揭示这些基因家族的起源和功能。","datePublished":"2023-12-01T09:34:24.000Z","dateModified":"2023-12-18T03:43:27.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2023/12/01/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2023/12/01/a.html","wordCount":193,"articleSection":"学习笔记","keywords":"OrthoFinder,r8s,cafe5,mcmctree","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
