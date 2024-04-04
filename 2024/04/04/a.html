@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1712216041427" as="style">
+  <link rel="preload" href="/css/style.css?time=1712216239831" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-04T07:30:25.000Z">
-<meta property="article:modified_time" content="2024-04-04T07:32:10.000Z">
+<meta property="article:modified_time" content="2024-04-04T07:37:08.000Z">
 <meta property="article:tag" content="HMMER3">
 <meta property="article:tag" content="TBtools">
 <meta name="twitter:card" content="summary">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1712216041427" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1712216041427"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1712216239831" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1712216239831"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1712216041427","sites":"/js/plugins/sites.js?time=1712216041427","friends":"/js/plugins/friends.js?time=1712216041427","parallax":"/js/plugins/parallax.js?time=1712216041427","rightMenu":"/js/plugins/rightMenu.js?time=1712216041427","contributors":"/js/plugins/contributors.js?time=1712216041427","message":"/js/thirdparty/message.js?time=1712216041427","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1712216041427"},"css":{"style":"/css/style.css?time=1712216041427","message":"/css/message.css?time=1712216041427"}},
+    cdn: {"js":{"app":"/js/app.js?time=1712216239831","sites":"/js/plugins/sites.js?time=1712216239831","friends":"/js/plugins/friends.js?time=1712216239831","parallax":"/js/plugins/parallax.js?time=1712216239831","rightMenu":"/js/plugins/rightMenu.js?time=1712216239831","contributors":"/js/plugins/contributors.js?time=1712216239831","message":"/js/thirdparty/message.js?time=1712216239831","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1712216239831"},"css":{"style":"/css/style.css?time=1712216239831","message":"/css/message.css?time=1712216239831"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712216041427),
+    lastupdate: new Date(1712216239831),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3325,7 +3325,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hmmsearch --domtblout WRKY.out Ap_WRKY.hmm Ap_rmTE.pep.fa</span><br><span class="line"><span class="comment"># 再次对蛋白数据集进行HMM搜索</span></span><br><span class="line"></span><br><span class="line">grep -v <span class="string">&quot;#&quot;</span> WRKY.out|awk <span class="string">&#x27;($7 + 0) &lt; 1E-20&#x27;</span>|<span class="built_in">cut</span> -f1 -d <span class="string">&quot; &quot;</span>|<span class="built_in">sort</span> -u &gt; WRKY-geneid.txt</span><br><span class="line"><span class="comment"># 过滤</span></span><br><span class="line"></span><br><span class="line">seqkit grep -f WRKY-geneid.txt Ap_rmTE.pep.fa &gt; WRKY.fasta</span><br><span class="line"><span class="comment"># 提取</span></span><br></pre></td></tr></table></figure>
 
 <p>需要注意一点，如果你用的fa格式的多序列比对结果构建的HMM，<strong>是不包含GA、TC和NC参数的</strong>。只有用官方推荐的<strong>SELEX</strong>或者<strong>Stockholm</strong>格式（PFAM友好的多序列比对格式）才会有上面三个参数，否侧你用<code>--cut_tc</code>这样指定算法是会<strong>报错</strong>的！</p>
-<p>一个可以转换多序列比对格式的网站，需要可以自取：<a target="_blank" rel="noopener" href="https://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_phylip.php">https://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_phylip.php</a></p>
+<p>一个可以转换多序列比对格式的网站，需要可以自取：<br><a target="_blank" rel="noopener" href="https://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_phylip.php">https://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_phylip.php</a></p>
 <p>这种方式找到的候选基因家族数量比上面直接<code>hmmsearch</code>得到的数量多，也是需要自己确定阈值筛选的。</p>
 <h3 id="2-3-HMMER补充说明"><a href="#2-3-HMMER补充说明" class="headerlink" title="2.3 HMMER补充说明"></a>2.3 HMMER补充说明</h3><p>HMMER软件包功能远不止上面的构建HMM模型和搜寻同源序列，顺便就再介绍下其他功能和操作。</p>
 <p>一个蛋白可能有多种结构域，比如说我想确定上面候选的WRKY基因家族成员中还包含了哪些<strong>其他结构域</strong>该怎么办？这个时候可以用到<code>hmmscan</code>命令，<strong>使用蛋白序列搜寻HMM库</strong>。</p>
@@ -3391,7 +3391,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-04T15:32:10+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-04T15:37:08+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年4月4日</p>
@@ -3693,7 +3693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1712216041427.js"></script>
+<script src="/js/app.js?time=1712216239831.js"></script>
 
 
 
@@ -3877,7 +3877,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1712216041427')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1712216239831')</script>
 
 
 
@@ -4007,19 +4007,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1712216041427")
+        volantis.js("/js/plugins/sites.js?time=1712216239831")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1712216041427")
+        volantis.js("/js/plugins/friends.js?time=1712216239831")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1712216041427")
+        volantis.js("/js/plugins/contributors.js?time=1712216239831")
       }
     
   };
@@ -4088,7 +4088,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1712216041427')
+    await volantis.js('/js/plugins/aplayer.js?time=1712216239831')
   
   })();
 
@@ -4208,7 +4208,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1712216041427");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1712216239831");
   }
 
   function loadSearchService() {
@@ -4548,7 +4548,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1712216041427').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1712216239831').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4782,7 +4782,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因家族分析/","name":"基因家族分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2024/04/04/a.html","name":"基因家族分析——鉴定基因家族成员"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族分析——鉴定基因家族成员","description":"最近基因家族分析的文章越来越多（铺天盖地的培训班宣传），知网上几乎天天都有更新这类文章。很多的这类文章都是纯生信分析，用的公共数据库中的基因组、蛋白序列和转录组数据，最多加个qPCR验证（甚至有些文章都没有），内容没有深度比较氵。写这篇笔记并不是鼓励大家水文章，只是掌握一门分析方法，不要把这类分析看得太难，0代码基础也可以做分析。","datePublished":"2024-04-04T07:30:25.000Z","dateModified":"2024-04-04T07:32:10.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2024/04/04/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2024/04/04/a.html","wordCount":166,"articleSection":"学习笔记","keywords":"HMMER3,TBtools","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/基因家族分析/","name":"基因家族分析"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2024/04/04/a.html","name":"基因家族分析——鉴定基因家族成员"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基因家族分析——鉴定基因家族成员","description":"最近基因家族分析的文章越来越多（铺天盖地的培训班宣传），知网上几乎天天都有更新这类文章。很多的这类文章都是纯生信分析，用的公共数据库中的基因组、蛋白序列和转录组数据，最多加个qPCR验证（甚至有些文章都没有），内容没有深度比较氵。写这篇笔记并不是鼓励大家水文章，只是掌握一门分析方法，不要把这类分析看得太难，0代码基础也可以做分析。","datePublished":"2024-04-04T07:30:25.000Z","dateModified":"2024-04-04T07:37:08.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2024/04/04/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2024/04/04/a.html","wordCount":166,"articleSection":"学习笔记","keywords":"HMMER3,TBtools","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
