@@ -22,7 +22,7 @@
   <meta content="我的小破站" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1714431317058" as="style">
+  <link rel="preload" href="/css/style.css?time=1715687048667" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.shelven.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-29T22:50:54.000Z">
-<meta property="article:modified_time" content="2024-04-29T22:54:58.000Z">
+<meta property="article:modified_time" content="2024-05-14T11:43:44.000Z">
 <meta property="article:tag" content="建站">
 <meta property="article:tag" content="正向代理">
 <meta name="twitter:card" content="summary">
@@ -1782,8 +1782,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1714431317058" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1714431317058"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1715687048667" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1715687048667"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1860,9 +1860,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1714431317058","sites":"/js/plugins/sites.js?time=1714431317058","friends":"/js/plugins/friends.js?time=1714431317058","parallax":"/js/plugins/parallax.js?time=1714431317058","rightMenu":"/js/plugins/rightMenu.js?time=1714431317058","contributors":"/js/plugins/contributors.js?time=1714431317058","message":"/js/thirdparty/message.js?time=1714431317058","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1714431317058"},"css":{"style":"/css/style.css?time=1714431317058","message":"/css/message.css?time=1714431317058"}},
+    cdn: {"js":{"app":"/js/app.js?time=1715687048667","sites":"/js/plugins/sites.js?time=1715687048667","friends":"/js/plugins/friends.js?time=1715687048667","parallax":"/js/plugins/parallax.js?time=1715687048667","rightMenu":"/js/plugins/rightMenu.js?time=1715687048667","contributors":"/js/plugins/contributors.js?time=1715687048667","message":"/js/thirdparty/message.js?time=1715687048667","search":"https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1715687048667"},"css":{"style":"/css/style.css?time=1715687048667","message":"/css/message.css?time=1715687048667"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1714431317058),
+    lastupdate: new Date(1715687048667),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3311,7 +3311,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>服务端设置完成之后记得放行对应的防火墙端口，并重载防火墙使其生效，常用的相关命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 放行16823端口：</span></span><br><span class="line">firewall-cmd --add-port=16823--zone=public --permanent</span><br><span class="line"><span class="comment"># 重载防火墙：</span></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="comment"># 查看放行的端口：</span></span><br><span class="line">firewall-cmd --list-port</span><br><span class="line"><span class="comment"># 查看进程：</span></span><br><span class="line">ps -ef | grep v2ray</span><br><span class="line"><span class="comment"># 启动v2ray：</span></span><br><span class="line">systemctl start v2ray</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 放行16823端口：</span></span><br><span class="line">firewall-cmd --add-port=16823/tcp --zone=public --permanent</span><br><span class="line"><span class="comment"># 重载防火墙：</span></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="comment"># 查看放行的端口：</span></span><br><span class="line">firewall-cmd --list-port</span><br><span class="line"><span class="comment"># 查看进程：</span></span><br><span class="line">ps -ef | grep v2ray</span><br><span class="line"><span class="comment"># 启动v2ray：</span></span><br><span class="line">systemctl start v2ray</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>客户端和服务端的<code>&quot;alterId&quot;</code>都设置为0，用户手册说可以指定额外ID数量，<strong>但是我这里不为0的话流量只能走直连，写的其他规则全都无法生效</strong>（不知道算不算bug）。</p>
 </li>
@@ -3421,10 +3421,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-30T06:54:58+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T19:43:44+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年4月30日</p>
+    <p>更新于：2024年5月14日</p>
   </a>
 </div>
 
@@ -3723,7 +3723,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1714431317058.js"></script>
+<script src="/js/app.js?time=1715687048667.js"></script>
 
 
 
@@ -3907,7 +3907,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1714431317058')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1715687048667')</script>
 
 
 
@@ -4037,19 +4037,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1714431317058")
+        volantis.js("/js/plugins/sites.js?time=1715687048667")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1714431317058")
+        volantis.js("/js/plugins/friends.js?time=1715687048667")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1714431317058")
+        volantis.js("/js/plugins/contributors.js?time=1715687048667")
       }
     
   };
@@ -4118,7 +4118,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("/libs/meting/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1714431317058')
+    await volantis.js('/js/plugins/aplayer.js?time=1715687048667')
   
   })();
 
@@ -4238,7 +4238,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1714431317058");
+    return volantis.js("https://cdn.jsdelivr.net/gh/Phantom-Aria/Phantom-Aria.github.io@master/js/search/hexo.js?time=1715687048667");
   }
 
   function loadSearchService() {
@@ -4578,7 +4578,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1714431317058').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1715687048667').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4812,7 +4812,7 @@ volantis.pjax.push(()=>{_hmt.push(['_trackPageview', document.location.pathname]
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/网络相关/","name":"网络相关"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2024/04/30/a.html","name":"V2Ray海外节点搭建及优化(学术专用)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"V2Ray海外节点搭建及优化(学术专用)","description":"因为做课题需要用到谷歌，以前一直用的clash，买的别人搭建好的订阅链接。最近写文章要用到谷歌学术，买的订阅链接这个时候全都挂了…..不如自己配置个更稳定的节点，于是在RackNerd买了一台VPS，准备自己折腾折腾访问谷歌学术和github用。","datePublished":"2024-04-29T22:50:54.000Z","dateModified":"2024-04-29T22:54:58.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2024/04/30/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2024/04/30/a.html","wordCount":123,"articleSection":"网络相关","keywords":"建站,正向代理","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"我的小破站","url":"http://www.shelven.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.shelven.com/","name":"我的小破站"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.shelven.com/categories/网络相关/","name":"网络相关"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.shelven.com/2024/04/30/a.html","name":"V2Ray海外节点搭建及优化(学术专用)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"V2Ray海外节点搭建及优化(学术专用)","description":"因为做课题需要用到谷歌，以前一直用的clash，买的别人搭建好的订阅链接。最近写文章要用到谷歌学术，买的订阅链接这个时候全都挂了…..不如自己配置个更稳定的节点，于是在RackNerd买了一台VPS，准备自己折腾折腾访问谷歌学术和github用。","datePublished":"2024-04-29T22:50:54.000Z","dateModified":"2024-05-14T11:43:44.000Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shelven.com/2024/04/30/a.html"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.shelven.com/"},"publisher":{"@type":"Organization","name":"我的小破站","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.shelven.com/2024/04/30/a.html","wordCount":123,"articleSection":"网络相关","keywords":"建站,正向代理","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
